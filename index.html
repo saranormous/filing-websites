@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unitree Technology IPO Prospectus (Translated)</title>
+<meta name="description" content="English translation and structured summary of Unitree Technology (宇树科技) STAR Market IPO Prospectus filed March 20, 2026">
+<style>
+:root {
+  --bg: #0d1117;
+  --surface: #161b22;
+  --border: #30363d;
+  --text: #e6edf3;
+  --text-muted: #8b949e;
+  --accent: #58a6ff;
+  --accent2: #3fb950;
+  --accent3: #d29922;
+  --red: #f85149;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+/* Header */
+header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 20px 0; position: sticky; top: 0; z-index: 100; }
+header .container { display: flex; align-items: center; gap: 16px; }
+.logo { font-size: 1.1rem; font-weight: 700; white-space: nowrap; }
+.logo span { color: var(--accent); }
+#search { background: var(--bg); border: 1px solid var(--border); color: var(--text); padding: 8px 14px; border-radius: 6px; flex: 1; max-width: 400px; font-size: 0.9rem; }
+#search:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(88,166,255,0.15); }
+.header-meta { font-size: 0.75rem; color: var(--text-muted); white-space: nowrap; margin-left: auto; }
+@media (max-width: 700px) {
+  header .container { flex-wrap: wrap; }
+  #search { max-width: 100%; order: 3; }
+  .header-meta { display: none; }
+}
+
+/* Hero */
+.hero { padding: 48px 0 32px; border-bottom: 1px solid var(--border); }
+.hero h1 { font-size: 2rem; margin-bottom: 8px; }
+.hero .subtitle { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 20px; }
+.badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+.badge-blue { background: rgba(88,166,255,0.15); color: var(--accent); }
+.badge-green { background: rgba(63,185,80,0.15); color: var(--accent2); }
+.badge-yellow { background: rgba(210,153,34,0.15); color: var(--accent3); }
+
+/* KPI Cards */
+.kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 24px 0; }
+.kpi { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 20px; }
+.kpi .label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+.kpi .value { font-size: 1.5rem; font-weight: 700; }
+.kpi .sub { font-size: 0.8rem; color: var(--accent2); margin-top: 4px; }
+
+/* Section Nav */
+.section-nav { padding: 24px 0; }
+.section-nav h2 { font-size: 1.2rem; margin-bottom: 16px; color: var(--text-muted); }
+.nav-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+.nav-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; display: block; transition: border-color 0.2s; cursor: pointer; }
+.nav-card:hover { border-color: var(--accent); text-decoration: none; }
+.nav-card .num { font-size: 0.75rem; color: var(--accent); font-weight: 700; margin-bottom: 4px; }
+.nav-card h3 { font-size: 1rem; margin-bottom: 4px; color: var(--text); }
+.nav-card p { font-size: 0.8rem; color: var(--text-muted); }
+
+/* Content sections */
+.section { padding: 32px 0; border-bottom: 1px solid var(--border); }
+.section h2 { font-size: 1.5rem; margin-bottom: 8px; scroll-margin-top: 80px; }
+.section h2 .cn { font-size: 0.9rem; color: var(--text-muted); font-weight: 400; margin-left: 8px; }
+.section h3 { font-size: 1.1rem; margin: 20px 0 8px; color: var(--accent); }
+.section p, .section li { margin-bottom: 8px; font-size: 0.95rem; color: var(--text); }
+.section ul { padding-left: 20px; }
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.85rem; }
+th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+th { background: var(--surface); color: var(--text-muted); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; }
+td { color: var(--text); }
+tr:hover td { background: rgba(88,166,255,0.04); }
+.num-cell { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* Collapsible */
+details { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; margin: 12px 0; }
+details summary { padding: 12px 16px; cursor: pointer; font-weight: 600; font-size: 0.95rem; }
+details summary:hover { color: var(--accent); }
+details .inner { padding: 0 16px 16px; }
+
+/* Search / Ask */
+.search-results { display: none; padding: 24px 0; }
+.search-results.active { display: block; }
+.sr-item { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px; cursor: pointer; }
+.sr-item:hover { border-color: var(--accent); }
+.sr-item h4 { color: var(--accent); margin-bottom: 4px; }
+.sr-item p { font-size: 0.85rem; color: var(--text-muted); }
+mark { background: rgba(210,153,34,0.3); color: var(--text); padding: 1px 2px; border-radius: 2px; }
+
+.ai-answer { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; line-height: 1.7; font-size: 0.93rem; }
+.ai-answer strong { color: var(--accent2); }
+.ai-answer code { background: rgba(88,166,255,0.1); padding: 2px 5px; border-radius: 3px; font-size: 0.85rem; }
+.ai-label { display: inline-block; font-size: 0.7rem; padding: 2px 8px; border-radius: 4px; background: rgba(88,166,255,0.15); color: var(--accent); font-weight: 600; margin-bottom: 10px; }
+.ai-setup { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+.ai-setup input { background: var(--bg); border: 1px solid var(--border); color: var(--text); padding: 8px 12px; border-radius: 6px; width: 100%; font-size: 0.85rem; margin: 8px 0; }
+.ai-setup button { background: var(--accent); color: #fff; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: 600; }
+.ai-setup button:hover { opacity: 0.9; }
+.ai-loading { color: var(--text-muted); font-size: 0.9rem; }
+.ai-loading .dot { animation: blink 1.4s infinite; }
+.ai-loading .dot:nth-child(2) { animation-delay: 0.2s; }
+.ai-loading .dot:nth-child(3) { animation-delay: 0.4s; }
+@keyframes blink { 0%,80%,100% { opacity: 0; } 40% { opacity: 1; } }
+.fallback-results { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); }
+.fallback-results .fl-label { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.04em; }
+
+/* JSON-LD hidden block */
+.json-ld-link { font-size: 0.8rem; color: var(--text-muted); margin-top: 8px; }
+
+/* Footer */
+footer { padding: 32px 0; text-align: center; color: var(--text-muted); font-size: 0.8rem; }
+
+/* Responsive */
+@media (max-width: 640px) {
+  .hero h1 { font-size: 1.4rem; }
+  #search { width: 100%; }
+  .kpi .value { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo"><span>UNITREE</span> IPO Prospectus</div>
+    <input type="search" id="search" placeholder="Ask anything... (e.g. &quot;how much are they raising?&quot;)" autocomplete="off">
+    <div class="header-meta">Filed: March 20, 2026 | STAR Market | Draft</div>
+  </div>
+</header>
+
+<div class="container">
+
+<!-- Hero -->
+<div class="hero">
+  <h1>Unitree Technology Co., Ltd. <span style="color:var(--text-muted);font-size:1rem;">(宇树科技股份有限公司)</span></h1>
+  <div class="subtitle">IPO Prospectus &mdash; Initial Public Offering of A-Shares on the SSE STAR Market</div>
+  <div class="badges">
+    <span class="badge badge-blue">Robotics</span>
+    <span class="badge badge-blue">Embodied Intelligence</span>
+    <span class="badge badge-green">Global #1 Quadruped Sales</span>
+    <span class="badge badge-green">Global #1 Humanoid Shipments 2025</span>
+    <span class="badge badge-yellow">Fundraise: RMB 4.2B</span>
+  </div>
+  <p class="json-ld-link">Machine-readable: <a href="data.json">data.json</a> | <a href="#" onclick="document.getElementById('all-content').style.display='block';this.style.display='none';return false;">Expand all sections</a></p>
+</div>
+
+<!-- KPI Cards -->
+<div class="kpi-grid">
+  <div class="kpi">
+    <div class="label">2025 Revenue (reviewed)</div>
+    <div class="value">RMB 1.71B</div>
+    <div class="sub">+335% YoY</div>
+  </div>
+  <div class="kpi">
+    <div class="label">2025 Adj. Net Profit</div>
+    <div class="value">RMB 600M</div>
+    <div class="sub">+674% YoY</div>
+  </div>
+  <div class="kpi">
+    <div class="label">Gross Margin (Jan-Sep 2025)</div>
+    <div class="value">59.5%</div>
+    <div class="sub">Main business</div>
+  </div>
+  <div class="kpi">
+    <div class="label">Humanoid Shipments (2025)</div>
+    <div class="value">5,500+</div>
+    <div class="sub">Global #1</div>
+  </div>
+  <div class="kpi">
+    <div class="label">Quadruped Sales (Cumulative)</div>
+    <div class="value">30,000+</div>
+    <div class="sub">2022-Sep 2025</div>
+  </div>
+  <div class="kpi">
+    <div class="label">Employees</div>
+    <div class="value">480</div>
+    <div class="sub">36.5% R&D</div>
+  </div>
+  <div class="kpi">
+    <div class="label">IPO Shares Offered</div>
+    <div class="value">40.4M</div>
+    <div class="sub">&ge;10% post-IPO</div>
+  </div>
+  <div class="kpi">
+    <div class="label">Last Private Valuation</div>
+    <div class="value">RMB 12.7B</div>
+    <div class="sub">June 2025 post-money</div>
+  </div>
+</div>
+
+<!-- Search Results -->
+<div class="search-results" id="searchResults"></div>
+
+<!-- Section Navigation -->
+<div class="section-nav" id="nav">
+  <h2>Prospectus Sections</h2>
+  <div class="nav-grid">
+    <a class="nav-card" href="#overview"><div class="num">SECTION II</div><h3>Overview</h3><p>Key metrics, risk highlights, offering summary</p></a>
+    <a class="nav-card" href="#risks"><div class="num">SECTION III</div><h3>Risk Factors</h3><p>Company and industry risks</p></a>
+    <a class="nav-card" href="#company"><div class="num">SECTION IV</div><h3>Company Information</h3><p>History, shareholders, governance, employees</p></a>
+    <a class="nav-card" href="#business"><div class="num">SECTION V</div><h3>Business & Technology</h3><p>Products, industry, competition, core tech</p></a>
+    <a class="nav-card" href="#financials"><div class="num">SECTION VI</div><h3>Financial Information</h3><p>Statements, revenue analysis, cost structure</p></a>
+    <a class="nav-card" href="#proceeds"><div class="num">SECTION VII</div><h3>Use of Proceeds</h3><p>4 projects totaling RMB 4.2B</p></a>
+    <a class="nav-card" href="#products"><div class="num">PRODUCTS</div><h3>Product Catalog</h3><p>Humanoid, quadruped, components, specs</p></a>
+    <a class="nav-card" href="#shareholders"><div class="num">SHAREHOLDERS</div><h3>Shareholder Table</h3><p>All 46 pre-IPO shareholders</p></a>
+  </div>
+</div>
+
+<!-- CONTENT SECTIONS -->
+<div id="all-content">
+
+<!-- Overview -->
+<div class="section" id="overview">
+  <h2>Overview <span class="cn">概览</span></h2>
+  <p>Unitree Technology is a world-renowned, internationally leading high-performance general-purpose robot company. Founded in 2016 by Wang Xingxing, it focuses on humanoid robots, quadruped robots, robot components, and embodied intelligence models.</p>
+
+  <h3>Company Snapshot</h3>
+  <table>
+    <tr><th>Attribute</th><th>Detail</th></tr>
+    <tr><td>Full Name</td><td>Unitree Technology Co., Ltd. (宇树科技股份有限公司)</td></tr>
+    <tr><td>Founded</td><td>August 26, 2016</td></tr>
+    <tr><td>Headquarters</td><td>Hangzhou, Zhejiang, China</td></tr>
+    <tr><td>Registered Capital</td><td>RMB 364,017,906</td></tr>
+    <tr><td>Legal Representative</td><td>Wang Xingxing (王兴兴)</td></tr>
+    <tr><td>Industry Classification</td><td>C3499 Other General Equipment Manufacturing</td></tr>
+    <tr><td>Website</td><td>www.unitree.com</td></tr>
+    <tr><td>Sponsor</td><td>CITIC Securities Co., Ltd.</td></tr>
+    <tr><td>Auditor</td><td>RSM China (容诚会计师事务所)</td></tr>
+    <tr><td>Law Firm</td><td>Beijing DeHeng Law Offices</td></tr>
+  </table>
+
+  <h3>Key Financial Milestones</h3>
+  <table>
+    <tr><th>Metric</th><th class="num-cell">2022</th><th class="num-cell">2023</th><th class="num-cell">2024</th><th class="num-cell">Jan-Sep 2025</th><th class="num-cell">FY2025 (reviewed)</th></tr>
+    <tr><td>Revenue (RMB M)</td><td class="num-cell">122.9</td><td class="num-cell">159.1</td><td class="num-cell">392.4</td><td class="num-cell">1,167.5</td><td class="num-cell">1,708.2</td></tr>
+    <tr><td>Net Profit (RMB M)</td><td class="num-cell">(22.1)</td><td class="num-cell">(11.1)</td><td class="num-cell">94.5</td><td class="num-cell">105.3</td><td class="num-cell">287.6</td></tr>
+    <tr><td>Adj. Net Profit* (RMB M)</td><td class="num-cell">(8.1)</td><td class="num-cell">(18.0)</td><td class="num-cell">77.5</td><td class="num-cell">430.6</td><td class="num-cell">600.1</td></tr>
+    <tr><td>Gross Margin (main biz)</td><td class="num-cell">44.2%</td><td class="num-cell">44.2%</td><td class="num-cell">56.4%</td><td class="num-cell">59.5%</td><td class="num-cell">60.3%</td></tr>
+    <tr><td>Operating Cash Flow (RMB M)</td><td class="num-cell">(30.2)</td><td class="num-cell">4.9</td><td class="num-cell">192.4</td><td class="num-cell">427.5</td><td class="num-cell">672.1</td></tr>
+  </table>
+  <p style="font-size:0.8rem;color:var(--text-muted);">*Adjusted = excluding non-recurring items (mainly share-based compensation charges of RMB 18.7M in 2022 and RMB 349M in Jan-Sep 2025)</p>
+</div>
+
+<!-- Risk Factors -->
+<div class="section" id="risks">
+  <h2>Risk Factors <span class="cn">风险因素</span></h2>
+
+  <details><summary>1. Technology Breakthrough & Product Innovation Risk</summary><div class="inner">
+    <p>The embodied intelligence large model ("brain") technology is still in R&D testing globally. If breakthroughs are not achieved, large-scale robot applications face uncertainty. Key risks include misjudging tech trends, failing to meet performance targets, and falling behind competitors.</p>
+  </div></details>
+
+  <details><summary>2. Downstream Commercial Application Risk</summary><div class="inner">
+    <p>Humanoid robot large-scale commercialization faces uncertainty. Technology maturity in areas like dexterous hand durability, embodied model generalization, and non-standard scene adaptation remains limited. Consumer market has not yet formed rigid demand.</p>
+  </div></details>
+
+  <details><summary>3. International Trade Friction Risk</summary><div class="inner">
+    <p>Overseas revenue exceeds 35% of total. US tariff policy volatility and potential export controls could impact both sales and ~20% of raw material imports sourced from abroad via domestic agents.</p>
+  </div></details>
+
+  <details><summary>4. Competition Risk</summary><div class="inner">
+    <p>Tesla (Optimus), Figure, Boston Dynamics, and numerous Chinese startups are accelerating entry. Competition is shifting from hardware to full-stack "perception-decision-execution" capabilities. Price competition may intensify.</p>
+  </div></details>
+
+  <details><summary>5. Special Voting Rights Risk</summary><div class="inner">
+    <p>Wang Xingxing controls 68.78% of voting power pre-IPO through Class A shares (10x voting). This may override minority shareholder interests on most ordinary and special resolutions.</p>
+  </div></details>
+
+  <details><summary>6. High Growth Rate & Margin Sustainability Risk</summary><div class="inner">
+    <p>Revenue CAGR exceeded 100% and gross margins rose to ~60%. Multiple factors including competition, tech changes, and cost pressures could slow growth or compress margins.</p>
+  </div></details>
+</div>
+
+<!-- Company Info -->
+<div class="section" id="company">
+  <h2>Company Information <span class="cn">发行人基本情况</span></h2>
+
+  <h3>Leadership</h3>
+  <table>
+    <tr><th>Name</th><th>Role</th><th>Background</th></tr>
+    <tr><td>Wang Xingxing (王兴兴)</td><td>Chairman, CEO, CTO</td><td>Founder; 15+ years robotics R&D; TIME 100 AI 2025; created XDog prototype during master's</td></tr>
+    <tr><td>Yang Zhiyu (杨知雨)</td><td>Director, Mechanical Structure Lead</td><td>Core tech; ~10 years robot mechanical systems; 30+ patents</td></tr>
+    <tr><td>Zhang Yangguang (张阳光)</td><td>Director, Algorithm & Software Lead</td><td>Core tech; ~10 years motion control algorithms; 10+ patents</td></tr>
+    <tr><td>Chen Li (陈立)</td><td>Director, Sales & Service Lead</td><td>At company since 2018</td></tr>
+    <tr><td>Wang Feng (王枫)</td><td>CFO</td><td>Former CFO at Shuanglin Environment (listed)</td></tr>
+    <tr><td>Fu Fenghua (傅风华)</td><td>Board Secretary</td><td>Former Board Secretary at Hangke Technology (listed)</td></tr>
+  </table>
+
+  <h3>Subsidiaries</h3>
+  <table>
+    <tr><th>Entity</th><th>Ownership</th><th>Location</th><th>Purpose</th></tr>
+    <tr><td>Hangzhou Unitree Robot</td><td>100%</td><td>Hangzhou</td><td>Holds 10% of pilot base</td></tr>
+    <tr><td>Shanghai Gaoyi</td><td>100%</td><td>Shanghai</td><td>R&D and sales</td></tr>
+    <tr><td>Beijing Lingyi</td><td>100%</td><td>Beijing</td><td>R&D</td></tr>
+    <tr><td>Shenzhen Tianyi</td><td>100%</td><td>Shenzhen</td><td>Not yet operational</td></tr>
+    <tr><td>UNITREE LIMITED</td><td>100%</td><td>Hong Kong</td><td>Not yet operational</td></tr>
+    <tr><td>Ningbo Unitree</td><td>100%</td><td>Ningbo</td><td>Not yet operational</td></tr>
+    <tr><td>Chongqing Yuyi</td><td>100%</td><td>Chongqing</td><td>Not yet operational</td></tr>
+  </table>
+</div>
+
+<!-- Products -->
+<div class="section" id="products">
+  <h2>Product Catalog <span class="cn">主要产品</span></h2>
+
+  <h3>Humanoid Robots</h3>
+  <table>
+    <tr><th>Model</th><th>Height</th><th>Weight</th><th>DOF (Legs/Arms)</th><th>Key Features</th><th>Launch</th></tr>
+    <tr><td><strong>H1</strong></td><td>~180cm</td><td>~47kg</td><td>5/4</td><td>Full-size; max speed 5m/s (world record); first electric backflip</td><td>Aug 2023</td></tr>
+    <tr><td><strong>G1</strong></td><td>~132cm</td><td>~35kg</td><td>6/5-7</td><td>Mid-size; best-selling humanoid 2024-25; ultra-large joint ROM; dexterous hands</td><td>May 2024</td></tr>
+    <tr><td><strong>R1</strong></td><td>~123cm</td><td>~25kg</td><td>6/5</td><td>Lightweight; TIME Best Invention 2025; multimodal interaction; RMB 29,900 starting</td><td>Jul 2025</td></tr>
+    <tr><td><strong>H2</strong></td><td>~182cm</td><td>~70kg</td><td>6/7</td><td>Full-size v2; 31 DOF; near-human proportions; embodied AI deployment</td><td>Oct 2025</td></tr>
+    <tr><td><strong>G1-D</strong></td><td>168cm (L)</td><td>~50kg</td><td>-/7</td><td>Wheeled dual-arm; industrial deployment; open-source compatible</td><td>2025</td></tr>
+  </table>
+
+  <h3>Quadruped Robots</h3>
+  <table>
+    <tr><th>Model</th><th>Weight</th><th>Max Speed</th><th>Payload</th><th>Battery</th><th>IP Rating</th><th>Segment</th></tr>
+    <tr><td><strong>Go2</strong></td><td>~15kg</td><td>-</td><td>12kg</td><td>2-4h</td><td>-</td><td>Consumer</td></tr>
+    <tr><td><strong>Go2-W</strong></td><td>~18kg</td><td>-</td><td>12kg</td><td>2-3h</td><td>-</td><td>Consumer (wheeled)</td></tr>
+    <tr><td><strong>A2</strong></td><td>~37kg</td><td>5m/s</td><td>>25kg</td><td>5h</td><td>IP67</td><td>Industrial (mid)</td></tr>
+    <tr><td><strong>B2</strong></td><td>~60kg</td><td>-</td><td>>40kg</td><td>>5h</td><td>IP68</td><td>Industrial</td></tr>
+    <tr><td><strong>B2-W</strong></td><td>~85kg</td><td>15km/h</td><td>>40kg</td><td>5h</td><td>IP67</td><td>Industrial (wheeled)</td></tr>
+  </table>
+
+  <h3>Robot Components</h3>
+  <table>
+    <tr><th>Product</th><th>Type</th><th>Key Specs</th></tr>
+    <tr><td>Z1</td><td>Collaborative Robotic Arm</td><td>6-axis; 4.5kg; payload &ge;3kg; 740mm reach</td></tr>
+    <tr><td>L1 / L2</td><td>3D LiDAR</td><td>Omnidirectional; 30m range; 360&deg;&times;90-96&deg; FOV</td></tr>
+    <tr><td>Dex1-1</td><td>Gripper Hand</td><td>550g; 5-120N grip force; 0.1mm resolution</td></tr>
+    <tr><td>Dex3-1</td><td>3-Finger Dexterous Hand</td><td>710g; 7 DOF; 33 tactile sensors per hand</td></tr>
+    <tr><td>Dex5-1</td><td>5-Finger Dexterous Hand</td><td>1000g; 20 DOF; 94 tactile sensors; 4.5kg payload</td></tr>
+  </table>
+</div>
+
+<!-- Business & Technology -->
+<div class="section" id="business">
+  <h2>Business & Technology <span class="cn">业务与技术</span></h2>
+
+  <h3>Revenue by Product (RMB millions)</h3>
+  <table>
+    <tr><th>Product</th><th class="num-cell">2022</th><th class="num-cell">2023</th><th class="num-cell">2024</th><th class="num-cell">Jan-Sep 2025</th></tr>
+    <tr><td>Quadruped Robots</td><td class="num-cell">92.8 (76.6%)</td><td class="num-cell">119.4 (75.8%)</td><td class="num-cell">230.5 (59.5%)</td><td class="num-cell">488.0 (42.3%)</td></tr>
+    <tr><td>Humanoid Robots</td><td class="num-cell">- (-)</td><td class="num-cell">3.0 (1.9%)</td><td class="num-cell">106.9 (27.6%)</td><td class="num-cell">595.2 (51.5%)</td></tr>
+    <tr><td>Robot Components</td><td class="num-cell">21.4 (17.7%)</td><td class="num-cell">26.9 (17.1%)</td><td class="num-cell">44.5 (11.5%)</td><td class="num-cell">66.5 (5.8%)</td></tr>
+    <tr><td>Other</td><td class="num-cell">7.0 (5.8%)</td><td class="num-cell">8.3 (5.2%)</td><td class="num-cell">5.3 (1.4%)</td><td class="num-cell">5.2 (0.5%)</td></tr>
+    <tr><td><strong>Total</strong></td><td class="num-cell"><strong>121.2</strong></td><td class="num-cell"><strong>157.5</strong></td><td class="num-cell"><strong>387.3</strong></td><td class="num-cell"><strong>1,154.9</strong></td></tr>
+  </table>
+
+  <h3>Revenue by Geography</h3>
+  <table>
+    <tr><th>Region</th><th class="num-cell">2022</th><th class="num-cell">2023</th><th class="num-cell">2024</th><th class="num-cell">Jan-Sep 2025</th></tr>
+    <tr><td>Domestic (China)</td><td class="num-cell">42.8%</td><td class="num-cell">44.4%</td><td class="num-cell">44.3%</td><td class="num-cell">60.8%</td></tr>
+    <tr><td>Overseas</td><td class="num-cell">57.2%</td><td class="num-cell">55.6%</td><td class="num-cell">55.7%</td><td class="num-cell">39.2%</td></tr>
+  </table>
+
+  <h3>12 Core Technologies</h3>
+  <ul>
+    <li><strong>Integrated Joint Technology</strong> &mdash; Motor-reducer-driver-sensor-thermal-structure all in one shell; IP67; -20 to 55&deg;C</li>
+    <li><strong>Compact Body Integration</strong> &mdash; "Shell-as-skeleton" design with composite materials</li>
+    <li><strong>Self-developed LiDAR</strong> &mdash; Single-emitter, dual-axis programmable scanning, 3-level anti-collision</li>
+    <li><strong>Anti-fall Protection</strong> &mdash; Multi-material layered impact absorption reducing peak forces 30-50%</li>
+    <li><strong>Auto-following</strong> &mdash; Dual-antenna phase-time positioning with wearable target module</li>
+    <li><strong>Thermal Management</strong> &mdash; Integrated cooling in joints and body structure</li>
+    <li><strong>Environment Perception & Mapping</strong> &mdash; Real-time 2.5D rolling grid height maps on embedded compute</li>
+    <li><strong>High-dynamic Motion Control</strong> &mdash; Reinforcement learning-based; enables collective dance, martial arts, competition</li>
+    <li><strong>Multi-product Technology Reuse</strong> &mdash; 10+ products share joint drive, battery, software, algorithm tech</li>
+    <li><strong>Self-developed Core Components</strong> &mdash; Motors, reducers with industry-leading torque and power density</li>
+    <li><strong>Shock-resistant Reducer Design</strong> &mdash; Floating load-sharing gears with elastic buffer rings</li>
+    <li><strong>Embodied Large Model</strong> &mdash; WMA (UnifoLM-WMA-0) and VLA (UnifoLM-VLA-0) architectures; open-sourced</li>
+  </ul>
+
+  <h3>Notable Achievements</h3>
+  <table>
+    <tr><th>Year</th><th>Event</th></tr>
+    <tr><td>2024 Mar</td><td>H1: World's first full-size electric humanoid backflip</td></tr>
+    <tr><td>2025 Jan</td><td>16 H1 robots: CCTV Spring Festival Gala dance performance (full AI-driven)</td></tr>
+    <tr><td>2025 Mar</td><td>G1: World's first electric humanoid sideflip</td></tr>
+    <tr><td>2025 May</td><td>G1: Only robot in CMG World Robot Combat Competition</td></tr>
+    <tr><td>2025 Aug</td><td>World Robot Games: 4 gold medals, 11 total medals (most of any company)</td></tr>
+    <tr><td>2025 Dec</td><td>6 G1 robots performed live with singer Wang Leehom</td></tr>
+    <tr><td>2026 Feb</td><td>25 robots: CCTV Spring Gala martial arts "武BOT" &mdash; multiple world firsts</td></tr>
+  </table>
+</div>
+
+<!-- Financials -->
+<div class="section" id="financials">
+  <h2>Financial Information <span class="cn">财务会计信息</span></h2>
+
+  <h3>Balance Sheet Highlights (RMB millions)</h3>
+  <table>
+    <tr><th>Item</th><th class="num-cell">2022</th><th class="num-cell">2023</th><th class="num-cell">2024</th><th class="num-cell">Sep 2025</th></tr>
+    <tr><td>Total Assets</td><td class="num-cell">366.2</td><td class="num-cell">391.3</td><td class="num-cell">1,526.9</td><td class="num-cell">2,864.8</td></tr>
+    <tr><td>Total Liabilities</td><td class="num-cell">56.5</td><td class="num-cell">92.2</td><td class="num-cell">247.3</td><td class="num-cell">434.6</td></tr>
+    <tr><td>Equity</td><td class="num-cell">309.7</td><td class="num-cell">299.0</td><td class="num-cell">1,279.6</td><td class="num-cell">2,430.1</td></tr>
+    <tr><td>Cash & Equivalents</td><td class="num-cell">135.7</td><td class="num-cell">222.3</td><td class="num-cell">565.9</td><td class="num-cell">1,794.7</td></tr>
+    <tr><td>Debt Ratio</td><td class="num-cell">15.4%</td><td class="num-cell">23.6%</td><td class="num-cell">16.2%</td><td class="num-cell">15.2%</td></tr>
+  </table>
+
+  <h3>Key Ratios</h3>
+  <table>
+    <tr><th>Ratio</th><th class="num-cell">2022</th><th class="num-cell">2023</th><th class="num-cell">2024</th><th class="num-cell">Jan-Sep 2025</th></tr>
+    <tr><td>Current Ratio</td><td class="num-cell">7.17x</td><td class="num-cell">3.85x</td><td class="num-cell">5.34x</td><td class="num-cell">6.36x</td></tr>
+    <tr><td>AR Turnover</td><td class="num-cell">17.9x</td><td class="num-cell">16.8x</td><td class="num-cell">24.0x</td><td class="num-cell">22.2x</td></tr>
+    <tr><td>R&D / Revenue</td><td class="num-cell">24.4%</td><td class="num-cell">31.4%</td><td class="num-cell">17.8%</td><td class="num-cell">7.7%</td></tr>
+    <tr><td>ROE (weighted avg)</td><td class="num-cell">(8.6%)</td><td class="num-cell">(3.7%)</td><td class="num-cell">10.4%</td><td class="num-cell">6.1%</td></tr>
+  </table>
+</div>
+
+<!-- Shareholders -->
+<div class="section" id="shareholders">
+  <h2>Shareholder Table (Pre-IPO) <span class="cn">股东结构</span></h2>
+  <table>
+    <tr><th>#</th><th>Shareholder</th><th class="num-cell">Shares (10K)</th><th class="num-cell">% Held</th><th>Notes</th></tr>
+    <tr><td>1</td><td>Wang Xingxing</td><td class="num-cell">8,671.5</td><td class="num-cell">23.82%</td><td>Controller; Class A super-voting (63.5% voting power)</td></tr>
+    <tr><td>2</td><td>Shanghai Yuyi (ESOP)</td><td class="num-cell">3,982.9</td><td class="num-cell">10.94%</td><td>Employee incentive platform; controlled by Wang</td></tr>
+    <tr><td>3</td><td>Hanhai Info (Meituan)</td><td class="num-cell">2,770.7</td><td class="num-cell">7.61%</td><td>Meituan group total: 9.65% (w/ Galaxy Z + Chengdu Longzhu)</td></tr>
+    <tr><td>4</td><td>Ningbo Sequoia</td><td class="num-cell">2,260.5</td><td class="num-cell">6.21%</td><td>Sequoia China total: 7.11% (w/ Xiamen Yaheng)</td></tr>
+    <tr><td>5</td><td>Astrend IV</td><td class="num-cell">1,610.6</td><td class="num-cell">4.42%</td><td></td></tr>
+    <tr><td>6</td><td>Matrix Partners (No.1)</td><td class="num-cell">1,550.6</td><td class="num-cell">4.26%</td><td>Matrix total: 5.45% (w/ No.3)</td></tr>
+    <tr><td>7</td><td>Jinshi Growth (CITIC PE)</td><td class="num-cell">1,511.4</td><td class="num-cell">4.15%</td><td></td></tr>
+    <tr><td>8</td><td>Beijing Robot Fund</td><td class="num-cell">1,392.8</td><td class="num-cell">3.83%</td><td></td></tr>
+    <tr><td>9</td><td>Jiaxing Huamao</td><td class="num-cell">1,160.2</td><td class="num-cell">3.19%</td><td></td></tr>
+    <tr><td>10</td><td>Junwan Hongyi</td><td class="num-cell">1,117.5</td><td class="num-cell">3.07%</td><td></td></tr>
+    <tr><td>11</td><td>Source Code Capital</td><td class="num-cell">947.7</td><td class="num-cell">2.60%</td><td></td></tr>
+    <tr><td>12</td><td>China Internet Investment</td><td class="num-cell">767.7</td><td class="num-cell">2.11%</td><td></td></tr>
+    <tr><td>13</td><td>Vertex Ventures</td><td class="num-cell">658.3</td><td class="num-cell">1.81%</td><td></td></tr>
+    <tr><td>14</td><td>Tencent</td><td class="num-cell">217.9</td><td class="num-cell">0.60%</td><td>New investor Jun 2025</td></tr>
+    <tr><td>15</td><td>China Mobile (CMI)</td><td class="num-cell">217.9</td><td class="num-cell">0.60%</td><td>New investor Jun 2025</td></tr>
+    <tr><td colspan="2">+ 31 other shareholders</td><td class="num-cell">8,736.0</td><td class="num-cell">24.00%</td><td>Including Alibaba (Hangzhou Haoyue), Ant Group (Shanghai Yunyang), etc.</td></tr>
+    <tr><td colspan="2"><strong>Total</strong></td><td class="num-cell"><strong>36,401.8</strong></td><td class="num-cell"><strong>100.00%</strong></td><td></td></tr>
+  </table>
+</div>
+
+<!-- Use of Proceeds -->
+<div class="section" id="proceeds">
+  <h2>Use of Proceeds <span class="cn">募集资金运用</span></h2>
+  <table>
+    <tr><th>#</th><th>Project</th><th class="num-cell">Investment (RMB M)</th><th class="num-cell">% of Total</th><th>Duration</th></tr>
+    <tr><td>1</td><td><strong>Intelligent Robot Model R&D</strong><br><span style="color:var(--text-muted);font-size:0.8rem;">Embodied AI models (WMA/VLA), compute infrastructure, data collection, training platform</span></td><td class="num-cell">2,022.5</td><td class="num-cell">48.1%</td><td>3 years</td></tr>
+    <tr><td>2</td><td><strong>Robot Body R&D</strong><br><span style="color:var(--text-muted);font-size:0.8rem;">High-power motors, transmissions, drivers, lightweight structures, thermal systems + R&D center acquisition</span></td><td class="num-cell">1,109.7</td><td class="num-cell">26.4%</td><td>3 years</td></tr>
+    <tr><td>3</td><td><strong>New Smart Robot Product Development</strong><br><span style="color:var(--text-muted);font-size:0.8rem;">Next-gen humanoid and quadruped products, multi-category/multi-scenario expansion</span></td><td class="num-cell">445.4</td><td class="num-cell">10.6%</td><td>3 years</td></tr>
+    <tr><td>4</td><td><strong>Smart Robot Manufacturing Base</strong><br><span style="color:var(--text-muted);font-size:0.8rem;">New production facility (78,690 sqm), automated assembly lines, testing, smart warehousing</span></td><td class="num-cell">624.1</td><td class="num-cell">14.9%</td><td>2 years</td></tr>
+    <tr><td colspan="2"><strong>Total</strong></td><td class="num-cell"><strong>4,201.7</strong></td><td class="num-cell"><strong>100.0%</strong></td><td></td></tr>
+  </table>
+</div>
+
+</div><!-- all-content -->
+
+</div><!-- container -->
+
+<footer>
+  <div class="container">
+    <p>This is a translated summary of the draft prospectus filed by Unitree Technology (宇树科技) on March 20, 2026. For official filings, refer to the SSE website. This page is for informational purposes only and does not constitute investment advice.</p>
+    <p style="margin-top:8px;">Built for reference by <a href="#">@sarahguo</a></p>
+  </div>
+</footer>
+
+<!-- LLM-powered Q&A + keyword fallback search -->
+<script>
+const searchInput = document.getElementById('search');
+const searchResults = document.getElementById('searchResults');
+const nav = document.getElementById('nav');
+let dataJson = null;
+
+// Load structured data for LLM context
+fetch('data.json').then(r => r.json()).then(d => { dataJson = d; }).catch(() => {});
+
+// --- Keyword fallback (instant, no API needed) ---
+function keywordSearch(q) {
+  const ql = q.toLowerCase();
+  const hits = [];
+  document.querySelectorAll('.section').forEach(sec => {
+    const id = sec.id;
+    const title = (sec.querySelector('h2')?.textContent || id).replace(/\s+/g,' ').trim();
+    const blocks = sec.querySelectorAll('p, li, td, summary, h3');
+    let count = 0;
+    const snippets = [];
+    blocks.forEach(el => {
+      const t = el.textContent;
+      if (t.toLowerCase().includes(ql)) {
+        count++;
+        if (snippets.length < 3) {
+          snippets.push(highlightSnippet(t, q, 60));
+        }
+      }
+    });
+    if (count > 0) hits.push({ id, title, count, snippets });
+  });
+  // Also check KPI cards
+  document.querySelectorAll('.kpi').forEach(kpi => {
+    if (kpi.textContent.toLowerCase().includes(ql)) {
+      const existing = hits.find(h => h.id === 'overview');
+      if (existing) { existing.count++; }
+      else { hits.push({ id: 'overview', title: 'Key Metrics', count: 1, snippets: [highlightSnippet(kpi.textContent, q, 60)] }); }
+    }
+  });
+  hits.sort((a,b) => b.count - a.count);
+  return hits;
+}
+
+function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function highlightSnippet(text, query, ctx) {
+  ctx = ctx || 60;
+  const t = text.replace(/\s+/g,' ').trim();
+  const qi = t.toLowerCase().indexOf(query.toLowerCase());
+  if (qi === -1) return esc(t.slice(0, ctx*2)) + (t.length > ctx*2 ? '...' : '');
+  const s = Math.max(0, qi - ctx), e = Math.min(t.length, qi + query.length + ctx);
+  return (s > 0 ? '...' : '') + esc(t.slice(s, qi)) + '<mark>' + esc(t.slice(qi, qi+query.length)) + '</mark>' + esc(t.slice(qi+query.length, e)) + (e < t.length ? '...' : '');
+}
+
+function renderKeywordHits(hits, q) {
+  if (hits.length === 0) return '';
+  let html = '<div class="fallback-results"><div class="fl-label">Keyword matches</div>';
+  hits.slice(0, 5).forEach(h => {
+    html += `<div class="sr-item" onclick="navigateTo('${h.id}')"><h4>${esc(h.title)} <span style="font-size:0.75rem;font-weight:400;color:var(--text-muted);">(${h.count})</span></h4>`;
+    h.snippets.forEach(s => { html += `<div style="font-size:0.83rem;color:var(--text-muted);margin-top:4px;line-height:1.5;">${s}</div>`; });
+    html += '</div>';
+  });
+  return html + '</div>';
+}
+
+function navigateTo(id) {
+  const sec = document.getElementById(id);
+  if (!sec) return;
+  sec.scrollIntoView({ behavior: 'smooth' });
+  searchInput.value = '';
+  searchResults.classList.remove('active');
+  searchResults.innerHTML = '';
+  nav.style.display = '';
+  sec.style.background = 'rgba(88,166,255,0.06)';
+  setTimeout(() => sec.style.background = '', 1500);
+}
+
+// --- LLM Q&A ---
+function getApiKey() { return localStorage.getItem('anthropic_api_key'); }
+function setApiKey(k) { localStorage.setItem('anthropic_api_key', k); }
+
+function renderApiKeySetup(q) {
+  return `<div class="ai-setup">
+    <p style="margin-bottom:8px;">To use AI-powered answers, enter your <a href="https://console.anthropic.com/settings/keys" target="_blank">Anthropic API key</a>. It&rsquo;s stored only in your browser&rsquo;s localStorage.</p>
+    <input type="password" id="apiKeyInput" placeholder="sk-ant-api03-...">
+    <button onclick="setApiKey(document.getElementById('apiKeyInput').value.trim()); askLLM('${esc(q)}');">Save &amp; Ask</button>
+    <p style="font-size:0.75rem;color:var(--text-muted);margin-top:8px;">Or just browse the keyword results below. Press Escape to clear.</p>
+  </div>`;
+}
+
+async function askLLM(q) {
+  const key = getApiKey();
+  if (!key) {
+    const kwHits = keywordSearch(q);
+    searchResults.innerHTML = renderApiKeySetup(q) + renderKeywordHits(kwHits, q);
+    searchResults.classList.add('active');
+    nav.style.display = 'none';
+    return;
+  }
+
+  nav.style.display = 'none';
+  const kwHits = keywordSearch(q);
+  searchResults.innerHTML = `<div class="ai-answer"><span class="ai-label">AI Answer</span><div class="ai-loading">Thinking<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></div></div>` + renderKeywordHits(kwHits, q);
+  searchResults.classList.add('active');
+
+  try {
+    const contextJson = JSON.stringify(dataJson, null, 0).slice(0, 12000);
+    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': key,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 600,
+        system: `You are answering questions about an IPO prospectus for Unitree Technology (宇树科技). Use ONLY the structured data provided. Be concise, cite specific numbers, and note which section to look at. If you don't know, say so. Use markdown bold for key figures. Answer in the same language as the question.`,
+        messages: [
+          { role: 'user', content: `Prospectus data:\n${contextJson}\n\nQuestion: ${q}` }
+        ]
+      })
+    });
+    if (!resp.ok) {
+      const err = await resp.json().catch(() => ({}));
+      throw new Error(err.error?.message || `API error ${resp.status}`);
+    }
+    const data = await resp.json();
+    const answer = data.content?.[0]?.text || 'No answer returned.';
+    // Simple markdown bold -> html
+    const html = esc(answer).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
+    const aiBox = searchResults.querySelector('.ai-answer');
+    if (aiBox) {
+      aiBox.innerHTML = `<span class="ai-label">AI Answer</span><div>${html}</div>`;
+    }
+  } catch (e) {
+    const aiBox = searchResults.querySelector('.ai-answer');
+    if (aiBox) {
+      if (e.message.includes('401') || e.message.includes('auth')) {
+        localStorage.removeItem('anthropic_api_key');
+        aiBox.innerHTML = `<span class="ai-label">API Key Invalid</span><p style="color:var(--red);font-size:0.9rem;">Key rejected. ${renderApiKeySetup(q)}</p>`;
+      } else {
+        aiBox.innerHTML = `<span class="ai-label">Error</span><p style="color:var(--red);font-size:0.9rem;">${esc(e.message)}</p>`;
+      }
+    }
+  }
+}
+
+// --- Event handlers ---
+let debounce;
+searchInput.addEventListener('input', function() {
+  clearTimeout(debounce);
+  const q = this.value.trim();
+  if (q.length < 2) {
+    searchResults.classList.remove('active');
+    searchResults.innerHTML = '';
+    nav.style.display = '';
+    return;
+  }
+  // Show instant keyword results on type
+  debounce = setTimeout(() => {
+    nav.style.display = 'none';
+    const kwHits = keywordSearch(q);
+    const hint = getApiKey()
+      ? '<p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:12px;">Press <kbd style="background:var(--surface);padding:2px 6px;border-radius:3px;border:1px solid var(--border);">Enter</kbd> to ask AI</p>'
+      : '<p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:12px;">Press <kbd style="background:var(--surface);padding:2px 6px;border-radius:3px;border:1px solid var(--border);">Enter</kbd> for AI-powered answers</p>';
+    if (kwHits.length > 0) {
+      searchResults.innerHTML = hint + renderKeywordHits(kwHits, q).replace('class="fallback-results"', 'class="fallback-results" style="border:none;margin:0;padding:0"');
+    } else {
+      searchResults.innerHTML = hint + `<p style="color:var(--text-muted);">No keyword matches. Press Enter to ask AI.</p>`;
+    }
+    searchResults.classList.add('active');
+  }, 200);
+});
+
+searchInput.addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' && this.value.trim().length >= 2) {
+    e.preventDefault();
+    askLLM(this.value.trim());
+  }
+  if (e.key === 'Escape') {
+    this.value = '';
+    searchResults.classList.remove('active');
+    searchResults.innerHTML = '';
+    nav.style.display = '';
+  }
+});
+</script>
+
+<!-- Structured Data for agents -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Corporation",
+  "name": "Unitree Technology Co., Ltd.",
+  "alternateName": "宇树科技股份有限公司",
+  "url": "https://www.unitree.com",
+  "foundingDate": "2016-08-26",
+  "founder": {"@type": "Person", "name": "Wang Xingxing"},
+  "address": {"@type": "PostalAddress", "addressLocality": "Hangzhou", "addressRegion": "Zhejiang", "addressCountry": "CN"},
+  "numberOfEmployees": {"@type": "QuantitativeValue", "value": 480},
+  "description": "World-leading high-performance general-purpose robot company specializing in humanoid robots, quadruped robots, robot components, and embodied intelligence models."
+}
+</script>
+
+</body>
+</html>

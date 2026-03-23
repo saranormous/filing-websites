@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "document": "IPO Prospectus (Draft)",
+    "issuer": "Unitree Technology Co., Ltd.",
+    "issuer_cn": "宇树科技股份有限公司",
+    "filing_date": "2026-03-20",
+    "exchange": "Shanghai Stock Exchange",
+    "board": "STAR Market (科创板)",
+    "sponsor": "CITIC Securities Co., Ltd.",
+    "auditor": "RSM China (容诚会计师事务所)",
+    "law_firm": "Beijing DeHeng Law Offices",
+    "source_language": "Chinese",
+    "translation_note": "Summarized English translation for reference only"
+  },
+  "company": {
+    "name_en": "Unitree Technology Co., Ltd.",
+    "name_cn": "宇树科技股份有限公司",
+    "founded": "2016-08-26",
+    "headquarters": "Hangzhou, Zhejiang, China",
+    "registered_capital_rmb": 364017906,
+    "website": "www.unitree.com",
+    "industry": "C3499 Other General Equipment Manufacturing",
+    "controller": {
+      "name": "Wang Xingxing",
+      "direct_shares_pct": 23.82,
+      "total_control_pct": 34.76,
+      "voting_power_pct": 68.78,
+      "roles": ["Chairman", "CEO", "CTO"]
+    },
+    "employees": {
+      "total": 480,
+      "rd": 175,
+      "sales": 141,
+      "production": 116,
+      "management": 48,
+      "as_of": "2025-09-30"
+    }
+  },
+  "offering": {
+    "shares_offered_min": 40446434,
+    "post_ipo_shares_min": 404464340,
+    "offering_pct_min": 10.0,
+    "par_value_rmb": 1.00,
+    "all_new_shares": true,
+    "last_private_valuation_rmb_billion": 12.7,
+    "special_voting_rights": true
+  },
+  "financials": {
+    "currency": "RMB",
+    "unit": "10K (万元)",
+    "income_statement": [
+      {"period": "2022", "revenue": 12291.95, "net_profit": -2210.05, "adj_net_profit": -807.08, "gross_margin_main_biz_pct": 44.18, "rd_expense": 2998.48},
+      {"period": "2023", "revenue": 15913.44, "net_profit": -1114.51, "adj_net_profit": -1801.91, "gross_margin_main_biz_pct": 44.22, "rd_expense": 4995.18},
+      {"period": "2024", "revenue": 39237.06, "net_profit": 9450.18, "adj_net_profit": 7750.36, "gross_margin_main_biz_pct": 56.41, "rd_expense": 7001.70},
+      {"period": "2025-Q1-Q3", "revenue": 116749.01, "net_profit": 10533.14, "adj_net_profit": 43061.23, "gross_margin_main_biz_pct": 59.45, "rd_expense": 9020.94},
+      {"period": "2025-FY-reviewed", "revenue": 170820.87, "net_profit": 28756.24, "adj_net_profit": 60010.47, "gross_margin_main_biz_pct": 60.27}
+    ],
+    "balance_sheet": [
+      {"date": "2022-12-31", "total_assets": 36618.43, "total_liabilities": 5649.23, "equity": 30969.21, "cash": 13565.50, "debt_ratio_pct": 15.43},
+      {"date": "2023-12-31", "total_assets": 39127.15, "total_liabilities": 9222.66, "equity": 29904.49, "cash": 22229.31, "debt_ratio_pct": 23.57},
+      {"date": "2024-12-31", "total_assets": 152689.65, "total_liabilities": 24732.04, "equity": 127957.61, "cash": 56594.28, "debt_ratio_pct": 16.20},
+      {"date": "2025-09-30", "total_assets": 286476.07, "total_liabilities": 43461.73, "equity": 243014.33, "cash": 179473.96, "debt_ratio_pct": 15.17}
+    ],
+    "cash_flow": [
+      {"period": "2022", "operating": -3019.73, "investing": -10370.69, "financing": 21072.08},
+      {"period": "2023", "operating": 494.25, "investing": 7770.45, "financing": 284.64},
+      {"period": "2024", "operating": 19239.13, "investing": -71350.62, "financing": 86008.22},
+      {"period": "2025-Q1-Q3", "operating": 42753.22, "investing": 13499.58, "financing": 68207.25}
+    ]
+  },
+  "revenue_breakdown": {
+    "by_product": [
+      {"product": "Quadruped Robots", "2022": 9282.38, "2023": 11938.09, "2024": 23054.37, "2025_q1q3": 48798.55},
+      {"product": "Humanoid Robots", "2022": 0, "2023": 296.71, "2024": 10689.76, "2025_q1q3": 59518.79},
+      {"product": "Robot Components", "2022": 2141.42, "2023": 2692.34, "2024": 4453.82, "2025_q1q3": 6653.89},
+      {"product": "Other", "2022": 698.97, "2023": 826.51, "2024": 529.33, "2025_q1q3": 523.72}
+    ],
+    "by_geography_pct": [
+      {"region": "Domestic", "2022": 42.79, "2023": 44.37, "2024": 44.30, "2025_q1q3": 60.80},
+      {"region": "Overseas", "2022": 57.21, "2023": 55.63, "2024": 55.70, "2025_q1q3": 39.20}
+    ]
+  },
+  "products": {
+    "humanoid_robots": [
+      {"model": "H1", "height_cm": 180, "weight_kg": 47, "max_speed_mps": 5.0, "leg_dof": 5, "arm_dof": 4, "launch": "2023-08", "notes": "Full-size; world record backflip & speed"},
+      {"model": "G1", "height_cm": 132, "weight_kg": 35, "leg_dof": 6, "arm_dof": "5-7", "launch": "2024-05", "notes": "Mid-size; best-selling humanoid 2024-25"},
+      {"model": "R1", "height_cm": 123, "weight_kg": 25, "leg_dof": 6, "arm_dof": 5, "launch": "2025-07", "notes": "Lightweight; TIME Best Invention 2025; from RMB 29,900"},
+      {"model": "H2", "height_cm": 182, "weight_kg": 70, "leg_dof": 6, "arm_dof": 7, "launch": "2025-10", "notes": "Full-size v2; 31 DOF; near-human proportions"},
+      {"model": "G1-D", "height_cm": 168, "weight_kg": 50, "total_dof": 17, "arm_dof": 7, "launch": "2025", "notes": "Wheeled dual-arm; industrial deployment"}
+    ],
+    "quadruped_robots": [
+      {"model": "Go2", "weight_kg": 15, "payload_kg": 12, "battery_hours": "2-4", "segment": "Consumer"},
+      {"model": "Go2-W", "weight_kg": 18, "payload_kg": 12, "battery_hours": "2-3", "segment": "Consumer (wheeled)"},
+      {"model": "A2", "weight_kg": 37, "max_speed_mps": 5.0, "payload_kg": 25, "battery_hours": 5, "ip_rating": "IP67", "segment": "Industrial (mid)"},
+      {"model": "B2", "weight_kg": 60, "payload_kg": 40, "battery_hours": 5, "ip_rating": "IP68", "segment": "Industrial"},
+      {"model": "B2-W", "weight_kg": 85, "max_speed_kmh": 15, "payload_kg": 40, "battery_hours": 5, "ip_rating": "IP67", "segment": "Industrial (wheeled)"}
+    ],
+    "components": [
+      {"model": "Z1", "type": "Collaborative Arm", "specs": "6-axis, 4.5kg, ≥3kg payload"},
+      {"model": "L1/L2", "type": "3D LiDAR", "specs": "360°×90-96° FOV, 30m range"},
+      {"model": "Dex1-1", "type": "Gripper", "specs": "5-120N, 0.1mm resolution"},
+      {"model": "Dex3-1", "type": "3-Finger Hand", "specs": "7 DOF, 33 tactile sensors"},
+      {"model": "Dex5-1", "type": "5-Finger Hand", "specs": "20 DOF, 94 tactile sensors, 4.5kg payload"}
+    ]
+  },
+  "shareholders_pre_ipo": [
+    {"name": "Wang Xingxing", "shares_10k": 8671.50, "pct": 23.82, "type": "Controller"},
+    {"name": "Shanghai Yuyi (ESOP)", "shares_10k": 3982.86, "pct": 10.94, "type": "Employee platform"},
+    {"name": "Hanhai Info (Meituan)", "shares_10k": 2770.68, "pct": 7.61, "type": "Strategic"},
+    {"name": "Ningbo Sequoia", "shares_10k": 2260.54, "pct": 6.21, "type": "Financial"},
+    {"name": "Astrend IV", "shares_10k": 1610.60, "pct": 4.42, "type": "Financial"},
+    {"name": "Matrix Partners No.1", "shares_10k": 1550.63, "pct": 4.26, "type": "Financial"},
+    {"name": "Jinshi Growth (CITIC PE)", "shares_10k": 1511.42, "pct": 4.15, "type": "Sponsor-related"},
+    {"name": "Beijing Robot Fund", "shares_10k": 1392.80, "pct": 3.83, "type": "Industrial"},
+    {"name": "Jiaxing Huamao", "shares_10k": 1160.23, "pct": 3.19, "type": "Financial"},
+    {"name": "Junwan Hongyi", "shares_10k": 1117.49, "pct": 3.07, "type": "Financial"},
+    {"name": "Source Code Capital", "shares_10k": 947.71, "pct": 2.60, "type": "Financial"},
+    {"name": "China Internet Investment", "shares_10k": 767.67, "pct": 2.11, "type": "State-backed"},
+    {"name": "Vertex Ventures", "shares_10k": 658.32, "pct": 1.81, "type": "Financial"},
+    {"name": "Others (33 shareholders)", "shares_10k": 8041.34, "pct": 22.09, "type": "Various"}
+  ],
+  "use_of_proceeds": {
+    "total_rmb_10k": 420171.12,
+    "projects": [
+      {"name": "Intelligent Robot Model R&D", "amount_rmb_10k": 202245.93, "duration_years": 3, "focus": "Embodied AI (WMA/VLA), compute, data, training platform"},
+      {"name": "Robot Body R&D", "amount_rmb_10k": 110973.80, "duration_years": 3, "focus": "Motors, transmissions, lightweight structures, thermal systems, R&D center"},
+      {"name": "New Smart Robot Product Development", "amount_rmb_10k": 44540.00, "duration_years": 3, "focus": "Next-gen humanoid and quadruped products"},
+      {"name": "Smart Robot Manufacturing Base", "amount_rmb_10k": 62411.39, "duration_years": 2, "focus": "78,690 sqm production facility with automated lines"}
+    ]
+  },
+  "ip": {
+    "patents_total": 262,
+    "patents_domestic": 169,
+    "patents_overseas": 93,
+    "invention_patents_domestic": 20,
+    "trademarks_domestic": 386,
+    "trademarks_overseas": 112,
+    "software_copyrights": 8,
+    "as_of": "2026-01-31"
+  },
+  "key_risks": [
+    "Technology breakthrough and product innovation may fall short",
+    "Downstream large-scale commercial applications uncertain",
+    "International trade friction and export control escalation",
+    "Intensifying industry competition (Tesla, etc.)",
+    "Special voting rights governance risk",
+    "High growth and gross margin may not be sustained",
+    "Key technology leakage / core personnel loss",
+    "Large fundraising project execution risk",
+    "FX risk on 35%+ overseas revenue"
+  ]
+}

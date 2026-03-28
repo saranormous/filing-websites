@@ -516,6 +516,378 @@ Translate to English. Output ONLY valid JSON.""",
     return merged
 
 
+# ─── Vision-Based Extraction ─────────────────────────────────────────────────
+
+def split_pdf_to_chunks(pdf_path, pages_per_chunk=50):
+    """Split PDF into chunks, returning list of (base64_data, start_page, end_page)."""
+    from pypdf import PdfReader, PdfWriter
+    import io, base64
+    reader = PdfReader(pdf_path)
+    total = len(reader.pages)
+    chunks = []
+    for start in range(0, total, pages_per_chunk):
+        end = min(start + pages_per_chunk, total)
+        writer = PdfWriter()
+        for i in range(start, end):
+            writer.add_page(reader.pages[i])
+        buf = io.BytesIO()
+        writer.write(buf)
+        data = buf.getvalue()
+        # If chunk > 30MB, reduce size by halving
+        if len(data) > 30 * 1024 * 1024 and pages_per_chunk > 10:
+            half = pages_per_chunk // 2
+            return split_pdf_to_chunks(pdf_path, half)
+        b64 = base64.standard_b64encode(data).decode()
+        chunks.append((b64, start + 1, end))  # 1-indexed
+    return chunks
+
+
+def find_page_ranges_for_keywords(pdf_path, keywords, context_pages=5):
+    """Use pdftotext page-by-page to find which pages contain keywords. Returns page ranges."""
+    total_pages = get_page_count(pdf_path)
+    hit_pages = set()
+    for page in range(1, total_pages + 1):
+        text = extract_text(pdf_path, start_page=page, end_page=page)
+        for kw in keywords:
+            if kw.lower() in text.lower():
+                hit_pages.add(page)
+                break
+    if not hit_pages:
+        return []
+    # Consolidate into ranges with context padding
+    pages = sorted(hit_pages)
+    ranges = []
+    for p in pages:
+        start = max(1, p - context_pages)
+        end = min(total_pages, p + context_pages)
+        if ranges and start <= ranges[-1][1] + 1:
+            ranges[-1] = (ranges[-1][0], end)
+        else:
+            ranges.append((start, end))
+    return ranges
+
+
+def _make_pdf_chunk_for_ranges(pdf_path, page_ranges):
+    """Create a single base64 PDF from page ranges."""
+    from pypdf import PdfReader, PdfWriter
+    import io, base64
+    reader = PdfReader(pdf_path)
+    writer = PdfWriter()
+    for start, end in page_ranges:
+        for i in range(start - 1, min(end, len(reader.pages))):
+            writer.add_page(reader.pages[i])
+    buf = io.BytesIO()
+    writer.write(buf)
+    return base64.standard_b64encode(buf.getvalue()).decode()
+
+
+def call_claude_vision(system_prompt, pdf_b64, user_prompt, max_tokens=4096, retries=3):
+    """Call Claude API with a PDF document as visual input."""
+    import anthropic
+    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+    for attempt in range(retries):
+        try:
+            msg = client.messages.create(
+                model="claude-sonnet-4-6",
+                max_tokens=max_tokens,
+                system=system_prompt,
+                messages=[{
+                    "role": "user",
+                    "content": [
+                        {
+                            "type": "document",
+                            "source": {
+                                "type": "base64",
+                                "media_type": "application/pdf",
+                                "data": pdf_b64
+                            }
+                        },
+                        {
+                            "type": "text",
+                            "text": user_prompt
+                        }
+                    ]
+                }]
+            )
+            return msg.content[0].text
+        except Exception as e:
+            if attempt < retries - 1:
+                wait = 2 ** attempt * 5
+                print(f"  API error ({e}), retrying in {wait}s...")
+                time.sleep(wait)
+            else:
+                raise
+
+
+def _call_and_parse_json_vision(system, pdf_b64, user, max_tokens=8192):
+    """Call Claude vision API and parse JSON response with repair logic."""
+    result = call_claude_vision(system, pdf_b64, user, max_tokens=max_tokens)
+    result = strip_code_fences(result)
+    try:
+        return json.loads(result)
+    except json.JSONDecodeError:
+        result = re.sub(r',\s*}', '}', result)
+        result = re.sub(r',\s*]', ']', result)
+        open_braces = result.count('{') - result.count('}')
+        open_brackets = result.count('[') - result.count(']')
+        result += ']' * open_brackets + '}' * open_braces
+        try:
+            return json.loads(result)
+        except json.JSONDecodeError:
+            print(f"  ERROR: Could not parse vision JSON. First 300 chars:\n{result[:300]}")
+            return {}
+
+
+def extract_structured_data_vision(pdf_path):
+    """Extract structured data using vision — Claude reads the actual PDF pages.
+
+    Same 4-pass structure and output schema as extract_structured_data,
+    but sends PDF page images instead of pdftotext output.
+    """
+    print("Vision extraction: reading PDF pages directly...")
+    total_pages = get_page_count(pdf_path)
+    print(f"  {total_pages} pages")
+
+    # ── Pass 1: Overview (pages 1-50) ──
+    print("  Vision Pass 1/4: Company overview & offering (pages 1-50)...")
+    overview_chunks = split_pdf_to_chunks(pdf_path, pages_per_chunk=50)
+    overview_b64 = overview_chunks[0][0] if overview_chunks else None
+    overview = {}
+    if overview_b64:
+        overview = _call_and_parse_json_vision(
+            """You are reading an IPO prospectus document. You can see the actual pages with all tables, charts, and formatting.
+Extract company overview. Output JSON:
+{
+  "meta": { "document": "IPO Prospectus (Draft)", "issuer": "English name", "issuer_cn": "Chinese name", "filing_date": "YYYY-MM-DD", "exchange": "...", "board": "...", "sponsor": "...", "source_language": "Chinese" },
+  "company": { "name_en": "...", "name_cn": "...", "founded": "YYYY", "headquarters": "...", "registered_capital_rmb": number, "website": "...", "industry": "...", "controller": { "name": "...", "direct_shares_pct": number, "total_control_pct": number, "roles": ["..."] }, "employees": { "total": number, "rd": number } },
+  "offering": { "shares_offered_max": number, "post_ipo_shares_approx": number, "offering_pct_approx": number, "par_value_rmb": number },
+  "products": [ { "name": "English name", "type": "...", "specs": "..." } ]
+}
+Translate all Chinese text to English. Output ONLY valid JSON.""",
+            overview_b64,
+            "Extract company overview, offering details, and products from these prospectus pages. Read all visible tables and data.",
+            max_tokens=4096
+        )
+    time.sleep(2)
+
+    # ── Pass 2: Shareholders (targeted pages) ──
+    print("  Vision Pass 2/4: Shareholders & cap table...")
+    sh_keywords = ['持股比例', '持股数', '股东名称', '股份比例', '持股', '股東', 'Shareholding', '% of shares']
+    sh_ranges = find_page_ranges_for_keywords(pdf_path, sh_keywords, context_pages=3)
+    shareholders_data = {}
+    if sh_ranges:
+        total_sh_pages = sum(e - s + 1 for s, e in sh_ranges)
+        print(f"    Found shareholder data on pages: {sh_ranges} ({total_sh_pages} pages)")
+        sh_b64 = _make_pdf_chunk_for_ranges(pdf_path, sh_ranges[:5])  # Limit to first 5 ranges
+        shareholders_data = _call_and_parse_json_vision(
+            """You are reading IPO prospectus pages that contain shareholder/cap table information.
+You can see the actual tables with all rows and columns. Read them exactly as displayed.
+Output JSON: { "shareholders_pre_ipo": [{ "name": "English name (translate Chinese)", "shares_10k": number_or_null, "pct": number, "type": "Individual|VC|Institution" }] }
+Include EVERY shareholder row visible in the tables. Extract exact percentage values from the table columns. Output ONLY valid JSON.""",
+            sh_b64,
+            "Extract ALL shareholders with their exact shareholding percentages from the tables visible on these pages.",
+            max_tokens=8192
+        )
+    else:
+        print("    No shareholder keywords found")
+    time.sleep(2)
+
+    # ── Pass 3: Financials (targeted pages) ──
+    print("  Vision Pass 3/4: Financial tables...")
+    fin_keywords = ['营业收入', '净利润', '总资产', '利润表', '资产负债', '现金流量',
+                    '營業收入', '淨利潤', '總資產', 'Revenue', 'Net profit', 'Total assets', 'Income Statement']
+    fin_ranges = find_page_ranges_for_keywords(pdf_path, fin_keywords, context_pages=3)
+    financials_data = {}
+    if fin_ranges:
+        total_fin_pages = sum(e - s + 1 for s, e in fin_ranges)
+        print(f"    Found financial data on pages: {fin_ranges} ({total_fin_pages} pages)")
+        # Limit to first 8 ranges to stay under API limits
+        fin_b64 = _make_pdf_chunk_for_ranges(pdf_path, fin_ranges[:8])
+        financials_data = _call_and_parse_json_vision(
+            """You are reading IPO prospectus pages that contain financial tables and statements.
+You can see the actual tables with all rows, columns, and numbers. Read them exactly as displayed.
+Output JSON:
+{
+  "financials": {
+    "currency": "RMB", "unit": "10K (万元)",
+    "income_statement": [{ "period": "2022", "revenue": number_万, "net_profit": number_万, "gross_margin_pct": number, "rd_expense": number_万 }],
+    "balance_sheet": [{ "date": "YYYY-12-31", "total_assets": number_万, "total_liabilities": number_万, "equity": number_万, "cash": number_万 }],
+    "cash_flow": [{ "period": "2022", "operating": number_万, "investing": number_万, "financing": number_万 }]
+  },
+  "revenue_breakdown": {
+    "by_product": [{ "product": "English name", "2022": number_万, "2023": number_万, "2024": number_万 }],
+    "by_geography_pct": [{ "region": "Domestic", "2022": number, "2023": number, "2024": number }]
+  }
+}
+Read EVERY number from the financial tables exactly as printed. Determine the correct unit from the table headers. Output ONLY valid JSON.""",
+            fin_b64,
+            "Extract ALL financial data from the tables visible on these pages. Read every row and column.",
+            max_tokens=8192
+        )
+    else:
+        print("    No financial keywords found")
+    time.sleep(2)
+
+    # ── Pass 4: Risks + proceeds ──
+    print("  Vision Pass 4/4: Risks & use of proceeds...")
+    risk_keywords = ['风险因素', '風險因素', 'RISK FACTORS', '募集资金', '募投项目', '所得款項', 'Use of Proceeds']
+    risk_ranges = find_page_ranges_for_keywords(pdf_path, risk_keywords, context_pages=3)
+    risks_data = {}
+    if risk_ranges:
+        total_risk_pages = sum(e - s + 1 for s, e in risk_ranges)
+        print(f"    Found risk/proceeds data on pages: {risk_ranges} ({total_risk_pages} pages)")
+        risk_b64 = _make_pdf_chunk_for_ranges(pdf_path, risk_ranges[:5])
+        risks_data = _call_and_parse_json_vision(
+            """You are reading IPO prospectus pages containing risk factors and use of proceeds.
+Extract all risk factors and proceeds allocation. Output JSON:
+{
+  "key_risks": ["Risk 1 in English", "Risk 2", ...],
+  "use_of_proceeds": { "total_rmb_10k": number, "projects": [{ "name": "English name", "amount_rmb_10k": number, "focus": "..." }] }
+}
+Translate all Chinese to English. Output ONLY valid JSON.""",
+            risk_b64,
+            "Extract all risk factors and use of proceeds from these pages.",
+            max_tokens=4096
+        )
+    else:
+        print("    No risk keywords found")
+
+    # ── Merge ──
+    print("  Merging vision passes...")
+    merged = overview or {}
+    if shareholders_data.get('shareholders_pre_ipo'):
+        merged['shareholders_pre_ipo'] = shareholders_data['shareholders_pre_ipo']
+    if financials_data.get('financials'):
+        merged['financials'] = financials_data['financials']
+    if financials_data.get('revenue_breakdown'):
+        merged['revenue_breakdown'] = financials_data['revenue_breakdown']
+    if risks_data.get('key_risks'):
+        merged['key_risks'] = risks_data['key_risks']
+    if risks_data.get('use_of_proceeds'):
+        merged['use_of_proceeds'] = risks_data['use_of_proceeds']
+
+    merged.setdefault('meta', {})
+    merged.setdefault('company', {})
+    merged.setdefault('offering', {})
+    merged.setdefault('financials', {'currency': 'RMB', 'unit': '10K (万元)', 'income_statement': [], 'balance_sheet': [], 'cash_flow': []})
+    merged.setdefault('shareholders_pre_ipo', [])
+    merged.setdefault('key_risks', [])
+    merged.setdefault('use_of_proceeds', {'projects': []})
+    merged.setdefault('products', [])
+    merged['meta']['translation_note'] = 'AI-translated for reference only'
+    merged['meta']['extraction_method'] = 'vision'
+
+    sh_count = len(merged.get('shareholders_pre_ipo', []))
+    fin_count = len(merged.get('financials', {}).get('income_statement', []))
+    risk_count = len(merged.get('key_risks', []))
+    sh_with_pct = sum(1 for s in merged.get('shareholders_pre_ipo', []) if s.get('pct'))
+    print(f"  Vision result: {sh_count} shareholders ({sh_with_pct} with %), {fin_count} income periods, {risk_count} risks")
+
+    return merged
+
+
+def compare_extractions(text_data, vision_data):
+    """Compare text-based and vision-based extraction results. Returns report dict."""
+    report = {'dimensions': []}
+
+    def _compare_field(name, text_val, vision_val):
+        winner = 'tie'
+        if text_val and not vision_val:
+            winner = 'text'
+        elif vision_val and not text_val:
+            winner = 'vision'
+        elif text_val and vision_val and text_val != vision_val:
+            winner = 'different'
+        report['dimensions'].append({
+            'field': name, 'text': text_val, 'vision': vision_val, 'winner': winner
+        })
+
+    # Shareholders
+    text_sh = text_data.get('shareholders_pre_ipo', [])
+    vision_sh = vision_data.get('shareholders_pre_ipo', [])
+    text_sh_pct = sum(1 for s in text_sh if s.get('pct'))
+    vision_sh_pct = sum(1 for s in vision_sh if s.get('pct'))
+    _compare_field('shareholders_count', len(text_sh), len(vision_sh))
+    _compare_field('shareholders_with_pct', text_sh_pct, vision_sh_pct)
+    sh_winner = 'vision' if vision_sh_pct > text_sh_pct else ('text' if text_sh_pct > vision_sh_pct else 'tie')
+    report['dimensions'][-1]['winner'] = sh_winner
+
+    # Financials
+    text_fin = text_data.get('financials', {})
+    vision_fin = vision_data.get('financials', {})
+    text_inc = text_fin.get('income_statement', [])
+    vision_inc = vision_fin.get('income_statement', [])
+    text_bs = text_fin.get('balance_sheet', [])
+    vision_bs = vision_fin.get('balance_sheet', [])
+    text_rev_count = sum(1 for r in text_inc if r.get('revenue'))
+    vision_rev_count = sum(1 for r in vision_inc if r.get('revenue'))
+    _compare_field('income_periods', len(text_inc), len(vision_inc))
+    _compare_field('periods_with_revenue', text_rev_count, vision_rev_count)
+    _compare_field('balance_sheet_periods', len(text_bs), len(vision_bs))
+
+    # Compare specific revenue values where both have data
+    text_revs = {r.get('period'): r.get('revenue') for r in text_inc if r.get('revenue')}
+    vision_revs = {r.get('period'): r.get('revenue') for r in vision_inc if r.get('revenue')}
+    common_periods = set(text_revs.keys()) & set(vision_revs.keys())
+    if common_periods:
+        matches = sum(1 for p in common_periods if abs(text_revs[p] - vision_revs[p]) < text_revs[p] * 0.05)
+        _compare_field('revenue_value_matches', f'{matches}/{len(common_periods)}', f'{matches}/{len(common_periods)}')
+
+    # Metadata completeness
+    text_meta_fields = sum(1 for v in [
+        text_data.get('company', {}).get('founded'),
+        text_data.get('company', {}).get('controller', {}).get('name'),
+        text_data.get('company', {}).get('headquarters'),
+        text_data.get('company', {}).get('industry'),
+        text_data.get('meta', {}).get('filing_date'),
+    ] if v)
+    vision_meta_fields = sum(1 for v in [
+        vision_data.get('company', {}).get('founded'),
+        vision_data.get('company', {}).get('controller', {}).get('name'),
+        vision_data.get('company', {}).get('headquarters'),
+        vision_data.get('company', {}).get('industry'),
+        vision_data.get('meta', {}).get('filing_date'),
+    ] if v)
+    _compare_field('metadata_completeness', f'{text_meta_fields}/5', f'{vision_meta_fields}/5')
+
+    # Risks
+    text_risks = len(text_data.get('key_risks', []))
+    vision_risks = len(vision_data.get('key_risks', []))
+    _compare_field('risk_count', text_risks, vision_risks)
+
+    # Products
+    text_prods = len(text_data.get('products', []))
+    vision_prods = len(vision_data.get('products', []))
+    _compare_field('product_count', text_prods, vision_prods)
+
+    # Overall winner
+    text_wins = sum(1 for d in report['dimensions'] if d['winner'] == 'text')
+    vision_wins = sum(1 for d in report['dimensions'] if d['winner'] == 'vision')
+    report['summary'] = {
+        'text_wins': text_wins,
+        'vision_wins': vision_wins,
+        'ties': len(report['dimensions']) - text_wins - vision_wins,
+        'overall': 'vision' if vision_wins > text_wins else ('text' if text_wins > vision_wins else 'tie')
+    }
+
+    return report
+
+
+def print_eval_report(report):
+    """Print a human-readable eval comparison report."""
+    print("\n" + "=" * 60)
+    print("  EXTRACTION QUALITY COMPARISON: TEXT vs VISION")
+    print("=" * 60)
+    for d in report['dimensions']:
+        winner_mark = {'text': '← TEXT', 'vision': 'VISION →', 'tie': '  TIE  ', 'different': ' DIFF  '}
+        print(f"  {d['field']:30s}  {str(d['text']):>10s}  {winner_mark.get(d['winner'], ''):^9s}  {str(d['vision']):<10s}")
+    s = report['summary']
+    print("-" * 60)
+    print(f"  Text wins: {s['text_wins']}  |  Vision wins: {s['vision_wins']}  |  Ties: {s['ties']}")
+    print(f"  Overall winner: {s['overall'].upper()}")
+    print("=" * 60)
+
+
 # ─── Executive Summary ───────────────────────────────────────────────────────
 
 def generate_executive_summary(data, full_text_data=None):
@@ -1769,6 +2141,8 @@ if __name__ == '__main__':
         print("  python3 pipeline.py --rebuild-index                  # Regenerate index.html from filings.json")
         print("  python3 pipeline.py --estimate <pdf>                 # Cost/time estimate")
         print("  python3 pipeline.py --render <dir>                   # Re-render site from existing data")
+        print("  python3 pipeline.py --vision <pdf> <dir>             # Full pipeline with vision extraction")
+        print("  python3 pipeline.py --eval <pdf> <dir>               # Compare text vs vision extraction")
         print()
         print("Examples:")
         print("  python3 pipeline.py prospectus.pdf mycompany")
@@ -1820,6 +2194,8 @@ if __name__ == '__main__':
 
     # ── Full pipeline or translate-only ──
     translate_only = '--translate-only' in sys.argv
+    use_vision = '--vision' in sys.argv
+    run_eval = '--eval' in sys.argv
     confirm = '--yes' not in sys.argv  # skip confirmation with --yes
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
 
@@ -1862,6 +2238,31 @@ if __name__ == '__main__':
             json.dump(full_text_data, f, indent=2, ensure_ascii=False)
         total_chars = sum(len(s['content']) for s in full_text_data['sections'])
         print(f"\n✓ Full text translation complete: {len(full_text_data['sections'])} sections, {total_chars:,} chars")
+    elif run_eval:
+        # ── Eval mode: run both text and vision extraction, compare ──
+        print("\n─── EVAL MODE: Text vs Vision extraction ───")
+        os.makedirs(output_dir, exist_ok=True)
+
+        print("\n─── Text extraction ───")
+        text_data = extract_structured_data(pdf_path)
+        validate_data(text_data)
+        with open(os.path.join(output_dir, 'data_text.json'), 'w') as f:
+            json.dump(text_data, f, indent=2, ensure_ascii=False)
+
+        print("\n─── Vision extraction ───")
+        vision_data = extract_structured_data_vision(pdf_path)
+        validate_data(vision_data)
+        with open(os.path.join(output_dir, 'data_vision.json'), 'w') as f:
+            json.dump(vision_data, f, indent=2, ensure_ascii=False)
+
+        # Compare
+        report = compare_extractions(text_data, vision_data)
+        with open(os.path.join(output_dir, 'eval_report.json'), 'w') as f:
+            json.dump(report, f, indent=2, ensure_ascii=False)
+        print_eval_report(report)
+
+        print(f"\nSaved: {output_dir}/data_text.json, data_vision.json, eval_report.json")
+
     else:
         # Step 1: Extract structured data
         print("\n─── Step 1: Extracting structured data ───")
@@ -1874,7 +2275,11 @@ if __name__ == '__main__':
             with open(data_path) as f:
                 existing_data = json.load(f)
 
-        data = extract_structured_data(pdf_path)
+        # Use vision or text extraction
+        if use_vision:
+            data = extract_structured_data_vision(pdf_path)
+        else:
+            data = extract_structured_data(pdf_path)
         validate_data(data)
         print(f"  Extracted: {len(data.get('key_risks', []))} risks, {len(data.get('shareholders_pre_ipo', []))} shareholders")
 

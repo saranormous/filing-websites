@@ -1,0 +1,407 @@
+{
+  "meta": {
+    "document": "IPO Prospectus (Draft)",
+    "issuer": "Unitree Robotics Co., Ltd.",
+    "issuer_cn": "宇树科技股份有限公司",
+    "filing_date": null,
+    "exchange": "Shanghai Stock Exchange",
+    "board": "STAR Market (Ke Chuang Ban)",
+    "sponsor": "CITIC Securities Co., Ltd.",
+    "source_language": "Chinese",
+    "translation_note": "AI-translated for reference only"
+  },
+  "company": {
+    "name_en": "Unitree Robotics Co., Ltd.",
+    "name_cn": "宇树科技股份有限公司",
+    "founded": "2016",
+    "headquarters": "Building 1, No. 88 Dongliu Road, Xixing Street, Binjiang District, Hangzhou, Zhejiang Province",
+    "registered_capital_rmb": null,
+    "website": null,
+    "industry": "High-Performance General-Purpose Robotics / Embodied Intelligence",
+    "controller": {
+      "name": "Wang Xingxing",
+      "direct_shares_pct": null,
+      "total_control_pct": null,
+      "roles": [
+        "Actual Controller",
+        "Chairman of the Board"
+      ]
+    },
+    "employees": {
+      "total": null,
+      "rd": null
+    }
+  },
+  "offering": {
+    "shares_offered_max": 40446434,
+    "post_ipo_shares_approx": 404464340,
+    "offering_pct_approx": 10.0,
+    "par_value_rmb": 1.0
+  },
+  "products": [
+    {
+      "name": "Humanoid Robot H1",
+      "type": "General-Purpose Humanoid Robot",
+      "specs": "First released August 2023; one of four humanoid robot series (excluding wheeled variants) self-developed by the company"
+    },
+    {
+      "name": "B Series",
+      "type": "Quadruped Robot (Industrial Grade)",
+      "specs": "Applied in scientific research, industrial inspection, emergency rescue, and intelligent services"
+    },
+    {
+      "name": "Go Series",
+      "type": "Quadruped Robot (Consumer Grade)",
+      "specs": "Applied in scientific research, industrial inspection, emergency rescue, and intelligent services"
+    },
+    {
+      "name": "Joint Modules",
+      "type": "Robot Component",
+      "specs": "Core actuator component for robots"
+    },
+    {
+      "name": "Dexterous Hands",
+      "type": "Robot Component",
+      "specs": "End-effector component for humanoid robots"
+    },
+    {
+      "name": "Collaborative Robotic Arms",
+      "type": "Robot Component",
+      "specs": "Modular robotic arm component"
+    },
+    {
+      "name": "Perception Sensors",
+      "type": "Robot Component",
+      "specs": "Sensing and perception hardware for robots"
+    },
+    {
+      "name": "Embodied Intelligence Model",
+      "type": "AI Software / Embodied AI",
+      "specs": "Intelligent algorithm models for robot control, motion, and perception"
+    }
+  ],
+  "shareholders_pre_ipo": [
+    {
+      "name": "Wang Xingxing",
+      "shares_10k": null,
+      "pct": 34.763,
+      "type": "Individual"
+    },
+    {
+      "name": "Shanghai Yuyi Enterprise Management Consulting Partnership (Limited Partnership) [Employee Incentive Platform]",
+      "shares_10k": null,
+      "pct": 10.94,
+      "type": "Institution"
+    },
+    {
+      "name": "Hanhai Information Technology (Shanghai) Co., Ltd. [Meituan]",
+      "shares_10k": null,
+      "pct": null,
+      "type": "Institution"
+    },
+    {
+      "name": "Galaxy Z Holding Limited [Meituan]",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Chengdu Longzhu Equity Investment Fund Partnership (Limited Partnership) [Meituan]",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Ningbo Hongshan Kesheng Equity Investment Partnership (Limited Partnership) [Sequoia China]",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Xiamen Yaheng Venture Investment Fund Partnership (Limited Partnership) [Sequoia China]",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Astrend IV (Hong Kong) Alpha Limited",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Nanjing Jingwei Chuang No.1 Investment Partnership (Limited Partnership) [Matrix Partners China]",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Nanjing Jingwei Chuang No.3 Investment Partnership (Limited Partnership) [Matrix Partners China]",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Beijing Robot Industry Development Investment Fund (Limited Partnership)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "Institution"
+    },
+    {
+      "name": "Jiaxing Huamao Equity Investment Partnership (Limited Partnership)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Tianjin Junwan Hongyi Enterprise Management Consulting Partnership (Limited Partnership)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "Institution"
+    },
+    {
+      "name": "Wuhan Yuanxia Equity Investment Partnership (Limited Partnership) [Source Code Capital]",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "China Internet Investment Fund (Limited Partnership)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "Institution"
+    },
+    {
+      "name": "Jiaxing Ruili Jinyu Venture Investment Partnership (Limited Partnership)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Hexagon Software Technology (Qingdao) Co., Ltd.",
+      "shares_10k": null,
+      "pct": null,
+      "type": "Institution"
+    },
+    {
+      "name": "Shenzhen Venture Capital SME Development Fund (Xinjiang) Limited Partnership [Shenzhen Capital Group]",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Hangzhou Guanghe Phase II Venture Investment Partnership (Limited Partnership)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Zhejiang Rongteng Venture Investment Partnership (Limited Partnership)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Beijing Zhongguancun Science City Technology Growth Investment Partnership (Limited Partnership)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "Institution"
+    },
+    {
+      "name": "Hangzhou Rongteng No.2 Venture Investment Partnership (Limited Partnership)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Ningbo Meishan Bonded Port Area Jisi Investment Partnership (Limited Partnership)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Shenzhen Dezhi Qing Investment Co., Ltd.",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Guangzhou Chuzhe Zhixin Equity Investment Partnership (Limited Partnership)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Hangzhou Chuzhe Xinyu Enterprise Management Consulting Partnership (Limited Partnership)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "Institution"
+    },
+    {
+      "name": "Shanghai China Mobile Digital Transformation Industry Private Equity Fund Partnership (Limited Partnership) [China Mobile Hechuang]",
+      "shares_10k": null,
+      "pct": null,
+      "type": "Institution"
+    },
+    {
+      "name": "Tencent Technology (Shanghai) Co., Ltd.",
+      "shares_10k": null,
+      "pct": null,
+      "type": "Institution"
+    },
+    {
+      "name": "Wuxi Jinqiu Hualei Technology Co., Ltd.",
+      "shares_10k": null,
+      "pct": null,
+      "type": "Institution"
+    },
+    {
+      "name": "Guangzhou Hupo Anyun Phase II Venture Investment Partnership (Limited Partnership)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Jiangsu Jiequan Hongtu Intelligent Venture Investment Fund (Limited Partnership)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Hangzhou Haoyue Enterprise Management Co., Ltd.",
+      "shares_10k": null,
+      "pct": null,
+      "type": "Institution"
+    },
+    {
+      "name": "Shenzhen Innovation Capital Investment Co., Ltd.",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Shanghai Science and Technology Innovation Center No.2 Private Equity Investment Fund Partnership (Limited Partnership)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "Institution"
+    },
+    {
+      "name": "Jinshi Growth Equity Investment (Hangzhou) Partnership (Limited Partnership)",
+      "shares_10k": null,
+      "pct": 4.152,
+      "type": "VC"
+    },
+    {
+      "name": "CITIC Securities Investment Co., Ltd.",
+      "shares_10k": null,
+      "pct": 0.3377,
+      "type": "Institution"
+    },
+    {
+      "name": "Shenzhen Capital Group Co., Ltd.",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Tianjin Suanli Wujin Enterprise Management Consulting Partnership (Limited Partnership)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "Institution"
+    },
+    {
+      "name": "Hangzhou Yixin Enterprise Management Consulting Partnership (Limited Partnership)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "Institution"
+    },
+    {
+      "name": "Hangzhou Yiyi Enterprise Management Consulting Partnership (Limited Partnership)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "Institution"
+    },
+    {
+      "name": "Shanghai Yixin Enterprise Management Consulting Partnership (Limited Partnership)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "Institution"
+    }
+  ],
+  "financials": {
+    "currency": "RMB",
+    "unit": "10K (万元)",
+    "income_statement": [
+      {
+        "period": "2025-01-09 (Jan-Sep)",
+        "revenue": 116749.01,
+        "net_profit": null,
+        "net_profit_excluding_non_recurring": 43061.23,
+        "gross_margin_pct": null,
+        "rd_expense": null
+      },
+      {
+        "period": "2025-full-year (reviewed)",
+        "revenue": null,
+        "net_profit": null,
+        "net_profit_excluding_non_recurring": 60010.47,
+        "gross_margin_pct": null,
+        "rd_expense": null
+      }
+    ],
+    "balance_sheet": [],
+    "cash_flow": []
+  },
+  "revenue_breakdown": {
+    "by_product": [],
+    "by_geography_pct": [
+      {
+        "region": "Overseas (境外)",
+        "note": "Each period during the reporting period, overseas revenue ratio exceeded 35%",
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "threshold": 35
+      }
+    ]
+  },
+  "key_risks": [
+    "STAR Market listing risks: companies listed on the STAR Market have characteristics of high R&D investment, high operational risk, unstable performance, and high delisting risk, exposing investors to significant market risk.",
+    "Technology and product iteration risk: the general robotics industry requires rapid and continuous technology and product updates; if the company fails to keep pace with technological advancements, it may lose its competitive advantage.",
+    "High R&D investment risk: the company operates in a technology-intensive, R&D-driven industry with large and ongoing R&D expenditures, which may not yield expected returns and could affect profitability.",
+    "Business performance instability risk: as a high-growth technology company at an early stage of commercialization, operating results may fluctuate significantly.",
+    "Industry competition risk: the humanoid robot and quadruped robot industries are highly competitive globally, and intensified competition could negatively impact the company's market share and margins.",
+    "Key personnel and talent retention risk: the company relies heavily on specialized talent in AI, motion control, and perception; failure to attract or retain key personnel could adversely affect operations.",
+    "Commercialization and market adoption risk: embodied intelligence and general-purpose robots are at an early stage of development; market acceptance and large-scale deployment may be slower than expected.",
+    "Supply chain and component risk: the company depends on external suppliers for certain key components; supply disruptions could affect production and delivery.",
+    "International market and geopolitical risk: the company has significant overseas sales and recognition; changes in international trade policies, export controls, or geopolitical tensions could adversely impact overseas business.",
+    "Delisting risk: as a STAR Market listed company, the company faces the inherent risk of delisting if it fails to meet continued listing requirements.",
+    "Early-stage industrialization risk: the robotics hardware and software technology are still at an early rapid-development stage, and the pace of industrialization may be uncertain.",
+    "Corporate governance risk: the company is transitioning to a publicly listed company governance structure; failure to effectively implement governance improvements could affect investor interests."
+  ],
+  "use_of_proceeds": {
+    "total_rmb_10k": null,
+    "projects": [
+      {
+        "name": "Intelligent Robot Model Research and Development Project",
+        "amount_rmb_10k": null,
+        "focus": "R&D of embodied intelligence AI models, including reinforcement learning, high-precision control, and frontier AI technology for general-purpose robots"
+      },
+      {
+        "name": "Robot Body Research and Development Project",
+        "amount_rmb_10k": null,
+        "focus": "R&D of robot hardware bodies, including humanoid robots and quadruped robots, improving motion performance, robustness, and humanization level"
+      },
+      {
+        "name": "New Intelligent Robot Product Development Project",
+        "amount_rmb_10k": null,
+        "focus": "Development of new intelligent robot products, expanding product matrix including robot components such as joint modules, dexterous hands, collaborative robotic arms, and perception sensors"
+      },
+      {
+        "name": "Intelligent Robot Manufacturing Base Construction Project",
+        "amount_rmb_10k": null,
+        "focus": "Construction of a scaled, intelligent manufacturing facility to enhance industrialization capability and production capacity for high-performance general-purpose robots"
+      }
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "dimensions": [
+    {
+      "field": "shareholders_count",
+      "text": 41,
+      "vision": 46,
+      "winner": "different"
+    },
+    {
+      "field": "shareholders_with_pct",
+      "text": 4,
+      "vision": 46,
+      "winner": "vision"
+    },
+    {
+      "field": "income_periods",
+      "text": 2,
+      "vision": 5,
+      "winner": "different"
+    },
+    {
+      "field": "periods_with_revenue",
+      "text": 1,
+      "vision": 5,
+      "winner": "different"
+    },
+    {
+      "field": "balance_sheet_periods",
+      "text": 0,
+      "vision": 5,
+      "winner": "vision"
+    },
+    {
+      "field": "metadata_completeness",
+      "text": "4/5",
+      "vision": "5/5",
+      "winner": "different"
+    },
+    {
+      "field": "risk_count",
+      "text": 12,
+      "vision": 15,
+      "winner": "different"
+    },
+    {
+      "field": "product_count",
+      "text": 8,
+      "vision": 7,
+      "winner": "different"
+    }
+  ],
+  "summary": {
+    "text_wins": 0,
+    "vision_wins": 2,
+    "ties": 6,
+    "overall": "vision"
+  }
+}

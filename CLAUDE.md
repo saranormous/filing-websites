@@ -8,9 +8,9 @@ Static GitHub Pages site hosting translated, searchable Chinese tech IPO prospec
 - **GitHub Pages** deploys from `main` branch root
 - All filing sites share the same feature set (see below)
 - `pipeline.py` generates new sites from Chinese PDF prospectuses via Claude API
+- **Vision-based extraction** — PDF pages sent directly to Claude as document blocks. Claude reads the actual rendered tables, charts, and layout. Dramatically better than text-based extraction for financial tables and shareholder data (see EVAL.md). **Always use `--vision` for extraction.**
 - **Deterministic HTML template** — `render_html()` in pipeline.py uses Python string formatting, not LLM-generated HTML. Every site gets identical CSS/JS/layout.
 - **`filings.json`** — single source of truth for all filings. Top-level `index.html` is auto-generated from it via `--rebuild-index`, sorted newest-first with sector filter chips.
-- **Multi-pass extraction** — structured data is extracted in 4 targeted passes (overview, shareholders, financials, risks) to maximize data coverage.
 
 ## Required Features — ALL Filing Pages Must Include
 Every `{company}/index.html` MUST have all of these. When modifying one site, update the template in `render_html()` and re-render ALL sites via `make render-all`:
@@ -45,11 +45,12 @@ Every `{company}/index.html` MUST have all of these. When modifying one site, up
 - `sunwoda/` — Sunwoda Electronic (HKEX, batteries)
 
 ## Consistency Rules
+- **Always use `--vision` for extraction.** Vision-based extraction reads actual PDF pages and captures table data that text-based extraction misses. See EVAL.md for the comparison. Text-based (`pdftotext`) is a cheap fallback only.
 - When modifying a feature: update `render_html()` in pipeline.py, then `make render-all`
-- When adding a new filing: add entry to `filings.json`, run the pipeline, then `make index`
+- When adding a new filing: add entry to `filings.json`, run the pipeline with `--vision`, then `make index`
 - Search JS, CSS, and toggles are all in the template — guaranteed consistent
 - `data.json` schema should follow the same structure across filings
-- All monetary values displayed as USD by default; `rmb-val` class required for conversion
+- All monetary values displayed as USD, pre-rendered at build time via `_get_unit_multiplier()`
 
 ## Pipeline Usage
 
@@ -67,22 +68,24 @@ make push MSG="Add mycompany"                 # Commit and push
 ```bash
 export ANTHROPIC_API_KEY=sk-ant-...
 
-python3 pipeline.py <pdf_or_url> <slug>          # Full pipeline (with cost confirmation)
-python3 pipeline.py --yes <pdf_or_url> <slug>     # Skip confirmation
-python3 pipeline.py --translate-only <pdf> <dir>  # Translation only
-python3 pipeline.py --estimate <pdf_or_url>       # Cost/time estimate
-python3 pipeline.py --render <slug>               # Re-render from existing data
-python3 pipeline.py --rebuild-index               # Generate index.html from filings.json
+python3 pipeline.py --vision <pdf_or_url> <slug>  # Full pipeline with vision extraction (RECOMMENDED)
+python3 pipeline.py --yes --vision <pdf> <slug>    # Skip confirmation
+python3 pipeline.py <pdf_or_url> <slug>            # Text-based extraction (cheaper, lower quality)
+python3 pipeline.py --eval <pdf> <slug>            # Compare text vs vision vs reducto extraction
+python3 pipeline.py --translate-only <pdf> <dir>   # Translation only
+python3 pipeline.py --estimate <pdf_or_url>        # Cost/time estimate
+python3 pipeline.py --render <slug>                # Re-render from existing data
+python3 pipeline.py --rebuild-index                # Generate index.html from filings.json
 ```
 
 ### Pipeline steps
 1. Resolves input (downloads PDF if URL)
 2. Shows cost estimate and asks for confirmation (skip with `--yes`)
-3. Multi-pass structured data extraction (4 targeted API calls for overview, shareholders, financials, risks)
+3. **Vision extraction**: sends targeted PDF pages to Claude as document blocks. 4 passes (overview, shareholders, financials, risks) → `data.json`. Claude reads actual tables from the rendered pages.
 4. Translates full document section-by-section → `full_text.json` (with checkpointing)
 5. Generates executive summary (1 API call, stored in `data.json`)
 6. Renders `index.html` from deterministic Python template
-7. Validates: JSON integrity, translation completeness, HTML completeness
+7. Validates and auto-fixes: shareholder double-counting, extreme margins, missing fields
 
 ### Resumable translations
 Translations checkpoint `full_text.json` after each section. If the pipeline crashes mid-translation, restarting it resumes from the last completed section.

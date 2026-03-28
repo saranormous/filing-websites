@@ -32,7 +32,7 @@ Static, searchable financial filing websites with LLM-powered Q&A. Translates Ch
 
 ## Pipeline
 
-Deterministic template with multi-pass extraction. The LLM translates, structures, and summarizes — HTML generation is pure Python string formatting.
+Vision-based extraction — Claude reads the actual PDF pages as images, preserving tables and layout. Evaluated against text-based (`pdftotext`) and Reducto extraction; vision wins on shareholder data (46 vs 4 with percentages) and financials (5 vs 0 balance sheet periods). See [EVAL.md](EVAL.md) for details. HTML generation is pure Python string formatting (deterministic template, no LLM).
 
 ### Adding a new filing
 
@@ -68,13 +68,13 @@ make push MSG="commit message"          # Commit and push
 
 ### Pipeline steps
 
-1. **Ingest** — download PDF (if URL) and extract text with `pdftotext`
+1. **Ingest** — download PDF (if URL)
 2. **Estimate** — show cost/time, confirm
-3. **Structure** — 4-pass targeted extraction (overview, shareholders, financials, risks) → `data.json`
+3. **Structure** — vision-based: send targeted PDF pages to Claude as document blocks. 4 passes (overview, shareholders, financials, risks) → `data.json`
 4. **Translate** — full document section-by-section → `full_text.json` (resumable)
 5. **Summarize** — AI-generated executive summary → `data.json`
 6. **Render** — deterministic template → `index.html`
-7. **Validate** — check completeness
+7. **Validate** — auto-fix shareholder double-counting, extreme margins, missing fields
 
 ### GitHub Action
 

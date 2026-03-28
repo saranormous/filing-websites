@@ -1,0 +1,280 @@
+{
+  "meta": {
+    "document": "IPO Prospectus (Application Proof / Draft)",
+    "issuer": "EVE Energy Co., Ltd.",
+    "issuer_cn": "惠州億緯鋰能股份有限公司",
+    "filing_date": "2026-01-02",
+    "exchange": "The Stock Exchange of Hong Kong Limited (HKEX)",
+    "board": "Main Board",
+    "sponsor": "Redacted (Sole Sponsor)",
+    "source_language": "Chinese/English (bilingual)",
+    "translation_note": "AI-translated for reference only"
+  },
+  "company": {
+    "name_en": "EVE Energy Co., Ltd.",
+    "name_cn": "惠州億緯鋰能股份有限公司",
+    "founded": "2001",
+    "headquarters": "Huizhou, Guangdong Province, People's Republic of China",
+    "registered_capital_rmb": null,
+    "website": "www.evebattery.com",
+    "industry": "Lithium Battery / Energy Storage",
+    "controller": {
+      "name": "Liu Jincheng",
+      "roles": [
+        "Chairman"
+      ]
+    },
+    "employees": {
+      "total": null,
+      "rd": null
+    }
+  },
+  "offering": {
+    "shares_offered_max": null,
+    "post_ipo_shares_approx": null,
+    "offering_pct_approx": null,
+    "par_value_rmb": 1.0
+  },
+  "products": [
+    {
+      "name": "Lithium Batteries",
+      "type": "Rechargeable Battery / Energy Storage",
+      "specs": "Redacted — details not disclosed in provided excerpt"
+    }
+  ],
+  "financials": {
+    "currency": "RMB",
+    "unit": "万元",
+    "income_statement": [
+      {
+        "period": "2022",
+        "revenue": 363039.48,
+        "cost_of_sales": -305181.1,
+        "gross_profit": 57858.38,
+        "other_income": 10963.87,
+        "selling_and_marketing_expenses": -3336.27,
+        "administrative_expenses": -16023.48,
+        "rd_expense": -21531.36,
+        "impairment_losses": -2047.83,
+        "other_gains_losses_net": -745.81,
+        "finance_costs": -3921.77,
+        "share_of_profit_joint_venture": 333.45,
+        "share_of_results_associates_net": 13432.07,
+        "net_profit": null,
+        "gross_margin_pct": 15.94
+      },
+      {
+        "period": "2023",
+        "revenue": 487835.87,
+        "cost_of_sales": -406642.74,
+        "gross_profit": 81193.13,
+        "other_income": 19853.98,
+        "selling_and_marketing_expenses": -4575.94,
+        "administrative_expenses": -17489.52,
+        "rd_expense": -27316.37,
+        "impairment_losses": -1803.74,
+        "other_gains_losses_net": -3476.84,
+        "finance_costs": -4765.14,
+        "share_of_profit_joint_venture": 275.38,
+        "share_of_results_associates_net": 6392.93,
+        "net_profit": null,
+        "gross_margin_pct": 16.64
+      },
+      {
+        "period": "2024",
+        "revenue": 486145.57,
+        "cost_of_sales": -401492.08,
+        "gross_profit": 84653.49,
+        "other_income": 15674.46,
+        "selling_and_marketing_expenses": -5971.46,
+        "administrative_expenses": -15200.0,
+        "rd_expense": -29423.08,
+        "impairment_losses": -2700.57,
+        "other_gains_losses_net": 582.36,
+        "finance_costs": -6350.72,
+        "share_of_profit_joint_venture": 504.42,
+        "share_of_results_associates_net": 4613.75,
+        "net_profit": null,
+        "gross_margin_pct": 17.41
+      },
+      {
+        "period": "9M2024",
+        "revenue": 340492.77,
+        "cost_of_sales": -282496.38,
+        "gross_profit": 57996.39,
+        "other_income": 11526.57,
+        "selling_and_marketing_expenses": -3891.46,
+        "administrative_expenses": -9396.17,
+        "rd_expense": -21722.62,
+        "impairment_losses": -731.51,
+        "other_gains_losses_net": 807.21,
+        "finance_costs": -4476.35,
+        "share_of_profit_joint_venture": 362.44,
+        "share_of_results_associates_net": 4133.0,
+        "net_profit": null,
+        "gross_margin_pct": 17.03
+      },
+      {
+        "period": "9M2025",
+        "revenue": 450015.18,
+        "cost_of_sales": -378215.84,
+        "gross_profit": 71799.34,
+        "other_income": 7568.71,
+        "selling_and_marketing_expenses": -5451.12,
+        "administrative_expenses": -22766.86,
+        "rd_expense": -18720.42,
+        "impairment_losses": -3014.64,
+        "other_gains_losses_net": 4203.13,
+        "finance_costs": -5401.23,
+        "share_of_profit_joint_venture": 643.95,
+        "share_of_results_associates_net": 3046.24,
+        "net_profit": null,
+        "gross_margin_pct": 15.96
+      }
+    ],
+    "balance_sheet": [
+      {
+        "date": "2022-12-31",
+        "total_assets": 836378.12,
+        "total_liabilities": 504776.33,
+        "equity": 331601.79,
+        "total_non_current_liabilities": 183063.61,
+        "total_current_liabilities": 321712.72,
+        "net_current_assets": 46858.21,
+        "share_capital": 20417.59,
+        "reserves": 283716.91,
+        "non_controlling_interests": 27467.29,
+        "cash": null
+      },
+      {
+        "date": "2023-12-31",
+        "total_assets": 943553.39,
+        "total_liabilities": 563500.71,
+        "equity": 380052.68,
+        "total_non_current_liabilities": 185153.06,
+        "total_current_liabilities": 378347.65,
+        "net_current_assets": -10483.28,
+        "share_capital": 20457.21,
+        "reserves": 326871.43,
+        "non_controlling_interests": 32724.04,
+        "cash": null
+      },
+      {
+        "date": "2024-12-31",
+        "total_assets": 1008906.25,
+        "total_liabilities": 598914.38,
+        "equity": 409991.87,
+        "total_non_current_liabilities": 200971.46,
+        "total_current_liabilities": 397942.92,
+        "net_current_assets": -18096.13,
+        "share_capital": 20457.21,
+        "reserves": 355349.76,
+        "non_controlling_interests": 34184.9,
+        "cash": null
+      },
+      {
+        "date": "2025-09-30",
+        "total_assets": 1163703.13,
+        "total_liabilities": 738551.77,
+        "equity": 425151.36,
+        "total_non_current_liabilities": 293450.22,
+        "total_current_liabilities": 445101.55,
+        "net_current_assets": 23230.3,
+        "share_capital": 20457.33,
+        "reserves": 378265.69,
+        "non_controlling_interests": 26428.34,
+        "cash": null
+      }
+    ],
+    "cash_flow": []
+  },
+  "revenue_breakdown": {
+    "by_product": [
+      {
+        "product": "Consumer Batteries",
+        "2022": 85134.51,
+        "2022_pct": 23.5,
+        "2023": 83621.21,
+        "2023_pct": 17.1,
+        "2024": 103221.61,
+        "2024_pct": 21.2,
+        "9M2024": 74777.34,
+        "9M2024_pct": 22.0,
+        "9M2025": 82576.56,
+        "9M2025_pct": 18.3
+      },
+      {
+        "product": "Power Batteries",
+        "2022": 182507.02,
+        "2022_pct": 50.3,
+        "2023": 239838.68,
+        "2023_pct": 49.2,
+        "2024": 191672.42,
+        "2024_pct": 39.4,
+        "9M2024": 134399.02,
+        "9M2024_pct": 39.5,
+        "9M2025": 196069.57,
+        "9M2025_pct": 43.6
+      },
+      {
+        "product": "ESS Batteries",
+        "2022": 94321.03,
+        "2022_pct": 26.0,
+        "2023": 163402.1,
+        "2023_pct": 33.5,
+        "2024": 190269.22,
+        "2024_pct": 39.1,
+        "9M2024": 130617.42,
+        "9M2024_pct": 38.3,
+        "9M2025": 170686.56,
+        "9M2025_pct": 37.9
+      },
+      {
+        "product": "Others",
+        "2022": 1076.92,
+        "2022_pct": 0.2,
+        "2023": 973.88,
+        "2023_pct": 0.2,
+        "2024": 982.32,
+        "2024_pct": 0.2,
+        "9M2024": 698.99,
+        "9M2024_pct": 0.2,
+        "9M2025": 682.49,
+        "9M2025_pct": 0.2
+      }
+    ],
+    "by_geography_pct": [
+      {
+        "region": "Chinese Mainland (Domestic)",
+        "note": "Majority of revenue; exact percentages not provided in extracted text"
+      },
+      {
+        "region": "Overseas (primarily South Korea and EU)",
+        "note": "Minority of revenue; exact percentages not provided in extracted text"
+      }
+    ]
+  },
+  "key_risks": [
+    "Fluctuations in demand in the downstream markets of our battery products may materially and adversely affect our business, results of operations and financial condition.",
+    "If we fail to maintain our technological competitiveness in the battery industry, our operating results may be adversely affected.",
+    "The battery industry is highly competitive. Our failure to successfully compete could materially and adversely affect our market position and market share.",
+    "We may not be able to derive the desired benefits from our research and development efforts, which may negatively affect our competitiveness and profitability, and lead to a decrease in the demand for our products.",
+    "Failure to launch new and innovative products or keep up with evolving market trends may materially and adversely affect our market share and profitability.",
+    "If we are unable to retain existing customers and attract new customers, our business, financial conditions and results of operations will be adversely affected.",
+    "Our profitability may be materially and adversely affected if we are forced to lower the selling prices of our products.",
+    "We face risks of sharing relevant research and development results with our collaboration partners at the level of jointly established entities.",
+    "We face risks associated with our global operations and business expansion."
+  ],
+  "use_of_proceeds": {
+    "total_rmb_10k": null,
+    "projects": [
+      {
+        "name": "Use of Proceeds — Details Redacted",
+        "amount_rmb_10k": null,
+        "focus": "The specific use of proceeds details are redacted in this draft prospectus. The section 'Future Plans and Use of [REDACTED]' is referenced at page 389 but the actual allocation amounts and project details are not disclosed in the provided excerpts."
+      }
+    ]
+  },
+  "shareholders_pre_ipo": [],
+  "executive_summary": "EVE Energy Co., Ltd. is a Chinese lithium battery manufacturer competing across consumer, power, and energy storage battery segments, ranking among the global top three in consumer batteries, second globally in energy storage batteries, and fifth among Chinese makers in power batteries.\n\nRevenue was roughly flat at $671M in 2024 (converted from RMB 48.6B) after growing 34% in 2023, with gross margins steady around 16-17%. For the first nine months of 2025, revenue reached $621M, up 32% year-on-year from the same prior period, with a 16% gross margin. Net profit figures are not disclosed in this draft. Total assets stood at $1.61B as of September 2025, though the company carries negative working capital in recent years and rising total liabilities of $1.02B.\n\nEVE Energy is seeking a listing on the Main Board of the Hong Kong Stock Exchange. The offering size, share count, and specific use of proceeds are all redacted in this draft prospectus. Key existing shareholder and investor details are similarly undisclosed at this stage.\n\nThe three biggest risks are intense competition from well-funded rivals in a rapidly commoditizing battery market, dependence on continued price stability since margin pressure from forced selling price reductions could significantly hurt profitability, and execution risk around global expansion and R&D commercialization as the company scales manufacturing across multiple international markets."
+}

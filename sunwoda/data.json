@@ -1,0 +1,246 @@
+{
+  "meta": {
+    "document": "IPO Prospectus (Draft)",
+    "issuer": "Sunwoda Electronic Co., Ltd.",
+    "issuer_cn": "欣旺達電子股份有限公司",
+    "filing_date": "2026-01-30",
+    "exchange": "Hong Kong Stock Exchange (HKEX)",
+    "board": "Main Board",
+    "sponsor": "[Redacted] (Joint Sponsors)",
+    "source_language": "Chinese",
+    "translation_note": "AI-translated for reference only"
+  },
+  "company": {
+    "name_en": "Sunwoda Electronic Co., Ltd.",
+    "name_cn": "欣旺達電子股份有限公司",
+    "founded": "1997",
+    "headquarters": "China (PRC)",
+    "registered_capital_rmb": null,
+    "website": "www.sunwoda.com",
+    "industry": "Lithium Battery Manufacturing / New Energy",
+    "controller": {
+      "name": "Wang Mingwang",
+      "roles": [
+        "Chairman"
+      ]
+    },
+    "employees": {
+      "total": null,
+      "rd": null
+    }
+  },
+  "offering": {
+    "shares_offered_max": null,
+    "post_ipo_shares_approx": null,
+    "offering_pct_approx": null,
+    "par_value_rmb": 1.0
+  },
+  "products": [
+    {
+      "name": "Consumer Battery - Mobile Phone Battery",
+      "type": "Lithium-ion Battery",
+      "specs": "Global #1 in mobile phone batteries by 2024 shipments; 34.3% global market share"
+    },
+    {
+      "name": "Consumer Battery - Laptop and Tablet Battery",
+      "type": "Lithium-ion Battery",
+      "specs": "Global #2 in laptop and tablet batteries by 2024 shipments; 21.6% global market share"
+    },
+    {
+      "name": "Consumer Battery - Smart Wearables Battery",
+      "type": "Lithium-ion Battery",
+      "specs": "Battery solutions for smart wearable devices"
+    },
+    {
+      "name": "Consumer Battery - Smart Home Battery",
+      "type": "Lithium-ion Battery",
+      "specs": "Battery solutions for smart home devices"
+    },
+    {
+      "name": "Consumer Battery - Smart Mobility / Service Robots Battery",
+      "type": "Lithium-ion Battery",
+      "specs": "Battery solutions for smart mobility and service robots"
+    },
+    {
+      "name": "EV Power Battery - Battery Electric Vehicle (BEV)",
+      "type": "Power Battery",
+      "specs": "Battery solutions for pure electric vehicles; global top 10 power battery manufacturer (2.1% market share by 2024 shipments)"
+    },
+    {
+      "name": "EV Power Battery - Hybrid Electric Vehicle (HEV/PHEV)",
+      "type": "Power Battery",
+      "specs": "Battery solutions for hybrid electric vehicles"
+    },
+    {
+      "name": "EV Power Battery - Commercial Vehicles & Construction Machinery",
+      "type": "Power Battery",
+      "specs": "Battery solutions for commercial vehicles and engineering machinery"
+    },
+    {
+      "name": "Energy Storage System - Grid-scale",
+      "type": "Energy Storage System",
+      "specs": "Grid-level energy storage solutions"
+    },
+    {
+      "name": "Energy Storage System - Commercial & Industrial",
+      "type": "Energy Storage System",
+      "specs": "C&I energy storage solutions"
+    },
+    {
+      "name": "Energy Storage System - Residential",
+      "type": "Energy Storage System",
+      "specs": "Home energy storage solutions; global top 5 AC-coupled energy storage system brand"
+    },
+    {
+      "name": "Energy Storage System - Data Center",
+      "type": "Energy Storage System",
+      "specs": "Data center energy storage solutions; global top 10 energy storage battery manufacturer (1.4% market share by 2024 shipments)"
+    },
+    {
+      "name": "Battery Testing and Recycling Services",
+      "type": "Service",
+      "specs": "Full lifecycle battery testing and recycling services"
+    }
+  ],
+  "shareholders_pre_ipo": [
+    {
+      "name": "Wang Mingwang",
+      "shares_10k": null,
+      "pct": 26.75,
+      "type": "Individual"
+    },
+    {
+      "name": "Wang Wei",
+      "shares_10k": null,
+      "pct": null,
+      "type": "Individual"
+    }
+  ],
+  "financials": {
+    "currency": "RMB",
+    "unit": "10K (万元)",
+    "income_statement": [
+      {
+        "period": "2022",
+        "revenue": 522000,
+        "net_profit": 76.3361,
+        "gross_profit": 630000,
+        "gross_margin_pct": null,
+        "rd_expense": null,
+        "net_profit_attributable_to_owners": 110000,
+        "net_profit_total": 76336.1,
+        "adjusted_net_profit_non_ifrs": 103048.2
+      },
+      {
+        "period": "2023",
+        "revenue": null,
+        "net_profit": null,
+        "gross_profit": null,
+        "gross_margin_pct": null,
+        "rd_expense": null,
+        "net_profit_attributable_to_owners": null,
+        "net_profit_total": 33074.6,
+        "adjusted_net_profit_non_ifrs": 53507.4
+      },
+      {
+        "period": "2024",
+        "revenue": 560000,
+        "net_profit": null,
+        "gross_profit": 820000,
+        "gross_margin_pct": null,
+        "rd_expense": null,
+        "net_profit_attributable_to_owners": 150000,
+        "net_profit_total": 53428.3,
+        "adjusted_net_profit_non_ifrs": 72952.1
+      },
+      {
+        "period": "9M2024",
+        "revenue": 383000,
+        "net_profit": null,
+        "gross_profit": 590000,
+        "gross_margin_pct": null,
+        "rd_expense": null,
+        "net_profit_attributable_to_owners": 120000,
+        "net_profit_total": 55349.1,
+        "adjusted_net_profit_non_ifrs": 72612.4
+      },
+      {
+        "period": "9M2025",
+        "revenue": 435000,
+        "net_profit": null,
+        "gross_profit": 710000,
+        "gross_margin_pct": null,
+        "rd_expense": null,
+        "net_profit_attributable_to_owners": 140000,
+        "net_profit_total": 77908.4,
+        "adjusted_net_profit_non_ifrs": 93861.8
+      }
+    ],
+    "balance_sheet": [],
+    "cash_flow": [],
+    "non_ifrs_reconciliation": [
+      {
+        "period": "2022",
+        "net_profit_for_year": 76336.1,
+        "share_based_payment": 16312.1,
+        "convertible_bond_fair_value_change": 10400.0,
+        "adjusted_net_profit": 103048.2
+      },
+      {
+        "period": "2023",
+        "net_profit_for_year": 33074.6,
+        "share_based_payment": 15832.8,
+        "convertible_bond_fair_value_change": 4600.0,
+        "adjusted_net_profit": 53507.4
+      },
+      {
+        "period": "2024",
+        "net_profit_for_year": 53428.3,
+        "share_based_payment": 19523.8,
+        "convertible_bond_fair_value_change": 0,
+        "adjusted_net_profit": 72952.1
+      },
+      {
+        "period": "9M2024",
+        "net_profit_for_year": 55349.1,
+        "share_based_payment": 17264.3,
+        "convertible_bond_fair_value_change": 0,
+        "adjusted_net_profit": 72612.4
+      },
+      {
+        "period": "9M2025",
+        "net_profit_for_year": 77908.4,
+        "share_based_payment": 15388.9,
+        "convertible_bond_fair_value_change": 0,
+        "adjusted_net_profit": 93861.8
+      }
+    ]
+  },
+  "revenue_breakdown": {
+    "by_product": [],
+    "by_geography_pct": []
+  },
+  "key_risks": [
+    "Demand for our products may fluctuate due to macroeconomic factors (including global and regional economic conditions, industry cyclicality, and evolving market dynamics) as well as our own operational capabilities.",
+    "The lithium-ion battery industry is highly competitive. If we fail to compete successfully, it may have a material adverse effect on our market share and market position.",
+    "Our R&D activities involve risks and uncertainties, and we may not be able to obtain expected benefits from our R&D efforts, which could negatively impact our competitiveness and profitability.",
+    "We may not be able to keep up with rapid technological changes and evolving industry standards, which could adversely affect our market position and render our products under development or in production, as well as our production facilities, uncompetitive or obsolete.",
+    "Our success depends on our customers' ability to successfully market and sell their end products and their decisions to place orders with us.",
+    "We experienced customer concentration during the track record period and may continue to face risks related to such concentration in the future.",
+    "Changes in tariffs may adversely affect our international sales, including potential further increases in US tariffs on goods imported from China.",
+    "We face risks related to sanctions, export control laws and regulations, and international trade policies, including new US export control rules expanding entity list controls.",
+    "We may be subject to US outbound investment rules in the future, which could adversely affect our ability to raise funds from US persons.",
+    "Concentration risk with major suppliers: purchases from our largest supplier accounted for up to 18.1% of total procurement in any given period."
+  ],
+  "use_of_proceeds": {
+    "total_rmb_10k": null,
+    "projects": [
+      {
+        "name": "Future Plans and Use of Proceeds",
+        "amount_rmb_10k": null,
+        "focus": "The prospectus references a section on 'Future Plans and [Redacted] Use of Proceeds' (page 386), but specific project names, amounts, and details have been redacted in this draft document. Proceeds are expected to support expansion of overseas production capacity and customer base diversification, among other strategic initiatives."
+      }
+    ]
+  },
+  "executive_summary": "Sunwoda Electronic Co., Ltd. is a Chinese lithium battery manufacturer covering consumer batteries, EV power batteries, and energy storage systems, holding the global number one position in mobile phone batteries (34.3% market share) and number two in laptop and tablet batteries (21.6% market share).\n\nRevenue grew from $720M in 2022 to $773M in 2024, with nine-month 2025 revenue of $600M, up roughly 14% year-over-year versus the same period in 2024. Adjusted net profit for the nine months ended 2025 was $130M, up from $100M in the comparable prior period. Gross profit trends also improved, with nine-month 2025 gross profit reaching $980M on reported figures — though some data points in the filing appear inconsistent and should be verified against the final prospectus. Net profit margins remain modest given the capital-intensive nature of the industry.\n\nThe company is seeking a listing on the Hong Kong Stock Exchange Main Board. The IPO size and price range are redacted in this draft filing. The founding family, led by Wang Mingwang (26.75% pre-IPO), are the controlling shareholders. Use of proceeds is partially redacted but is expected to fund overseas production capacity expansion and customer base diversification.\n\nThe three biggest risks are: escalating US tariffs and export controls targeting Chinese manufacturers, intense price competition in a commoditized battery market, and significant customer concentration that leaves revenue vulnerable to shifts in a small number of large customer relationships."
+}

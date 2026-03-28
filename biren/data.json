@@ -1,0 +1,238 @@
+{
+  "meta": {
+    "document": "IPO Prospectus (Draft)",
+    "issuer": "Shanghai Biren Technology Co., Ltd.",
+    "issuer_cn": "上海壁仞科技股份有限公司",
+    "filing_date": "2025-12-22",
+    "exchange": "Hong Kong Stock Exchange (HKEX)",
+    "board": "Main Board (Specialist Technology Company, Chapter 18C)",
+    "sponsor": "Not explicitly named in excerpt (Joint Sponsor / Overall Coordinator role indicated)",
+    "source_language": "Chinese",
+    "translation_note": "AI-translated for reference only"
+  },
+  "company": {
+    "name_en": "Shanghai Biren Technology Co., Ltd.",
+    "name_cn": "上海壁仞科技股份有限公司",
+    "founded": "2019",
+    "headquarters": "Shanghai, China",
+    "registered_capital_rmb": null,
+    "website": "www.birentech.com",
+    "industry": "Specialist Technology (Semiconductor / AI Chip)",
+    "controller": {
+      "name": "Zhang Wen",
+      "roles": [
+        "Founder",
+        "Chairman"
+      ]
+    },
+    "employees": {
+      "total": null,
+      "rd": null
+    }
+  },
+  "offering": {
+    "shares_offered_max": 247692800,
+    "post_ipo_shares_approx": null,
+    "offering_pct_approx": null,
+    "par_value_rmb": 0.02
+  },
+  "products": [],
+  "shareholders_pre_ipo": [
+    {
+      "name": "Zhang (Mr. Zhang) - Single Largest Shareholder Group (including Shanghai Biliren and Shanghai Zhuoren)",
+      "shares_10k": null,
+      "pct": 17.73,
+      "type": "Individual"
+    },
+    {
+      "name": "QM120",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Country Garden Ventures (碧桂園創投)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Huibi No. 2 (匯碧二號)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Sky9 Capital",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Zhuhai Gree (珠海格力)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "Institution"
+    },
+    {
+      "name": "Shenzhen Songhe (深圳市松禾)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    }
+  ],
+  "financials": {
+    "currency": "RMB",
+    "unit": "10K (万元)",
+    "income_statement": [
+      {
+        "period": "2022",
+        "revenue": 0.05,
+        "net_profit": null,
+        "gross_profit": 0.05,
+        "gross_margin_pct": null,
+        "rd_expense": null
+      },
+      {
+        "period": "2023",
+        "revenue": 620.3,
+        "net_profit": null,
+        "gross_profit": 474.03,
+        "gross_margin_pct": 76.4,
+        "rd_expense": null
+      },
+      {
+        "period": "2024",
+        "revenue": 3367.0,
+        "net_profit": null,
+        "gross_profit": 1791.88,
+        "gross_margin_pct": 53.2,
+        "rd_expense": null
+      },
+      {
+        "period": "H1_2024",
+        "revenue": 393.0,
+        "net_profit": null,
+        "gross_profit": 279.03,
+        "gross_margin_pct": 71.0,
+        "rd_expense": null
+      },
+      {
+        "period": "H1_2025",
+        "revenue": 589.0,
+        "net_profit": null,
+        "gross_profit": 188.0,
+        "gross_margin_pct": 31.9,
+        "rd_expense": null
+      }
+    ],
+    "balance_sheet": [],
+    "cash_flow": []
+  },
+  "revenue_breakdown": {
+    "by_product": [
+      {
+        "product": "Intelligent Computing Solutions (Product Sales)",
+        "gross_profit_2022_thousand_rmb": 0,
+        "gross_profit_2023_thousand_rmb": 47403,
+        "gross_profit_2024_thousand_rmb": 179188,
+        "gross_profit_H1_2024_thousand_rmb": 27903,
+        "gross_profit_H1_2025_thousand_rmb": 18127,
+        "gross_margin_2022_pct": null,
+        "gross_margin_2023_pct": 76.4,
+        "gross_margin_2024_pct": 53.2,
+        "gross_margin_H1_2024_pct": 71.0,
+        "gross_margin_H1_2025_pct": 31.2
+      },
+      {
+        "product": "Agency Fees",
+        "gross_profit_2022_thousand_rmb": 499,
+        "gross_profit_2023_thousand_rmb": 0,
+        "gross_profit_2024_thousand_rmb": 0,
+        "gross_profit_H1_2024_thousand_rmb": 0,
+        "gross_profit_H1_2025_thousand_rmb": 0,
+        "gross_margin_2022_pct": 100.0,
+        "gross_margin_2023_pct": null,
+        "gross_margin_2024_pct": null,
+        "gross_margin_H1_2024_pct": null,
+        "gross_margin_H1_2025_pct": null
+      },
+      {
+        "product": "Support or Extended Warranty Services",
+        "gross_profit_2022_thousand_rmb": 0,
+        "gross_profit_2023_thousand_rmb": 0,
+        "gross_profit_2024_thousand_rmb": 9,
+        "gross_profit_H1_2024_thousand_rmb": 0,
+        "gross_profit_H1_2025_thousand_rmb": 46,
+        "gross_margin_2022_pct": null,
+        "gross_margin_2023_pct": null,
+        "gross_margin_2024_pct": 100.0,
+        "gross_margin_H1_2024_pct": null,
+        "gross_margin_H1_2025_pct": 100.0
+      },
+      {
+        "product": "Intelligent Computing Cluster Leasing Revenue",
+        "gross_profit_2022_thousand_rmb": 0,
+        "gross_profit_2023_thousand_rmb": 0,
+        "gross_profit_2024_thousand_rmb": 0,
+        "gross_profit_H1_2024_thousand_rmb": 0,
+        "gross_profit_H1_2025_thousand_rmb": 596,
+        "gross_margin_2022_pct": null,
+        "gross_margin_2023_pct": null,
+        "gross_margin_2024_pct": null,
+        "gross_margin_H1_2024_pct": null,
+        "gross_margin_H1_2025_pct": 84.3
+      }
+    ],
+    "by_geography_pct": [],
+    "summary_gross_profit_thousand_rmb": {
+      "2022": 499,
+      "2023": 47403,
+      "2024": 179197,
+      "H1_2024": 27903,
+      "H1_2025": 18769
+    },
+    "summary_gross_margin_pct": {
+      "2022": 100.0,
+      "2023": 76.4,
+      "2024": 53.2,
+      "H1_2024": 71.0,
+      "H1_2025": 31.9
+    },
+    "summary_revenue_million_rmb": {
+      "H1_2024": 39.3,
+      "H1_2025": 58.9
+    }
+  },
+  "key_risks": [
+    "Limited operating history; unproven ability to develop and produce products at scale, making it difficult to assess the business and predict future performance.",
+    "Future commercial success of products and solutions depends on market acceptance and customer demand; failure to accurately estimate customer needs may lead to supply-demand imbalance.",
+    "Failure to establish, expand, and optimize an effective sales network may prevent the company from generating revenue as planned.",
+    "Supply chain disruptions may delay development plans.",
+    "Business success depends on timely launch of products or solutions with good functionality and performance levels to keep pace with major industry trends.",
+    "Heavy investment in R&D may not yield expected results; failure to develop, enhance, or adapt to new technologies may render products obsolete.",
+    "Inability to attract, hire, retain, and motivate key executives, technical personnel, and employees may harm the business.",
+    "May be unable to successfully compete in the intelligent computing solutions industry.",
+    "Risks related to international trade policies, export controls, economic sanctions, geopolitical tensions, and trade protectionism may adversely affect business and financial results.",
+    "Since October 17, 2023, certain group entities have been added to the BIS Entity List, restricting their ability to purchase or otherwise obtain certain commodities, software, and technologies.",
+    "Failure to obtain and maintain patent and other intellectual property protection of sufficient breadth may allow third parties to develop and commercialize similar products and technologies, directly competing with the company.",
+    "Reliance on non-patented proprietary technology, trade secrets, processes, and know-how, which may be difficult to protect.",
+    "May face intellectual property infringement claims that are time-consuming or costly to defend, may generate negative publicity, and divert financial and management resources.",
+    "The company has incurred net losses since inception and may continue to incur net losses for the foreseeable future.",
+    "Cash net outflows from operating activities during the track record period.",
+    "As a specialist technology company listed under Chapter 18C of the Listing Rules, securities involve higher investment risks including share price volatility and overvaluation risks.",
+    "Intelligent computing solutions are at a relatively early stage of commercialization, with revenue only beginning in 2023.",
+    "Declining current ratio (from 8.74 in 2022 to 0.26 as of June 30, 2025), indicating potential liquidity pressures."
+  ],
+  "use_of_proceeds": {
+    "total_rmb_10k": null,
+    "projects": [
+      {
+        "name": "Working capital and general corporate purposes",
+        "amount_rmb_10k": null,
+        "focus": "Approximately 10% of estimated net proceeds from the Global Offering allocated as working capital and other general corporate purposes; total estimated net proceeds approximately HKD 4,036.7 million (at the lower end of the indicative offer price range of HKD 17.00 per share, before exercise of over-allotment and upsize options). Specific project-level allocation details were not disclosed in the excerpted sections of the prospectus."
+      }
+    ]
+  },
+  "executive_summary": "Shanghai Biren Technology is a Chinese AI chip and intelligent computing solutions company developing GPU-like processors for data center and AI workloads. Revenue grew from essentially zero in 2022 to roughly $4.6M in 2023 and $46.5M in 2024, reflecting genuine commercial traction but from a tiny base. Gross margins have compressed sharply, falling from 76% in 2023 to 53% in full-year 2024 and further to 32% in H1 2025, suggesting pricing pressure or rising hardware costs. The company is loss-making with negative operating cash flow since inception.\n\nBiren is raising up to approximately $517M at a maximum offer price of HK$19.60 per share, listing 247.7 million H Shares on the Hong Kong Stock Exchange Main Board under the specialist technology Chapter 18C framework (stock code: 6082). The largest pre-IPO shareholder is founder Mr. Zhang at 17.73%, alongside backers including Sky9 Capital, Country Garden Ventures, Zhuhai Gree, and Shenzhen Songhe. Roughly 10% of net proceeds go to working capital; specific project allocations were not disclosed.\n\nThe three biggest risks are: first, Biren entities are on the US BIS Entity List since October 2023, restricting access to key foreign components and technology; second, the company is pre-profit with a deteriorating liquidity position, with its current ratio collapsing from 8.74 to 0.26 by mid-2025; third, it operates in a fiercely competitive AI chip market where commercial scale remains unproven."
+}

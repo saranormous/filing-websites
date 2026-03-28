@@ -1,0 +1,237 @@
+{
+  "meta": {
+    "document": "IPO Prospectus (Draft - Registration Version)",
+    "issuer": "Cambricon Technologies Corporation Limited",
+    "issuer_cn": "中科寒武纪科技股份有限公司",
+    "filing_date": "2020-06-03",
+    "exchange": "Shanghai Stock Exchange",
+    "board": "STAR Market (Ke Chuang Ban)",
+    "sponsor": "CITIC Securities Co., Ltd.",
+    "source_language": "Chinese",
+    "translation_note": "AI-translated for reference only"
+  },
+  "company": {
+    "name_en": "Cambricon Technologies Corporation Limited",
+    "name_cn": "中科寒武纪科技股份有限公司",
+    "founded": "2016",
+    "headquarters": "Room 1601, 16/F, Tower D, Zhizhen Building, No. 7 Zhichun Road, Haidian District, Beijing",
+    "registered_capital_rmb": null,
+    "website": null,
+    "industry": "Artificial Intelligence Chips (Integrated Circuit Design)",
+    "controller": {
+      "name": "Chen Tianshi",
+      "roles": [
+        "Chairman",
+        "CEO"
+      ]
+    },
+    "employees": {
+      "total": null,
+      "rd": null
+    }
+  },
+  "offering": {
+    "shares_offered_max": 40100000,
+    "post_ipo_shares_approx": 400100000,
+    "offering_pct_approx": 10.0,
+    "par_value_rmb": 1.0
+  },
+  "products": [
+    {
+      "name": "Terminal Intelligent Processor IP - Cambricon 1A",
+      "type": "Processor IP Licensing",
+      "specs": "Intelligent processor IP for terminal/edge smart devices; licensed to customers such as HiSilicon for integration into SoC chips"
+    },
+    {
+      "name": "Terminal Intelligent Processor IP - Cambricon 1H",
+      "type": "Processor IP Licensing",
+      "specs": "Intelligent processor IP for terminal/edge smart devices; licensed to customers such as HiSilicon for integration into SoC chips"
+    },
+    {
+      "name": "Cloud Intelligent Chip and Accelerator Card - Siyuan 100 (MLU100)",
+      "type": "Cloud AI Chip / Accelerator Card",
+      "specs": "Cloud-side AI inference chip and accelerator card; used in cloud servers and data centers"
+    },
+    {
+      "name": "Cloud Intelligent Chip and Accelerator Card - Siyuan 290 (MLU290)",
+      "type": "Cloud AI Chip / Accelerator Card",
+      "specs": "Next-generation cloud-side AI chip; competes with NVIDIA A100/V100; expected to achieve scaled revenue in 2021"
+    },
+    {
+      "name": "Edge Intelligent Chip and Accelerator Card - Siyuan 220 (MLU220)",
+      "type": "Edge AI Chip / Accelerator Card",
+      "specs": "Edge-side AI chip and M.2 accelerator card; officially released November 2019; targeted at AI industry clients and internet companies; expected scaled shipments in 2020"
+    },
+    {
+      "name": "Intelligent Computing Cluster System",
+      "type": "AI Computing Infrastructure System",
+      "specs": "Integrated AI computing cluster system based on proprietary cloud-side AI chips and software; deployed in data centers and research institutions (e.g., Hengqin Advanced Intelligent Computing Platform)"
+    },
+    {
+      "name": "Cambricon Neuware",
+      "type": "Basic System Software Platform",
+      "specs": "Proprietary foundational software platform supporting cloud-edge-terminal integrated AI workloads; covers training and inference; ecosystem still developing relative to NVIDIA CUDA"
+    }
+  ],
+  "shareholders_pre_ipo": [
+    {
+      "name": "Jinshi Yinyi (CITIC Securities affiliated fund)",
+      "shares_10k": 428.55,
+      "pct": 1.19,
+      "type": "VC"
+    },
+    {
+      "name": "Ningbo Hangao (CITIC affiliated)",
+      "shares_10k": 1233.91,
+      "pct": 3.43,
+      "type": "VC"
+    },
+    {
+      "name": "Zhongjin Haomo (CICC affiliated fund)",
+      "shares_10k": 428.55,
+      "pct": 1.19,
+      "type": "VC"
+    }
+  ],
+  "financials": {
+    "currency": "RMB",
+    "unit": "10K (万元)",
+    "income_statement": [
+      {
+        "period": "2017",
+        "revenue": 784.33,
+        "net_profit": -38070.04,
+        "gross_margin_pct": null,
+        "rd_expense": null,
+        "net_profit_excluding_nonrecurring": -2886.07,
+        "share_based_compensation": 36398.57
+      },
+      {
+        "period": "2018",
+        "revenue": 11702.52,
+        "net_profit": -4104.65,
+        "gross_margin_pct": null,
+        "rd_expense": null,
+        "net_profit_excluding_nonrecurring": -17191.5,
+        "share_based_compensation": 17.48
+      },
+      {
+        "period": "2019",
+        "revenue": 44393.85,
+        "net_profit": -117912.53,
+        "gross_margin_pct": null,
+        "rd_expense": null,
+        "net_profit_excluding_nonrecurring": -37673.31,
+        "share_based_compensation": 94379.44,
+        "net_profit_attributable_to_parent": -117898.56
+      }
+    ],
+    "balance_sheet": [
+      {
+        "date": "2019-12-31",
+        "total_assets": null,
+        "total_liabilities": null,
+        "equity": null,
+        "cash": null,
+        "retained_earnings": -85463.7
+      }
+    ],
+    "cash_flow": []
+  },
+  "revenue_breakdown": {
+    "by_product": [
+      {
+        "product": "Terminal Intelligent Processor IP Licensing",
+        "2017": 771.27,
+        "2018": 11666.21,
+        "2019": 6877.12,
+        "pct_of_revenue_2017": 98.95,
+        "pct_of_revenue_2018": 99.69,
+        "pct_of_revenue_2019": 15.49,
+        "huawei_hisilicon_sales_2017": 771.27,
+        "huawei_hisilicon_sales_2018": 11425.64,
+        "huawei_hisilicon_sales_2019": 6365.8,
+        "huawei_pct_of_ip_revenue_2017": 100.0,
+        "huawei_pct_of_ip_revenue_2018": 97.94,
+        "huawei_pct_of_ip_revenue_2019": 92.56
+      },
+      {
+        "product": "Cloud Intelligent Chip and Accelerator Card",
+        "2017": null,
+        "2018": null,
+        "2019": 7888.24,
+        "related_party_cambricon_sales_2019": 6384.43,
+        "related_party_pct_2019": 80.94,
+        "non_related_party_sales_2019": 1503.81,
+        "non_related_party_pct_2019": 19.06
+      },
+      {
+        "product": "Intelligent Computing Cluster System",
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "hengqin_phase1_sales_to_dawning_2019": 6344.83,
+        "hengqin_phase2_revenue_2019": 20708.35,
+        "hengqin_total_pct_of_2019_revenue": 60.94
+      }
+    ],
+    "by_geography_pct": [],
+    "procurement": [
+      {
+        "item": "Top 5 direct suppliers total procurement",
+        "2017": 1422.28,
+        "2018": 20315.49,
+        "2019": 36271.17,
+        "pct_of_total_procurement_2017": 92.64,
+        "pct_of_total_procurement_2018": 82.53,
+        "pct_of_total_procurement_2019": 66.49
+      }
+    ],
+    "customer_concentration": [
+      {
+        "item": "Top 5 customers as % of revenue",
+        "2017": 100.0,
+        "2018": 99.95,
+        "2019": 95.44
+      }
+    ],
+    "revenue_growth": [
+      {
+        "period": "2018_vs_2017",
+        "growth_pct": 1392.05
+      },
+      {
+        "period": "2019_vs_2018",
+        "growth_pct": 279.35
+      }
+    ]
+  },
+  "key_risks": [
+    "Short operating history (founded March 2016) with rapidly changing business structure and commercial model; uncertainty about sustainable operations and future development prospects",
+    "Continuous large R&D expenditures resulting in persistent losses; risk that cumulative unrecovered losses will further expand if business expansion and revenue growth are adversely affected",
+    "Heavy dependence on Huawei HiSilicon for IP licensing revenue (100%/97.94%/92.56% of terminal AI processor IP revenue in 2017/2018/2019); Huawei HiSilicon chose to develop its own AI chips since 2018, causing IP licensing revenue to decline 41.23% in 2019, with further decline expected in 2020",
+    "Limited market demand for intelligent processor IP; competition intensifying from NVIDIA, Intel, Qualcomm, MediaTek, Huawei HiSilicon, and ARM entering the terminal AI processor IP market",
+    "High concentration of cloud AI chip and accelerator card sales to related party Sugon (Zhongke Shuguang) at 80.94% of cloud chip revenue in 2019; risk of sharp revenue decline if Sugon reduces purchases and new non-related customers cannot be expanded in time",
+    "Slow customer expansion for cloud AI chips and accelerator cards due to lengthy certification, testing, adaptation and porting processes required by customers before adoption",
+    "Siyuan 290 cloud AI chip faces intense competition from NVIDIA A100/V100 and Huawei HiSilicon Ascend 910; NVIDIA has superior software ecosystem (CUDA), more mature sales network, and earlier customer adoption timeline",
+    "Uncertainty in edge AI chip (Siyuan 220) business: product launched November 2019, still in sample testing phase with customers; risk that scaled shipments in 2020 may not be achieved as planned",
+    "Sustainability risk of intelligent computing cluster system business: heavily concentrated in two projects (97.29% of 2019 revenue); limited backlog beyond one pending order worth RMB 185.71 million; risk of slowdown in downstream AI data center construction demand",
+    "Risk that existing orders and contracts cannot be executed on schedule due to COVID-19, industry policy changes, international political/economic environment, macroeconomic conditions, and downstream customer production/sales disruptions",
+    "Risk of adverse impact from cooperation with Institute of Computing Technology, Chinese Academy of Sciences (ICT-CAS) on future business operations and independent market development capabilities",
+    "Technology risk: AI chip technology is still in early stages; risk of failure to keep pace with rapid technological change or develop competitive next-generation products",
+    "Financial risk: persistent losses and potential need for additional financing; risk of dilution or inability to raise funds on favorable terms",
+    "Supply chain and foundry risk: dependence on third-party chip foundries (fabless model); risk of supply disruptions or inability to obtain advanced process nodes",
+    "Risk related to IPO fundraising projects not achieving expected returns or not being completed on schedule"
+  ],
+  "use_of_proceeds": {
+    "total_rmb_10k": null,
+    "projects": [
+      {
+        "name": "Note: Specific use-of-proceeds details (project names, amounts) were referenced in the prospectus table of contents under 'Section II, Item VIII: Use of Fundraising Proceeds' but the detailed project breakdown was not included in the provided text excerpts. Exact figures are not available from the supplied document pages.",
+        "amount_rmb_10k": null,
+        "focus": "Based on context, proceeds are expected to be used for: R&D of next-generation AI chips (cloud, edge, terminal), software ecosystem development (Cambricon Neuware platform), market expansion and sales network buildout, and general working capital"
+      }
+    ]
+  },
+  "executive_summary": "Cambricon Technologies is a Beijing-based artificial intelligence chip designer focused on intelligent processors for cloud, edge, and terminal applications, including its Siyuan series AI accelerator cards and licensed processor IP.\n\nFinancially, the company is pre-profit and burning cash. Revenue grew sharply from $1.1M in 2017 to $16.1M in 2018 (up 1,392%) and $61.3M in 2019 (up 279%), driven largely by AI processor IP licensing to Huawei HiSilicon and a large AI computing cluster project. Net losses attributable to shareholders reached $162.8M in 2019, heavily inflated by $130.2M in share-based compensation. The underlying operating loss excluding non-recurring items was $52.0M. Gross margins are not disclosed.\n\nCambricon is raising up to 10% of post-IPO shares (approximately 40.1 million shares) on the Shanghai Stock Exchange STAR Market, sponsored by CITIC Securities. Proceeds will fund next-generation AI chip R&D, software ecosystem development, and working capital. Notable pre-IPO investors include CITIC and CICC affiliated funds.\n\nThe three biggest risks are: first, near-total historical dependence on Huawei HiSilicon for IP licensing revenue, which is already declining as Huawei builds its own chips; second, extreme customer concentration with 81% of cloud chip revenue coming from related party Sugon; and third, intense competition from NVIDIA, whose mature CUDA software ecosystem gives it a substantial and durable advantage over Cambricon's still-developing Neuware platform."
+}

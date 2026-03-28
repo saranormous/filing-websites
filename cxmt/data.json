@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "document": "IPO Prospectus (Draft)",
+    "issuer": "CXMT Corporation",
+    "issuer_cn": "长鑫科技集团股份有限公司",
+    "filing_date": "2026-03-15",
+    "exchange": "Shanghai Stock Exchange",
+    "board": "STAR Market",
+    "sponsor": "China International Capital Corporation Limited; CITIC Securities Co., Ltd.",
+    "source_language": "Chinese",
+    "translation_note": "AI-translated for reference only"
+  },
+  "company": {
+    "name_en": "CXMT Corporation",
+    "name_cn": "长鑫科技集团股份有限公司",
+    "founded": null,
+    "headquarters": "No. 388 Xingye Avenue, Airport Industrial Park, Hefei Economic and Technological Development Zone, Anhui Province",
+    "website": null,
+    "industry": "Integrated Circuit - DRAM (Dynamic Random Access Memory) Research, Design, Manufacturing and Sales; China's largest and most technically advanced integrated DRAM R&D, design and manufacturing enterprise; ranked #1 in China and #4 globally by production capacity",
+    "controller": {
+      "name": "Zhu Yiming",
+      "roles": [
+        "Chairman of the Board"
+      ]
+    },
+    "employees": {
+      "total": null,
+      "rd": null
+    }
+  },
+  "offering": {
+    "shares_offered_max": 106222599.99,
+    "post_ipo_shares_approx": 708150574.68,
+    "offering_pct_approx": 10.0,
+    "par_value_rmb": 1.0
+  },
+  "financials": {
+    "currency": "RMB",
+    "unit": "10K (万元)",
+    "income_statement": [],
+    "balance_sheet": [],
+    "cash_flow": []
+  },
+  "revenue_breakdown": {
+    "by_product": [],
+    "by_geography_pct": []
+  },
+  "products": [
+    {
+      "name": "DRAM Memory Products",
+      "type": "Dynamic Random Access Memory",
+      "specs": "Including DDR5, LPDDR5/5X and other advanced memory products; used in data centers, mobile devices and terminals, communications, intelligent manufacturing and other key application areas"
+    }
+  ],
+  "shareholders_pre_ipo": [
+    {
+      "name": "National Integrated Circuit Industry Investment Fund Phase II (Big Fund Phase II)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "Institution"
+    }
+  ],
+  "use_of_proceeds": {
+    "total_rmb_10k": null,
+    "projects": [
+      {
+        "name": "Memory Wafer Manufacturing Production Line Technology Upgrade and Renovation Project",
+        "amount_rmb_10k": null,
+        "focus": "Upgrade and transformation of existing DRAM wafer manufacturing production lines to improve production capacity, reduce unit costs, and enhance manufacturing process levels"
+      },
+      {
+        "name": "DRAM Memory Technology Upgrade Project",
+        "amount_rmb_10k": null,
+        "focus": "Accelerate DRAM production capacity construction and process technology upgrades, expanding production scale and enhancing core competitiveness"
+      },
+      {
+        "name": "Dynamic Random Access Memory Forward-Looking Technology Research and Development Project",
+        "amount_rmb_10k": null,
+        "focus": "Continuous R&D investment in frontier and forward-looking DRAM technologies to maintain technological leadership, improve product performance (higher storage density, lower power consumption, faster read/write speeds), and enhance the company's risk resistance capability"
+      }
+    ]
+  },
+  "key_risks": [
+    "STAR Market investment risk: The company's shares are intended to be listed on the STAR Market after this offering. This market carries higher investment risks. STAR Market companies are characterized by large R&D investment, high operational risks, unstable performance, and high delisting risks. Investors face significant market risks and should fully understand these risks before making investment decisions.",
+    "Technology iteration risk: The DRAM industry undergoes rapid technology iteration. Products such as DDR5 and LPDDR5/5X are accelerating penetration into downstream markets. The company must continuously invest in R&D and maintain efficient technology iteration capabilities. Failure to keep pace with technology trends could result in the company losing its competitive advantage and market position.",
+    "Net loss risk: During the reporting period, the company has been in a net loss position, though the magnitude of losses has been narrowing rapidly. There is no guarantee that the company will achieve profitability in the near term. Investors should be aware of the risk associated with the company's ongoing losses.",
+    "Capacity gap risk: Although the company ranks #1 in China and #4 globally in terms of production capacity, there remains a significant gap compared to the top three international DRAM manufacturers (Samsung, SK Hynix, Micron). The company's capacity is also far below domestic market demand. If the company fails to ramp up capacity as planned, its competitive position may deteriorate.",
+    "Supply chain and technology sanctions risk: As a Chinese DRAM manufacturer, the company is exposed to the risk of export controls, sanctions, and restrictions on advanced semiconductor equipment, materials, and technology from foreign governments (particularly the United States). Such restrictions could impair the company's ability to procure critical manufacturing equipment and materials, potentially limiting production capacity expansion and technology upgrades.",
+    "High capital expenditure requirement risk: DRAM manufacturing is an extremely capital-intensive industry requiring continuous and substantial investment in production equipment, facilities, and R&D. The company's ability to finance ongoing capital expenditures through the IPO proceeds and other financing channels cannot be guaranteed, and insufficient funding could delay capacity expansion and technology development plans.",
+    "Industry cyclicality risk: The DRAM industry is subject to significant cyclical fluctuations in supply and demand, which directly affect product prices and the company's revenues and profitability. A downturn in DRAM prices could materially and adversely affect the company's financial performance.",
+    "Key talent retention risk: The integrated circuit industry is talent-intensive, and attracting and retaining top global engineering and technical talent is critical to the company's sustained development. The company may face challenges in competing for talent against well-established international peers with greater resources and brand recognition.",
+    "Intellectual property risk: DRAM technology involves highly complex and extensive intellectual property. The company may face patent infringement claims from global competitors or may be unable to adequately protect its own intellectual property, which could result in litigation, licensing costs, or restrictions on product sales.",
+    "Customer concentration risk: The company's revenues may be concentrated among a limited number of customers. Loss of key customers or deterioration in relationships with major customers could significantly impact the company's revenue and business operations.",
+    "Geopolitical and trade risk: As a Chinese semiconductor company, the company is exposed to risks arising from geopolitical tensions, trade disputes, and international political developments, which could adversely impact its overseas market expansion, supply chain security, and overall business operations.",
+    "Domestic market self-sufficiency risk: China's domestic DRAM self-sufficiency rate remains low, and the market is heavily dependent on imports from international manufacturers. While this represents a market opportunity, it also means the company faces intense competition from established global players with stronger brand recognition, deeper customer relationships, and more advanced technologies.",
+    "R&D investment uncertainty risk: The company's R&D projects, including forward-looking technology research, may not achieve expected results within the projected timeframe or budget. Technology development in the DRAM sector involves significant uncertainty, and R&D failures or delays could negatively impact the company's competitive position and financial condition.",
+    "Production yield and quality risk: DRAM manufacturing involves hundreds of highly complex process steps including photolithography, etching, thin film deposition, diffusion, ion implantation, chemical cleaning, and chemical mechanical polishing. Any failure to maintain high production yields and product quality standards could lead to significant financial losses and damage to the company's reputation.",
+    "Regulatory and compliance risk: As a listed company on the STAR Market, the company will be subject to heightened regulatory scrutiny and compliance requirements from the CSRC and Shanghai Stock Exchange. Failure to comply with applicable laws and regulations could result in penalties, reputational damage, or restrictions on business operations."
+  ]
+}

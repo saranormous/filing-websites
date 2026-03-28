@@ -1,0 +1,291 @@
+{
+  "meta": {
+    "document": "IPO Prospectus (Draft)",
+    "issuer": "Knowledge Atlas Technology Joint Stock Company Limited",
+    "issuer_cn": "北京智譜華章科技股份有限公司",
+    "filing_date": "2025-12-30",
+    "exchange": "The Stock Exchange of Hong Kong Limited (HKEX)",
+    "board": "Main Board (Specialist Technology Company, Chapter 18C)",
+    "sponsor": "Not explicitly named in extracted text (Sole Sponsor, Sponsor-Overall Coordinator listed without name)",
+    "source_language": "Chinese",
+    "translation_note": "AI-translated for reference only"
+  },
+  "company": {
+    "name_en": "Knowledge Atlas Technology Joint Stock Company Limited",
+    "name_cn": "北京智譜華章科技股份有限公司",
+    "founded": "2019",
+    "headquarters": "Beijing, People's Republic of China",
+    "registered_capital_rmb": null,
+    "website": "www.zhipuai.cn",
+    "industry": "Specialist Technology / Artificial Intelligence",
+    "controller": {
+      "name": "Tang Jie",
+      "roles": [
+        "CEO",
+        "Co-founder"
+      ]
+    },
+    "employees": {
+      "total": null,
+      "rd": null
+    }
+  },
+  "offering": {
+    "shares_offered_max": 37419500,
+    "post_ipo_shares_approx": null,
+    "offering_pct_approx": null,
+    "par_value_rmb": 0.1
+  },
+  "financials": {
+    "currency": "RMB",
+    "unit": "10K (万元)",
+    "income_statement": [
+      {
+        "period": "2022",
+        "revenue": 574,
+        "net_profit": null,
+        "gross_margin_pct": 50,
+        "rd_expense": null
+      },
+      {
+        "period": "2023",
+        "revenue": 1245,
+        "net_profit": null,
+        "gross_margin_pct": 50,
+        "rd_expense": null
+      },
+      {
+        "period": "2024",
+        "revenue": 3124,
+        "net_profit": null,
+        "gross_margin_pct": 50,
+        "rd_expense": null
+      },
+      {
+        "period": "2025H1",
+        "revenue": 1909,
+        "net_profit": null,
+        "gross_margin_pct": 50,
+        "rd_expense": 15947
+      },
+      {
+        "period": "2024H1",
+        "revenue": null,
+        "net_profit": null,
+        "gross_margin_pct": null,
+        "rd_expense": 8592
+      }
+    ],
+    "balance_sheet": [],
+    "cash_flow": []
+  },
+  "revenue_breakdown": {
+    "by_product": [],
+    "by_geography_pct": [],
+    "market_share": [
+      {
+        "rank": 1,
+        "company": "Company A",
+        "type": "Non-independent",
+        "revenue_billion_rmb": 0.44,
+        "market_share_pct": 9.4
+      },
+      {
+        "rank": 2,
+        "company": "The Company (ZhipuAI)",
+        "type": "Independent",
+        "revenue_billion_rmb": 0.31,
+        "market_share_pct": 6.6
+      },
+      {
+        "rank": 3,
+        "company": "Company B",
+        "type": "Non-independent",
+        "revenue_billion_rmb": 0.3,
+        "market_share_pct": 6.4
+      },
+      {
+        "rank": 4,
+        "company": "Company C",
+        "type": "Non-independent",
+        "revenue_billion_rmb": 0.29,
+        "market_share_pct": 6.1
+      },
+      {
+        "rank": 5,
+        "company": "Company D",
+        "type": "Non-independent",
+        "revenue_billion_rmb": 0.22,
+        "market_share_pct": 4.7
+      }
+    ],
+    "customer_concentration": [
+      {
+        "period": "2022",
+        "top5_customers_pct": 55.4,
+        "largest_customer_pct": 15.4
+      },
+      {
+        "period": "2023",
+        "top5_customers_pct": 61.5,
+        "largest_customer_pct": 14.7
+      },
+      {
+        "period": "2024",
+        "top5_customers_pct": 45.5,
+        "largest_customer_pct": 19.0
+      },
+      {
+        "period": "2025H1",
+        "top5_customers_pct": 40.0,
+        "largest_customer_pct": 11.0
+      }
+    ],
+    "supplier_concentration": [
+      {
+        "period": "2022",
+        "top5_suppliers_pct": 54.5,
+        "largest_supplier_pct": 33.1
+      },
+      {
+        "period": "2023",
+        "top5_suppliers_pct": 53.6,
+        "largest_supplier_pct": 16.4
+      },
+      {
+        "period": "2024",
+        "top5_suppliers_pct": 47.3,
+        "largest_supplier_pct": 15.6
+      },
+      {
+        "period": "2025H1",
+        "top5_suppliers_pct": 50.2,
+        "largest_supplier_pct": 13.4
+      }
+    ],
+    "other_metrics": {
+      "institutional_customers": 8000,
+      "institutional_customers_date": "2025-06-30",
+      "devices_empowered_million": 80,
+      "open_source_downloads_million_plus": 45,
+      "revenue_cagr_2022_to_2024_pct_plus": 130,
+      "gross_margin_pct_all_periods_plus": 50,
+      "pre_ipo_funds_raised_million_rmb": 8360,
+      "rd_team_headcount": 657,
+      "rd_team_headcount_date": "2025-06-30",
+      "registered_patents_china": 86,
+      "invention_patents_china": 84,
+      "patent_applications_china": 232,
+      "copyrights_china": 160,
+      "trademarks_china": 314,
+      "domain_names_china": 59,
+      "offer_price_hkd": 116.2
+    }
+  },
+  "products": [],
+  "shareholders_pre_ipo": [
+    {
+      "name": "Junlian Xiangdao (Legend Capital SII)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Junlian Jinfan (Legend Capital SII)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Social Security Zhongguancun Innovation Fund (Legend Capital SII)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "Institution"
+    },
+    {
+      "name": "Tianjin Sankuai (Meituan SII)",
+      "shares_10k": null,
+      "pct": 4.27,
+      "type": "Institution"
+    },
+    {
+      "name": "Qiming Rongqian (Qiming Venture SII)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Qiming Rongkai (Qiming Venture SII)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Xinglian Zhaoji",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Tongzhi Investments",
+      "shares_10k": null,
+      "pct": null,
+      "type": "VC"
+    },
+    {
+      "name": "Shanghai Yunya (Ant Group)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "Institution"
+    },
+    {
+      "name": "Shanghai Feiya (Ant Group)",
+      "shares_10k": null,
+      "pct": null,
+      "type": "Institution"
+    },
+    {
+      "name": "Haihe Fuxin Youda Fund",
+      "shares_10k": null,
+      "pct": null,
+      "type": "Institution"
+    },
+    {
+      "name": "Trend Mega",
+      "shares_10k": null,
+      "pct": null,
+      "type": "Institution"
+    }
+  ],
+  "use_of_proceeds": {
+    "total_rmb_10k": null,
+    "projects": [
+      {
+        "name": "Use of Proceeds — Details not fully extracted from provided text",
+        "amount_rmb_10k": null,
+        "focus": "The prospectus references a 'Future Plans and Use of Proceeds' section on page 299, but the detailed breakdown of proceeds allocation was not included in the provided text excerpts. Full details are available in the complete prospectus."
+      }
+    ]
+  },
+  "ip": {
+    "patents_total": null
+  },
+  "key_risks": [
+    "The AI industry is characterized by constant changes. If we are not able to upgrade, enhance or innovate our technologies and services, our business, results of operations, financial condition and prospects could be adversely affected.",
+    "We have made and expect to continue to make substantial investments in R&D. If we cannot continuously invest in our R&D activities while achieving technological innovation, our business, results of operations, financial condition and prospects may be materially and adversely affected.",
+    "The development of AGI is still at an early stage and there are substantial uncertainties in the future realization of AGI.",
+    "We are exposed to risks relating to our R&D team and our senior management.",
+    "We rely on third parties to provide computing resources to us, and any disruption of their services or fluctuation of prices could adversely affect our business, results of operations and financial condition.",
+    "Our commercial success depends on the performance of our models. Any failure in research and development efforts to offer high-quality models and solutions could harm our business, results of operations, financial condition and prospects.",
+    "The AI industry is subject to evolving and extensive regulation in China. Future laws and regulations may impose additional requirements and other obligations that could materially and adversely affect our business, results of operations, financial condition and prospects.",
+    "We may not be able to obtain or maintain adequate intellectual property rights protection for our business, or the scope of such intellectual property rights protection may not be sufficiently broad.",
+    "We may not be able to compete effectively against current or future competitors.",
+    "The size of our addressable market and the demand for our solutions may not increase as rapidly as we anticipate due to a variety of factors, which would materially and adversely affect our business, results of operations, financial condition and prospects.",
+    "Any failure of our MaaS platform to perform as required could harm our business, results of operations, financial condition and prospects.",
+    "We have a limited track record in the commercialization of our business.",
+    "Risks related to our financial condition and need for additional capital.",
+    "Risks related to the jurisdictions where we conduct business.",
+    "Risks related to the Global Offering."
+  ],
+  "executive_summary": "Knowledge Atlas Technology (ZhipuAI, stock code 2513) is a Beijing-based artificial intelligence company developing large language models and AI solutions for enterprise customers in China.\n\nRevenue has grown at a compound annual rate exceeding 130% from 2022 to 2024, rising from roughly $792K to $1.7M to $4.3M across those years (figures in 万元 units: 574, 1,245, and 3,124 respectively). First-half 2025 revenue reached approximately $2.6M. Gross margins have consistently exceeded 50% across all reported periods. R&D spending is heavy, totaling approximately $22M in the first half of 2025 alone, nearly double the $11.8M spent in H1 2024. The company serves over 8,000 institutional customers and has empowered roughly 80 million devices.\n\nZhipuAI is listing on the Hong Kong Stock Exchange Main Board under the Specialist Technology (Chapter 18C) framework, offering 37.4 million H shares at HK$116.20 each, implying gross proceeds of approximately $557M. Prior to IPO, the company raised the equivalent of roughly $1.15B across previous funding rounds. Notable backers include Legend Capital, Qiming Venture Partners, Meituan (4.27% stake), and Ant Group. Proceeds are intended to fund continued R&D investment and business expansion, though a detailed allocation was not disclosed in the extracted filing.\n\nThe three most significant risks are intense competition and rapid technological change in AI that could render current models obsolete, heavy dependence on third-party computing infrastructure, and evolving Chinese regulatory requirements governing AI that could impose material new compliance burdens."
+}

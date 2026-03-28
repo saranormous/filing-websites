@@ -1,0 +1,323 @@
+{
+  "meta": {
+    "document": "IPO Prospectus (Global Offering)",
+    "issuer": "Black Sesame International Holding Limited",
+    "issuer_cn": "黑芝麻智能國際控股有限公司",
+    "filing_date": "2024-07-31",
+    "exchange": "The Stock Exchange of Hong Kong Limited (HKEX)",
+    "board": "Main Board (Specialist Technology Company, Chapter 18C)",
+    "sponsor": "Not individually named in extracted text (Joint Sponsors listed without names in excerpt)",
+    "source_language": "Chinese/English (bilingual)",
+    "translation_note": "AI-translated for reference only"
+  },
+  "company": {
+    "name_en": "Black Sesame International Holding Limited",
+    "name_cn": "黑芝麻智能國際控股有限公司",
+    "founded": "2016",
+    "headquarters": "Cayman Islands (incorporated); operational headquarters not specified in extracted text",
+    "registered_capital_rmb": null,
+    "website": "www.blacksesame.com.cn",
+    "industry": "Specialist Technology – Automotive-grade Intelligent Driving Chips / Autonomous Driving SoC",
+    "controller": {
+      "name": "Dan Meng",
+      "roles": [
+        "Chairman",
+        "CEO"
+      ]
+    },
+    "employees": {
+      "total": null,
+      "rd": null
+    }
+  },
+  "offering": {
+    "shares_offered_max": 37000000,
+    "post_ipo_shares_approx": null,
+    "offering_pct_approx": null,
+    "par_value_rmb": null,
+    "par_value_usd": 0.0001,
+    "max_offer_price_hkd": 30.3,
+    "min_offer_price_hkd": 28.0,
+    "stock_code": "2533",
+    "hong_kong_offer_shares": 1850000,
+    "international_offer_shares": 35150000,
+    "listing_date": "2024-08-08",
+    "price_determination_date": "2024-08-06"
+  },
+  "products": [],
+  "shareholders_pre_ipo": [
+    {
+      "name": "Mr. Shan",
+      "shares_10k": 4410,
+      "pct": 8.29,
+      "type": "Individual"
+    },
+    {
+      "name": "Ms. Pan",
+      "shares_10k": 830.016,
+      "pct": 1.56,
+      "type": "Individual"
+    },
+    {
+      "name": "Ruby Wealth",
+      "shares_10k": 0.01,
+      "pct": 2e-05,
+      "type": "Institution"
+    },
+    {
+      "name": "New Key Trade",
+      "shares_10k": 1469.99,
+      "pct": 2.58,
+      "type": "Institution"
+    },
+    {
+      "name": "Marvel Stars",
+      "shares_10k": 460,
+      "pct": 0.81,
+      "type": "Institution"
+    },
+    {
+      "name": "Mr. Xiong Chengyu",
+      "shares_10k": 320.033,
+      "pct": 0.6,
+      "type": "Individual"
+    },
+    {
+      "name": "Mr. Gu Qun",
+      "shares_10k": 159.951,
+      "pct": 0.3,
+      "type": "Individual"
+    },
+    {
+      "name": "Excellent Ocean Trust",
+      "shares_10k": 2418.7308,
+      "pct": 4.54,
+      "type": "Institution"
+    },
+    {
+      "name": "88 Employees of the Group",
+      "shares_10k": 2268.9107,
+      "pct": 4.26,
+      "type": "Individual"
+    },
+    {
+      "name": "Mr. Liu",
+      "shares_10k": 1470,
+      "pct": 2.58,
+      "type": "Individual"
+    },
+    {
+      "name": "Northern Light Venture Fund IV, L.P.",
+      "shares_10k": 5081.5819,
+      "pct": 8.93,
+      "type": "VC"
+    },
+    {
+      "name": "Northern Light Strategic Fund IV, L.P.",
+      "shares_10k": 417.7559,
+      "pct": 0.73,
+      "type": "VC"
+    },
+    {
+      "name": "Northern Light Partners Fund IV, L.P.",
+      "shares_10k": 70.74,
+      "pct": 0.12,
+      "type": "VC"
+    },
+    {
+      "name": "Oceanpine Investment Fund II LP",
+      "shares_10k": 1063.2714,
+      "pct": 1.87,
+      "type": "VC"
+    },
+    {
+      "name": "Bright Sapphire Holding Inc",
+      "shares_10k": 1832.6766,
+      "pct": 3.22,
+      "type": "Institution"
+    }
+  ],
+  "financials": {
+    "currency": "RMB",
+    "unit": "10K (万元)",
+    "income_statement": [
+      {
+        "period": "2021",
+        "revenue": 2925.6,
+        "net_profit": -235650.2,
+        "gross_margin_pct": 18.7,
+        "rd_expense": null
+      },
+      {
+        "period": "2022",
+        "revenue": 6050.4,
+        "net_profit": -235393.6,
+        "gross_margin_pct": 36.1,
+        "rd_expense": null
+      },
+      {
+        "period": "2023",
+        "revenue": 16544.2,
+        "net_profit": -275393.6,
+        "gross_margin_pct": 29.4,
+        "rd_expense": null
+      },
+      {
+        "period": "2024",
+        "revenue": 31239.1,
+        "net_profit": -485511.8,
+        "gross_margin_pct": 24.7,
+        "rd_expense": null
+      },
+      {
+        "period": "2023-Q1",
+        "revenue": 2747.3,
+        "net_profit": -110666.3,
+        "gross_margin_pct": 60.9,
+        "rd_expense": null
+      },
+      {
+        "period": "2024-Q1",
+        "revenue": 2747.3,
+        "net_profit": 120330.2,
+        "gross_margin_pct": null,
+        "rd_expense": null
+      }
+    ],
+    "balance_sheet": [],
+    "cash_flow": []
+  },
+  "revenue_breakdown": {
+    "by_product": [
+      {
+        "product": "Autonomous Driving Products and Solutions - Total",
+        "2021_pct": 56.6,
+        "2022_pct": 86.0,
+        "2023_pct": 88.5,
+        "2023Q1_pct": 77.5,
+        "2024Q1_pct": 85.8
+      },
+      {
+        "product": "SoC-based Solutions - Gross Profit",
+        "2021": 637.9,
+        "2022": 3438.4,
+        "2023": 5904.5,
+        "2023Q1": 133.3,
+        "2024Q1": 1206.3
+      },
+      {
+        "product": "Algorithm-based Solutions - Gross Profit",
+        "2021": 503.7,
+        "2022": 643.0,
+        "2023": 1308.7,
+        "2023Q1": 158.0,
+        "2024Q1": 91.6
+      },
+      {
+        "product": "Intelligent Imaging Solutions - Revenue",
+        "2021": 2620.0,
+        "2022": 2320.0,
+        "2023": 3610.0,
+        "2023Q1": 660.0,
+        "2024Q1": 390.0
+      },
+      {
+        "product": "Intelligent Imaging Solutions - Gross Profit",
+        "2021": 1549.3,
+        "2022": 1424.7,
+        "2023": 1808.9,
+        "2023Q1": 255.0,
+        "2024Q1": null
+      }
+    ],
+    "by_product_gross_margin_pct": [
+      {
+        "product": "Autonomous Driving Products and Solutions",
+        "2021": 18.6,
+        "2022": 24.2,
+        "2023": 21.4,
+        "2023Q1": 12.9,
+        "2024Q1": 55.0
+      },
+      {
+        "product": "SoC-based Solutions",
+        "2021": 83.1,
+        "2022": 32.7,
+        "2023": 23.7,
+        "2023Q1": 12.6,
+        "2024Q1": null
+      },
+      {
+        "product": "Algorithm-based Solutions",
+        "2021": 15.4,
+        "2022": 11.3,
+        "2023": 15.8,
+        "2023Q1": 13.0,
+        "2024Q1": null
+      },
+      {
+        "product": "Intelligent Imaging Solutions",
+        "2021": 59.0,
+        "2022": 61.5,
+        "2023": 50.1,
+        "2023Q1": 38.7,
+        "2024Q1": null
+      }
+    ],
+    "by_geography_pct": [],
+    "customer_concentration": [
+      {
+        "metric": "Largest Customer % of Revenue",
+        "2021": 40.7,
+        "2022": 43.5,
+        "2023": 15.2,
+        "2024Q1": 47.7
+      },
+      {
+        "metric": "Top 5 Customers % of Revenue",
+        "2021": 77.7,
+        "2022": 75.4,
+        "2023": 47.7,
+        "2024Q1": 96.6
+      }
+    ],
+    "supplier_concentration": [
+      {
+        "metric": "Largest Supplier % of Total Purchase",
+        "2021": 28.7,
+        "2022": 18.1,
+        "2023": 10.8,
+        "2024Q1": 16.7
+      },
+      {
+        "metric": "Top 5 Suppliers % of Total Purchase",
+        "2021": 68.2,
+        "2022": 50.9,
+        "2023": 43.4,
+        "2024Q1": 58.8
+      }
+    ]
+  },
+  "key_risks": [
+    "Unable to develop and introduce new products and solutions, which would materially and adversely affect future business, results of operations, financial condition and competitive position",
+    "Significant R&D investment may adversely impact profitability and operating cash flow and may not generate expected results",
+    "Unable to obtain or maintain adequate intellectual property rights protection, or the scope of such protection may not be sufficiently broad",
+    "Involvement in costly and time-consuming lawsuits to protect or enforce intellectual property; patent rights could be found invalid or unenforceable",
+    "Third-party claims of intellectual property infringement may result in liabilities, financial penalties, and required redesign or discontinuation of products",
+    "Limited track record in commercialization of products and solutions",
+    "No assurance that efforts to seek design wins for products and solutions will succeed",
+    "No guarantee that sales results will meet forecasts even after achieving design wins",
+    "Supply chain risks and interruption of requisite services due to reliance on single or limited suppliers and vendors",
+    "Dependence on TSMC as sole manufacturer of SoCs",
+    "Early stage of commercialization with SoCs only going into mass production in 2022; operating losses recorded since inception with expected continued adjusted net losses and operating losses through 2024 and 2025",
+    "Dependence on contractual relationships with third parties for certain technologies; inability to use or obtain such technologies would materially and adversely affect business",
+    "Highly competitive industries; failure to compete with competitors may materially and adversely affect business, results of operations and financial condition",
+    "Risks relating to conducting business in the PRC",
+    "Risks relating to the Global Offering"
+  ],
+  "use_of_proceeds": {
+    "total_rmb_10k": null,
+    "projects": []
+  },
+  "executive_summary": "Black Sesame International Holding Limited is a Chinese developer of automotive-grade system-on-chip processors and intelligent vehicle solutions for autonomous driving applications, ranking third globally in shipments of high-computing power automotive SoCs in 2023.\n\nRevenue has grown sharply from $4M in 2021 to $8.3M in 2022 and $22.8M in 2023, reaching $43.1M for the full year 2024. Gross margins have fluctuated between 19% and 36%, settling at 25% in 2024. Despite revenue growth, the company has never been profitable, recording net losses of $325M in 2021, $324M in 2022, $380M in 2023, and $670M in 2024 — driven heavily by share-based compensation and R&D spending. Customer concentration is a concern, with the top five customers representing 97% of Q1 2024 revenue.\n\nThe company is raising up to roughly $143M through 37 million shares priced at HK$28.00 to HK$30.30, listing on HKEX Main Board under the specialist technology Chapter 18C framework. Key pre-IPO backers include Northern Light Venture Capital (9.8% combined stake) and Bright Sapphire Holding (3.2%). Proceeds will fund R&D and product development, expanded sales and marketing, and general working capital. The three biggest risks are continued and deepening operating losses with no near-term path to profitability, near-total dependence on TSMC as its sole chip manufacturer, and heavy customer concentration leaving revenue highly vulnerable to the loss of any single relationship."
+}

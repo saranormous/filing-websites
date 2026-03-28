@@ -1,0 +1,396 @@
+{
+  "meta": {
+    "document": "IPO Prospectus (Global Offering)",
+    "issuer": "Horizon Robotics",
+    "issuer_cn": "地平线",
+    "filing_date": "2024-10-16",
+    "exchange": "The Stock Exchange of Hong Kong Limited (HKEX)",
+    "board": "Main Board (Weighted Voting Rights / WVR Structure)",
+    "sponsor": "Not specified in extracted text (multiple Joint Sponsors listed)",
+    "source_language": "English / Chinese",
+    "translation_note": "AI-translated for reference only"
+  },
+  "company": {
+    "name_en": "Horizon Robotics",
+    "name_cn": "地平线",
+    "founded": "2015",
+    "headquarters": "Cayman Islands (incorporated); operations in China",
+    "registered_capital_rmb": null,
+    "website": "https://www.horizon.auto",
+    "industry": "Intelligent Driving / Autonomous Driving Technology / Robotics",
+    "controller": {
+      "name": "Not specified in extracted text",
+      "direct_shares_pct": null,
+      "total_control_pct": null,
+      "roles": [
+        "WVR Beneficiary / Weighted Voting Rights Controller"
+      ]
+    },
+    "employees": {
+      "total": null,
+      "rd": null
+    }
+  },
+  "offering": {
+    "shares_offered_max": 1355106600,
+    "post_ipo_shares_approx": null,
+    "offering_pct_approx": null,
+    "par_value_rmb": null,
+    "par_value_usd": 2.5e-06,
+    "max_offer_price_hkd": 3.99,
+    "min_offer_price_hkd": 3.73,
+    "stock_code": "9660",
+    "hong_kong_offer_shares": 135511200,
+    "international_offer_shares": 1219595400,
+    "currency": "HKD"
+  },
+  "products": [],
+  "shareholders_pre_ipo": [
+    {
+      "name": "Dr. Yu (through family trust and controlled entities)",
+      "shares_10k": null,
+      "pct": 12.38,
+      "type": "Individual"
+    },
+    {
+      "name": "Dr. Huang (through family trust and controlled entities)",
+      "shares_10k": null,
+      "pct": 3.0,
+      "type": "Individual"
+    },
+    {
+      "name": "Ms. Tao",
+      "shares_10k": null,
+      "pct": 1.3,
+      "type": "Individual"
+    },
+    {
+      "name": "Employee Shareholding Platforms",
+      "shares_10k": null,
+      "pct": 0.1,
+      "type": "Institution"
+    },
+    {
+      "name": "CARIAD",
+      "shares_10k": null,
+      "pct": 2.31,
+      "type": "Institution"
+    },
+    {
+      "name": "SAIC",
+      "shares_10k": null,
+      "pct": 8.78,
+      "type": "Institution"
+    },
+    {
+      "name": "5Y Capital",
+      "shares_10k": null,
+      "pct": 5.55,
+      "type": "VC"
+    },
+    {
+      "name": "Hillhouse",
+      "shares_10k": null,
+      "pct": 3.24,
+      "type": "VC"
+    },
+    {
+      "name": "HongShan",
+      "shares_10k": null,
+      "pct": 2.36,
+      "type": "VC"
+    },
+    {
+      "name": "Walnut Robotics, Inc.",
+      "shares_10k": null,
+      "pct": 0.09,
+      "type": "Institution"
+    },
+    {
+      "name": "Other Pre-IPO Investors",
+      "shares_10k": null,
+      "pct": 45.63,
+      "type": "Institution"
+    }
+  ],
+  "financials": {
+    "currency": "RMB",
+    "unit": "10K (万元)",
+    "income_statement": [
+      {
+        "period": "2021",
+        "revenue": 46672.0,
+        "net_profit": -206360.0,
+        "gross_profit": 33098.6,
+        "gross_margin_pct": 70.92,
+        "rd_expense": 114364.2,
+        "cost_of_sales": 13573.4,
+        "admin_expenses": 31900.3,
+        "selling_marketing_expenses": 21139.0,
+        "operating_loss": -133533.3,
+        "finance_income": 2823.9,
+        "finance_costs": 1659.2,
+        "finance_income_net": 1164.7
+      },
+      {
+        "period": "2022",
+        "revenue": 90567.6,
+        "net_profit": -872040.0,
+        "gross_profit": 62771.3,
+        "gross_margin_pct": 69.31,
+        "rd_expense": 187988.8,
+        "cost_of_sales": 27796.3,
+        "admin_expenses": 37390.9,
+        "selling_marketing_expenses": 29850.0,
+        "operating_loss": -213201.6,
+        "finance_income": 10452.8,
+        "finance_costs": 754.8,
+        "finance_income_net": 9698.0
+      },
+      {
+        "period": "2023",
+        "revenue": 155160.7,
+        "net_profit": -673910.0,
+        "gross_profit": 109431.0,
+        "gross_margin_pct": 70.53,
+        "rd_expense": 236625.5,
+        "cost_of_sales": 45729.7,
+        "admin_expenses": 44336.6,
+        "selling_marketing_expenses": 32724.9,
+        "operating_loss": -203052.2,
+        "finance_income": 16747.3,
+        "finance_costs": 865.1,
+        "finance_income_net": 15882.2
+      },
+      {
+        "period": "H1_2023",
+        "revenue": 37149.1,
+        "net_profit": -509810.0,
+        "gross_profit": 22661.2,
+        "gross_margin_pct": 60.99,
+        "rd_expense": 104899.1,
+        "cost_of_sales": 14487.9,
+        "admin_expenses": 21499.7,
+        "selling_marketing_expenses": 14272.8,
+        "operating_loss": -123731.5,
+        "finance_income": 8726.8,
+        "finance_costs": 458.5,
+        "finance_income_net": 8268.3
+      },
+      {
+        "period": "H1_2024",
+        "revenue": 93459.9,
+        "net_profit": -509810.0,
+        "gross_profit": 73873.8,
+        "gross_margin_pct": 79.04,
+        "rd_expense": 141965.6,
+        "cost_of_sales": 19586.1,
+        "admin_expenses": 24314.4,
+        "selling_marketing_expenses": 19842.1,
+        "operating_loss": -110541.8,
+        "finance_income": 21455.2,
+        "finance_costs": 378.9,
+        "finance_income_net": 21076.3
+      }
+    ],
+    "balance_sheet": [
+      {
+        "date": "2021-12-31",
+        "total_assets": 1059688.7,
+        "total_liabilities": 1899080.8,
+        "equity": -839392.1,
+        "total_non_current_assets": 68344.5,
+        "total_current_assets": 991344.2,
+        "total_non_current_liabilities": 8483.6,
+        "total_current_liabilities": 1890597.2,
+        "net_current_liabilities": -899253.0,
+        "non_controlling_interests": 25.0
+      },
+      {
+        "date": "2022-12-31",
+        "total_assets": 989522.8,
+        "total_liabilities": 2733376.5,
+        "equity": -1743853.7,
+        "total_non_current_assets": 109154.8,
+        "total_current_assets": 880368.0,
+        "total_non_current_liabilities": 18234.3,
+        "total_current_liabilities": 2715142.2,
+        "net_current_liabilities": -1834774.2,
+        "non_controlling_interests": -7.5
+      },
+      {
+        "date": "2023-12-31",
+        "total_assets": 1587387.3,
+        "total_liabilities": 4053925.7,
+        "equity": -2466538.4,
+        "total_non_current_assets": 233579.8,
+        "total_current_assets": 1353807.5,
+        "total_non_current_liabilities": 28714.4,
+        "total_current_liabilities": 4025211.3,
+        "net_current_liabilities": -2671403.8,
+        "non_controlling_interests": -10.7
+      },
+      {
+        "date": "2024-06-30",
+        "total_assets": 1495276.4,
+        "total_liabilities": 4476782.4,
+        "equity": -2981506.0,
+        "total_non_current_assets": 220901.5,
+        "total_current_assets": 1274374.9,
+        "total_non_current_liabilities": 38046.1,
+        "total_current_liabilities": 4438736.3,
+        "net_current_liabilities": -3164361.4,
+        "non_controlling_interests": 86.1
+      }
+    ],
+    "cash_flow": []
+  },
+  "revenue_breakdown": {
+    "by_product": [
+      {
+        "product": "Automotive Solutions",
+        "2021": 41025.7,
+        "2022": 80127.0,
+        "2023": 147091.4,
+        "H1_2023": 34521.7,
+        "H1_2024": 91300.4
+      },
+      {
+        "product": "Non-Automotive Solutions",
+        "2021": 5646.3,
+        "2022": 10440.6,
+        "2023": 8069.3,
+        "H1_2023": 2627.4,
+        "H1_2024": 2159.5
+      },
+      {
+        "product": "OEM Customers - Product Solutions",
+        "2021": 8.8,
+        "2022": 4807.4,
+        "2023": 22118.2,
+        "H1_2023": 7494.5,
+        "H1_2024": 9410.9
+      },
+      {
+        "product": "OEM Customers - License and Services",
+        "2021": 14870.9,
+        "2022": 25858.5,
+        "2023": 74757.2,
+        "H1_2023": 5279.3,
+        "H1_2024": 42439.7
+      },
+      {
+        "product": "Tier-One Supplier Customers - Product Solutions",
+        "2021": 15888.7,
+        "2022": 26696.4,
+        "2023": 28344.2,
+        "H1_2023": 11592.9,
+        "H1_2024": 12750.8
+      },
+      {
+        "product": "Tier-One Supplier Customers - License and Services",
+        "2021": 4234.8,
+        "2022": 17880.3,
+        "2023": 20919.7,
+        "H1_2023": 9453.0,
+        "H1_2024": 26087.4
+      }
+    ],
+    "by_geography_pct": [],
+    "by_customer_type_pct": [
+      {
+        "type": "Automotive Solutions",
+        "2021": 87.9,
+        "2022": 88.5,
+        "2023": 94.8,
+        "H1_2023": 92.9,
+        "H1_2024": 97.7
+      },
+      {
+        "type": "Non-Automotive Solutions",
+        "2021": 12.1,
+        "2022": 11.5,
+        "2023": 5.2,
+        "H1_2023": 7.1,
+        "H1_2024": 2.3
+      }
+    ],
+    "key_customer_revenue": [
+      {
+        "customer": "CARIZON (Largest Customer)",
+        "2023": 62730.0,
+        "H1_2024": 35160.0,
+        "2023_pct_of_revenue": 40.4,
+        "H1_2024_pct_of_revenue": 37.6
+      },
+      {
+        "customer": "Top 5 Customers Aggregate",
+        "2021": 28310.0,
+        "2022": 48210.0,
+        "2023": 106700.0,
+        "H1_2024": 72700.0,
+        "2021_pct": 60.7,
+        "2022_pct": 53.2,
+        "2023_pct": 68.8,
+        "H1_2024_pct": 77.9
+      },
+      {
+        "customer": "Largest Customer",
+        "2021": 11520.0,
+        "2022": 14530.0,
+        "2023": 62730.0,
+        "H1_2024": 35160.0,
+        "2021_pct": 24.7,
+        "2022_pct": 16.0,
+        "2023_pct": 40.4,
+        "H1_2024_pct": 37.6
+      }
+    ],
+    "key_supplier_purchase": [
+      {
+        "supplier": "Top 5 Suppliers Aggregate",
+        "2021": 25160.0,
+        "2022": 89020.0,
+        "2023": 117790.0,
+        "H1_2024": 39240.0,
+        "2021_pct": 52.0,
+        "2022_pct": 61.8,
+        "2023_pct": 50.2,
+        "H1_2024_pct": 40.8
+      },
+      {
+        "supplier": "Largest Supplier",
+        "2021": 10070.0,
+        "2022": 22630.0,
+        "2023": 45850.0,
+        "H1_2024": 11550.0,
+        "2021_pct": 20.8,
+        "2022_pct": 15.7,
+        "2023_pct": 19.5,
+        "H1_2024_pct": 12.0
+      }
+    ]
+  },
+  "key_risks": [
+    "We operate in a competitive market subject to an evolving landscape. If we fail to meet evolving customer needs or the pace of industry innovation by improving our existing solutions and introducing new solutions in a timely and cost-effective manner, our competitive position would be impacted and our business, results of operations and financial condition may be materially adversely affected.",
+    "We have been and intend to continue investing significantly in research and development, and to the extent our research and development efforts are unsuccessful, our competitive position would be negatively impacted and our business, results of operations and financial condition would be adversely affected.",
+    "We cannot ensure that there will be sufficient future market adoption of ADAS and AD solutions to drive our growth, nor can we ensure that industry developments as well as market acceptance of ADAS and AD solutions will develop in our favor. If the markets toward smart vehicles and ADAS and AD solutions falter, or if these trends do not grow as rapidly or as positively as expected, our business, results of operations and financial condition may be adversely affected.",
+    "The interruption of requisite services from third-party partners may expose us to supply chain risk that could harm our business.",
+    "We depend on a limited number of third-party business partners for certain essential materials, equipment and services.",
+    "We face risks related to heightened regulatory and public scrutiny on our third-party service providers. If such parties, their associates and/or network members are subject to regulatory or public scrutiny, such as investigations and negative publicity, our reputation, business and results of operations may be adversely affected.",
+    "Our customer concentration has been high and we currently generate a significant share of our revenue from a limited number of customers. There still exists a risk of customer concentration, and our revenue could be adversely affected if we lose or are prevented from selling to any of our top customers.",
+    "We are subject to the risks associated with sanctions and export controls laws and regulations, international trade policies, and developing domestic and foreign laws and regulations on smart vehicles and related technologies, and our business, financial condition and results of operations could be adversely affected.",
+    "We have a history of losses and operating cash outflow as well as net current liabilities and negative equity during the Track Record Period, and there is no assurance that we will become or subsequently remain profitable."
+  ],
+  "use_of_proceeds": {
+    "total_rmb_10k": null,
+    "projects": [
+      {
+        "name": "General corporate purposes and working capital for expansion and growth strategies",
+        "amount_rmb_10k": null,
+        "focus": "The prospectus references use of net proceeds from the Global Offering to support working capital and operations, including research and development investment, business expansion, and maintaining sufficient liquidity for expansion and growth strategies. Specific project-level allocation details were not included in the provided excerpts."
+      }
+    ]
+  },
+  "executive_summary": "Horizon Robotics is a China-based developer of intelligent driving technology, providing automotive-grade ADAS and autonomous driving solutions — including custom AI chips (Journey series ASICs), software platforms, and integrated systems — to OEMs and tier-one automotive suppliers.\n\nRevenue has grown strongly: $64M in 2021, $125M in 2022, and $214M in 2023, with H1 2024 revenue of $129M, more than doubling H1 2023's $51M. Gross margins have been consistently high at roughly 70%, expanding to 79% in H1 2024. However, the company remains deeply unprofitable, with a 2023 operating loss of $280M and a net loss of $930M, and carries negative equity of approximately $411M as of mid-2024.\n\nHorizon Robotics is raising up to approximately $692M (at HK$3.99 per share) through a global offering on the Hong Kong Stock Exchange (stock code: 9660) under a weighted voting rights structure. Key shareholders include co-founder Dr. Yu (12.4%), SAIC (8.8%), 5Y Capital (5.6%), Hillhouse (3.2%), and strategic investor CARIAD (Volkswagen's software unit, 2.3%). Proceeds will fund R&D investment, business expansion, and general working capital.\n\nThe three biggest risks are: heavy customer concentration (top customer CARIZON accounted for 40% of 2023 revenue); persistent and large losses with no clear path to profitability; and uncertainty over the pace of ADAS/autonomous driving market adoption in China, which underpins the entire growth thesis."
+}

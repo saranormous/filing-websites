@@ -1,0 +1,50 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build deploy directory
+        run: |
+          mkdir -p _site
+          # Copy only site files (not build artifacts)
+          cp index.html filings.json .nojekyll _site/
+          for dir in */; do
+            slug="${dir%/}"
+            [ "$slug" = "_site" ] && continue
+            [ "$slug" = ".git" ] && continue
+            [ "$slug" = ".github" ] && continue
+            [ "$slug" = ".claude" ] && continue
+            if [ -f "$slug/index.html" ]; then
+              mkdir -p "_site/$slug"
+              cp "$slug/index.html" "_site/$slug/"
+              [ -f "$slug/data.json" ] && cp "$slug/data.json" "_site/$slug/"
+            fi
+          done
+          echo "Deploy size: $(du -sh _site | cut -f1)"
+          echo "Files: $(find _site -type f | wc -l)"
+
+      - uses: actions/configure-pages@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - uses: actions/deploy-pages@v4
+        id: deployment

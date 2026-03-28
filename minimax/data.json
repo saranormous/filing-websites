@@ -1,0 +1,257 @@
+{
+  "meta": {
+    "document": "IPO Prospectus (Draft)",
+    "issuer": "MiniMax Group Inc.",
+    "issuer_cn": "MiniMax Group Inc.",
+    "filing_date": "2025-12-31",
+    "exchange": "The Stock Exchange of Hong Kong Limited (HKEX)",
+    "board": "Main Board (Chapter 18C – Specialist Technology Company / Pre-Commercial Company)",
+    "sponsor": "Not specified in extracted text",
+    "source_language": "English",
+    "translation_note": "AI-translated for reference only"
+  },
+  "company": {
+    "name_en": "MiniMax Group Inc.",
+    "name_cn": "MiniMax Group Inc.",
+    "founded": "2021",
+    "headquarters": "Cayman Islands (incorporated); operations not specified in extracted text",
+    "registered_capital_rmb": null,
+    "website": "https://www.minimaxi.com",
+    "industry": "Specialist Technology / Artificial Intelligence",
+    "controller": {
+      "name": "WVR Beneficiary (name not specified in extracted text)",
+      "direct_shares_pct": null,
+      "total_control_pct": null,
+      "roles": [
+        "Weighted Voting Rights Beneficiary",
+        "Controlling Shareholder"
+      ]
+    },
+    "employees": {
+      "total": null,
+      "rd": null
+    }
+  },
+  "offering": {
+    "shares_offered_max": 25389220,
+    "post_ipo_shares_approx": null,
+    "offering_pct_approx": null,
+    "par_value_rmb": null,
+    "par_value_usd": 0.0001,
+    "max_offer_price_hkd": 165.0,
+    "min_offer_price_hkd": 151.0,
+    "hong_kong_offer_shares": 1269480,
+    "international_offer_shares": 24119740,
+    "stock_code": "0100",
+    "listing_date_approx": "2026-01-09",
+    "price_determination_date": "2026-01-07"
+  },
+  "financials": {
+    "currency": "USD",
+    "unit": "thousands (US$)",
+    "income_statement": [
+      {
+        "period": "2022",
+        "revenue": 0,
+        "net_profit": null,
+        "gross_margin_pct": null,
+        "rd_expense": null
+      },
+      {
+        "period": "2023",
+        "revenue": 3460,
+        "net_profit": null,
+        "gross_margin_pct": -24.7,
+        "rd_expense": 70002
+      },
+      {
+        "period": "2024",
+        "revenue": 30523,
+        "net_profit": null,
+        "gross_margin_pct": 12.2,
+        "rd_expense": 188979
+      },
+      {
+        "period": "9M2024",
+        "revenue": 19454,
+        "net_profit": null,
+        "gross_margin_pct": null,
+        "rd_expense": 138684
+      }
+    ],
+    "balance_sheet": [],
+    "cash_flow": []
+  },
+  "revenue_breakdown": {
+    "by_product": [
+      {
+        "product": "MiniMax",
+        "2022": 0,
+        "2023": 0,
+        "2024": null,
+        "9M2024": 0,
+        "9M2025": 756
+      },
+      {
+        "product": "Hailuo AI",
+        "2022": 0,
+        "2023": 0,
+        "2024": 2347,
+        "9M2024": 0,
+        "9M2025": 17464
+      },
+      {
+        "product": "MiniMax Audio",
+        "2022": 0,
+        "2023": 0,
+        "2024": null,
+        "9M2024": 0,
+        "9M2025": 1050
+      },
+      {
+        "product": "Talkie/Xingye",
+        "2022": 0,
+        "2023": 758,
+        "2024": 19458,
+        "9M2024": 13529,
+        "9M2025": null
+      },
+      {
+        "product": "Open Platform and other AI-based enterprise services",
+        "2022": 0,
+        "2023": null,
+        "2024": null,
+        "9M2024": null,
+        "9M2025": null
+      }
+    ],
+    "by_product_pct": [
+      {
+        "product": "Talkie/Xingye",
+        "2023_pct": 21.9,
+        "2024_pct": 63.7,
+        "9M2024_pct": 69.5,
+        "9M2025_pct": null
+      },
+      {
+        "product": "Hailuo AI",
+        "2024_pct": 7.7,
+        "9M2025_pct": null
+      }
+    ],
+    "by_geography_pct": []
+  },
+  "products": [],
+  "shareholders_pre_ipo": [
+    {
+      "name": "MiniMax Limited",
+      "shares_10k": 1.5,
+      "pct": 1e-05,
+      "type": "Institution"
+    },
+    {
+      "name": "MiniMax Matrix",
+      "shares_10k": 500.0,
+      "pct": 1.79,
+      "type": "Institution"
+    },
+    {
+      "name": "MiniMax Awakening",
+      "shares_10k": 1150.9339,
+      "pct": 4.11,
+      "type": "Institution"
+    },
+    {
+      "name": "Alpha EXP",
+      "shares_10k": 6259.318,
+      "pct": 22.35,
+      "type": "Institution"
+    },
+    {
+      "name": "Floating Sky",
+      "shares_10k": 700.0,
+      "pct": 2.5,
+      "type": "Institution"
+    },
+    {
+      "name": "MiniMax Gene (Employee Shareholding Platform)",
+      "shares_10k": 2089.0736,
+      "pct": 7.46,
+      "type": "Institution"
+    },
+    {
+      "name": "miHoYo Limited",
+      "shares_10k": 1601.5779,
+      "pct": 5.72,
+      "type": "Institution"
+    },
+    {
+      "name": "Shanghai Mihoyo Argo Technology Co., Ltd",
+      "shares_10k": 191.2399,
+      "pct": 0.68,
+      "type": "Institution"
+    },
+    {
+      "name": "Cosmic Station Limited",
+      "shares_10k": 730.1687,
+      "pct": 2.61,
+      "type": "VC"
+    },
+    {
+      "name": "Seasonal Charm Limited",
+      "shares_10k": 53.5263,
+      "pct": 0.19,
+      "type": "VC"
+    },
+    {
+      "name": "Image Frame Investment (HK) Limited",
+      "shares_10k": 783.695,
+      "pct": 2.8,
+      "type": "Institution"
+    },
+    {
+      "name": "Alisoft China Holding Limited",
+      "shares_10k": 723.2084,
+      "pct": 2.58,
+      "type": "Institution"
+    }
+  ],
+  "use_of_proceeds": {
+    "total_rmb_10k": null,
+    "projects": [
+      {
+        "name": "Research and Development Investment",
+        "amount_rmb_10k": null,
+        "focus": "Continued investment in foundation model research and development to support long-term growth and technological innovation."
+      },
+      {
+        "name": "Business Expansion and Operations",
+        "amount_rmb_10k": null,
+        "focus": "Expansion of business operations and scaling of the global foundation model business."
+      },
+      {
+        "name": "Infrastructure and Cloud Services",
+        "amount_rmb_10k": null,
+        "focus": "Investment in third-party cloud services and computing infrastructure related to model training and deployment."
+      }
+    ]
+  },
+  "ip": {
+    "patents_total": null
+  },
+  "key_risks": [
+    "The company has recorded net losses, net liabilities, and operating cash outflow during the Track Record Period and recorded net current liabilities as of September 30, 2025, and may not be able to achieve or subsequently maintain profitability.",
+    "The company operates in a rapidly evolving and increasingly competitive global foundation model industry. If it fails to continuously innovate and adapt to evolving customer needs, its competitive position would be impacted and its business, financial condition, and results of operations may be materially and adversely affected.",
+    "The content or data used to train foundation models and the content generated by the foundation models could be subject to third-party intellectual property infringement claims, which may materially and adversely affect the business, financial condition, and results of operations.",
+    "Any actual or perceived flaws or inappropriate usage of foundation model technologies, committed by the company or third parties intentionally or inadvertently, could materially and adversely impact reputation, business, financial condition, results of operations, and the broader acceptance of foundation model products by society.",
+    "The competitiveness of the foundation models and offerings depends on continuous and significant investment in research and development. Such investment may negatively impact profitability and operating cash flow in the short term and may not generate the expected results.",
+    "The company may not be able to adequately protect or enforce its intellectual property rights throughout the world, and efforts to do so may be costly.",
+    "The company may become subject to litigation brought by third parties claiming infringement of their intellectual property rights.",
+    "The company is a Pre-Commercial Company listing under Chapter 18C of the Listing Rules, which involves unique challenges, risks, and uncertainties compared to standard listed companies.",
+    "Operating expenses increased significantly from US$14.4 million in 2022 to US$290.4 million in 2024, primarily due to increasing investment in third-party cloud services related to training, and are expected to continue to increase.",
+    "The company has a weighted voting rights structure where Class B Ordinary Shares carry ten votes per share, concentrating significant voting control with the WVR Beneficiaries and limiting minority shareholder influence.",
+    "The company has never declared or paid any dividends and may not pay any dividends in the foreseeable future.",
+    "The company has negative net cash flow from operating activities and anticipates this will continue as it expands its business and operations."
+  ],
+  "executive_summary": "MiniMax Group Inc. is a Chinese artificial intelligence company developing foundation models across text, audio, image, and video modalities, with consumer-facing products including Hailuo AI (video generation) and Talkie/Xingye (AI companionship), as well as an enterprise open platform.\n\nRevenue grew sharply from $3.5 million in 2023 to $30.5 million in 2024, with gross margin improving from negative 24.7% to positive 12.2%. For the nine months ended September 2025, revenue reached approximately $37.6 million (annualizing strongly), driven by Hailuo AI and Talkie/Xingye. R&D spending surged to $189 million in 2024, dwarfing revenue, and operating expenses hit $290 million in 2024. The company remains deeply unprofitable with negative operating cash flow and net liabilities.\n\nMiniMax is raising up to approximately $530 million (25.4 million shares at a maximum HK$165 per share) on the Hong Kong Stock Exchange Main Board under Chapter 18C as a Pre-Commercial Specialist Technology Company, with listing expected January 9, 2026. Key pre-IPO shareholders include Alpha EXP (22.4%), the employee platform MiniMax Gene (7.5%), miHoYo (6.4%), and Image Frame Investment (2.8%). Proceeds will fund foundation model R&D, business expansion, and cloud computing infrastructure.\n\nThe three biggest risks are: sustained deep losses with no clear path to profitability given massive R&D and infrastructure costs; intense and fast-moving competition in the global AI foundation model market; and concentrated voting control through a weighted voting rights structure that limits minority shareholder influence."
+}

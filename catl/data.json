@@ -1,0 +1,374 @@
+{
+  "meta": {
+    "document": "IPO Prospectus (Draft)",
+    "issuer": "Contemporary Amperex Technology Co., Limited",
+    "issuer_cn": "寧德時代新能源科技股份有限公司",
+    "filing_date": "2025-05-12",
+    "exchange": "The Stock Exchange of Hong Kong Limited (HKEX)",
+    "board": "Main Board",
+    "sponsor": "BofA Securities, CICC, China Securities International, J.P. Morgan",
+    "source_language": "Chinese",
+    "translation_note": "AI-translated for reference only"
+  },
+  "company": {
+    "name_en": "Contemporary Amperex Technology Co., Limited",
+    "name_cn": "寧德時代新能源科技股份有限公司",
+    "founded": "2011",
+    "headquarters": "China",
+    "registered_capital_rmb": null,
+    "website": "www.catl.com",
+    "industry": "New Energy / Battery Technology",
+    "controller": {
+      "name": "Zeng Yuqun",
+      "roles": [
+        "Chairman"
+      ]
+    },
+    "employees": {
+      "total": null,
+      "rd": null
+    }
+  },
+  "offering": {
+    "shares_offered_max": 117894500,
+    "post_ipo_shares_approx": null,
+    "offering_pct_approx": null,
+    "par_value_rmb": 1.0
+  },
+  "financials": {
+    "currency": "RMB",
+    "unit": "10K (万元)",
+    "income_statement": [
+      {
+        "period": "2022",
+        "revenue": 32859398.8,
+        "net_profit": 3345714.4,
+        "gross_profit": 5796420.8,
+        "gross_margin_pct": 17.6,
+        "cost_of_sales": 27062978.0,
+        "rd_expense": 1551045.3,
+        "admin_and_other_operating_expenses": 810378.7,
+        "selling_expenses": 251923.0,
+        "other_income": 704724.4,
+        "other_gains_and_losses_net": 128590.8,
+        "impairment_losses": -397317.5,
+        "finance_costs": -213237.5,
+        "share_of_results_of_associates_and_jv": 261451.7,
+        "profit_before_income_tax": 3667285.7,
+        "income_tax_expense": -321571.3
+      },
+      {
+        "period": "2023",
+        "revenue": 40091704.5,
+        "net_profit": 4734203.5,
+        "gross_profit": 8849359.5,
+        "gross_margin_pct": 22.1,
+        "cost_of_sales": 32398213.0,
+        "rd_expense": 1835610.8,
+        "admin_and_other_operating_expenses": 1052643.9,
+        "selling_expenses": 304274.4,
+        "other_income": 1488342.8,
+        "other_gains_and_losses_net": 41072.4,
+        "impairment_losses": -610796.8,
+        "finance_costs": -344651.6,
+        "share_of_results_of_associates_and_jv": 374576.2,
+        "profit_before_income_tax": 5449505.4,
+        "income_tax_expense": -715301.9
+      },
+      {
+        "period": "2024",
+        "revenue": 36201255.4,
+        "net_profit": 5530000.0,
+        "gross_profit": 8849359.5,
+        "gross_margin_pct": 24.4,
+        "cost_of_sales": 27351895.9,
+        "rd_expense": 1860675.6,
+        "admin_and_other_operating_expenses": 1195225.7,
+        "selling_expenses": 356279.7,
+        "other_income": 1951496.4,
+        "other_gains_and_losses_net": 1534.2,
+        "impairment_losses": -929585.1,
+        "finance_costs": -387907.6,
+        "share_of_results_of_associates_and_jv": 374304.0,
+        "profit_before_income_tax": 7693491.5
+      }
+    ],
+    "balance_sheet": [
+      {
+        "date": "2022-12-31",
+        "current_assets": 38773485.8,
+        "non_current_assets": 21321749.5,
+        "total_assets": 60095235.3,
+        "current_liabilities": 29576142.1,
+        "non_current_liabilities": 12828177.1,
+        "total_liabilities": 42404319.2,
+        "net_current_assets": 9197343.7,
+        "equity": 17690916.1,
+        "cash": 7550573.5
+      },
+      {
+        "date": "2023-12-31",
+        "current_assets": 44978800.2,
+        "non_current_assets": 26738003.9,
+        "total_assets": 71716804.1,
+        "current_liabilities": 28700107.1,
+        "non_current_liabilities": 21028382.0,
+        "total_liabilities": 49728489.1,
+        "net_current_assets": 16278693.1,
+        "equity": 21988315.0,
+        "cash": 15762931.8
+      },
+      {
+        "date": "2024-12-31",
+        "current_assets": 51014208.8,
+        "non_current_assets": 27651603.5,
+        "total_assets": 78665812.3,
+        "current_liabilities": 31717153.4,
+        "non_current_liabilities": 19603041.6,
+        "total_liabilities": 51320195.0,
+        "net_current_assets": 19297055.4,
+        "equity": 27345617.3,
+        "cash": 23816548.7
+      }
+    ],
+    "cash_flow": [
+      {
+        "period": "2022",
+        "operating": 6120884.4,
+        "investing": -6413984.3,
+        "financing": 8226643.1,
+        "net_change_in_cash": 7933543.2,
+        "cash_at_beginning": 278815.1
+      },
+      {
+        "period": "2023",
+        "operating": 9282612.5,
+        "investing": -2918776.3,
+        "financing": 1471636.2,
+        "net_change_in_cash": 7835472.4,
+        "cash_at_beginning": 15762931.8
+      },
+      {
+        "period": "2024",
+        "operating": 9699034.4,
+        "investing": -4887531.1,
+        "financing": -1452423.4,
+        "net_change_in_cash": 3359079.9,
+        "cash_at_beginning": 15762931.8
+      }
+    ]
+  },
+  "revenue_breakdown": {
+    "by_product": [
+      {
+        "product": "EV Batteries",
+        "2022": 23659349.7,
+        "2022_pct": 72.0,
+        "2023": 28525291.7,
+        "2023_pct": 71.2,
+        "2024": 25304133.7,
+        "2024_pct": 69.9
+      },
+      {
+        "product": "ESS Batteries",
+        "2022": 4498027.7,
+        "2022_pct": 13.7,
+        "2023": 5990052.2,
+        "2023_pct": 14.9,
+        "2024": 5729046.0,
+        "2024_pct": 15.8
+      },
+      {
+        "product": "Battery Materials and Recycling",
+        "2022": 2603151.4,
+        "2022_pct": 7.9,
+        "2023": 3360228.4,
+        "2023_pct": 8.4,
+        "2024": 2869993.5,
+        "2024_pct": 7.9
+      },
+      {
+        "product": "Battery Mineral Resources",
+        "2022": 450863.3,
+        "2022_pct": 1.4,
+        "2023": 773415.1,
+        "2023_pct": 1.9,
+        "2024": 549300.3,
+        "2024_pct": 1.5
+      },
+      {
+        "product": "Others",
+        "2022": 1648006.7,
+        "2022_pct": 5.0,
+        "2023": 1442717.1,
+        "2023_pct": 3.6,
+        "2024": 1748781.9,
+        "2024_pct": 4.8
+      },
+      {
+        "product": "Total",
+        "2022": 32859398.8,
+        "2022_pct": 100.0,
+        "2023": 40091704.5,
+        "2023_pct": 100.0,
+        "2024": 36201255.4,
+        "2024_pct": 100.0
+      }
+    ],
+    "ev_ess_operational_metrics": [
+      {
+        "product": "EV Batteries",
+        "year": "2022",
+        "sales_volume_gwh": 242,
+        "revenue_rmb_000": 236593497,
+        "avg_price_rmb_per_wh": 0.98,
+        "gross_profit_margin_pct": 14.1
+      },
+      {
+        "product": "ESS Batteries",
+        "year": "2022",
+        "sales_volume_gwh": 47,
+        "revenue_rmb_000": 44980277,
+        "avg_price_rmb_per_wh": 0.96,
+        "gross_profit_margin_pct": 14.0
+      },
+      {
+        "product": "EV Batteries",
+        "year": "2023",
+        "sales_volume_gwh": 321,
+        "revenue_rmb_000": 285252917,
+        "avg_price_rmb_per_wh": 0.89,
+        "gross_profit_margin_pct": 18.1
+      },
+      {
+        "product": "ESS Batteries",
+        "year": "2023",
+        "sales_volume_gwh": 69,
+        "revenue_rmb_000": 59900522,
+        "avg_price_rmb_per_wh": 0.87,
+        "gross_profit_margin_pct": 18.7
+      },
+      {
+        "product": "EV Batteries",
+        "year": "2024",
+        "sales_volume_gwh": 381,
+        "revenue_rmb_000": 253041337,
+        "avg_price_rmb_per_wh": 0.66,
+        "gross_profit_margin_pct": 23.9
+      },
+      {
+        "product": "ESS Batteries",
+        "year": "2024",
+        "sales_volume_gwh": 93,
+        "revenue_rmb_000": 57290460,
+        "avg_price_rmb_per_wh": 0.62,
+        "gross_profit_margin_pct": 26.8
+      }
+    ],
+    "key_financial_ratios": [
+      {
+        "metric": "Net Profit Margin",
+        "2022": "10.2%",
+        "2023": "11.8%",
+        "2024": "15.3%"
+      },
+      {
+        "metric": "Weighted Average ROE",
+        "2022": "24.7%",
+        "2023": "24.3%",
+        "2024": "24.7%"
+      },
+      {
+        "metric": "Current Ratio",
+        "2022": 1.3,
+        "2023": 1.6,
+        "2024": 1.6
+      },
+      {
+        "metric": "Quick Ratio",
+        "2022": 1.1,
+        "2023": 1.4,
+        "2024": 1.4
+      },
+      {
+        "metric": "Debt-to-Asset Ratio",
+        "2022": "70.6%",
+        "2023": "69.3%",
+        "2024": "65.2%"
+      },
+      {
+        "metric": "Interest-Bearing Debt Ratio",
+        "2022": "16.8%",
+        "2023": "17.6%",
+        "2024": "17.4%"
+      },
+      {
+        "metric": "Operating Cash Flow Conversion Ratio",
+        "2022": 1.8,
+        "2023": 2.0,
+        "2024": 1.8
+      }
+    ]
+  },
+  "products": [],
+  "shareholders_pre_ipo": [
+    {
+      "name": "Zeng Yuqun (via Ruihua Investment and Xiamen Ruiting)",
+      "shares_10k": null,
+      "pct": 23.27,
+      "type": "Individual"
+    },
+    {
+      "name": "Huang Shilin",
+      "shares_10k": null,
+      "pct": 10.66,
+      "type": "Individual"
+    },
+    {
+      "name": "Ningbo United Innovation of New Energy Investment Management Partnership (Limited Partnership)",
+      "shares_10k": null,
+      "pct": 6.45,
+      "type": "VC"
+    },
+    {
+      "name": "Li Ping",
+      "shares_10k": null,
+      "pct": 4.58,
+      "type": "Individual"
+    },
+    {
+      "name": "Other Holders of A Shares",
+      "shares_10k": null,
+      "pct": 55.04,
+      "type": "Institution"
+    }
+  ],
+  "use_of_proceeds": {
+    "total_rmb_10k": null,
+    "projects": [
+      {
+        "name": "Use of Proceeds from Global Offering",
+        "amount_rmb_10k": null,
+        "focus": "Details of use of proceeds are described in the 'Future Plans and Use of Proceeds' section (page 310) of the prospectus, which was not included in the provided text excerpts. Specific project allocations and amounts are not available from the provided content."
+      }
+    ]
+  },
+  "ip": {
+    "patents_total": null
+  },
+  "key_risks": [
+    "The demand in the end markets of our industry is constantly changing. If we are unable to respond effectively to these changes, our business, results of operations and financial condition will be materially and adversely affected.",
+    "If we fail to maintain technology leadership in the battery industry, our operating results may be adversely affected.",
+    "We face risks of changing new energy industry policies.",
+    "Our business faces significant competition.",
+    "We may face risks if there are quality issues with our products.",
+    "If we are unable to retain our existing customers or attract new customers, our business, financial condition and results of operations could be materially and adversely affected.",
+    "We face uncertainties and risks in overseas manufacturing and operations.",
+    "Price fluctuation and inadequate supply of materials and equipment for our production could adversely affect our business, financial condition and results of operations.",
+    "Policies and regulations affecting international trade and investment, including U.S. tariffs on Chinese imports (raised to 20% from March 4, 2025), 25% tariffs on automobiles and parts, and reciprocal tariffs announced in April 2025, may adversely affect our business and results of operations.",
+    "Risks relating to financial, accounting and tax matters.",
+    "Risks relating to government regulations.",
+    "Risks relating to the Global Offering, including potential decline in H Share market price."
+  ],
+  "executive_summary": "Contemporary Amperex Technology Co., Limited (CATL) is the world's leading manufacturer of electric vehicle and energy storage batteries, powering one in every three EVs globally. Revenue was $4.99B in 2024 (down 10% from $5.53B in 2023 due to falling battery prices), though volumes grew strongly — EV battery shipments rose from 321 GWh to 381 GWh year-over-year. Gross margins improved meaningfully from 17.6% in 2022 to 24.4% in 2024, and net profit reached $763M in 2024 (net margin 15.3%), up from $653M in 2023. The company generates strong operating cash flow of approximately $1.34B annually.\n\nCATL is listing H Shares on the Hong Kong Stock Exchange (stock code: 3750), offering approximately 117.9 million shares at a maximum price of HK$263 per share, implying gross proceeds of roughly $3.97B. Sponsors include BofA Securities, CICC, J.P. Morgan, Goldman Sachs, and Morgan Stanley. Founder Zeng Yuqun controls 23.3% of shares, with co-founder Huang Shilin holding 10.7%.\n\nSpecific use of proceeds was not disclosed in the available prospectus excerpts but is expected to fund global manufacturing expansion and R&D.\n\nThe three biggest risks are: escalating US tariffs on Chinese goods threatening overseas competitiveness; intensifying competition compressing already-declining battery prices; and the company's ability to maintain its technology lead as rivals close the gap."
+}

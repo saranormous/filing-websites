@@ -80,6 +80,16 @@ make push MSG="commit message"          # Commit and push
 
 Go to **Actions → Process IPO Filing → Run workflow** and provide PDF URL, company slug, name, exchange, and sector.
 
+## Dependencies
+
+```bash
+brew install poppler qpdf
+pip3 install anthropic pypdf
+export ANTHROPIC_API_KEY=sk-ant-...
+```
+
+Note: Use system python (`/usr/bin/python3`) not Homebrew python. Some SSE filings are DRM-encrypted — the pipeline auto-decrypts with `qpdf` if needed.
+
 ## LLM Search
 
 Requires an [Anthropic API key](https://console.anthropic.com/settings/keys) or OpenAI key. Stored in browser localStorage only. Keyword search works without any key.

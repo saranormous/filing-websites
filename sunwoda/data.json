@@ -3,25 +3,29 @@
     "document": "IPO Prospectus (Draft)",
     "issuer": "Sunwoda Electronic Co., Ltd.",
     "issuer_cn": "欣旺達電子股份有限公司",
-    "filing_date": "2026-01-30",
+    "filing_date": "2026-01-21",
     "exchange": "Hong Kong Stock Exchange (HKEX)",
     "board": "Main Board",
-    "sponsor": "[Redacted] (Joint Sponsors)",
+    "sponsor": "Goldman Sachs (Asia) L.L.C. / CITIC Securities",
     "source_language": "Chinese",
-    "translation_note": "AI-translated for reference only"
+    "translation_note": "AI-translated for reference only",
+    "extraction_method": "vision"
   },
   "company": {
     "name_en": "Sunwoda Electronic Co., Ltd.",
     "name_cn": "欣旺達電子股份有限公司",
     "founded": "1997",
-    "headquarters": "China (PRC)",
+    "headquarters": "Shenzhen, Guangdong, China",
     "registered_capital_rmb": null,
     "website": "www.sunwoda.com",
-    "industry": "Lithium Battery Manufacturing / New Energy",
+    "industry": "Lithium Battery Research, Design, Manufacturing and Sales (Consumer Batteries, Power Batteries, Energy Storage Systems)",
     "controller": {
-      "name": "Wang Mingwang",
+      "name": "Wang Mingwang and Wang Wei (acting in concert)",
+      "direct_shares_pct": null,
+      "total_control_pct": 26.75,
       "roles": [
-        "Chairman"
+        "Single Largest Shareholders",
+        "Parties to Concert Action Agreement dated August 6, 2008"
       ]
     },
     "employees": {
@@ -37,147 +41,288 @@
   },
   "products": [
     {
-      "name": "Consumer Battery - Mobile Phone Battery",
-      "type": "Lithium-ion Battery",
-      "specs": "Global #1 in mobile phone batteries by 2024 shipments; 34.3% global market share"
+      "name": "Consumer Battery",
+      "type": "Lithium-ion battery pack",
+      "specs": "For smartphones, notebooks, tablets, smart home devices, smart wearables, smart mobility devices, service robots; revenue RMB 30.4 billion in 2024; sales volume 586.3 million units in 2024; average selling price RMB 51.9/unit in 2024; capacity 687.3 million units in 2024; utilization rate 91.0% in 2024"
     },
     {
-      "name": "Consumer Battery - Laptop and Tablet Battery",
-      "type": "Lithium-ion Battery",
-      "specs": "Global #2 in laptop and tablet batteries by 2024 shipments; 21.6% global market share"
+      "name": "Power Battery",
+      "type": "Lithium-ion battery for electric vehicles",
+      "specs": "For BEV, EREV, PHEV, HEV passenger vehicles, commercial vehicles, construction machinery; revenue RMB 15.1 billion in 2024; sales volume 25.3 GWh in 2024; average selling price RMB 0.6/Wh in 2024; capacity 39.5 GWh in 2024; utilization rate 69.9% in 2024; includes LFP and ternary battery types"
     },
     {
-      "name": "Consumer Battery - Smart Wearables Battery",
-      "type": "Lithium-ion Battery",
-      "specs": "Battery solutions for smart wearable devices"
+      "name": "Energy Storage System",
+      "type": "Integrated energy storage solution",
+      "specs": "For grid-scale storage, industrial and commercial storage, residential storage, data center storage; revenue RMB 1.89 billion in 2024; sales volume 9.6 GWh in 2024; average selling price RMB 0.2/Wh in 2024; capacity 12.0 GWh in 2024; utilization rate 77.5% in 2024"
     },
     {
-      "name": "Consumer Battery - Smart Home Battery",
-      "type": "Lithium-ion Battery",
-      "specs": "Battery solutions for smart home devices"
+      "name": "Precision Structural Components",
+      "type": "Precision molds and structural parts",
+      "specs": "For smartphones, tablets, smart home and smart wearable devices; includes smart device structural components and smart home structural components; revenue RMB 3.4 billion in 2024"
     },
     {
-      "name": "Consumer Battery - Smart Mobility / Service Robots Battery",
-      "type": "Lithium-ion Battery",
-      "specs": "Battery solutions for smart mobility and service robots"
+      "name": "Smart Hardware",
+      "type": "OEM/ODM smart hardware terminal products",
+      "specs": "Includes cleaning robots, personal care products, smart pens; revenue RMB 2.4 billion in 2024"
     },
     {
-      "name": "EV Power Battery - Battery Electric Vehicle (BEV)",
-      "type": "Power Battery",
-      "specs": "Battery solutions for pure electric vehicles; global top 10 power battery manufacturer (2.1% market share by 2024 shipments)"
-    },
-    {
-      "name": "EV Power Battery - Hybrid Electric Vehicle (HEV/PHEV)",
-      "type": "Power Battery",
-      "specs": "Battery solutions for hybrid electric vehicles"
-    },
-    {
-      "name": "EV Power Battery - Commercial Vehicles & Construction Machinery",
-      "type": "Power Battery",
-      "specs": "Battery solutions for commercial vehicles and engineering machinery"
-    },
-    {
-      "name": "Energy Storage System - Grid-scale",
-      "type": "Energy Storage System",
-      "specs": "Grid-level energy storage solutions"
-    },
-    {
-      "name": "Energy Storage System - Commercial & Industrial",
-      "type": "Energy Storage System",
-      "specs": "C&I energy storage solutions"
-    },
-    {
-      "name": "Energy Storage System - Residential",
-      "type": "Energy Storage System",
-      "specs": "Home energy storage solutions; global top 5 AC-coupled energy storage system brand"
-    },
-    {
-      "name": "Energy Storage System - Data Center",
-      "type": "Energy Storage System",
-      "specs": "Data center energy storage solutions; global top 10 energy storage battery manufacturer (1.4% market share by 2024 shipments)"
-    },
-    {
-      "name": "Battery Testing and Recycling Services",
-      "type": "Service",
-      "specs": "Full lifecycle battery testing and recycling services"
-    }
-  ],
-  "shareholders_pre_ipo": [
-    {
-      "name": "Wang Mingwang",
-      "shares_10k": null,
-      "pct": 26.75,
-      "type": "Individual"
-    },
-    {
-      "name": "Wang Wei",
-      "shares_10k": null,
-      "pct": null,
-      "type": "Individual"
+      "name": "Other Products and Services",
+      "type": "Battery testing, recycling and other supplementary services",
+      "specs": "Battery testing services, battery recycling services; revenue RMB 2.78 billion in 2024"
     }
   ],
   "financials": {
     "currency": "RMB",
-    "unit": "10K (万元)",
+    "unit": "千元 (thousands)",
     "income_statement": [
       {
         "period": "2022",
-        "revenue": 522000,
-        "net_profit": 76.3361,
-        "gross_profit": 630000,
-        "gross_margin_pct": null,
-        "rd_expense": null,
-        "net_profit_attributable_to_owners": 110000,
-        "net_profit_total": 76336.1,
-        "adjusted_net_profit_non_ifrs": 103048.2
+        "revenue": 52162269,
+        "net_profit": 763361,
+        "gross_profit": 6284600,
+        "gross_margin_pct": 12.0,
+        "rd_expense": 2741803,
+        "operating_profit": 941347,
+        "profit_before_tax": 439510,
+        "tax": 323851,
+        "net_profit_to_owners": 1068014,
+        "net_profit_to_nci": -304653,
+        "selling_expense": 285759,
+        "ga_expense": 2327600,
+        "finance_income": 193979,
+        "finance_cost": 687545
       },
       {
         "period": "2023",
-        "revenue": null,
-        "net_profit": null,
-        "gross_profit": null,
-        "gross_margin_pct": null,
-        "rd_expense": null,
-        "net_profit_attributable_to_owners": null,
-        "net_profit_total": 33074.6,
-        "adjusted_net_profit_non_ifrs": 53507.4
+        "revenue": 47862227,
+        "net_profit": 330746,
+        "gross_profit": 6118044,
+        "gross_margin_pct": 12.8,
+        "rd_expense": 2710630,
+        "operating_profit": 583591,
+        "profit_before_tax": 168269,
+        "tax": 162477,
+        "net_profit_to_owners": 1076198,
+        "net_profit_to_nci": -745452,
+        "selling_expense": 389057,
+        "ga_expense": 2897553,
+        "finance_income": 377161,
+        "finance_cost": 726935
       },
       {
         "period": "2024",
-        "revenue": 560000,
-        "net_profit": null,
-        "gross_profit": 820000,
-        "gross_margin_pct": null,
-        "rd_expense": null,
-        "net_profit_attributable_to_owners": 150000,
-        "net_profit_total": 53428.3,
-        "adjusted_net_profit_non_ifrs": 72952.1
+        "revenue": 56020634,
+        "net_profit": 534283,
+        "gross_profit": 8202831,
+        "gross_margin_pct": 14.6,
+        "rd_expense": 3330198,
+        "operating_profit": 1130937,
+        "profit_before_tax": 788742,
+        "tax": -254459,
+        "net_profit_to_owners": 1474324,
+        "net_profit_to_nci": -940041,
+        "selling_expense": 522651,
+        "ga_expense": 3332799,
+        "finance_income": 374787,
+        "finance_cost": 716441
       },
       {
         "period": "9M2024",
-        "revenue": 383000,
-        "net_profit": null,
-        "gross_profit": 590000,
-        "gross_margin_pct": null,
-        "rd_expense": null,
-        "net_profit_attributable_to_owners": 120000,
-        "net_profit_total": 55349.1,
-        "adjusted_net_profit_non_ifrs": 72612.4
+        "revenue": 38278681,
+        "net_profit": 553491,
+        "gross_profit": 5853937,
+        "rd_expense": 2267622,
+        "operating_profit": 974113,
+        "profit_before_tax": 702357,
+        "tax": -148866,
+        "net_profit_to_owners": 1212215,
+        "net_profit_to_nci": -658724,
+        "selling_expense": 388200,
+        "ga_expense": 2372210,
+        "finance_income": 270092,
+        "finance_cost": 525153
       },
       {
         "period": "9M2025",
-        "revenue": 435000,
-        "net_profit": null,
-        "gross_profit": 710000,
-        "gross_margin_pct": null,
-        "rd_expense": null,
-        "net_profit_attributable_to_owners": 140000,
-        "net_profit_total": 77908.4,
-        "adjusted_net_profit_non_ifrs": 93861.8
+        "revenue": 43533748,
+        "net_profit": 779084,
+        "gross_profit": 7073090,
+        "gross_margin_pct": 16.2,
+        "rd_expense": 3201977,
+        "operating_profit": 1294752,
+        "profit_before_tax": 987494,
+        "tax": -208410,
+        "net_profit_to_owners": 1413519,
+        "net_profit_to_nci": -634435,
+        "selling_expense": 420531,
+        "ga_expense": 2738935,
+        "finance_income": 207508,
+        "finance_cost": 578868
       }
     ],
-    "balance_sheet": [],
-    "cash_flow": [],
+    "balance_sheet": [
+      {
+        "date": "2022-12-31",
+        "total_current_assets": 45149260,
+        "total_current_liabilities": 39007199,
+        "net_current_assets": 6142061,
+        "total_non_current_assets": 29349920,
+        "total_non_current_liabilities": 9176594,
+        "total_assets": 74499180,
+        "total_liabilities": 48183793,
+        "equity": 26315387,
+        "nci": 6251613,
+        "cash": 11097753
+      },
+      {
+        "date": "2023-12-31",
+        "total_current_assets": 41770982,
+        "total_current_liabilities": 32765131,
+        "net_current_assets": 9005851,
+        "total_non_current_assets": 37490277,
+        "total_non_current_liabilities": 14051506,
+        "total_assets": 79261259,
+        "total_liabilities": 46816637,
+        "equity": 32444622,
+        "nci": 9329173,
+        "cash": 13668744
+      },
+      {
+        "date": "2024-12-31",
+        "total_current_assets": 45312436,
+        "total_current_liabilities": 40544330,
+        "net_current_assets": 4768106,
+        "total_non_current_assets": 42185907,
+        "total_non_current_liabilities": 15027162,
+        "total_assets": 87498343,
+        "total_liabilities": 55571492,
+        "equity": 31926851,
+        "nci": 8198793,
+        "cash": 9465822
+      },
+      {
+        "date": "2025-09-30",
+        "total_current_assets": 52963168,
+        "total_current_liabilities": 49553329,
+        "net_current_assets": 3409839,
+        "total_non_current_assets": 47478839,
+        "total_non_current_liabilities": 18471702,
+        "total_assets": 100442007,
+        "total_liabilities": 68025031,
+        "equity": 32416976,
+        "nci": 7574145,
+        "cash": 11145952
+      }
+    ],
+    "cash_flow": [
+      {
+        "period": "2022",
+        "operating": 439281,
+        "investing": -9640928,
+        "financing": 14880791,
+        "net_change": 5679144,
+        "opening_cash": 5441712,
+        "closing_cash": 11097753
+      },
+      {
+        "period": "2023",
+        "operating": 2729717,
+        "investing": -5968608,
+        "financing": 5770948,
+        "net_change": 2532057,
+        "opening_cash": 11097753,
+        "closing_cash": 13668744
+      },
+      {
+        "period": "2024",
+        "operating": 2992429,
+        "investing": -5764272,
+        "financing": -1439055,
+        "net_change": -4210898,
+        "opening_cash": 13668744,
+        "closing_cash": 9465822
+      },
+      {
+        "period": "9M2024",
+        "operating": 2483268,
+        "investing": -4612121,
+        "financing": -1284879,
+        "net_change": -3413732,
+        "opening_cash": 13668744,
+        "closing_cash": 10265706
+      },
+      {
+        "period": "9M2025",
+        "operating": 2099321,
+        "investing": -6007415,
+        "financing": 5589464,
+        "net_change": 1681370,
+        "opening_cash": 9465822,
+        "closing_cash": 11145952
+      }
+    ],
+    "key_ratios": [
+      {
+        "period": "2022",
+        "gross_margin_pct": 12.0,
+        "current_ratio": 1.2,
+        "inventory_turnover": 5.2,
+        "debt_to_asset_pct": 65.2
+      },
+      {
+        "period": "2023",
+        "gross_margin_pct": 12.8,
+        "current_ratio": 1.3,
+        "inventory_turnover": 4.9,
+        "debt_to_asset_pct": 62.7
+      },
+      {
+        "period": "2024",
+        "gross_margin_pct": 14.6,
+        "current_ratio": 1.1,
+        "inventory_turnover": 6.6,
+        "debt_to_asset_pct": 69.3
+      },
+      {
+        "period": "9M2025",
+        "gross_margin_pct": 16.2,
+        "current_ratio": 1.1,
+        "inventory_turnover": 5.6,
+        "debt_to_asset_pct": 91.6
+      }
+    ],
+    "non_ifrs": [
+      {
+        "period": "2022",
+        "adjusted_net_profit": 1030482,
+        "share_based_payment": 163121,
+        "convertible_bond_fv_change": 104000
+      },
+      {
+        "period": "2023",
+        "adjusted_net_profit": 535074,
+        "share_based_payment": 158328,
+        "convertible_bond_fv_change": 46000
+      },
+      {
+        "period": "2024",
+        "adjusted_net_profit": 729521,
+        "share_based_payment": 195238,
+        "convertible_bond_fv_change": 0
+      },
+      {
+        "period": "9M2024",
+        "adjusted_net_profit": 726124,
+        "share_based_payment": 172643,
+        "convertible_bond_fv_change": 0
+      },
+      {
+        "period": "9M2025",
+        "adjusted_net_profit": 938618,
+        "share_based_payment": 153889,
+        "convertible_bond_fv_change": 0
+      }
+    ],
     "non_ifrs_reconciliation": [
       {
         "period": "2022",
@@ -217,30 +362,278 @@
     ]
   },
   "revenue_breakdown": {
-    "by_product": [],
-    "by_geography_pct": []
+    "by_product": [
+      {
+        "product": "Consumer Battery",
+        "2022": 32015431,
+        "2023": 28543283,
+        "2024": 30405096
+      },
+      {
+        "product": "EV/Power Battery",
+        "2022": 12686520,
+        "2023": 10794809,
+        "2024": 15138528
+      },
+      {
+        "product": "Energy Storage Systems",
+        "2022": 454947,
+        "2023": 1110059,
+        "2024": 1889216
+      },
+      {
+        "product": "Others - Precision Structural Components",
+        "2022": 2331111,
+        "2023": 2787292,
+        "2024": 3404443
+      },
+      {
+        "product": "Others - Smart Hardware",
+        "2022": 3505106,
+        "2023": 2551140,
+        "2024": 2403537
+      },
+      {
+        "product": "Others - Other Products & Services",
+        "2022": 1169154,
+        "2023": 2075644,
+        "2024": 2779814
+      },
+      {
+        "product": "Others Total",
+        "2022": 7005371,
+        "2023": 7414076,
+        "2024": 8587794
+      },
+      {
+        "product": "Total",
+        "2022": 52162269,
+        "2023": 47862227,
+        "2024": 56020634
+      }
+    ],
+    "by_segment": [
+      {
+        "segment": "Consumer Battery Division",
+        "2022": 34284421,
+        "2023": 31067523,
+        "2024": 33475483
+      },
+      {
+        "segment": "EV Battery Division",
+        "2022": 12686520,
+        "2023": 10794809,
+        "2024": 15138528
+      },
+      {
+        "segment": "Energy Storage Division",
+        "2022": 177367,
+        "2023": 698749,
+        "2024": 1238486
+      },
+      {
+        "segment": "Other Division",
+        "2022": 5013961,
+        "2023": 5301146,
+        "2024": 6168137
+      }
+    ],
+    "by_geography": [
+      {
+        "region": "Mainland China (excl. special customs)",
+        "2022": 29576325,
+        "2023": 27406020,
+        "2024": 32589324,
+        "2022_pct": 56.7,
+        "2023_pct": 57.3,
+        "2024_pct": 58.2
+      },
+      {
+        "region": "China Special Customs Zone",
+        "2022": 17697221,
+        "2023": 14078068,
+        "2024": 15222790,
+        "2022_pct": 33.9,
+        "2023_pct": 29.4,
+        "2024_pct": 27.2
+      },
+      {
+        "region": "USA",
+        "2022": 254635,
+        "2023": 417346,
+        "2024": 1348432,
+        "2022_pct": 0.5,
+        "2023_pct": 0.9,
+        "2024_pct": 2.4
+      },
+      {
+        "region": "EU",
+        "2022": 637469,
+        "2023": 1102896,
+        "2024": 1833417,
+        "2022_pct": 1.2,
+        "2023_pct": 2.3,
+        "2024_pct": 3.3
+      },
+      {
+        "region": "Other Countries/Regions",
+        "2022": 3996619,
+        "2023": 4857897,
+        "2024": 5026671,
+        "2022_pct": 7.7,
+        "2023_pct": 10.1,
+        "2024_pct": 8.9
+      },
+      {
+        "region": "Total",
+        "2022": 52162269,
+        "2023": 47862227,
+        "2024": 56020634
+      }
+    ],
+    "by_geography_pct": [
+      {
+        "region": "Mainland China (excl. special customs)",
+        "2022": 56.7,
+        "2023": 57.3,
+        "2024": 58.2
+      },
+      {
+        "region": "China Special Customs Zone",
+        "2022": 33.9,
+        "2023": 29.4,
+        "2024": 27.2
+      },
+      {
+        "region": "USA",
+        "2022": 0.5,
+        "2023": 0.9,
+        "2024": 2.4
+      },
+      {
+        "region": "EU",
+        "2022": 1.2,
+        "2023": 2.3,
+        "2024": 3.3
+      },
+      {
+        "region": "Other Countries/Regions",
+        "2022": 7.7,
+        "2023": 10.1,
+        "2024": 8.9
+      }
+    ]
   },
   "key_risks": [
-    "Demand for our products may fluctuate due to macroeconomic factors (including global and regional economic conditions, industry cyclicality, and evolving market dynamics) as well as our own operational capabilities.",
-    "The lithium-ion battery industry is highly competitive. If we fail to compete successfully, it may have a material adverse effect on our market share and market position.",
-    "Our R&D activities involve risks and uncertainties, and we may not be able to obtain expected benefits from our R&D efforts, which could negatively impact our competitiveness and profitability.",
-    "We may not be able to keep up with rapid technological changes and evolving industry standards, which could adversely affect our market position and render our products under development or in production, as well as our production facilities, uncompetitive or obsolete.",
-    "Our success depends on our customers' ability to successfully market and sell their end products and their decisions to place orders with us.",
+    "Market demand for our products may fluctuate due to macroeconomic factors such as global and regional economic conditions, industry cyclicality and evolving market dynamics, as well as our own operational capabilities.",
+    "The lithium-ion battery industry is highly competitive. If we fail to compete successfully, it could have a material adverse effect on our market share and market position.",
+    "Our R&D activities involve risks and uncertainties, and we may not obtain the expected benefits from our R&D efforts, which could negatively affect our competitiveness and profitability.",
+    "We may not be able to keep up with rapid technological changes and evolving industry standards, which could adversely affect our market position and render our products or production facilities uncompetitive or obsolete.",
+    "Our success depends on customers' ability to successfully market and sell their end products and their decisions to place orders with us.",
     "We experienced customer concentration during the track record period and may continue to face risks related to such concentration in the future.",
-    "Changes in tariffs may adversely affect our international sales, including potential further increases in US tariffs on goods imported from China.",
-    "We face risks related to sanctions, export control laws and regulations, and international trade policies, including new US export control rules expanding entity list controls.",
-    "We may be subject to US outbound investment rules in the future, which could adversely affect our ability to raise funds from US persons.",
-    "Concentration risk with major suppliers: purchases from our largest supplier accounted for up to 18.1% of total procurement in any given period."
+    "Fluctuations in raw material and component prices could have a material adverse effect on our business, results of operations and financial condition, and we may be unable to obtain sufficient raw materials and components meeting our quality standards in a timely and cost-effective manner or at all.",
+    "We may face supply chain risks due to reliance on a limited number of suppliers for certain raw materials and components.",
+    "We face counterparty performance risk from suppliers and customers failing to fulfill their contractual obligations.",
+    "We face risks associated with our overseas operations and sales of products in overseas markets, including compliance with local laws and regulations, international trade policies, tariff regulations and geopolitical tensions.",
+    "Any quality issues related to our products could expose us to potential product liability and warranty claims, leading to product recalls, legal disputes, reputational damage, and declines in sales and market share.",
+    "We are required to comply with various regulations and customer requirements, and may not be able to successfully maintain an effective quality control system.",
+    "Failure to continue to develop and maintain cost-effective production could have a material adverse effect on our business, results of operations and financial condition.",
+    "Our manufacturing processes face risk of disruption, which could significantly increase our manufacturing costs.",
+    "Our manufacturing relies on obtaining stable, timely and sufficient supply of water and electricity at commercially reasonable prices.",
+    "We may not be able to successfully implement our future business plans and strategies.",
+    "Any changes or termination of tax incentives and government subsidies we currently enjoy may adversely affect our business, results of operations and financial condition.",
+    "Our sales are subject to seasonal fluctuations.",
+    "Our reputation is key to our business success. Negative news or publicity could adversely affect our reputation, business and growth prospects.",
+    "Rising labor costs and inflation may adversely affect our business, results of operations, financial condition and prospects.",
+    "Our business operations and expansion depend on retaining our senior management, key R&D personnel, and our ability to attract and retain qualified and experienced employees.",
+    "Our strategic acquisitions, joint ventures or other investments may not be successful, and we may not be able to realize the anticipated strategic benefits and financial returns from such transactions.",
+    "Our business faces various risks. Our risk management and internal control systems and available risk management tools may not adequately protect us against inherent risks in our business.",
+    "We face risks related to IT system failures or malfunctions.",
+    "Our insurance may not be sufficient to cover all losses or potential claims that may affect our business, results of operations and financial condition.",
+    "Our single largest shareholder may have significant influence over our company, and their interests may not be aligned with those of other shareholders.",
+    "Our single largest shareholder has pledged their shares, which may give rise to potential ownership disputes.",
+    "Any unexpected interruptions to our business operations, future force majeure events, natural disasters, acts of war or terrorism, outbreaks of widespread infectious diseases or other events beyond our control may adversely affect our business, results of operations and financial condition.",
+    "If we fail to maintain optimal inventory levels and effectively manage inventory, we may incur additional write-downs and result in inventory obsolescence.",
+    "We may be unable to collect our trade receivables and bills receivable in a timely manner, which could negatively impact our liquidity and financial condition.",
+    "Exchange rate fluctuations may result in foreign exchange losses and have a material adverse effect on our financial performance.",
+    "Our financial liabilities may expose us to risks and uncertainties.",
+    "We face risks of fair value changes in financial assets measured at fair value.",
+    "We invest in associates and joint ventures, and our financial condition and results of operations may be affected by fluctuations in the share of results of such investments.",
+    "We may require additional funding, and we may not be able to obtain such funding on favorable terms or at all.",
+    "We have previously invested and may invest in wealth management products in the future.",
+    "Failure to fulfill obligations related to our contract liabilities may adversely affect our results of operations, liquidity and financial condition.",
+    "Our business depends on our ability to protect our intellectual property. We may also face intellectual property infringement claims, which may be costly to defend and could disrupt our business operations.",
+    "We may experience delays or be unable to obtain and renew necessary government approvals, licenses or permits required for our business and/or new projects or expansion projects.",
+    "New laws and changes in policies and regulatory requirements related to the lithium-ion battery industry and the downstream markets of our products may affect our business operations and prospects.",
+    "Defending or resolving any legal or regulatory proceedings against us, or non-compliance with A-share and GDR listing requirements, may be costly and time-consuming and may damage our reputation.",
+    "We face certain risks related to some of our owned and leased properties.",
+    "We face risks related to sanctions, export control laws and regulations, and international trade policies.",
+    "Changes in tariffs may adversely affect our international sales.",
+    "We may be subject to U.S. outbound investment rules in the future, which could adversely affect our ability to raise funds from U.S. persons.",
+    "ESG matters and failure to successfully manage such matters may increase additional costs and expose us to new risks.",
+    "We are required to comply with privacy and data protection laws and regulations. Any actual or alleged failure to comply with applicable laws and regulations may subject us to reputational, financial, legal and operational impacts.",
+    "We are required to comply with certain regulatory requirements on foreign exchange conversion and remittances.",
+    "Failure to comply with the Labor Contract Law or other PRC labor-related laws and regulations may adversely affect our financial condition and results of operations.",
+    "If environmental laws and regulations become more burdensome, we may be required to bear higher compliance costs, which could adversely affect our operations and financial performance and result in our inability to pass on costs to customers.",
+    "We are required to comply with anti-corruption, anti-bribery, anti-money laundering and similar laws and regulations; failure to comply may expose us to administrative, civil and criminal penalties, collateral consequences, remedial measures and legal expenses.",
+    "Non-PRC resident holders of H shares may be subject to PRC income tax obligations.",
+    "You may face difficulties in serving legal process on us or our directors or senior management or enforcing foreign judgments.",
+    "We will be required to simultaneously comply with listing and regulatory requirements in mainland China, Hong Kong and Switzerland.",
+    "The characteristics of the A-share and H-share markets may differ.",
+    "You should not rely on any information published in connection with our A-share listing on Shenzhen Stock Exchange or our GDR listing on the Swiss Exchange.",
+    "There has been no prior public market for our H shares, and an active trading market for our H shares may not develop or be maintained.",
+    "The price and trading volume of H shares may be volatile.",
+    "A-share price volatility may negatively affect H-share prices.",
+    "Our issuance of additional H shares or other equity securities may result in additional dilution to shareholders.",
+    "Future sales or market expectations of large quantities of H shares in the market may adversely affect the price of our H shares.",
+    "Our historical dividends may not be indicative of our future dividend policy, and we cannot guarantee whether and when dividends will be declared and paid in the future.",
+    "We face risks related to potential spin-offs.",
+    "We cannot guarantee the accuracy of facts, forecasts and other statistical data from official government sources contained in this document.",
+    "The forward-looking statements contained in this document involve risks and uncertainties."
   ],
   "use_of_proceeds": {
     "total_rmb_10k": null,
     "projects": [
       {
-        "name": "Future Plans and Use of Proceeds",
+        "name": "International Growth Strategy Expansion",
         "amount_rmb_10k": null,
-        "focus": "The prospectus references a section on 'Future Plans and [Redacted] Use of Proceeds' (page 386), but specific project names, amounts, and details have been redacted in this draft document. Proceeds are expected to support expansion of overseas production capacity and customer base diversification, among other strategic initiatives."
+        "focus": "Implementing our international growth strategy, including expanding overseas new production facilities and global sales and service networks to better reach our growing international customer base"
+      },
+      {
+        "name": "Research and Development",
+        "amount_rmb_10k": null,
+        "focus": "Used for R&D to maintain our leading position in the lithium-ion battery industry and further enhance our technological capabilities"
+      },
+      {
+        "name": "Digitalization and Intelligent Upgrade",
+        "amount_rmb_10k": null,
+        "focus": "Supporting the digitalization and intelligent upgrade of our operations"
+      },
+      {
+        "name": "Potential Investments or Acquisitions",
+        "amount_rmb_10k": null,
+        "focus": "Used for potential investments or acquisitions of upstream and downstream businesses to support our strategic development and expand the breadth and depth of our value chain"
+      },
+      {
+        "name": "Working Capital and General Corporate Purposes",
+        "amount_rmb_10k": null,
+        "focus": "Used as working capital and for other general corporate purposes"
       }
     ]
   },
+  "shareholders_pre_ipo": [
+    {
+      "name": "Wang Mingwang",
+      "shares_10k": null,
+      "pct": 26.75,
+      "type": "Individual"
+    },
+    {
+      "name": "Wang Wei",
+      "shares_10k": null,
+      "pct": null,
+      "type": "Individual"
+    }
+  ],
   "executive_summary": "Sunwoda Electronic Co., Ltd. is a Chinese lithium battery manufacturer covering consumer batteries, EV power batteries, and energy storage systems, holding the global number one position in mobile phone batteries (34.3% market share) and number two in laptop and tablet batteries (21.6% market share).\n\nRevenue grew from $720M in 2022 to $773M in 2024, with nine-month 2025 revenue of $600M, up roughly 14% year-over-year versus the same period in 2024. Adjusted net profit for the nine months ended 2025 was $130M, up from $100M in the comparable prior period. Gross profit trends also improved, with nine-month 2025 gross profit reaching $980M on reported figures — though some data points in the filing appear inconsistent and should be verified against the final prospectus. Net profit margins remain modest given the capital-intensive nature of the industry.\n\nThe company is seeking a listing on the Hong Kong Stock Exchange Main Board. The IPO size and price range are redacted in this draft filing. The founding family, led by Wang Mingwang (26.75% pre-IPO), are the controlling shareholders. Use of proceeds is partially redacted but is expected to fund overseas production capacity expansion and customer base diversification.\n\nThe three biggest risks are: escalating US tariffs and export controls targeting Chinese manufacturers, intense price competition in a commoditized battery market, and significant customer concentration that leaves revenue vulnerable to shifts in a small number of large customer relationships."
 }

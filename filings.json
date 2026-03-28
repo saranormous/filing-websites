@@ -9,8 +9,8 @@
     "status": "Draft",
     "stats": [
       {
-        "label": "Revenue (2025-01 to 2025-09)",
-        "value": "$161M"
+        "label": "Revenue (2025_FY)",
+        "value": "$236M"
       },
       {
         "label": "Top Shareholder",
@@ -29,8 +29,17 @@
     "status": "Listed",
     "stats": [
       {
+        "label": "Revenue (2025H1)",
+        "value": "$26M"
+      },
+      {
+        "label": "Gross Margin",
+        "value": "50.0%",
+        "color": "green"
+      },
+      {
         "label": "Top Shareholder",
-        "value": "Tianjin Sankuai (Mei",
+        "value": "Huihui (Employee Own",
         "color": "yellow"
       }
     ]
@@ -45,8 +54,13 @@
     "status": "Listed",
     "stats": [
       {
-        "label": "Revenue (9M2024)",
-        "value": "$19M"
+        "label": "Revenue (9M2025)",
+        "value": "$53M"
+      },
+      {
+        "label": "Gross Margin",
+        "value": "23.3%",
+        "color": "green"
       },
       {
         "label": "Top Shareholder",
@@ -86,7 +100,7 @@
     "name_cn": "中科寒武纪科技股份有限公司",
     "exchange": "SSE STAR Market",
     "sector": "AI Chips",
-    "filed": "2020-06-03",
+    "filed": "2020-01-01",
     "status": "Listed",
     "stats": [
       {
@@ -95,7 +109,7 @@
       },
       {
         "label": "Top Shareholder",
-        "value": "Ningbo Hangao (CITIC",
+        "value": "Chen Tianshi (陈天石)",
         "color": "yellow"
       }
     ]
@@ -176,16 +190,16 @@
     "name_cn": "惠州亿纬锂能股份有限公司",
     "exchange": "HKEX Main Board",
     "sector": "Energy / Batteries",
-    "filed": "2026-01-02",
+    "filed": "2025-12-24",
     "status": "Draft",
     "stats": [
       {
         "label": "Revenue (9M2025)",
-        "value": "$621M"
+        "value": "$6.2B"
       },
       {
         "label": "Gross Margin",
-        "value": "15.96%",
+        "value": "16.0%",
         "color": "green"
       }
     ]
@@ -196,12 +210,17 @@
     "name_cn": "欣旺达电子股份有限公司",
     "exchange": "HKEX Main Board",
     "sector": "Energy / Batteries",
-    "filed": "2026-01-30",
+    "filed": "2026-01-21",
     "status": "Draft",
     "stats": [
       {
         "label": "Revenue (9M2025)",
-        "value": "$600M"
+        "value": "$6.0B"
+      },
+      {
+        "label": "Gross Margin",
+        "value": "16.2%",
+        "color": "green"
       },
       {
         "label": "Top Shareholder",

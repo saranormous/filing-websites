@@ -3,55 +3,264 @@
     "document": "IPO Prospectus (Draft)",
     "issuer": "CXMT Corporation",
     "issuer_cn": "长鑫科技集团股份有限公司",
-    "filing_date": "2026-03-15",
+    "filing_date": "2025-12-29",
     "exchange": "Shanghai Stock Exchange",
-    "board": "STAR Market",
-    "sponsor": "China International Capital Corporation Limited; CITIC Securities Co., Ltd.",
+    "board": "STAR Market (Sci-Tech Innovation Board)",
+    "sponsor": "China International Capital Corporation Limited (CICC); China Securities Co., Ltd. (CITIC Securities)",
     "source_language": "Chinese",
-    "translation_note": "AI-translated for reference only"
+    "translation_note": "AI-translated for reference only",
+    "extraction_method": "vision"
   },
   "company": {
     "name_en": "CXMT Corporation",
     "name_cn": "长鑫科技集团股份有限公司",
-    "founded": null,
+    "founded": "2016",
     "headquarters": "No. 388 Xingye Avenue, Airport Industrial Park, Hefei Economic and Technological Development Zone, Anhui Province",
-    "website": null,
-    "industry": "Integrated Circuit - DRAM (Dynamic Random Access Memory) Research, Design, Manufacturing and Sales; China's largest and most technically advanced integrated DRAM R&D, design and manufacturing enterprise; ranked #1 in China and #4 globally by production capacity",
+    "registered_capital_rmb": 60192797469,
+    "website": "https://www.cxmt.com/",
+    "industry": "Computer, Communication and Other Electronic Equipment Manufacturing (C39); DRAM Research, Design, and Manufacturing",
     "controller": {
-      "name": "Zhu Yiming",
+      "name": "None (No controlling shareholder or actual controller)",
+      "direct_shares_pct": 0,
+      "total_control_pct": 0,
       "roles": [
-        "Chairman of the Board"
+        "No single shareholder holds more than 50% of shares; largest shareholder is Qinghui Jidian (formerly Shixi Jidian) with 21.67%"
       ]
     },
     "employees": {
-      "total": null,
-      "rd": null
+      "total": 13858,
+      "rd": 4143
     }
   },
   "offering": {
-    "shares_offered_max": 106222599.99,
-    "post_ipo_shares_approx": 708150574.68,
+    "shares_offered_max": 10622259999,
+    "post_ipo_shares_approx": 70815057468,
     "offering_pct_approx": 10.0,
     "par_value_rmb": 1.0
   },
+  "products": [
+    {
+      "name": "DDR4 DRAM",
+      "type": "Dynamic Random Access Memory - Consumer/Server",
+      "specs": "DDR4 standard; 4th generation DDR technology; used in desktops, servers"
+    },
+    {
+      "name": "DDR5 DRAM",
+      "type": "Dynamic Random Access Memory - Consumer/Server",
+      "specs": "DDR5 standard; 5th generation DDR technology; latest generation, accelerating market penetration"
+    },
+    {
+      "name": "LPDDR4X DRAM",
+      "type": "Low Power Dynamic Random Access Memory - Mobile",
+      "specs": "LPDDR4X standard; low power, compact form factor; primarily for mobile devices"
+    },
+    {
+      "name": "LPDDR5/5X DRAM",
+      "type": "Low Power Dynamic Random Access Memory - Mobile",
+      "specs": "LPDDR5/5X standard; latest generation low power memory; accelerating penetration in downstream markets"
+    },
+    {
+      "name": "DRAM Wafer",
+      "type": "Semiconductor Wafer - Intermediate Product",
+      "specs": "12-inch (300mm) DRAM wafers; produced at 3 wafer fabs in Hefei and Beijing"
+    },
+    {
+      "name": "DRAM Chip (Die)",
+      "type": "Packaged Semiconductor Chip",
+      "specs": "Packaged and tested DRAM die; covers DDR and LPDDR product families"
+    },
+    {
+      "name": "DRAM Module (DIMM)",
+      "type": "Memory Module",
+      "specs": "RDIMM (Registered DIMM for servers), UDIMM (Unbuffered DIMM for desktops), SODIMM (Small Outline DIMM for laptops), MRDIMM (Multiplexed Rank DIMM), LPCAMM; for servers, PCs, laptops, smart vehicles"
+    }
+  ],
   "financials": {
     "currency": "RMB",
     "unit": "10K (万元)",
-    "income_statement": [],
-    "balance_sheet": [],
-    "cash_flow": []
+    "income_statement": [
+      {
+        "period": "2022",
+        "revenue": 828654.47,
+        "net_profit": -917108.58,
+        "gross_margin_pct": -3.13,
+        "rd_expense": 419499.22
+      },
+      {
+        "period": "2023",
+        "revenue": 908714.72,
+        "net_profit": -1922488.63,
+        "gross_margin_pct": -1.93,
+        "rd_expense": 467047.07
+      },
+      {
+        "period": "2024",
+        "revenue": 2417824.87,
+        "net_profit": -905100.04,
+        "gross_margin_pct": 5.58,
+        "rd_expense": 634129.13
+      },
+      {
+        "period": "2025H1",
+        "revenue": 1543792.46,
+        "net_profit": -408751.86,
+        "gross_margin_pct": 13.0,
+        "rd_expense": 366072.8
+      }
+    ],
+    "balance_sheet": [
+      {
+        "date": "2022-12-31",
+        "total_assets": 14769393.92,
+        "total_liabilities": 8347760.28,
+        "equity": 6421633.64,
+        "cash": 3207240.41
+      },
+      {
+        "date": "2023-12-31",
+        "total_assets": 19275633.28,
+        "total_liabilities": 12764294.98,
+        "equity": 6511338.28,
+        "cash": 3137354.72
+      },
+      {
+        "date": "2024-12-31",
+        "total_assets": 27159883.1,
+        "total_liabilities": 16734195.36,
+        "equity": 10425687.75,
+        "cash": 4269868.37
+      },
+      {
+        "date": "2025-06-30",
+        "total_assets": 28990247.02,
+        "total_liabilities": 16711892.15,
+        "equity": 12278354.87,
+        "cash": 4292244.89
+      }
+    ],
+    "cash_flow": [
+      {
+        "period": "2022",
+        "operating": -195716.65,
+        "investing": -2694922.76,
+        "financing": 3897099.86
+      },
+      {
+        "period": "2023",
+        "operating": -727162.07,
+        "investing": -4400152.79,
+        "financing": 5080684.99
+      },
+      {
+        "period": "2024",
+        "operating": 689745.85,
+        "investing": -7241524.69,
+        "financing": 7721418.21
+      },
+      {
+        "period": "2025H1",
+        "operating": 425051.9,
+        "investing": -3052224.97,
+        "financing": 2080162.93
+      }
+    ]
   },
   "revenue_breakdown": {
-    "by_product": [],
-    "by_geography_pct": []
+    "by_product": [
+      {
+        "product": "DDR Series",
+        "2022": 147481.67,
+        "2023": 182716.69,
+        "2024": 317397.33,
+        "2025H1": 423548.37
+      },
+      {
+        "product": "LPDDR Series",
+        "2022": 641662.23,
+        "2023": 675607.25,
+        "2024": 1979825.86,
+        "2025H1": 1061681.86
+      },
+      {
+        "product": "Other Products and Services",
+        "2022": 19305.23,
+        "2023": 47990.43,
+        "2024": 95651.94,
+        "2025H1": 37145.76
+      }
+    ],
+    "by_geography_pct": [
+      {
+        "region": "Domestic",
+        "2022": 14.16,
+        "2023": 20.05,
+        "2024": 29.34,
+        "2025H1": 63.12
+      },
+      {
+        "region": "Overseas",
+        "2022": 85.84,
+        "2023": 79.95,
+        "2024": 70.66,
+        "2025H1": 36.88
+      },
+      {
+        "region": "Hong Kong",
+        "2022": 76.33,
+        "2023": 75.05,
+        "2024": 68.15,
+        "2025H1": 36.87
+      },
+      {
+        "region": "Other Regions",
+        "2022": 9.51,
+        "2023": 4.9,
+        "2024": 2.51,
+        "2025H1": 0.01
+      }
+    ]
   },
-  "products": [
-    {
-      "name": "DRAM Memory Products",
-      "type": "Dynamic Random Access Memory",
-      "specs": "Including DDR5, LPDDR5/5X and other advanced memory products; used in data centers, mobile devices and terminals, communications, intelligent manufacturing and other key application areas"
-    }
+  "key_risks": [
+    "The DRAM industry has high investment intensity and high technical barriers. During the reporting period, the company was in a stage of rapid capacity construction and ramp-up, while continuously increasing R&D investment. The company has not yet achieved profitability and has accumulated uncompensated losses. Net profits attributable to parent company shareholders during the reporting period were -8,328 million RMB, -16,340 million RMB, -7,145 million RMB, and -2,332 million RMB respectively. As of June 30, 2025, cumulative losses were -40,857 million RMB.",
+    "Risk of product sales price and operating performance fluctuations due to macroeconomic volatility and industry cyclicality. The DRAM industry experienced a deep downturn from 2022 to 2023, with product sales prices declining significantly. In 2023 and 2024, the company's main DRAM product selling price changed year-on-year by -43.54% and +55.08% respectively.",
+    "Risk of large fixed asset investment and depreciation. Fixed asset book values at end of each reporting period were 68,016 million RMB, 84,452 million RMB, 153,132 million RMB, and 171,593 million RMB, accounting for 46.05%, 43.81%, 56.38%, and 59.19% of total assets respectively. Depreciation amounts during the reporting periods were 5,243 million RMB, 10,555 million RMB, 14,875 million RMB, and 11,349 million RMB.",
+    "Inventory write-down risk. Inventory balances at end of each reporting period were 9,434 million RMB, 14,180 million RMB, 21,215 million RMB, and 28,073 million RMB. Inventory impairment provisions were 2,517 million RMB, 3,444 million RMB, 2,665 million RMB, and 1,986 million RMB respectively. Inventory write-down losses during the reporting periods were -4,078 million RMB, -11,500 million RMB, -1,827 million RMB, and -628 million RMB.",
+    "Risk of supply chain instability due to international trade friction. The global semiconductor supply chain is highly specialized, but current geopolitical conflicts are accelerating supply chain restructuring. If relevant countries further strengthen restriction policies in the short term, the company may face supply chain instability risks.",
+    "Risk of product and technology R&D falling short of expectations. The DRAM industry is technology-intensive with high barriers. If the company's R&D direction deviates from market needs, new product performance lags behind competitors, or technology development and product upgrades fall short of expectations, it may adversely affect the company's future operations.",
+    "Risk of no controlling shareholder and actual controller. The company's equity structure is relatively dispersed with no single shareholder holding more than 50%. This may lead to decision-making inefficiency due to disagreements among shareholders or directors, and the dispersed equity structure creates the possibility of control changes after listing.",
+    "Risk of new expenses and depreciation/amortization from fundraising investment projects affecting operating performance. During and after the construction period of fundraising projects, new fixed asset investments will lead to increased depreciation and amortization, directly affecting annual operating performance.",
+    "Risk of talent shortage or loss. The DRAM industry is talent-intensive. If the company cannot continuously attract and retain outstanding talent, it may lead to loss of core personnel and adversely affect important R&D and innovation activities.",
+    "Risk of technology leakage and intellectual property protection and disputes. Despite having comprehensive information security systems, the company may still face risks of core technology leakage or intellectual property disputes with competitors due to inherent limitations of confidentiality measures, core talent mobility, and other uncontrollable external factors.",
+    "Risk of high customer concentration. The top five customers accounted for 69.43%, 74.12%, 67.30%, and 59.99% of main business revenue during each reporting period. If major customers' market demand declines significantly, it may adversely affect the company's continuous operations and future performance growth.",
+    "Risk of gross margin fluctuations in main business. Main business gross margins during the reporting periods were -3.67%, -2.19%, 5.00%, and 12.72%. If memory chip market prices further decline and scale effects cannot be realized, gross margins may face further decline risks.",
+    "Risk of high R&D investment, large intangible asset amortization, and impairment. Cumulative R&D investment during the reporting period was 18,867 million RMB, accounting for 33.11% of cumulative revenue. Intangible asset amortization during each period was 978 million RMB, 1,343 million RMB, 1,432 million RMB, and 903 million RMB respectively.",
+    "Risk of net cash flow from operating activities fluctuation. Net cash flows from operating activities during the reporting periods were -1,957 million RMB, -7,272 million RMB, 6,897 million RMB, and 4,251 million RMB. Operating cash flows were negative in 2022-2023, posing potential liquidity risks.",
+    "Environmental protection risk. The company generates wastewater, exhaust gas, and solid waste in its production operations, and may face administrative penalties if environmental pollution incidents occur. More stringent environmental requirements may require additional investment in facility upgrades.",
+    "Safety production risk. Production involves mechanical equipment operation and hazardous raw materials. Safety accidents could result in employee casualties, property losses, production line shutdowns, and administrative penalties.",
+    "Market competition risk. Compared with international leading manufacturers (Samsung Electronics, SK Hynix, Micron Technology), the company still has gaps in overall scale, technology accumulation, and customer resources. If the company cannot accurately grasp industry iteration and technology trends, it will be difficult to maintain sustainable competitiveness.",
+    "Risk of fundraising investment project implementation falling short of expectations. Investment projects require certain construction periods, and may be adversely affected by changes in market environment, industrial policies, project management, and product/service market sales conditions.",
+    "Risk of IPO failure. If the number of offline investor subscriptions is lower than the initial offline issuance volume after the stock offering price is determined, the issuance may be suspended. If the company fails to complete the issuance within the validity period of the CSRC registration decision, it will face the risk of issuance failure."
   ],
+  "use_of_proceeds": {
+    "total_rmb_10k": 2950000,
+    "projects": [
+      {
+        "name": "Memory Wafer Manufacturing Production Line Technology Upgrade and Renovation Project",
+        "amount_rmb_10k": 750000,
+        "focus": "Upgrade and retrofit existing memory wafer manufacturing production lines to improve production capacity and manufacturing process technology level, accelerate DRAM capacity construction and upgrade, enhance market competitiveness; implemented by issuer's subsidiaries"
+      },
+      {
+        "name": "DRAM Memory Technology Upgrade Project",
+        "amount_rmb_10k": 1300000,
+        "focus": "Upgrade DRAM memory technology to advance process technology platform, improve product performance, reduce unit costs, expand production scale, and strengthen core competitiveness; total project investment is 18,000 million RMB with 13,000 million RMB from raised funds; implemented by issuer's subsidiaries"
+      },
+      {
+        "name": "Dynamic Random Access Memory Forward-Looking Technology Research and Development Project",
+        "amount_rmb_10k": 900000,
+        "focus": "Conduct frontier technology research and development for next-generation DRAM products, continuously iterate process technology, maintain technology leadership, enhance autonomous innovation capability, and improve the company's risk resistance; implemented by the issuer itself"
+      }
+    ]
+  },
   "shareholders_pre_ipo": [
     {
       "name": "National Integrated Circuit Industry Investment Fund Phase II (Big Fund Phase II)",
@@ -60,41 +269,5 @@
       "type": "Institution"
     }
   ],
-  "use_of_proceeds": {
-    "total_rmb_10k": null,
-    "projects": [
-      {
-        "name": "Memory Wafer Manufacturing Production Line Technology Upgrade and Renovation Project",
-        "amount_rmb_10k": null,
-        "focus": "Upgrade and transformation of existing DRAM wafer manufacturing production lines to improve production capacity, reduce unit costs, and enhance manufacturing process levels"
-      },
-      {
-        "name": "DRAM Memory Technology Upgrade Project",
-        "amount_rmb_10k": null,
-        "focus": "Accelerate DRAM production capacity construction and process technology upgrades, expanding production scale and enhancing core competitiveness"
-      },
-      {
-        "name": "Dynamic Random Access Memory Forward-Looking Technology Research and Development Project",
-        "amount_rmb_10k": null,
-        "focus": "Continuous R&D investment in frontier and forward-looking DRAM technologies to maintain technological leadership, improve product performance (higher storage density, lower power consumption, faster read/write speeds), and enhance the company's risk resistance capability"
-      }
-    ]
-  },
-  "key_risks": [
-    "STAR Market investment risk: The company's shares are intended to be listed on the STAR Market after this offering. This market carries higher investment risks. STAR Market companies are characterized by large R&D investment, high operational risks, unstable performance, and high delisting risks. Investors face significant market risks and should fully understand these risks before making investment decisions.",
-    "Technology iteration risk: The DRAM industry undergoes rapid technology iteration. Products such as DDR5 and LPDDR5/5X are accelerating penetration into downstream markets. The company must continuously invest in R&D and maintain efficient technology iteration capabilities. Failure to keep pace with technology trends could result in the company losing its competitive advantage and market position.",
-    "Net loss risk: During the reporting period, the company has been in a net loss position, though the magnitude of losses has been narrowing rapidly. There is no guarantee that the company will achieve profitability in the near term. Investors should be aware of the risk associated with the company's ongoing losses.",
-    "Capacity gap risk: Although the company ranks #1 in China and #4 globally in terms of production capacity, there remains a significant gap compared to the top three international DRAM manufacturers (Samsung, SK Hynix, Micron). The company's capacity is also far below domestic market demand. If the company fails to ramp up capacity as planned, its competitive position may deteriorate.",
-    "Supply chain and technology sanctions risk: As a Chinese DRAM manufacturer, the company is exposed to the risk of export controls, sanctions, and restrictions on advanced semiconductor equipment, materials, and technology from foreign governments (particularly the United States). Such restrictions could impair the company's ability to procure critical manufacturing equipment and materials, potentially limiting production capacity expansion and technology upgrades.",
-    "High capital expenditure requirement risk: DRAM manufacturing is an extremely capital-intensive industry requiring continuous and substantial investment in production equipment, facilities, and R&D. The company's ability to finance ongoing capital expenditures through the IPO proceeds and other financing channels cannot be guaranteed, and insufficient funding could delay capacity expansion and technology development plans.",
-    "Industry cyclicality risk: The DRAM industry is subject to significant cyclical fluctuations in supply and demand, which directly affect product prices and the company's revenues and profitability. A downturn in DRAM prices could materially and adversely affect the company's financial performance.",
-    "Key talent retention risk: The integrated circuit industry is talent-intensive, and attracting and retaining top global engineering and technical talent is critical to the company's sustained development. The company may face challenges in competing for talent against well-established international peers with greater resources and brand recognition.",
-    "Intellectual property risk: DRAM technology involves highly complex and extensive intellectual property. The company may face patent infringement claims from global competitors or may be unable to adequately protect its own intellectual property, which could result in litigation, licensing costs, or restrictions on product sales.",
-    "Customer concentration risk: The company's revenues may be concentrated among a limited number of customers. Loss of key customers or deterioration in relationships with major customers could significantly impact the company's revenue and business operations.",
-    "Geopolitical and trade risk: As a Chinese semiconductor company, the company is exposed to risks arising from geopolitical tensions, trade disputes, and international political developments, which could adversely impact its overseas market expansion, supply chain security, and overall business operations.",
-    "Domestic market self-sufficiency risk: China's domestic DRAM self-sufficiency rate remains low, and the market is heavily dependent on imports from international manufacturers. While this represents a market opportunity, it also means the company faces intense competition from established global players with stronger brand recognition, deeper customer relationships, and more advanced technologies.",
-    "R&D investment uncertainty risk: The company's R&D projects, including forward-looking technology research, may not achieve expected results within the projected timeframe or budget. Technology development in the DRAM sector involves significant uncertainty, and R&D failures or delays could negatively impact the company's competitive position and financial condition.",
-    "Production yield and quality risk: DRAM manufacturing involves hundreds of highly complex process steps including photolithography, etching, thin film deposition, diffusion, ion implantation, chemical cleaning, and chemical mechanical polishing. Any failure to maintain high production yields and product quality standards could lead to significant financial losses and damage to the company's reputation.",
-    "Regulatory and compliance risk: As a listed company on the STAR Market, the company will be subject to heightened regulatory scrutiny and compliance requirements from the CSRC and Shanghai Stock Exchange. Failure to comply with applicable laws and regulations could result in penalties, reputational damage, or restrictions on business operations."
-  ]
+  "executive_summary": "CXMT Corporation is China's leading domestic manufacturer of DRAM memory chips, producing DDR4/DDR5 and LPDDR4X/LPDDR5 products for PCs, servers, and mobile devices from its fabs in Hefei and Beijing.\n\nRevenue grew sharply from $114M in 2022 to $333M in 2024, with first-half 2025 revenue reaching $213M. The company has not yet achieved profitability, posting net losses of $125M (2022), $265M (2023), $125M (2024), and $56M (H1 2025). Gross margins have improved steadily from -3.1% in 2022 to 13% in H1 2025 as capacity scales up. Cumulative accumulated losses stand at approximately $564M as of June 30, 2025. Total assets are approximately $4B, with cash of $592M.\n\nCXMT is raising approximately $407M (RMB 29.5B) on the Shanghai Stock Exchange STAR Market, offering roughly 10% of post-IPO shares. The largest shareholder is Qinghui Jidian at 21.67%; there is no controlling shareholder or single controlling party. Proceeds will fund production line upgrades, new capacity construction, and R&D.\n\nThe three biggest risks are: persistent unprofitability with massive ongoing capital requirements and depreciation drag as new fabs ramp; severe DRAM price cyclicality (prices swung -44% in 2023 then +55% in 2024); and supply chain vulnerability to US-led export controls and geopolitical restrictions on semiconductor equipment and materials."
 }

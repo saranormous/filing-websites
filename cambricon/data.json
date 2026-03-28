@@ -1,33 +1,37 @@
 {
   "meta": {
-    "document": "IPO Prospectus (Draft - Registration Version)",
+    "document": "IPO Prospectus (Draft)",
     "issuer": "Cambricon Technologies Corporation Limited",
     "issuer_cn": "中科寒武纪科技股份有限公司",
-    "filing_date": "2020-06-03",
+    "filing_date": "2020-01-01",
     "exchange": "Shanghai Stock Exchange",
     "board": "STAR Market (Ke Chuang Ban)",
-    "sponsor": "CITIC Securities Co., Ltd.",
+    "sponsor": "CITIC Securities Company Limited",
     "source_language": "Chinese",
-    "translation_note": "AI-translated for reference only"
+    "translation_note": "AI-translated for reference only",
+    "extraction_method": "vision"
   },
   "company": {
     "name_en": "Cambricon Technologies Corporation Limited",
     "name_cn": "中科寒武纪科技股份有限公司",
     "founded": "2016",
-    "headquarters": "Room 1601, 16/F, Tower D, Zhizhen Building, No. 7 Zhichun Road, Haidian District, Beijing",
-    "registered_capital_rmb": null,
+    "headquarters": "Room 1601, 16th Floor, Tower D, Zhizhen Building, No. 7 Zhichun Road, Haidian District, Beijing",
+    "registered_capital_rmb": 360000000,
     "website": null,
-    "industry": "Artificial Intelligence Chips (Integrated Circuit Design)",
+    "industry": "C39 - Computer, Communication and Other Electronic Equipment Manufacturing",
     "controller": {
       "name": "Chen Tianshi",
+      "direct_shares_pct": null,
+      "total_control_pct": null,
       "roles": [
-        "Chairman",
-        "CEO"
+        "Controlling Shareholder",
+        "Actual Controller",
+        "Legal Representative"
       ]
     },
     "employees": {
-      "total": null,
-      "rd": null
+      "total": 858,
+      "rd": 680
     }
   },
   "offering": {
@@ -39,60 +43,305 @@
   "products": [
     {
       "name": "Terminal Intelligent Processor IP - Cambricon 1A",
-      "type": "Processor IP Licensing",
-      "specs": "Intelligent processor IP for terminal/edge smart devices; licensed to customers such as HiSilicon for integration into SoC chips"
+      "type": "Terminal Intelligent Processor IP",
+      "specs": "World's first commercial terminal intelligent processor IP product; used in flagship smartphone SoC chips of a globally renowned Chinese technology company; deployed in over 100 million smart terminals"
     },
     {
       "name": "Terminal Intelligent Processor IP - Cambricon 1H",
-      "type": "Processor IP Licensing",
-      "specs": "Intelligent processor IP for terminal/edge smart devices; licensed to customers such as HiSilicon for integration into SoC chips"
+      "type": "Terminal Intelligent Processor IP",
+      "specs": "Terminal intelligent processor IP; applied in flagship smartphone SoC chips; integrated into over 100 million smart phones and other intelligent terminal devices"
+    },
+    {
+      "name": "Terminal Intelligent Processor IP - Cambricon 1M",
+      "type": "Terminal Intelligent Processor IP",
+      "specs": "Terminal scenario intelligent processor IP series chip; won Outstanding Innovative Product Award at the 20th China Hi-Tech Fair"
     },
     {
       "name": "Cloud Intelligent Chip and Accelerator Card - Siyuan 100 (MLU100)",
-      "type": "Cloud AI Chip / Accelerator Card",
-      "specs": "Cloud-side AI inference chip and accelerator card; used in cloud servers and data centers"
+      "type": "Cloud Intelligent Chip and Accelerator Card",
+      "specs": "China's first high peak-performance cloud intelligent chip; won Outstanding Innovative Product Award at the 20th China Hi-Tech Fair; used CAS Institute of Computing licensed 'processor data transfer mechanism' patents"
+    },
+    {
+      "name": "Cloud Intelligent Chip and Accelerator Card - Siyuan 270 (MLU270)",
+      "type": "Cloud Intelligent Chip and Accelerator Card",
+      "specs": "Cloud intelligent accelerator card based on MLU270 chip; applied in server products of Inspur, Lenovo and other server manufacturers; won the 6th World Internet Conference World Internet Leading Technology Achievement Award"
     },
     {
       "name": "Cloud Intelligent Chip and Accelerator Card - Siyuan 290 (MLU290)",
-      "type": "Cloud AI Chip / Accelerator Card",
-      "specs": "Next-generation cloud-side AI chip; competes with NVIDIA A100/V100; expected to achieve scaled revenue in 2021"
+      "type": "Cloud Intelligent Chip and Accelerator Card",
+      "specs": "Next-generation cloud intelligent chip; expected to generate scaled revenue in 2021; main competitors include NVIDIA A100, V100 GPU and Huawei HiSilicon Ascend 910"
     },
     {
       "name": "Edge Intelligent Chip and Accelerator Card - Siyuan 220 (MLU220)",
-      "type": "Edge AI Chip / Accelerator Card",
-      "specs": "Edge-side AI chip and M.2 accelerator card; officially released November 2019; targeted at AI industry clients and internet companies; expected scaled shipments in 2020"
+      "type": "Edge Intelligent Chip and Accelerator Card",
+      "specs": "Edge intelligent chip officially released in November 2019; corresponding M.2 accelerator card; expected to achieve scaled shipments in 2020"
     },
     {
       "name": "Intelligent Computing Cluster System",
-      "type": "AI Computing Infrastructure System",
-      "specs": "Integrated AI computing cluster system based on proprietary cloud-side AI chips and software; deployed in data centers and research institutions (e.g., Hengqin Advanced Intelligent Computing Platform)"
+      "type": "Intelligent Computing Cluster System",
+      "specs": "Integrated intelligent computing cluster system based on Cambricon's proprietary cloud intelligent chips and software systems; deployed in projects including Hengqin Advanced Intelligent Computing Platform (Phase I and II) and Xi'an Fengdong project"
     },
     {
-      "name": "Cambricon Neuware",
+      "name": "Basic System Software Platform - Cambricon Neuware",
       "type": "Basic System Software Platform",
-      "specs": "Proprietary foundational software platform supporting cloud-edge-terminal integrated AI workloads; covers training and inference; ecosystem still developing relative to NVIDIA CUDA"
+      "specs": "Unified basic system software platform for cloud-edge-terminal intelligent chips and processor products; supports integrated cloud-edge-terminal deployment, training-inference fusion; eliminates development barriers between cloud, edge, and terminal; allows same AI application to run on all Cambricon products without complex porting"
     }
   ],
   "shareholders_pre_ipo": [
     {
-      "name": "Jinshi Yinyi (CITIC Securities affiliated fund)",
-      "shares_10k": 428.55,
-      "pct": 1.19,
+      "name": "Chen Tianshi (陈天石)",
+      "shares_10k": 11949.7756,
+      "pct": 33.19,
+      "type": "Individual"
+    },
+    {
+      "name": "Zhongke Suanyuan (中科算源 - Beijing Zhongke Suanyuan Asset Management Co., Ltd.)",
+      "shares_10k": 6566.9721,
+      "pct": 18.24,
+      "type": "Institution"
+    },
+    {
+      "name": "Aixi Partnership (艾溪合伙 - Beijing Aixi Technology Center LP)",
+      "shares_10k": 3064.587,
+      "pct": 8.51,
       "type": "VC"
     },
     {
-      "name": "Ningbo Hangao (CITIC affiliated)",
-      "shares_10k": 1233.91,
+      "name": "Gushengdai Venture (古生代创投 - Suzhou Industrial Park Gushengdai Venture Investment LP)",
+      "shares_10k": 1415.1905,
+      "pct": 3.93,
+      "type": "VC"
+    },
+    {
+      "name": "Guotou Fund (国投基金 - Guotou Shanghai Technology Achievement Transformation Venture Investment Fund LP)",
+      "shares_10k": 1412.473,
+      "pct": 3.92,
+      "type": "VC"
+    },
+    {
+      "name": "Nanjing Zhaoyin (南京招银 - Nanjing Zhaoyin Telecom New Trend Lingxiao Growth Equity Investment Fund LP)",
+      "shares_10k": 1300.2264,
+      "pct": 3.61,
+      "type": "VC"
+    },
+    {
+      "name": "Ningbo Hangao (宁波瀚高 - Ningbo Hangao Investment LP)",
+      "shares_10k": 1233.9146,
       "pct": 3.43,
       "type": "VC"
     },
     {
-      "name": "Zhongjin Haomo (CICC affiliated fund)",
-      "shares_10k": 428.55,
+      "name": "Shenzhen Xinxin (深圳新芯)",
+      "shares_10k": 857.109,
+      "pct": 2.38,
+      "type": "Institution"
+    },
+    {
+      "name": "Aijiaxi Partnership (艾加溪合伙)",
+      "shares_10k": 848.5379,
+      "pct": 2.36,
+      "type": "VC"
+    },
+    {
+      "name": "Alibaba Venture (阿里创投 - Alibaba Venture Investment)",
+      "shares_10k": 697.517,
+      "pct": 1.94,
+      "type": "VC"
+    },
+    {
+      "name": "Hubei Zhaoyin (湖北招银 - Hubei Changjiang Zhaoyin Growth Equity Investment LP)",
+      "shares_10k": 650.1132,
+      "pct": 1.81,
+      "type": "VC"
+    },
+    {
+      "name": "Henan Guoxin (河南国新)",
+      "shares_10k": 629.9745,
+      "pct": 1.75,
+      "type": "Institution"
+    },
+    {
+      "name": "Nayuan Mingzhi (纳远明志)",
+      "shares_10k": 571.5844,
+      "pct": 1.59,
+      "type": "VC"
+    },
+    {
+      "name": "Jinye Investment (谨业投资)",
+      "shares_10k": 571.5771,
+      "pct": 1.59,
+      "type": "VC"
+    },
+    {
+      "name": "Jinshi Yinyi (金石银翼)",
+      "shares_10k": 428.5533,
       "pct": 1.19,
       "type": "VC"
+    },
+    {
+      "name": "Zhongjin Haomo (中金澔镆)",
+      "shares_10k": 428.5533,
+      "pct": 1.19,
+      "type": "VC"
+    },
+    {
+      "name": "iFLYTEK (科大讯飞)",
+      "shares_10k": 426.8751,
+      "pct": 1.19,
+      "type": "Institution"
+    },
+    {
+      "name": "Zhike Shengxun (智科胜讯 - Suzhou Industrial Park Zhike Shengxun Venture Investment LP)",
+      "shares_10k": 400.2205,
+      "pct": 1.11,
+      "type": "VC"
+    },
+    {
+      "name": "Guoxin Capital (国新资本)",
+      "shares_10k": 379.6999,
+      "pct": 1.05,
+      "type": "Institution"
+    },
+    {
+      "name": "Guoke Ruihua (国科瑞华)",
+      "shares_10k": 315.0858,
+      "pct": 0.88,
+      "type": "VC"
+    },
+    {
+      "name": "Nash Equilibrium (纳什均衡 - Tianjin Nash Equilibrium Enterprise Management LP)",
+      "shares_10k": 308.5723,
+      "pct": 0.86,
+      "type": "VC"
+    },
+    {
+      "name": "Ediacara (埃迪卡拉 - Nanjing Ediacara Semiconductor Industry Investment LP)",
+      "shares_10k": 299.5651,
+      "pct": 0.83,
+      "type": "VC"
+    },
+    {
+      "name": "Hubei Lenovo (湖北联想 - Hubei Lenovo Changjiang Technology Industry Fund LP)",
+      "shares_10k": 288.4603,
+      "pct": 0.8,
+      "type": "Institution"
+    },
+    {
+      "name": "Xinjiang Dongpeng (新疆东鹏)",
+      "shares_10k": 214.2779,
+      "pct": 0.6,
+      "type": "VC"
+    },
+    {
+      "name": "Guodiao Guoxin Zhixin (国调国信智芯 - Nanjing Guodiao Guoxin Zhixin Equity Investment LP)",
+      "shares_10k": 162.5277,
+      "pct": 0.45,
+      "type": "VC"
+    },
+    {
+      "name": "Ningbo Turing (宁波图灵 - Ningbo Free Trade Zone Zhongke Turing Equity Investment LP)",
+      "shares_10k": 156.9409,
+      "pct": 0.44,
+      "type": "VC"
+    },
+    {
+      "name": "Guoke Aixi (国科艾熙)",
+      "shares_10k": 153.098,
+      "pct": 0.43,
+      "type": "VC"
+    },
+    {
+      "name": "CAS Technology Transfer (中科院转化)",
+      "shares_10k": 85.7111,
+      "pct": 0.24,
+      "type": "Institution"
+    },
+    {
+      "name": "Guangzhou Huixing (广州汇星 - Guangzhou Huixing No.2 Industrial Investment LP)",
+      "shares_10k": 82.1844,
+      "pct": 0.23,
+      "type": "VC"
+    },
+    {
+      "name": "Jiafu Zedi (嘉富泽地 - Hangzhou Jiafu Zedi Investment Management LP)",
+      "shares_10k": 81.2651,
+      "pct": 0.23,
+      "type": "VC"
+    },
+    {
+      "name": "Ningbo Huiyuan (宁波汇原)",
+      "shares_10k": 12.8567,
+      "pct": 0.04,
+      "type": "VC"
+    },
+    {
+      "name": "Guangzhou Xinye (广州新业)",
+      "shares_10k": 6.0003,
+      "pct": 0.02,
+      "type": "Institution"
     }
   ],
+  "key_risks": [
+    "The company has a short operating history, and its business structure and business model are still evolving, creating uncertainty about its ability to continue as a going concern and its future development prospects.",
+    "The company's operating performance has resulted in continuous losses, and the expansion of accumulated unrecovered losses creates uncertainty about future development prospects.",
+    "Risk that cooperation with Huawei HiSilicon cannot be sustained: IP licensing revenue has declined significantly as Huawei HiSilicon chose to develop its own AI chips, and the company cannot easily find equivalent large customers in the short term.",
+    "The market demand for intelligent processor IP is relatively limited, and market competition may intensify, with giants such as NVIDIA, Intel, Qualcomm, MediaTek, Huawei HiSilicon, and ARM all entering the space.",
+    "High proportion of related-party sales to Sugon (中科曙光) in the cloud-end intelligent chip and accelerator card business (80.94% in 2019), and risk that Sugon may not continue to purchase at the same scale.",
+    "Other major server manufacturers (besides Sugon) have small purchase volumes, creating risk of customer expansion falling short of expectations and revenue decline.",
+    "Risk that Siyuan 290 (思元290) market promotion and customer development will fall short of expectations, facing direct competition from NVIDIA A100/V100 and Huawei HiSilicon Ascend 910, with a less mature sales network and software ecosystem.",
+    "Uncertainty risk in the edge intelligent chip and accelerator card business: the Siyuan 220 (思元220) product is newly launched and its scaled commercialization is uncertain.",
+    "Sustainability risk of the intelligent computing cluster system business: revenue is highly concentrated in a small number of projects, and the company currently has no other intelligent computing cluster system orders on hand besides one existing order.",
+    "Risk that the company cannot form more effective market development and customer expansion capabilities due to its reliance on cooperation with the Institute of Computing Technology, Chinese Academy of Sciences (CAS ICT).",
+    "Risk from CAS ICT technology licensing and commissioned R&D: if CAS ICT terminates its technology license or commissioned R&D projects do not progress as expected, it will adversely affect operations.",
+    "Risk from CAS ICT part-time staff working at the company: if cooperation with CAS ICT changes and these personnel leave, it will adversely affect operations.",
+    "Risk that R&D work does not meet expectations: AI chip R&D has high uncertainty, and products developed may not be accepted by the market.",
+    "Risk of core technology leakage due to poor information management or loss of key technical personnel.",
+    "Intellectual property risks: patents may be invalidated, IP disputes with competitors may arise, and non-patent technology may inadvertently infringe third-party IP.",
+    "Technology licensing risk: key third-party IC IP and EDA tool suppliers (ARM, Synopsys, Cadence) could stop providing licenses due to force majeure or other factors.",
+    "Risk of revenue and performance decline due to adverse changes in international/domestic macroeconomic environment, industry policy, competition, new product performance, and order execution.",
+    "Risk of large share-based payment expenses: future equity incentive plans may generate large share-based payment charges, adversely affecting operating results and delaying profitability.",
+    "Risk of gross margin decline due to expansion into new businesses, changes in product pricing, raw material and packaging/testing costs, and supplier process levels.",
+    "Foreign exchange rate fluctuation risk: the company settles some procurement and sales in USD, and large RMB/USD exchange rate movements could cause significant exchange gains or losses.",
+    "Risk of declining return on net assets after the IPO, as fundraising projects take time to generate economic returns.",
+    "Risk of sustained negative operating cash flows: the company has had negative operating cash flows throughout the reporting period and plans to continue or increase R&D investment.",
+    "Accounts receivable recovery risk: as business scales up, accounts receivable may increase, and deterioration in downstream customers' financial condition could lead to uncollectible receivables.",
+    "Risk of changes in income tax preferential policies: if the company or its subsidiaries lose their high-tech enterprise status or small/micro-enterprise tax benefits, profitability will be adversely affected.",
+    "Risk from purchasing wealth management products with own funds: if market conditions deteriorate significantly or the product manager faces serious credit risk, the products may not be redeemable on time and principal may be at risk.",
+    "Management risk from rapid scale expansion: if organizational structure and management systems are not timely adjusted, the company faces management risks.",
+    "Risk of actual controller's control: Chen Tianshi controls 41.71% of the company's shares before this offering and may influence major business and personnel decisions in ways that harm other shareholders.",
+    "Risk that the proceeds investment projects do not generate expected returns: if key technologies cannot be broken through, performance metrics are not met, or products are not accepted by the market.",
+    "Risk of management and organizational implementation of fundraising investment projects: simultaneous implementation of multiple large projects places high demands on management capabilities.",
+    "Risk of IPO failure: market value may not meet listing conditions, or investors may not subscribe sufficiently.",
+    "Securities market risk: stock price may deviate from intrinsic value due to macro-economic, political, and other external factors.",
+    "Risk from COVID-19 (novel coronavirus pneumonia) pandemic: suppliers' delivery capacity may be impacted, intelligent computing cluster business construction may be delayed, and chip product adoption may slow significantly.",
+    "Risk of accumulated unrecovered losses and continued losses: the company is currently unprofitable and may not be able to pay cash dividends in the short term after the IPO.",
+    "Risk that the company cannot sustain profitability even if it achieves profitability in the future."
+  ],
+  "use_of_proceeds": {
+    "total_rmb_10k": 28006251,
+    "projects": [
+      {
+        "name": "Next-Generation Cloud-End Training Chip and System Project",
+        "amount_rmb_10k": 6997307,
+        "focus": "R&D of next-generation AI cloud-end training chips and systems, with a construction period of 3 years"
+      },
+      {
+        "name": "Next-Generation Cloud-End Inference Chip and System Project",
+        "amount_rmb_10k": 6001697,
+        "focus": "R&D of next-generation AI cloud-end inference chips and systems, with a construction period of 3 years"
+      },
+      {
+        "name": "Next-Generation Edge-End AI Chip and System Project",
+        "amount_rmb_10k": 6007247,
+        "focus": "R&D of next-generation edge-end AI chips and systems, with a construction period of 3 years"
+      },
+      {
+        "name": "Supplementary Working Capital",
+        "amount_rmb_10k": 9000000,
+        "focus": "Supplement general working capital to support ongoing business operations and R&D activities"
+      }
+    ]
+  },
   "financials": {
     "currency": "RMB",
     "unit": "10K (万元)",
@@ -203,33 +452,6 @@
       {
         "period": "2019_vs_2018",
         "growth_pct": 279.35
-      }
-    ]
-  },
-  "key_risks": [
-    "Short operating history (founded March 2016) with rapidly changing business structure and commercial model; uncertainty about sustainable operations and future development prospects",
-    "Continuous large R&D expenditures resulting in persistent losses; risk that cumulative unrecovered losses will further expand if business expansion and revenue growth are adversely affected",
-    "Heavy dependence on Huawei HiSilicon for IP licensing revenue (100%/97.94%/92.56% of terminal AI processor IP revenue in 2017/2018/2019); Huawei HiSilicon chose to develop its own AI chips since 2018, causing IP licensing revenue to decline 41.23% in 2019, with further decline expected in 2020",
-    "Limited market demand for intelligent processor IP; competition intensifying from NVIDIA, Intel, Qualcomm, MediaTek, Huawei HiSilicon, and ARM entering the terminal AI processor IP market",
-    "High concentration of cloud AI chip and accelerator card sales to related party Sugon (Zhongke Shuguang) at 80.94% of cloud chip revenue in 2019; risk of sharp revenue decline if Sugon reduces purchases and new non-related customers cannot be expanded in time",
-    "Slow customer expansion for cloud AI chips and accelerator cards due to lengthy certification, testing, adaptation and porting processes required by customers before adoption",
-    "Siyuan 290 cloud AI chip faces intense competition from NVIDIA A100/V100 and Huawei HiSilicon Ascend 910; NVIDIA has superior software ecosystem (CUDA), more mature sales network, and earlier customer adoption timeline",
-    "Uncertainty in edge AI chip (Siyuan 220) business: product launched November 2019, still in sample testing phase with customers; risk that scaled shipments in 2020 may not be achieved as planned",
-    "Sustainability risk of intelligent computing cluster system business: heavily concentrated in two projects (97.29% of 2019 revenue); limited backlog beyond one pending order worth RMB 185.71 million; risk of slowdown in downstream AI data center construction demand",
-    "Risk that existing orders and contracts cannot be executed on schedule due to COVID-19, industry policy changes, international political/economic environment, macroeconomic conditions, and downstream customer production/sales disruptions",
-    "Risk of adverse impact from cooperation with Institute of Computing Technology, Chinese Academy of Sciences (ICT-CAS) on future business operations and independent market development capabilities",
-    "Technology risk: AI chip technology is still in early stages; risk of failure to keep pace with rapid technological change or develop competitive next-generation products",
-    "Financial risk: persistent losses and potential need for additional financing; risk of dilution or inability to raise funds on favorable terms",
-    "Supply chain and foundry risk: dependence on third-party chip foundries (fabless model); risk of supply disruptions or inability to obtain advanced process nodes",
-    "Risk related to IPO fundraising projects not achieving expected returns or not being completed on schedule"
-  ],
-  "use_of_proceeds": {
-    "total_rmb_10k": null,
-    "projects": [
-      {
-        "name": "Note: Specific use-of-proceeds details (project names, amounts) were referenced in the prospectus table of contents under 'Section II, Item VIII: Use of Fundraising Proceeds' but the detailed project breakdown was not included in the provided text excerpts. Exact figures are not available from the supplied document pages.",
-        "amount_rmb_10k": null,
-        "focus": "Based on context, proceeds are expected to be used for: R&D of next-generation AI chips (cloud, edge, terminal), software ecosystem development (Cambricon Neuware platform), market expansion and sales network buildout, and general working capital"
       }
     ]
   },

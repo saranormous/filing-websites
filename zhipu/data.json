@@ -4,84 +4,659 @@
     "issuer": "Knowledge Atlas Technology Joint Stock Company Limited",
     "issuer_cn": "北京智譜華章科技股份有限公司",
     "filing_date": "2025-12-30",
-    "exchange": "The Stock Exchange of Hong Kong Limited (HKEX)",
-    "board": "Main Board (Specialist Technology Company, Chapter 18C)",
-    "sponsor": "Not explicitly named in extracted text (Sole Sponsor, Sponsor-Overall Coordinator listed without name)",
+    "exchange": "The Stock Exchange of Hong Kong Limited",
+    "board": "Main Board (Chapter 18C – Specialist Technology Company)",
+    "sponsor": "China International Capital Corporation Hong Kong Securities Limited (CICC)",
     "source_language": "Chinese",
-    "translation_note": "AI-translated for reference only"
+    "translation_note": "AI-translated for reference only",
+    "extraction_method": "vision"
   },
   "company": {
     "name_en": "Knowledge Atlas Technology Joint Stock Company Limited",
     "name_cn": "北京智譜華章科技股份有限公司",
     "founded": "2019",
     "headquarters": "Beijing, People's Republic of China",
-    "registered_capital_rmb": null,
+    "registered_capital_rmb": 0.1,
     "website": "www.zhipuai.cn",
-    "industry": "Specialist Technology / Artificial Intelligence",
+    "industry": "Artificial Intelligence – General-Purpose Large Language Models (LLM); Next-Generation Information Technology",
     "controller": {
-      "name": "Tang Jie",
+      "name": "Concert Party Group: Beijing Lianpai Technology Development Center (Limited Partnership), Dr. Liu Debing, Dr. Tang Jie, Dr. Li Juanzi, Dr. Xu Bin, Dr. Zhang Peng, Huihui, Zhideng",
+      "direct_shares_pct": null,
+      "total_control_pct": 33.03,
       "roles": [
-        "CEO",
-        "Co-founder"
+        "Dr. Liu Debing – Co-founder, Executive Director, Chairman of the Board",
+        "Dr. Zhang Peng – Co-founder, Executive Director, Chief Executive Officer, General Manager",
+        "Dr. Tang Jie – Co-founder, Controlling Shareholder",
+        "Dr. Li Juanzi – Co-founder, Non-Executive Director, Controlling Shareholder",
+        "Dr. Xu Bin – Co-founder, Controlling Shareholder",
+        "Beijing Lianpai – Controlling Shareholder (limited partnership)",
+        "Huihui – Employee Ownership Platform, Controlling Shareholder",
+        "Zhideng – Employee Ownership Platform, Controlling Shareholder"
       ]
     },
     "employees": {
       "total": null,
-      "rd": null
+      "rd": 657
     }
   },
   "offering": {
     "shares_offered_max": 37419500,
-    "post_ipo_shares_approx": null,
-    "offering_pct_approx": null,
+    "post_ipo_shares_approx": 440230190,
+    "offering_pct_approx": 8.5,
     "par_value_rmb": 0.1
   },
+  "products": [
+    {
+      "name": "GLM-4.5",
+      "type": "Foundation Model (Large Language Model)",
+      "specs": "Flagship open-source foundation model; 355 billion parameters (MoE); multi-stage training with fine-tuning and reinforcement learning; supports agentic, reasoning and coding tasks; multi-modal extensions; large context processing; ranked 3rd globally, 1st in China and 1st among global open-source models across 12 industry-standard benchmarks (July 2025); ranked 5th globally on Chatbot Arena and WebDev Arena (September 2025)"
+    },
+    {
+      "name": "GLM-4.5-Air",
+      "type": "Foundation Model – Lightweight Version",
+      "specs": "Lightweight version of GLM-4.5; 106 billion parameters"
+    },
+    {
+      "name": "GLM-4.6",
+      "type": "Foundation Model – Updated Version",
+      "specs": "Updated foundational model released September 2025; primarily features enhanced coding capabilities; ranked 1st globally on CodeArena (November 2025)"
+    },
+    {
+      "name": "GLM-Z1",
+      "type": "Reflection Model (Deep Thinking / Language Model)",
+      "specs": "Reflection model designed for problems with certainty; built on foundation model via extended reinforcement learning; optimized for mathematics, coding and logic tasks; more precise and accurate solutions"
+    },
+    {
+      "name": "GLM-Z1-Rumination",
+      "type": "Rumination Model (Deep Thinking / Language Model)",
+      "specs": "Rumination model designed for problems with uncertainty; handles open-ended, exploratory questions requiring iterative external information gathering; deeper and longer thinking than GLM-Z1; uses tools to solve complex problems"
+    },
+    {
+      "name": "CogView",
+      "type": "Multimodal Model – Image Generation",
+      "specs": "Image generation model; processes and generates visual content from text prompts"
+    },
+    {
+      "name": "GLM-4.5V",
+      "type": "Multimodal Model – Visual Comprehension and Reasoning",
+      "specs": "Foundational vision-language model (VLM); general-purpose visual comprehension and reasoning; capable of highly complex visual tasks autonomously; released August 2025"
+    },
+    {
+      "name": "CogVideoX",
+      "type": "Multimodal Model – Video Generation",
+      "specs": "Video generation model; generates video content from inputs"
+    },
+    {
+      "name": "GLM-Realtime",
+      "type": "Multimodal Model – Realtime Video",
+      "specs": "Realtime video call model; enables real-time video interaction capabilities"
+    },
+    {
+      "name": "GLM-4-Voice",
+      "type": "Multimodal Model – Voice",
+      "specs": "End-to-end voice model; processes and generates spoken language"
+    },
+    {
+      "name": "AutoGLM",
+      "type": "AI Agent – Foundation Agent",
+      "specs": "Foundation agent for autonomous control of digital devices via graphical user interfaces (GUIs); bridges conversation-based AI and real-world task execution ('from chat to act'); achieved SOTA on AgentBench (recognized by 2024 Stanford AI Index); AutoGLM 2.0 released August 2025 powered by GLM-4.5 and GLM-4.5V; simulates human actions across mobile apps and websites; completes tasks on cloud without occupying user device"
+    },
+    {
+      "name": "AutoGLM Rumination",
+      "type": "AI Agent – Advanced Autonomous Agent",
+      "specs": "Advanced version of AutoGLM; 'thinking while working' agent; leverages GLM-Z1-Rumination reasoning with AutoGLM's interactive operational capabilities; handles complex tasks involving deep reasoning, iterative research and actionable outcomes"
+    },
+    {
+      "name": "CoCo",
+      "type": "AI Agent – Enterprise Agent",
+      "specs": "Sophisticated enterprise AI agent; delivers intelligent automation across corporate environments"
+    },
+    {
+      "name": "CodeGeeX",
+      "type": "Coding Model",
+      "specs": "Powerful coding model; enhances programming efficiency; generates code from natural language descriptions; completes unfinished code blocks; improves developer productivity"
+    }
+  ],
+  "shareholders_pre_ipo": [
+    {
+      "name": "Beijing Lianpai",
+      "shares_10k": 340384,
+      "pct": 8.45,
+      "type": "Institution"
+    },
+    {
+      "name": "Dr. Liu Debing",
+      "shares_10k": 9252,
+      "pct": 0.23,
+      "type": "Individual"
+    },
+    {
+      "name": "Dr. Tang Peng (Zhang Peng)",
+      "shares_10k": 268353,
+      "pct": 6.66,
+      "type": "Individual"
+    },
+    {
+      "name": "Dr. Li Juanzi",
+      "shares_10k": 33678,
+      "pct": 0.84,
+      "type": "Individual"
+    },
+    {
+      "name": "Dr. Xu",
+      "shares_10k": 7990,
+      "pct": 0.2,
+      "type": "Individual"
+    },
+    {
+      "name": "Dr. Zhang",
+      "shares_10k": 3995,
+      "pct": 0.1,
+      "type": "Individual"
+    },
+    {
+      "name": "Huihui (Employee Ownership Platform)",
+      "shares_10k": 394827,
+      "pct": 9.8,
+      "type": "Institution"
+    },
+    {
+      "name": "Zhideng (Employee Ownership Platform)",
+      "shares_10k": 271963,
+      "pct": 6.75,
+      "type": "Institution"
+    },
+    {
+      "name": "Junlian Xiangdao (Legend Capital SII)",
+      "shares_10k": 186678,
+      "pct": 4.63,
+      "type": "VC"
+    },
+    {
+      "name": "Junlian Jinfan (Legend Capital SII)",
+      "shares_10k": 17524,
+      "pct": 0.44,
+      "type": "VC"
+    },
+    {
+      "name": "Social Security Zhongguancun Innovation Fund (Legend Capital SII)",
+      "shares_10k": 66890,
+      "pct": 1.66,
+      "type": "Institution"
+    },
+    {
+      "name": "Tianjin Sankuai (Meituan SII)",
+      "shares_10k": 172173,
+      "pct": 4.27,
+      "type": "Institution"
+    },
+    {
+      "name": "Qiming Rongqian (Qiming Venture SII)",
+      "shares_10k": 59052,
+      "pct": 1.47,
+      "type": "VC"
+    },
+    {
+      "name": "Qiming Rongkai (Qiming Venture SII)",
+      "shares_10k": 41137,
+      "pct": 1.02,
+      "type": "VC"
+    },
+    {
+      "name": "Xinglian Zhaoji",
+      "shares_10k": 95193,
+      "pct": 2.36,
+      "type": "Institution"
+    },
+    {
+      "name": "Tongzhi Investments",
+      "shares_10k": 70677,
+      "pct": 1.75,
+      "type": "Institution"
+    },
+    {
+      "name": "Shanghai Yunya",
+      "shares_10k": 53932,
+      "pct": 1.34,
+      "type": "Institution"
+    },
+    {
+      "name": "Shanghai Feiya",
+      "shares_10k": 106915,
+      "pct": 2.65,
+      "type": "Institution"
+    },
+    {
+      "name": "Haihe Fuxin Youda Fund",
+      "shares_10k": 156980,
+      "pct": 3.9,
+      "type": "Institution"
+    },
+    {
+      "name": "Tsinghua Technology (Tsinghua Control Technology Transfer Co., Ltd.)",
+      "shares_10k": 155344,
+      "pct": 3.86,
+      "type": "Institution"
+    },
+    {
+      "name": "Trend Mega",
+      "shares_10k": 113499,
+      "pct": 2.82,
+      "type": "Institution"
+    },
+    {
+      "name": "Dachen Chuanghong (Fortune Capital)",
+      "shares_10k": 82334,
+      "pct": 2.04,
+      "type": "VC"
+    },
+    {
+      "name": "Caizhi Chuangying (Fortune Capital)",
+      "shares_10k": 5844,
+      "pct": 0.15,
+      "type": "VC"
+    },
+    {
+      "name": "Beijing Huakong (Huakong Capital)",
+      "shares_10k": 30075,
+      "pct": 0.75,
+      "type": "VC"
+    },
+    {
+      "name": "Qingdao Huakong (Huakong Capital)",
+      "shares_10k": 52805,
+      "pct": 1.31,
+      "type": "VC"
+    },
+    {
+      "name": "Zhongguancun Science City",
+      "shares_10k": 82621,
+      "pct": 2.05,
+      "type": "Institution"
+    },
+    {
+      "name": "Zhuhai Huafa",
+      "shares_10k": 82621,
+      "pct": 2.05,
+      "type": "Institution"
+    },
+    {
+      "name": "Zhihui Linghang",
+      "shares_10k": 82621,
+      "pct": 2.05,
+      "type": "Institution"
+    },
+    {
+      "name": "AI Fund",
+      "shares_10k": 79557,
+      "pct": 1.98,
+      "type": "Institution"
+    },
+    {
+      "name": "Tencent Investment",
+      "shares_10k": 69485,
+      "pct": 1.73,
+      "type": "Institution"
+    },
+    {
+      "name": "Duoxiang Network",
+      "shares_10k": 67829,
+      "pct": 1.68,
+      "type": "Institution"
+    },
+    {
+      "name": "CAS Star (Beijing CAS Star Hard Technology Venture Capital)",
+      "shares_10k": 59123,
+      "pct": 1.47,
+      "type": "VC"
+    },
+    {
+      "name": "Hangzhou Chengtou Industrial Fund",
+      "shares_10k": 57835,
+      "pct": 1.44,
+      "type": "Institution"
+    },
+    {
+      "name": "Beijing Shunying",
+      "shares_10k": 52114,
+      "pct": 1.29,
+      "type": "Institution"
+    },
+    {
+      "name": "Prosperity7",
+      "shares_10k": 49539,
+      "pct": 1.23,
+      "type": "Institution"
+    },
+    {
+      "name": "Daxing Industrial Fund",
+      "shares_10k": 49573,
+      "pct": 1.23,
+      "type": "Institution"
+    },
+    {
+      "name": "High-tech Orinno",
+      "shares_10k": 49573,
+      "pct": 1.23,
+      "type": "Institution"
+    },
+    {
+      "name": "Xiamen Yaheng",
+      "shares_10k": 38231,
+      "pct": 0.95,
+      "type": "Institution"
+    },
+    {
+      "name": "Tianjin Heyuan (Guanghe)",
+      "shares_10k": 32118,
+      "pct": 0.8,
+      "type": "Institution"
+    },
+    {
+      "name": "Hangzhou Guanghe (Guanghe)",
+      "shares_10k": 6013,
+      "pct": 0.15,
+      "type": "Institution"
+    },
+    {
+      "name": "TAL",
+      "shares_10k": 34743,
+      "pct": 0.86,
+      "type": "Institution"
+    },
+    {
+      "name": "Ningbo Mingheng",
+      "shares_10k": 34743,
+      "pct": 0.86,
+      "type": "Institution"
+    },
+    {
+      "name": "Hainan Hezun",
+      "shares_10k": 30075,
+      "pct": 0.75,
+      "type": "Institution"
+    },
+    {
+      "name": "Lingyue No.4 (Lingyue)",
+      "shares_10k": 20862,
+      "pct": 0.52,
+      "type": "Institution"
+    },
+    {
+      "name": "Lingyue No.5 (Lingyue)",
+      "shares_10k": 3925,
+      "pct": 0.1,
+      "type": "Institution"
+    },
+    {
+      "name": "Wuxi Yunhui",
+      "shares_10k": 23255,
+      "pct": 0.58,
+      "type": "Institution"
+    },
+    {
+      "name": "Tianchuang Capital",
+      "shares_10k": 21482,
+      "pct": 0.53,
+      "type": "Institution"
+    },
+    {
+      "name": "5G Fund (Hubei Yangtze CITIC Technology Mobile Communication Industry Investment Fund)",
+      "shares_10k": 20929,
+      "pct": 0.52,
+      "type": "Institution"
+    },
+    {
+      "name": "Shangcheng Linghang",
+      "shares_10k": 16524,
+      "pct": 0.41,
+      "type": "Institution"
+    },
+    {
+      "name": "Xiarui Investments",
+      "shares_10k": 16524,
+      "pct": 0.41,
+      "type": "Institution"
+    },
+    {
+      "name": "Lenovo Venture Capital",
+      "shares_10k": 16524,
+      "pct": 0.41,
+      "type": "Institution"
+    },
+    {
+      "name": "Jia'an Qixin",
+      "shares_10k": 16524,
+      "pct": 0.41,
+      "type": "Institution"
+    },
+    {
+      "name": "Jiangmen Venture Capital (Beijing The Jiangmen Venture Capital Center)",
+      "shares_10k": 15038,
+      "pct": 0.37,
+      "type": "VC"
+    },
+    {
+      "name": "Luster (Luster LightTech Co., Ltd.)",
+      "shares_10k": 15038,
+      "pct": 0.37,
+      "type": "Institution"
+    },
+    {
+      "name": "Xiaofeng Technology",
+      "shares_10k": 14867,
+      "pct": 0.37,
+      "type": "Institution"
+    },
+    {
+      "name": "Huahai Jinpu",
+      "shares_10k": 10328,
+      "pct": 0.26,
+      "type": "Institution"
+    },
+    {
+      "name": "Zhaoshang Shuke",
+      "shares_10k": 9922,
+      "pct": 0.25,
+      "type": "Institution"
+    },
+    {
+      "name": "Innovation Zhiyuan (Beijing Innovation Zhiyuan Technology Co., Ltd.)",
+      "shares_10k": 9416,
+      "pct": 0.23,
+      "type": "Institution"
+    },
+    {
+      "name": "Rongjia Xingpu",
+      "shares_10k": 8663,
+      "pct": 0.22,
+      "type": "Institution"
+    },
+    {
+      "name": "Lianrong Zhiyuan",
+      "shares_10k": 8606,
+      "pct": 0.21,
+      "type": "Institution"
+    },
+    {
+      "name": "Lingtou Future",
+      "shares_10k": 8138,
+      "pct": 0.2,
+      "type": "Institution"
+    },
+    {
+      "name": "Shanchuang Zhizhi",
+      "shares_10k": 4292,
+      "pct": 0.11,
+      "type": "Institution"
+    },
+    {
+      "name": "Hengqin Shanzhi",
+      "shares_10k": 4292,
+      "pct": 0.11,
+      "type": "Institution"
+    },
+    {
+      "name": "Zhongxiao Ruizheng",
+      "shares_10k": 4030,
+      "pct": 0.1,
+      "type": "Institution"
+    },
+    {
+      "name": "Shandong Fuhong",
+      "shares_10k": 3021,
+      "pct": 0.07,
+      "type": "Institution"
+    }
+  ],
   "financials": {
     "currency": "RMB",
     "unit": "10K (万元)",
     "income_statement": [
       {
         "period": "2022",
-        "revenue": 574,
-        "net_profit": null,
-        "gross_margin_pct": 50,
-        "rd_expense": null
+        "revenue": 5740.9,
+        "net_profit": -14365.0,
+        "gross_margin_pct": 54.6,
+        "rd_expense": 8437.7
       },
       {
         "period": "2023",
-        "revenue": 1245,
-        "net_profit": null,
-        "gross_margin_pct": 50,
-        "rd_expense": null
+        "revenue": 12453.8,
+        "net_profit": -78795.7,
+        "gross_margin_pct": 64.6,
+        "rd_expense": 52888.4
       },
       {
         "period": "2024",
-        "revenue": 3124,
-        "net_profit": null,
-        "gross_margin_pct": 50,
-        "rd_expense": null
-      },
-      {
-        "period": "2025H1",
-        "revenue": 1909,
-        "net_profit": null,
-        "gross_margin_pct": 50,
-        "rd_expense": 15947
+        "revenue": 31241.4,
+        "net_profit": -295800.7,
+        "gross_margin_pct": 56.3,
+        "rd_expense": 219543.6
       },
       {
         "period": "2024H1",
-        "revenue": null,
-        "net_profit": null,
-        "gross_margin_pct": null,
-        "rd_expense": 8592
+        "revenue": 4490.9,
+        "net_profit": -123555.1,
+        "gross_margin_pct": 48.9,
+        "rd_expense": 85921.7
+      },
+      {
+        "period": "2025H1",
+        "revenue": 19087.7,
+        "net_profit": -235785.2,
+        "gross_margin_pct": 50.0,
+        "rd_expense": 159466.1
       }
     ],
-    "balance_sheet": [],
-    "cash_flow": []
+    "balance_sheet": [
+      {
+        "date": "2022-12-31",
+        "total_assets": 36197.6,
+        "total_liabilities": 54216.5,
+        "equity": -18018.8,
+        "cash": 21892.8
+      },
+      {
+        "date": "2023-12-31",
+        "total_assets": 286015.3,
+        "total_liabilities": 384175.1,
+        "equity": -98259.3,
+        "cash": 124917.5
+      },
+      {
+        "date": "2024-12-31",
+        "total_assets": 437576.9,
+        "total_liabilities": 833061.4,
+        "equity": -395514.5,
+        "cash": 226816.4
+      },
+      {
+        "date": "2025-06-30",
+        "total_assets": 510071.1,
+        "total_liabilities": 1125155.2,
+        "equity": -615084.1,
+        "cash": 255197.0
+      }
+    ],
+    "cash_flow": [
+      {
+        "period": "2022",
+        "operating": -6824.6,
+        "investing": 3292.1,
+        "financing": 19119.6
+      },
+      {
+        "period": "2023",
+        "operating": -64801.7,
+        "investing": -78496.5,
+        "financing": 246304.3
+      },
+      {
+        "period": "2024",
+        "operating": -224491.9,
+        "investing": -4855.9,
+        "financing": 331207.3
+      },
+      {
+        "period": "2024H1",
+        "operating": -99467.8,
+        "investing": -13877.5,
+        "financing": 81634.1
+      },
+      {
+        "period": "2025H1",
+        "operating": -132715.0,
+        "investing": -55637.3,
+        "financing": 216511.0
+      }
+    ]
   },
   "revenue_breakdown": {
-    "by_product": [],
-    "by_geography_pct": [],
+    "by_product": [
+      {
+        "product": "On-premise deployment",
+        "2022": 5481.5,
+        "2023": 11261.4,
+        "2024": 26393.0,
+        "2024H1": 2680.6,
+        "2025H1": 16177.7
+      },
+      {
+        "product": "Cloud-based deployment",
+        "2022": 259.4,
+        "2023": 1192.4,
+        "2024": 4848.4,
+        "2024H1": 1810.3,
+        "2025H1": 2910.0
+      }
+    ],
+    "by_geography_pct": [
+      {
+        "region": "Mainland China (On-premise)",
+        "2022": 100.0,
+        "2023": 100.0,
+        "2024": 99.5
+      },
+      {
+        "region": "Southeast Asia (On-premise)",
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.4
+      },
+      {
+        "region": "Hong Kong (On-premise)",
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.1
+      },
+      {
+        "region": "Others (On-premise)",
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0
+      }
+    ],
     "market_share": [
       {
         "rank": 1,
@@ -182,94 +757,6 @@
       "offer_price_hkd": 116.2
     }
   },
-  "products": [],
-  "shareholders_pre_ipo": [
-    {
-      "name": "Junlian Xiangdao (Legend Capital SII)",
-      "shares_10k": null,
-      "pct": null,
-      "type": "VC"
-    },
-    {
-      "name": "Junlian Jinfan (Legend Capital SII)",
-      "shares_10k": null,
-      "pct": null,
-      "type": "VC"
-    },
-    {
-      "name": "Social Security Zhongguancun Innovation Fund (Legend Capital SII)",
-      "shares_10k": null,
-      "pct": null,
-      "type": "Institution"
-    },
-    {
-      "name": "Tianjin Sankuai (Meituan SII)",
-      "shares_10k": null,
-      "pct": 4.27,
-      "type": "Institution"
-    },
-    {
-      "name": "Qiming Rongqian (Qiming Venture SII)",
-      "shares_10k": null,
-      "pct": null,
-      "type": "VC"
-    },
-    {
-      "name": "Qiming Rongkai (Qiming Venture SII)",
-      "shares_10k": null,
-      "pct": null,
-      "type": "VC"
-    },
-    {
-      "name": "Xinglian Zhaoji",
-      "shares_10k": null,
-      "pct": null,
-      "type": "VC"
-    },
-    {
-      "name": "Tongzhi Investments",
-      "shares_10k": null,
-      "pct": null,
-      "type": "VC"
-    },
-    {
-      "name": "Shanghai Yunya (Ant Group)",
-      "shares_10k": null,
-      "pct": null,
-      "type": "Institution"
-    },
-    {
-      "name": "Shanghai Feiya (Ant Group)",
-      "shares_10k": null,
-      "pct": null,
-      "type": "Institution"
-    },
-    {
-      "name": "Haihe Fuxin Youda Fund",
-      "shares_10k": null,
-      "pct": null,
-      "type": "Institution"
-    },
-    {
-      "name": "Trend Mega",
-      "shares_10k": null,
-      "pct": null,
-      "type": "Institution"
-    }
-  ],
-  "use_of_proceeds": {
-    "total_rmb_10k": null,
-    "projects": [
-      {
-        "name": "Use of Proceeds — Details not fully extracted from provided text",
-        "amount_rmb_10k": null,
-        "focus": "The prospectus references a 'Future Plans and Use of Proceeds' section on page 299, but the detailed breakdown of proceeds allocation was not included in the provided text excerpts. Full details are available in the complete prospectus."
-      }
-    ]
-  },
-  "ip": {
-    "patents_total": null
-  },
   "key_risks": [
     "The AI industry is characterized by constant changes. If we are not able to upgrade, enhance or innovate our technologies and services, our business, results of operations, financial condition and prospects could be adversely affected.",
     "We have made and expect to continue to make substantial investments in R&D. If we cannot continuously invest in our R&D activities while achieving technological innovation, our business, results of operations, financial condition and prospects may be materially and adversely affected.",
@@ -277,15 +764,87 @@
     "We are exposed to risks relating to our R&D team and our senior management.",
     "We rely on third parties to provide computing resources to us, and any disruption of their services or fluctuation of prices could adversely affect our business, results of operations and financial condition.",
     "Our commercial success depends on the performance of our models. Any failure in research and development efforts to offer high-quality models and solutions could harm our business, results of operations, financial condition and prospects.",
-    "The AI industry is subject to evolving and extensive regulation in China. Future laws and regulations may impose additional requirements and other obligations that could materially and adversely affect our business, results of operations, financial condition and prospects.",
-    "We may not be able to obtain or maintain adequate intellectual property rights protection for our business, or the scope of such intellectual property rights protection may not be sufficiently broad.",
     "We may not be able to compete effectively against current or future competitors.",
     "The size of our addressable market and the demand for our solutions may not increase as rapidly as we anticipate due to a variety of factors, which would materially and adversely affect our business, results of operations, financial condition and prospects.",
     "Any failure of our MaaS platform to perform as required could harm our business, results of operations, financial condition and prospects.",
+    "If we fail to retain existing customers, attract new customers or increase the spending by existing customers, our business, results of operations, financial condition and prospects may be materially and adversely affected.",
     "We have a limited track record in the commercialization of our business.",
-    "Risks related to our financial condition and need for additional capital.",
-    "Risks related to the jurisdictions where we conduct business.",
-    "Risks related to the Global Offering."
+    "If our attempt to expand our offerings or business model is unsuccessful, our business, results of operations, financial condition and prospects may be materially and adversely affected.",
+    "If we are unable to ensure compatibility of our models with a variety of hardware, platforms and applications developed by others, including our partners, we may become less competitive and our business, results of operations, financial condition and prospects may be harmed.",
+    "The AI industry is subject to evolving and extensive regulation in China. Future laws and regulations may impose additional requirements and other obligations that could materially and adversely affect our business, results of operations, financial condition and prospects.",
+    "We are subject to complex and evolving laws, regulations and governmental policies regarding cybersecurity, data security and personal information. Actual or alleged failure to comply with privacy and data protection laws, regulations and governmental policies could damage our reputation, deter current and potential customers from using our solutions and could subject us to significant legal, financial and operational consequences.",
+    "We are subject to risks associated with international trade policies, geopolitics and trade protection measures, and our business, financial condition and results of operations may be materially and adversely affected.",
+    "We may be subject to the risks associated with export controls, economic sanctions and investment restrictions, and our business, financial condition and results of operations may be materially and adversely affected.",
+    "We and nine of our subsidiaries were added to the Entity List administered by the U.S. Bureau of Industry and Security on January 16, 2025, which restricts our ability to purchase or otherwise access certain goods, software and technology subject to the Export Administration Regulations without a license.",
+    "We have a limited operating history, which may make it difficult to evaluate our current business and predict our future performance.",
+    "We may not be successful in implementing our business plans and strategies effectively, or at all, which could materially and adversely affect our business, results of operations, financial condition and prospects.",
+    "Our business is dependent on the strengths and market acceptance of our brand. If we fail to maintain and enhance our brand, or if we incur excessive expenses in this effort, our business, results of operations, financial condition and prospects may be materially and adversely affected.",
+    "Any flaws or misuse of AI technologies, whether actual or perceived, intended or inadvertent, committed by us or by other third parties, could have a material adverse effect on our reputation, business, results of operations, financial condition and prospects.",
+    "Our legal right to some leased properties may be challenged.",
+    "We may from time to time be subject to claims, disputes, lawsuits and other legal and administrative proceedings.",
+    "If we fail to obtain and maintain the requisite licenses and approvals required under the regulatory environment applicable to our business, our business, results of operations, financial condition and prospects may be materially and adversely affected.",
+    "We may be unable to expand and maintain existing strategic partnerships with academic institutions.",
+    "We may be subject to supplemental contributions of social insurance and housing provident funds required by relevant governmental authorities.",
+    "Our technology infrastructure and information technology system may experience unexpected failure, interruption, inadequacy, security breaches or cyberattacks.",
+    "Our insurance coverage may not be sufficient to cover all losses or potential claims by our customers.",
+    "We are in the process of prudently expanding our international operations, which exposes us to significant regulatory, economic and political risks.",
+    "We may experience any future occurrence of force majeure events, natural disasters or outbreaks of contagious diseases.",
+    "We may not be able to obtain or maintain adequate intellectual property rights protection for our business, or the scope of such intellectual property rights protection may not be sufficiently broad.",
+    "Unauthorized use of our intellectual property by third parties may harm our brand and reputation and may materially and adversely affect our business.",
+    "Obtaining and maintaining our intellectual property protection depends on compliance with various procedural, documentary, fee payment and other requirements imposed by governmental agencies, and our intellectual property protection could be reduced or eliminated for noncompliance with these requirements.",
+    "We may be unable to protect the confidentiality of our trade secrets, and we may be subject to claims that our employees or third parties have wrongfully used or disclosed alleged trade secrets owned by others.",
+    "If third parties claim that we infringe upon their intellectual property rights, we may incur liabilities and may have to redesign or discontinue selling the solutions involved.",
+    "We may not be able to sustain our historical growth rates, and our historical growth may not be indicative of our future growth or financial results.",
+    "We have incurred accumulated losses during the Track Record Period and incurred net losses in 2022, 2023 and 2024, the six months ended June 30, 2024 and 2025 and may continue to experience net losses in the foreseeable future.",
+    "We had net current liabilities and net liabilities and recorded net operating cash outflows historically which may continue into the foreseeable future and expose us to liquidity risk.",
+    "We are subject to credit risk related to delay in payment and defaults of customers or third parties, which would adversely affect our liquidity and financial condition.",
+    "The changes in the carrying amounts of financial instruments issued to investors may adversely affect our financial condition and results of operations.",
+    "We may not be able to raise adequate capital to finance our business operations, expansion plans or R&D strategies, or we may be able to do so only on unfavorable terms.",
+    "We may record impairments of intangible assets and goodwill.",
+    "We have granted, and may continue to grant, certain awards under our share incentive plans, which may result in increased share-based payment expenses and potentially dilute the shareholding of our existing shareholders.",
+    "We may experience discontinuation, reduction or delay of any preferential tax treatments or government grants.",
+    "Changes in China's economic, political and social conditions, as well as government policies, could have a material adverse effect on our business and prospects.",
+    "We may be subject to the approval or other requirements of the China Securities Regulatory Commission or other PRC governmental authorities in connection with future security activities.",
+    "It may be difficult to effect service of process, enforce foreign judgments or bring original actions against us, our Directors, Supervisors and senior management residing in China.",
+    "Laws and regulations over foreign currency conversion and on the remittance of Renminbi into and out of China may affect our utilization of our revenue and our ability to remit dividends.",
+    "Fluctuations in exchange rates of Renminbi against Hong Kong dollar, U.S. dollar or other foreign currencies could affect our business, results of operations, financial condition, and the value of your investment.",
+    "We are a mainland China enterprise and we are subject to mainland China tax on our global income and any gains on the sales of H Shares and dividends on the H Shares may be subject to mainland China income taxes.",
+    "Payment of dividends is subject to restrictions under PRC law.",
+    "Any failure to comply with relevant regulations regarding the registration requirements for employee share incentive plans may subject our share incentive plan participants or us to fines and other legal or administrative sanctions.",
+    "There has been no prior public market for our H Shares, an active trading market for our H Shares may not develop following the Global Offering and the liquidity and market price of our H Shares may be volatile.",
+    "You will incur immediate and significant dilution if the Offer Price of our H Shares is substantially higher than the net tangible book value per H Share, and may experience further dilution if we issue additional Shares in the future.",
+    "We cannot assure you when, whether and in what form or size we will pay dividends in the future.",
+    "Certain facts, forecasts and other statistics obtained from government publications contained in this prospectus may not be reliable in terms of accuracy, competence or reliance.",
+    "You should read the entire prospectus carefully and we strongly caution you not to place any reliance on any information contained in press articles and other media regarding us and the Global Offering.",
+    "Securities of Specialist Technology Companies carry high investment risks including risks of share price volatility and inflated valuation due to the difficulty in valuing such companies."
   ],
+  "use_of_proceeds": {
+    "total_rmb_10k": 378530,
+    "projects": [
+      {
+        "name": "Strengthening research and development capabilities in general-purpose large AI models",
+        "amount_rmb_10k": 264971,
+        "focus": "Continuously strengthen R&D capabilities in general-purpose large AI models, accounting for approximately 70% of net proceeds (HK$2,921.4 million)"
+      },
+      {
+        "name": "Optimization of MaaS platform",
+        "amount_rmb_10k": 37853,
+        "focus": "Continuously optimize the MaaS platform by offering the latest foundation models and training/inference tools and infrastructures, accounting for approximately 10% of net proceeds (HK$417.3 million)"
+      },
+      {
+        "name": "Development of business partner network and strategic investments",
+        "amount_rmb_10k": 37853,
+        "focus": "Development of business partner network as well as strategic investments, accounting for approximately 10% of net proceeds (HK$417.3 million)"
+      },
+      {
+        "name": "Working capital and other general corporate purposes",
+        "amount_rmb_10k": 37853,
+        "focus": "Working capital and other general corporate purposes, accounting for approximately 10% of net proceeds (HK$417.3 million)"
+      }
+    ]
+  },
+  "ip": {
+    "patents_total": null
+  },
   "executive_summary": "Knowledge Atlas Technology (ZhipuAI, stock code 2513) is a Beijing-based artificial intelligence company developing large language models and AI solutions for enterprise customers in China.\n\nRevenue has grown at a compound annual rate exceeding 130% from 2022 to 2024, rising from roughly $792K to $1.7M to $4.3M across those years (figures in 万元 units: 574, 1,245, and 3,124 respectively). First-half 2025 revenue reached approximately $2.6M. Gross margins have consistently exceeded 50% across all reported periods. R&D spending is heavy, totaling approximately $22M in the first half of 2025 alone, nearly double the $11.8M spent in H1 2024. The company serves over 8,000 institutional customers and has empowered roughly 80 million devices.\n\nZhipuAI is listing on the Hong Kong Stock Exchange Main Board under the Specialist Technology (Chapter 18C) framework, offering 37.4 million H shares at HK$116.20 each, implying gross proceeds of approximately $557M. Prior to IPO, the company raised the equivalent of roughly $1.15B across previous funding rounds. Notable backers include Legend Capital, Qiming Venture Partners, Meituan (4.27% stake), and Ant Group. Proceeds are intended to fund continued R&D investment and business expansion, though a detailed allocation was not disclosed in the extracted filing.\n\nThe three most significant risks are intense competition and rapid technological change in AI that could render current models obsolete, heavy dependence on third-party computing infrastructure, and evolving Chinese regulatory requirements governing AI that could impose material new compliance burdens."
 }

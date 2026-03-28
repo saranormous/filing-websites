@@ -15,6 +15,22 @@ from lib.common import (
 )
 
 
+def _cap_page_ranges(ranges, max_pages=40):
+    """Cap page ranges to max total pages, keeping earliest ranges first."""
+    capped = []
+    total = 0
+    for s, e in ranges:
+        pages = e - s + 1
+        if total + pages > max_pages:
+            remaining = max_pages - total
+            if remaining > 0:
+                capped.append((s, s + remaining - 1))
+            break
+        capped.append((s, e))
+        total += pages
+    return capped
+
+
 def _find_sections_by_keywords(lines, keywords, window=200):
     """Find all text windows around keyword matches."""
     found = []
@@ -194,9 +210,11 @@ Translate all Chinese text to English. Output ONLY valid JSON.""",
     sh_ranges = find_page_ranges_for_keywords(pdf_path, sh_keywords, context_pages=3)
     shareholders_data = {}
     if sh_ranges:
+        # Cap to max 40 pages to avoid drowning the LLM
+        sh_ranges = _cap_page_ranges(sh_ranges, max_pages=40)
         total_sh_pages = sum(e - s + 1 for s, e in sh_ranges)
-        print(f"    Found shareholder data on pages: {sh_ranges} ({total_sh_pages} pages)")
-        sh_b64 = _make_pdf_chunk_for_ranges(pdf_path, sh_ranges[:5])  # Limit to first 5 ranges
+        print(f"    Using {len(sh_ranges)} ranges ({total_sh_pages} pages)")
+        sh_b64 = _make_pdf_chunk_for_ranges(pdf_path, sh_ranges)
         shareholders_data = _call_and_parse_json_vision(
             """You are reading IPO prospectus pages that contain shareholder/cap table information.
 You can see the actual tables with all rows and columns. Read them exactly as displayed.
@@ -217,10 +235,10 @@ Include EVERY shareholder row visible in the tables. Extract exact percentage va
     fin_ranges = find_page_ranges_for_keywords(pdf_path, fin_keywords, context_pages=3)
     financials_data = {}
     if fin_ranges:
+        fin_ranges = _cap_page_ranges(fin_ranges, max_pages=40)
         total_fin_pages = sum(e - s + 1 for s, e in fin_ranges)
-        print(f"    Found financial data on pages: {fin_ranges} ({total_fin_pages} pages)")
-        # Limit to first 8 ranges to stay under API limits
-        fin_b64 = _make_pdf_chunk_for_ranges(pdf_path, fin_ranges[:8])
+        print(f"    Using {len(fin_ranges)} ranges ({total_fin_pages} pages)")
+        fin_b64 = _make_pdf_chunk_for_ranges(pdf_path, fin_ranges)
         financials_data = _call_and_parse_json_vision(
             """You are reading IPO prospectus pages that contain financial tables and statements.
 You can see the actual tables with all rows, columns, and numbers. Read them exactly as displayed.
@@ -252,9 +270,10 @@ Read EVERY number from the financial tables exactly as printed. Determine the co
     risk_ranges = find_page_ranges_for_keywords(pdf_path, risk_keywords, context_pages=3)
     risks_data = {}
     if risk_ranges:
+        risk_ranges = _cap_page_ranges(risk_ranges, max_pages=40)
         total_risk_pages = sum(e - s + 1 for s, e in risk_ranges)
-        print(f"    Found risk/proceeds data on pages: {risk_ranges} ({total_risk_pages} pages)")
-        risk_b64 = _make_pdf_chunk_for_ranges(pdf_path, risk_ranges[:5])
+        print(f"    Using {len(risk_ranges)} ranges ({total_risk_pages} pages)")
+        risk_b64 = _make_pdf_chunk_for_ranges(pdf_path, risk_ranges)
         risks_data = _call_and_parse_json_vision(
             """You are reading IPO prospectus pages containing risk factors and use of proceeds.
 Extract all risk factors and proceeds allocation. Output JSON:

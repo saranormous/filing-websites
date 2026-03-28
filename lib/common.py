@@ -106,7 +106,7 @@ def strip_code_fences(text):
     return text.strip()
 
 
-def call_claude_vision(system_prompt, pdf_b64, user_prompt, max_tokens=4096, retries=3):
+def call_claude_vision(system_prompt, pdf_b64, user_prompt, max_tokens=4096, retries=6):
     """Call Claude API with a PDF document as visual input."""
     import anthropic
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
@@ -137,7 +137,7 @@ def call_claude_vision(system_prompt, pdf_b64, user_prompt, max_tokens=4096, ret
             return msg.content[0].text
         except Exception as e:
             if attempt < retries - 1:
-                wait = 2 ** attempt * 5
+                wait = min(2 ** attempt * 10, 120)  # 10s, 20s, 40s, 80s, 120s
                 print(f"  API error ({e}), retrying in {wait}s...")
                 time.sleep(wait)
             else:

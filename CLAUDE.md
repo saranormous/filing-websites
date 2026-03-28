@@ -101,11 +101,23 @@ Translations checkpoint `full_text.json` after each section. If the pipeline cra
 - `filings.json` — manifest of all filings (generates index.html with sector filters)
 - The template's `render_html()` handles both translation formats (detects HTML vs plain text)
 
+## Dependencies
+- **Python 3.9+** — use `/usr/bin/python3` (system python) which has all deps installed. Homebrew python (`/opt/homebrew/bin/python3`) is 3.14 and does NOT have the required packages.
+- **poppler** — `brew install poppler` for `pdftotext` and `pdfinfo`
+- **qpdf** — `brew install qpdf` for decrypting DRM-protected PDFs (some SSE filings are encrypted)
+- **pypdf** — `pip3 install pypdf` for splitting PDFs into page chunks for vision
+- **anthropic** — `pip3 install anthropic` for Claude API calls
+- Must have `PATH="/opt/homebrew/bin:$PATH"` so poppler tools are found
+
 ## Common Gotchas
-- HKEX Chapter 18C draft filings often redact financial data and shareholder percentages
+- **Encrypted PDFs**: Some SSE filings (e.g., CXMT) have DRM encryption. pypdf crashes on these. Fix: `qpdf --decrypt input.pdf output.pdf` before processing.
+- **Rate limits**: Anthropic API limits to 400K input tokens/min. Running multiple vision pipelines in parallel saturates this. Run sequentially for reliability, or use Haiku for translation.
+- **Vision page caps**: Vision extraction caps each pass at 40 pages max (`_cap_page_ranges`). Without this, keyword matching can select 200+ pages (e.g., "revenue" appears everywhere), drowning the LLM and causing it to return prose instead of JSON.
+- **HKEX Chapter 18C draft filings** often redact financial data and shareholder percentages — expect null fields
 - API keys in search are per-visitor (localStorage), never in the repo
 - `index.html` at root is auto-generated — edit `filings.json` instead
 - Translation files can be either HTML chunks (old) or plain text sections (new) — template auto-detects
 - Requires `poppler` for PDF text extraction (`brew install poppler`)
 - Python f-strings in pipeline.py: use `\\n` for JS regex `\n`, `{{` for JS `{`
 - Currency conversion: all `rmb-val` values are treated as 万 (10K RMB) units
+- **Never overwrite `data.json`** — the pipeline merges new extraction data with existing data to preserve manually-fixed fields. The `--vision` flag writes extraction results and merges, it does not clobber.

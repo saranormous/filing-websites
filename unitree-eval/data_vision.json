@@ -5,7 +5,7 @@
     "issuer_cn": "宇树科技股份有限公司",
     "filing_date": "2026-03-20",
     "exchange": "Shanghai Stock Exchange",
-    "board": "STAR Market (Ke Chuang Ban)",
+    "board": "STAR Market (Sci-Tech Innovation Board)",
     "sponsor": "CITIC Securities Company Limited",
     "source_language": "Chinese",
     "translation_note": "AI-translated for reference only",
@@ -18,14 +18,13 @@
     "headquarters": "Building 1, No. 88 Dongliu Road, Xixing Street, Binjiang District, Hangzhou, Zhejiang Province, China",
     "registered_capital_rmb": 364017906,
     "website": "www.unitree.com",
-    "industry": "C3499 Other General Equipment Manufacturing Not Elsewhere Classified (High-Performance General-Purpose Robots / High-End Equipment)",
+    "industry": "C3499 Other General Equipment Manufacturing (not elsewhere classified)",
     "controller": {
       "name": "Wang Xingxing",
       "direct_shares_pct": 23.8216,
-      "total_control_pct": 34.763,
+      "total_control_pct": 68.7816,
       "roles": [
         "Actual Controller",
-        "Controlling Shareholder",
         "Chairman of the Board",
         "Legal Representative"
       ]
@@ -43,39 +42,64 @@
   },
   "products": [
     {
-      "name": "H1 Humanoid Robot",
-      "type": "Full-size humanoid robot",
-      "specs": "First self-developed humanoid robot launched August 2023; achieved world's first electric-drive backflip in place; running speed exceeding 5 m/s (world record for full-size humanoid robot); applications in scientific research, application development, education, cultural performance, intelligent services"
-    },
-    {
-      "name": "G1 Humanoid Robot",
-      "type": "Mid-size humanoid robot",
-      "specs": "Launched 2024; achieved electric-drive side flip in place (March 2025); 100m obstacle race in 33.71 seconds; participated in CMG World Robot Competition mech combat arena as sole entry; applications in scientific research, industrial inspection, intelligent services"
-    },
-    {
-      "name": "H2 Humanoid Robot",
-      "type": "Full-size humanoid robot",
-      "specs": "Self-developed humanoid robot; participated in martial arts performance 'Wu BOT' alongside G1 units in early 2026; demonstrated millisecond-level cluster coordination"
-    },
-    {
       "name": "B Series Quadruped Robot",
-      "type": "Industry-grade quadruped robot",
-      "specs": "Industry-grade product line; applications in scientific research, industrial inspection, emergency rescue, intelligent services, energy/chemical inspection, smart firefighting, smart city"
+      "type": "Quadruped Robot – Industry Grade",
+      "specs": "High-performance industrial-grade quadruped robot; applications include scientific research, industrial inspection, emergency rescue, and intelligent services"
     },
     {
       "name": "Go Series Quadruped Robot",
-      "type": "Consumer-grade quadruped robot",
-      "specs": "Consumer-grade product line; Go1 achieved running speed of 4.7 m/s (2021 world record for similar-spec quadruped robots); A1 achieved 3.3 m/s maximum running speed (2020); cumulative sales exceeding 30,000 units during reporting period"
+      "type": "Quadruped Robot – Consumer Grade",
+      "specs": "Consumer-grade quadruped robot; Go1 achieved running speed of 4.7 m/s setting a world record for similar-spec quadruped robots; cumulative sales exceeding 30,000 units during the reporting period"
     },
     {
-      "name": "Robot Components",
-      "type": "Robot sub-components and modules",
-      "specs": "Includes: joint modules, dexterous hands, collaborative robotic arms, perception sensors, high-performance motors, reducers (planetary reducers), encoders, laser LiDAR, depth cameras, millimeter-wave radar, linear actuators, rotary actuators, PCBA modules"
+      "name": "H1 Humanoid Robot",
+      "type": "Humanoid Robot – Full Size",
+      "specs": "First self-developed general-purpose humanoid robot released August 2023; achieved world's first high-difficulty electric-drive backflip; achieved running speed exceeding 5 m/s setting a full-size humanoid robot world record; applications include scientific research, application development, education, cultural performance, and intelligent services"
     },
     {
-      "name": "Embodied Intelligence Models",
-      "type": "AI software / embodied intelligence technology",
-      "specs": "Includes: Embodied Physical Intelligence Model (robot 'cerebellum' for high-stability full-body agile motion control); Embodied Large Model (robot 'cerebrum' for understanding, autonomous decision-making, task planning); WMA (World-Model-Action) large model; VLA (Vision-Language-Action) large model; reinforcement learning algorithms; motion control systems"
+      "name": "G1 Humanoid Robot",
+      "type": "Humanoid Robot – Mid Size",
+      "specs": "Mid-size general-purpose humanoid robot released 2024; achieved electric-drive side flip in March 2025; 100m obstacle race completed in 33.71 seconds at World Robot Games 2025; featured in CCTV Spring Festival Gala AI-driven group performance"
+    },
+    {
+      "name": "H2 Humanoid Robot",
+      "type": "Humanoid Robot – Full Size (Next Generation)",
+      "specs": "Next-generation full-size humanoid robot; participated in autonomous swarm martial arts performance 'Wu BOT' alongside 24 G1 units in early 2026"
+    },
+    {
+      "name": "Joint Module",
+      "type": "Robot Component",
+      "specs": "High-performance self-developed joint module; core actuator component for humanoid and quadruped robots"
+    },
+    {
+      "name": "Dexterous Hand",
+      "type": "Robot Component",
+      "specs": "High-degree-of-freedom robotic end-effector simulating human hand functions; multi-joint, multi-modal sensing with intelligent control for complex object grasping and manipulation"
+    },
+    {
+      "name": "Collaborative Robotic Arm",
+      "type": "Robot Component",
+      "specs": "Self-developed collaborative robotic arm component for general-purpose robot ecosystem"
+    },
+    {
+      "name": "Perception Sensors (LiDAR and other sensors)",
+      "type": "Robot Component",
+      "specs": "Self-developed high-performance sensors including LiDAR, depth cameras, millimeter-wave radar, and other perception devices for environment sensing"
+    },
+    {
+      "name": "Embodied Intelligence Model (Embodied Body Intelligence Model + Embodied Large Model)",
+      "type": "Software / AI Model",
+      "specs": "Full-stack self-developed AI models: Embodied Body Intelligence Model (Physical Intelligence, robot 'cerebellum') enabling high-stability, high-complexity whole-body agile motion; Embodied Large Model (Cognitive Intelligence, robot 'brain') enabling environment understanding, intent perception, autonomous decision-making and task execution; includes WMA (World-Model-Action) and VLA (Vision-Language-Action) large model technologies"
+    },
+    {
+      "name": "High-Performance Electric Motor",
+      "type": "Robot Component – Core Part",
+      "specs": "Self-developed high-performance electric motor reaching industry-leading level; core execution unit installed at robot joints to control joint movement"
+    },
+    {
+      "name": "Reducer (Planetary Gearbox)",
+      "type": "Robot Component – Core Part",
+      "specs": "Self-developed precision reducer using planetary gear transmission; high precision, high rigidity, high efficiency; core transmission device for robot joints"
     }
   ],
   "shareholders_pre_ipo": [
@@ -86,7 +110,7 @@
       "type": "Individual"
     },
     {
-      "name": "Shanghai Yuyi (Employee Stock Platform)",
+      "name": "Shanghai Yuyi (Employee Incentive Platform)",
       "shares_10k": 398.286,
       "pct": 10.9414,
       "type": "Institution"
@@ -110,7 +134,7 @@
       "type": "VC"
     },
     {
-      "name": "Jingwei No.1 (Matrix Partners)",
+      "name": "Jingwei No.1 (Matrix Partners China)",
       "shares_10k": 155.0632,
       "pct": 4.2598,
       "type": "VC"
@@ -122,7 +146,7 @@
       "type": "VC"
     },
     {
-      "name": "Robot Industry Development Investment Fund (Beijing)",
+      "name": "Robot Fund (Beijing Robot Industry Development Investment Fund)",
       "shares_10k": 139.2804,
       "pct": 3.8262,
       "type": "VC"
@@ -146,7 +170,7 @@
       "type": "VC"
     },
     {
-      "name": "China Internet Investment Fund",
+      "name": "China Internet Investment Fund (Zhongwang Investment)",
       "shares_10k": 76.7668,
       "pct": 2.1089,
       "type": "Institution"
@@ -164,25 +188,25 @@
       "type": "VC"
     },
     {
-      "name": "Hexagon Software Technology (Qingdao)",
+      "name": "Hexagon Software (Haikesikang)",
       "shares_10k": 48.4546,
       "pct": 1.3311,
       "type": "Institution"
     },
     {
-      "name": "Xinjiang Shenchuangtou (Shenzhen Capital Group - Xinjiang)",
+      "name": "Xinjiang Shenchuang Investment (Deep Creation Venture)",
       "shares_10k": 46.9148,
       "pct": 1.2888,
       "type": "VC"
     },
     {
-      "name": "Guanghe Phase II (Guanghe Investments)",
+      "name": "Guanghe Second Phase (Guanghe Erqi)",
       "shares_10k": 44.5284,
       "pct": 1.2232,
       "type": "VC"
     },
     {
-      "name": "Jingwei No.3 (Matrix Partners)",
+      "name": "Jingwei No.3 (Matrix Partners China)",
       "shares_10k": 43.4284,
       "pct": 1.193,
       "type": "VC"
@@ -206,7 +230,7 @@
       "type": "VC"
     },
     {
-      "name": "Beijing Zhongguancun Science City Technology Growth Investment",
+      "name": "Zhongguancun Science City (Beijing)",
       "shares_10k": 33.8864,
       "pct": 0.9309,
       "type": "VC"
@@ -248,25 +272,25 @@
       "type": "VC"
     },
     {
-      "name": "Shanghai Zhongyidishu (China Mobile Hechuang)",
-      "shares_10k": 21.7917,
-      "pct": 0.5986,
-      "type": "VC"
-    },
-    {
-      "name": "Tencent Technology (Shanghai)",
+      "name": "China Mobile Hechuang (CMCC Innovation)",
       "shares_10k": 21.7917,
       "pct": 0.5986,
       "type": "Institution"
     },
     {
-      "name": "Wuxi Jinqiu",
+      "name": "Tencent Technology (Shanghai)",
       "shares_10k": 21.7917,
       "pct": 0.5986,
       "type": "VC"
     },
     {
-      "name": "Hupo Anyun (Amber Cloud)",
+      "name": "Wuxi Jinqiu (Wuxi Jinqiu Hua Lei Technology)",
+      "shares_10k": 21.7917,
+      "pct": 0.5986,
+      "type": "Institution"
+    },
+    {
+      "name": "Hupo Anyun",
       "shares_10k": 21.7463,
       "pct": 0.5974,
       "type": "VC"
@@ -284,25 +308,25 @@
       "type": "Institution"
     },
     {
-      "name": "Innovation Capital (Shenzhen Chuangxin Ziben)",
+      "name": "Chuangxin Capital (Innovation Capital)",
       "shares_10k": 13.6571,
       "pct": 0.3752,
       "type": "VC"
     },
     {
-      "name": "Shanghai Kechuang (Shanghai Science and Technology Innovation Center No.2)",
+      "name": "Shanghai Kechuang (Shanghai Science Innovation Center)",
       "shares_10k": 13.637,
       "pct": 0.3746,
-      "type": "VC"
+      "type": "Institution"
     },
     {
-      "name": "CITIC Securities Investment (Zhongzheng Investment)",
+      "name": "Zhongzheng Investment (CITIC Securities Investment)",
       "shares_10k": 12.2938,
       "pct": 0.3377,
       "type": "Institution"
     },
     {
-      "name": "Shenzhen Capital Group (Shenchuangtou Jituan)",
+      "name": "Shenchuang Investment Group (Shenzhen Capital Group)",
       "shares_10k": 10.7957,
       "pct": 0.2966,
       "type": "VC"
@@ -314,7 +338,7 @@
       "type": "VC"
     },
     {
-      "name": "Xiangfeng Xiamen (Vertex/Sequoia Capital related)",
+      "name": "Xiangfeng Xiamen (Vertex Ventures)",
       "shares_10k": 9.5924,
       "pct": 0.2635,
       "type": "VC"
@@ -326,7 +350,7 @@
       "type": "Institution"
     },
     {
-      "name": "Junshi Chuangtou (Xiamen Junshi)",
+      "name": "Junshi Chuangtou (Xiamen)",
       "shares_10k": 6.7019,
       "pct": 0.1841,
       "type": "VC"
@@ -338,7 +362,7 @@
       "type": "VC"
     },
     {
-      "name": "Guangyue Investment (Suzhou)",
+      "name": "Guangyue Investment",
       "shares_10k": 4.948,
       "pct": 0.1359,
       "type": "VC"
@@ -389,7 +413,7 @@
         "rd_expense": 9020.94
       },
       {
-        "period": "2025-Full-Year",
+        "period": "2025",
         "revenue": 170820.87,
         "net_profit": 28756.24,
         "gross_margin_pct": null,
@@ -459,7 +483,7 @@
         "financing": 68207.25
       },
       {
-        "period": "2025-Full-Year",
+        "period": "2025",
         "operating": 67208.1,
         "investing": -47256.43,
         "financing": 67505.36
@@ -490,18 +514,11 @@
         "2025_1_9M": 6653.89
       },
       {
-        "product": "Others",
+        "product": "Other",
         "2022": 698.97,
         "2023": 826.51,
         "2024": 529.33,
         "2025_1_9M": 523.72
-      },
-      {
-        "product": "Total Main Business Revenue",
-        "2022": 12122.77,
-        "2023": 15753.65,
-        "2024": 38727.28,
-        "2025_1_9M": 115494.95
       }
     ],
     "by_geography_pct": [
@@ -522,44 +539,43 @@
     ]
   },
   "key_risks": [
-    "Risk of technology breakthroughs and product innovation falling short of expectations: The high-performance general-purpose robot industry is one of the most complex and cutting-edge technology fields, integrating software/hardware algorithms, AI reinforcement learning, embodied large models, scene data analysis, motors/reducers/sensors and many other disciplines. Technology innovation is frequent, upfront investment is high, and uncertainty is large. The company's embodied large model technology has not yet been deployed at scale in robot products, and if key technical breakthroughs cannot be achieved, the large-scale application process for general-purpose robots will face significant uncertainty.",
-    "Risk of downstream large-scale commercial application falling short of expectations: Large-scale commercialization of humanoid robots still faces uncertainty. Current technical maturity in areas such as embodied large model generalization capability and dexterous hand precision/durability is limited. The consumer-level market for general-purpose robots has not yet formed rigid demand, the application ecosystem construction process and market cultivation cycle are long, and constraints from energy systems, real-time computing platforms, regulatory policies, industry standards, and social acceptance may delay commercialization.",
-    "Risk of escalating international trade friction and regulatory policies: International trade friction has created obstacles for Chinese companies in overseas markets. Since 2025, the US government's tariff policies have fluctuated, increasing uncertainty. Overseas revenue accounted for more than 35% of total revenue in each reporting period. If the US continues to impose unfavorable trade and tariff policies, or places the company on restricted procurement or export control lists, the company may be unable to maintain high overseas sales growth or may experience a decline in performance. Imported materials procured through domestic agents account for approximately 20% of total raw material purchases, and adverse changes in supply chain and overseas market control policies could negatively impact the company.",
-    "Risk of intensified industry competition and disorderly/unfair competition: Global tech giants are accelerating their deployment and startups are proliferating, intensifying market competition. Companies such as Tesla with large-scale production capacity and AI technology resources could rapidly reduce unit costs of humanoid robots like Optimus, directly intensifying price competition and putting pressure on the company's product pricing, market share, and profit margins. The competitive focus is shifting from hardware manufacturing to full-stack 'perception-decision-execution' technology.",
-    "Risk of corporate governance issues from the special voting rights mechanism: Before this offering, the actual controller Wang Xingxing controls 34.7630% of shares and, through the special voting rights arrangement, controls 68.7816% of total voting rights. After the offering, this will decrease to no more than 65.3090%. Under special circumstances, the interests of the actual controller may not be consistent with other shareholders, potentially harming minority shareholders.",
-    "Risk of high revenue growth rate decline and gross margin compression: From 2023 to 2025, main business revenue grew by 29.95%, 145.83%, and 335.31% (reviewed) year-on-year, with gross margins of 44.22%, 56.41%, and 60.27% (reviewed) respectively. Future intensified competition, technology upgrades, or product iteration could lead to slower revenue growth, product price declines due to homogeneous competition, or cost increases from new equipment depreciation, potentially causing gross margin decline and adversely affecting profitability.",
-    "Risk of key technology leakage and loss of core personnel: The company has developed proprietary core technologies in high-performance general-purpose robots. Increasing competition between enterprises and regions for talent is intensifying. If key core technology is leaked or core R&D team members depart, it will adversely affect the company's technological innovation capability, market competitiveness, and operating results.",
-    "Risk of rapid inventory growth and impairment losses: At the end of each reporting period, the company's inventory book values were RMB 77.5374 million, RMB 78.9577 million, RMB 140.5805 million, and RMB 278.0366 million, accounting for 24.12%, 24.20%, 11.07%, and 11.14% of current assets respectively, with continuous growth. If raw material prices, supply chain, or market conditions change adversely, the net realizable value of inventory may decline significantly, increasing impairment losses.",
-    "Risk of rapid accounts receivable growth and bad debt losses: At the end of each reporting period, accounts receivable balances were RMB 7.8467 million, RMB 11.0671 million, RMB 21.5948 million, and RMB 83.4565 million. If downstream customers' financial conditions deteriorate, there is a risk that accounts receivable cannot be recovered, adversely affecting operating results.",
-    "Risk of large additional investment and expenditure from fundraising projects: The fundraising investment projects will generate significant depreciation, amortization, and expense expenditures. If the industry development trend, market environment, and other factors change adversely, causing the fundraising projects to fail to achieve expected returns, the additional depreciation, amortization, and period expenses will adversely affect future operating results.",
-    "Risk of exchange rate fluctuations related to foreign currency settlement of overseas revenue: Overseas main business revenue accounted for 57.21%, 55.63%, 55.70%, and 39.20% of main business revenue in each reporting period, primarily settled in USD. If future USD/RMB exchange rate volatility increases or exchange rate policies change significantly, it will have some impact on the company's performance.",
-    "Risk of operating performance decline due to multiple factors: If the company's new technology development or new product promotion falls short of expectations, raw material costs rise, R&D investment intensity increases, or large share-based payment expenses from new equity incentive grants occur, and the company fails to take effective measures in a timely manner, the company will face the risk of a significant decline in operating performance or even losses.",
-    "Risk of social attention hotspot and market demand fluctuations: High-performance general-purpose robots as a frontier technology field have attracted broad attention. However, if progress in key technology breakthroughs, cost control, or scene applications slows, current market enthusiasm and capital attention may significantly decrease. Long-term, large-scale commercialization requires overcoming technology reliability, production costs, market acceptance, and legal/regulatory factors; demand fluctuations could directly affect capacity utilization and revenue realization.",
-    "Risk of large share-based payment expenses impacting future performance: The company confirmed share-based payment expenses of RMB 18.7226 million in 2022 and RMB 349.0655 million in 2025 related to capital increases in the equity incentive platform Shanghai Yuyi. Future equity incentive grants will generate additional share-based payment expenses that may have a significant impact on future operating results.",
-    "Star Market-specific risks: Star Market listed companies are characterized by large R&D investment, high operational risk, unstable performance, and high delisting risk, and investors face significant market risks."
+    "Risk of technology breakthroughs and product innovation falling short of expectations: The high-performance general-purpose robot industry involves frequent technological innovation with high upfront investment and significant uncertainty. Embodied intelligence technology (comprising physical intelligence models and embodied large models) is still in R&D and testing stages globally. If the company or the industry fails to achieve important technological advances in embodied large models, or if the company makes poor decisions in R&D and product development, or key technologies cannot be breakthroughed and performance targets are not met, it will adversely affect the company's competitive advantages and operating results.",
+    "Risk of downstream large-scale commercial applications falling short of expectations: Large-scale commercialization of humanoid robots still faces uncertainty. Current technical maturity in areas such as generalization capability of embodied large models and dexterity/durability of robotic hands is limited. The consumer-level market for general-purpose robots has not yet formed rigid demand, the application ecosystem construction and market cultivation cycle is long, and supply chain capabilities in energy systems and real-time computing platforms have shortcomings. Regulatory policies, industry standards, and social acceptance may also constrain commercialization progress.",
+    "Risk of international trade frictions and escalation of regulatory policies: International trade frictions have created obstacles for Chinese companies conducting overseas business. Since 2025, U.S. government import tariff policies have fluctuated. Overseas revenue accounts for over 35% of the company's total revenue each period. If the U.S. continues to implement significantly unfavorable trade and tariff policies against Chinese companies, or lists the company on restricted procurement or technology export control lists, the company may be unable to maintain high growth in overseas sales or may experience a decline in performance. Additionally, imported materials purchased through domestic agents account for approximately 20% of total raw material procurement, which may also be adversely affected.",
+    "Risk of intensified industry competition and disorderly improper competition: Global tech giants are accelerating their deployment and startups are proliferating, intensifying market competition. Companies such as Tesla, with large-scale production capabilities and AI technology resources, may rapidly reduce unit costs of humanoid robots like Optimus, directly intensifying price competition and putting pressure on the company's product pricing, market share, and profit margins. The core of industry competition is shifting from hardware manufacturing to full-stack 'perception-decision-execution' technology. If the company fails to continuously increase R&D investment or fails to effectively leverage its first-mover advantages, it will face the risk of its core technological advantages being weakened.",
+    "Corporate governance risk from the special voting rights mechanism: Before this offering, actual controller Wang Xingxing controls 34.7630% of shares and, through the special voting rights arrangement, controls 68.7816% of voting rights. After this offering, Wang Xingxing's controlled voting rights ratio will drop to no more than 65.3090%. Under special circumstances, the actual controller's interests may not be consistent with other shareholders, potentially harming minority shareholders' interests.",
+    "Risk of high revenue growth rate and declining gross margin levels: Revenue growth rates from 2023 to 2025 were 29.95%, 145.83%, and 335.31% respectively, and gross margins were 44.22%, 56.41%, and 60.27% respectively. If industry competition intensifies, technology upgrades or product iterations occur, commercial application expansion is slower than expected, or the company cannot maintain technological leadership, the company may face declining gross margins and weakened profitability.",
+    "Risk of key technology leakage and loss of core personnel: The company has developed core technologies and built a core R&D team over many years. If key technologies are leaked or core R&D team members leave, it will adversely affect the company's technological innovation capability, market competitiveness, and operating results.",
+    "Risk of rapid growth in inventory and inventory write-down losses: At the end of each reporting period, the company's inventory book value was RMB 77.5374 million, RMB 78.9577 million, RMB 140.5805 million, and RMB 278.0366 million respectively, with relatively high proportions of current assets. If raw material prices, supply chain, or market conditions change adversely, the net realizable value of relevant products may significantly decrease, increasing inventory write-down risks.",
+    "Risk of rapid growth in accounts receivable and bad debt losses: Accounts receivable balances at the end of each reporting period were RMB 7.8467 million, RMB 11.0671 million, RMB 21.5948 million, and RMB 83.4565 million respectively. If downstream customers' financial conditions deteriorate, there is a risk that accounts receivable cannot be recovered.",
+    "Risk of large new investment and expenditure from fundraising projects: The fundraising investment projects will generate significant depreciation, amortization, and expense expenditures during implementation. If the industry development trend or market environment changes significantly for the worse, causing the projects to fail to achieve expected returns, the new depreciation, amortization, and period expenses will adversely affect future operating results.",
+    "Foreign exchange fluctuation risk from overseas revenue settled in foreign currency: Overseas main business revenue accounted for 57.21%, 55.63%, 55.70%, and 39.20% of total main business revenue respectively during the reporting periods. The company's overseas sales are primarily settled in USD. Intensified USD/RMB exchange rate fluctuations or significant changes in exchange rate policies will affect the company's performance.",
+    "Risk of operating performance decline due to multiple factors: If new technology development or new product promotion falls short of expectations, raw material costs rise, R&D investment intensity increases, large share-based payment expenses from newly granted equity incentives occur, and the company fails to take effective countermeasures in time, the company will face the risk of a significant decline in operating performance or even losses.",
+    "Risk of social attention hotspots and market demand fluctuations: If progress in key technology breakthroughs, cost control, or scenario applications is slow, current market enthusiasm and capital attention may significantly decrease. Long-term commercialization of humanoid robots requires overcoming technical reliability, production costs, market acceptance, and legal/regulatory challenges. Periodic demand fluctuations may directly affect the industry's and company's capacity utilization and revenue realization.",
+    "Risk of stock-based compensation impacting financial results: The company recognized share-based payment expenses of RMB 18.7226 million and RMB 349.0655 million in 2022 and 2025 respectively from capital increases to Shanghai Yuyi equity incentive platform. Future equity incentive grants will continue to generate share-based payment expenses that may significantly impact the company's future period operating results."
   ],
   "use_of_proceeds": {
     "total_rmb_10k": 420171.12,
     "projects": [
       {
-        "name": "Intelligent Robot Model R&D Project",
+        "name": "Intelligent Robot Model Research and Development Project",
         "amount_rmb_10k": 202245.93,
-        "focus": "Continuous R&D investment in embodied intelligence models including physical intelligence models (cerebellum) and embodied large models (brain); building computing infrastructure, large-scale datasets, automated annotation mechanisms, and an intelligent development training platform covering data processing, model training, and validation feedback; advancing cloud-edge-end computing collaboration to support model training and deep learning."
+        "focus": "Continuous R&D investment in embodied intelligence models including physical intelligence models (cerebellum) and embodied large models (brain); building cloud-edge-end computing infrastructure; constructing large-scale real datasets and automated annotation mechanisms; building intelligent development and training platforms integrating data engines, model factories, and evaluation centers to support model training, deep learning, and application expansion."
       },
       {
-        "name": "Robot Body R&D Project",
+        "name": "Robot Body (Hardware) Research and Development Project",
         "amount_rmb_10k": 110973.8,
-        "focus": "R&D of high-power-density motors, high-power-density transmission systems, high-power-density drives, multi-scale lightweight structural components for legged robots, and robot centralized thermal control systems; consolidating physical performance and cost advantages of high-performance general-purpose robot products."
+        "focus": "R&D of high power density motors, high power density transmission systems, high power density drivers, multi-scale lightweight structural components for legged robots, and centralized thermal control systems; consolidating the company's body performance advantages and cost advantages in high-performance general-purpose robot products."
       },
       {
         "name": "New Intelligent Robot Product Development Project",
         "amount_rmb_10k": 44540.0,
-        "focus": "Accelerating iteration of various types of robot products including humanoid robots and quadruped robots; enriching the product matrix; strengthening key R&D links such as overall architecture design, core component adaptation, functional performance test optimization, and process design to increase applicable application scenarios and strengthen market competitive barriers."
+        "focus": "Accelerating the iteration of various types of robot products (humanoid robots, quadruped robots, and extended products such as dexterous hands, dexterous robotic arms, 4D LiDAR); enriching the product matrix; strengthening key R&D links including overall architecture design, core component adaptation, functional performance testing and optimization, and process design; increasing applicable scenarios and strengthening market competition barriers."
       },
       {
         "name": "Intelligent Robot Manufacturing Base Construction Project",
         "amount_rmb_10k": 62411.39,
-        "focus": "Acquiring production base and production/testing equipment to solve space limitations and insufficient capacity; introducing automated assembly lines to improve precision assembly efficiency of humanoid and quadruped robot core components; configuring precision testing instruments for full-process product quality inspection; implementing intelligent warehousing systems; achieving data integration across production, inventory, and procurement to improve per-capita output efficiency and reduce reliance on leased facilities."
+        "focus": "Purchasing and constructing a production base to solve the problems of limited site area and insufficient production capacity; introducing automated assembly lines in the production area; configuring precision testing instruments in the inspection area for full-process testing of product performance, motion accuracy, and safety; deploying intelligent warehousing systems with IoT and automated equipment; realizing data integration across production, inventory, and procurement to improve per capita output efficiency and reduce unit production costs."
       }
     ]
   }

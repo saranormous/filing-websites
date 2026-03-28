@@ -786,6 +786,173 @@ Translate all Chinese to English. Output ONLY valid JSON.""",
     return merged
 
 
+def extract_structured_data_reducto(pdf_path):
+    """Extract structured data using Reducto for PDF parsing, then Claude for structuring.
+
+    Reducto handles the PDF → structured text conversion (preserving tables),
+    then we send that structured text to Claude for the same 4-pass extraction.
+    """
+    print("Reducto extraction: parsing PDF with Reducto API...")
+    from pathlib import Path
+    from reducto import Reducto
+
+    reducto_key = os.environ.get('REDUCTO_API_KEY', '')
+    if not reducto_key:
+        print("  ERROR: REDUCTO_API_KEY not set")
+        return {}
+
+    client = Reducto(api_key=reducto_key)
+    upload = client.upload(file=Path(pdf_path))
+    result = client.parse.run(input=upload)
+
+    print(f"  Parsed: {result.usage.num_pages} pages, {result.usage.credits} credits")
+
+    # Fetch result from URL (gzipped JSON)
+    import gzip
+    result_url = result.result.url
+    with urllib.request.urlopen(result_url) as resp:
+        raw = resp.read()
+        try:
+            raw = gzip.decompress(raw)
+        except Exception:
+            pass
+        parsed = json.loads(raw)
+
+    # Collect all text and tables
+    full_text = ''
+    tables = []
+    for chunk in parsed.get('chunks', []):
+        full_text += chunk.get('content', '') + '\n\n'
+        for block in chunk.get('blocks', []):
+            if block.get('type') == 'Table':
+                tables.append(block.get('content', ''))
+
+    print(f"  Total text: {len(full_text):,} chars, {len(tables)} tables detected")
+
+    lines = full_text.split('\n')
+    chunk1 = '\n'.join(lines[:500])
+
+    # ── Pass 1: Overview ──
+    print("  Reducto Pass 1/4: Company overview...")
+    overview = _call_and_parse_json(
+        """You are an expert financial analyst. This text was extracted from an IPO prospectus by a document parser that preserves table structure.
+Extract company overview. Output JSON:
+{
+  "meta": { "document": "IPO Prospectus (Draft)", "issuer": "English name", "issuer_cn": "Chinese name", "filing_date": "YYYY-MM-DD", "exchange": "...", "board": "...", "sponsor": "...", "source_language": "Chinese" },
+  "company": { "name_en": "...", "name_cn": "...", "founded": "YYYY", "headquarters": "...", "registered_capital_rmb": number, "website": "...", "industry": "...", "controller": { "name": "...", "direct_shares_pct": number, "total_control_pct": number, "roles": ["..."] }, "employees": { "total": number, "rd": number } },
+  "offering": { "shares_offered_max": number, "post_ipo_shares_approx": number, "offering_pct_approx": number, "par_value_rmb": number },
+  "products": [ { "name": "English name", "type": "...", "specs": "..." } ]
+}
+Translate to English. Output ONLY valid JSON.""",
+        f"Extract from this prospectus text (table structure preserved):\n\n{chunk1[:15000]}",
+        max_tokens=4096
+    )
+
+    # ── Pass 2: Shareholders ──
+    print("  Reducto Pass 2/4: Shareholders...")
+    # Find shareholder tables from Reducto output + context text
+    sh_tables = [t for t in tables if '持股' in t or '股东' in t or '比例' in t or 'Shareholding' in t.lower() or '%' in t]
+    sh_keywords = ['持股比例', '持股数', '股东名称', '股份比例', '持股', '股東', 'Shareholding']
+    sh_chunks = _find_sections_by_keywords(lines, sh_keywords, window=200)
+    sh_input = ''
+    if sh_tables:
+        sh_input = 'SHAREHOLDER TABLES:\n\n' + '\n\n---TABLE---\n\n'.join(sh_tables[:10])[:15000]
+    sh_input += '\n\nCONTEXT TEXT:\n\n' + '\n\n'.join(sh_chunks[:5])[:10000]
+    shareholders_data = {}
+    if sh_input:
+        shareholders_data = _call_and_parse_json(
+            """You are given tables and text extracted from a Chinese IPO prospectus with table structure preserved.
+Find the shareholder/cap table and extract ALL shareholders with their exact percentages.
+Output JSON: { "shareholders_pre_ipo": [{ "name": "English name (translate Chinese)", "shares_10k": number_or_null, "pct": number, "type": "Individual|VC|Institution" }] }
+Include EVERY shareholder row. Read percentage values exactly from the table columns. Output ONLY valid JSON.""",
+            sh_input,
+            max_tokens=8192
+        )
+
+    # ── Pass 3: Financials ──
+    print("  Reducto Pass 3/4: Financial tables...")
+    # Send ALL tables to Claude and let it find the financial ones
+    all_tables_text = '\n\n---TABLE---\n\n'.join(tables)
+    # Also include surrounding text for context
+    fin_keywords = ['营业收入', '净利润', '总资产', '利润表', '资产负债', 'Revenue', 'Net profit']
+    fin_chunks = _find_sections_by_keywords(lines, fin_keywords, window=50)
+    context_text = '\n\n'.join(fin_chunks[:5])[:10000]
+    fin_input = f"TABLES EXTRACTED FROM PROSPECTUS:\n\n{all_tables_text[:25000]}\n\nCONTEXT TEXT:\n\n{context_text}"
+    financials_data = {}
+    if tables:
+        financials_data = _call_and_parse_json(
+            """You are given tables extracted from a Chinese IPO prospectus. The tables are in markdown format with preserved structure.
+Find the income statement, balance sheet, and cash flow tables. Extract ALL financial data.
+Output JSON:
+{
+  "financials": {
+    "currency": "RMB", "unit": "10K (万元)",
+    "income_statement": [{ "period": "2022", "revenue": number_万, "net_profit": number_万, "gross_margin_pct": number, "rd_expense": number_万 }],
+    "balance_sheet": [{ "date": "YYYY-12-31", "total_assets": number_万, "total_liabilities": number_万, "equity": number_万, "cash": number_万 }],
+    "cash_flow": [{ "period": "2022", "operating": number_万, "investing": number_万, "financing": number_万 }]
+  },
+  "revenue_breakdown": {
+    "by_product": [{ "product": "English name", "2022": number_万, "2023": number_万, "2024": number_万 }],
+    "by_geography_pct": [{ "region": "Domestic", "2022": number, "2023": number, "2024": number }]
+  }
+}
+Extract EVERY number from the financial tables. Ignore non-financial tables. Output ONLY valid JSON.""",
+            fin_input,
+            max_tokens=8192
+        )
+
+    # ── Pass 4: Risks ──
+    print("  Reducto Pass 4/4: Risks & proceeds...")
+    risk_keywords = ['风险因素', '風險因素', 'RISK FACTORS', '募集资金', '所得款項']
+    risk_chunks = _find_sections_by_keywords(lines, risk_keywords, window=150)
+    risk_text = '\n\n---\n\n'.join(risk_chunks[:5])[:15000]
+    risks_data = {}
+    if risk_text:
+        risks_data = _call_and_parse_json(
+            """Extract risk factors and use of proceeds. Output JSON:
+{
+  "key_risks": ["Risk 1 in English", ...],
+  "use_of_proceeds": { "total_rmb_10k": number, "projects": [{ "name": "English name", "amount_rmb_10k": number, "focus": "..." }] }
+}
+Translate to English. Output ONLY valid JSON.""",
+            risk_text,
+            max_tokens=4096
+        )
+
+    # Merge
+    print("  Merging Reducto passes...")
+    merged = overview or {}
+    if shareholders_data.get('shareholders_pre_ipo'):
+        merged['shareholders_pre_ipo'] = shareholders_data['shareholders_pre_ipo']
+    if financials_data.get('financials'):
+        merged['financials'] = financials_data['financials']
+    if financials_data.get('revenue_breakdown'):
+        merged['revenue_breakdown'] = financials_data['revenue_breakdown']
+    if risks_data.get('key_risks'):
+        merged['key_risks'] = risks_data['key_risks']
+    if risks_data.get('use_of_proceeds'):
+        merged['use_of_proceeds'] = risks_data['use_of_proceeds']
+
+    merged.setdefault('meta', {})
+    merged.setdefault('company', {})
+    merged.setdefault('offering', {})
+    merged.setdefault('financials', {'currency': 'RMB', 'unit': '10K (万元)', 'income_statement': [], 'balance_sheet': [], 'cash_flow': []})
+    merged.setdefault('shareholders_pre_ipo', [])
+    merged.setdefault('key_risks', [])
+    merged.setdefault('use_of_proceeds', {'projects': []})
+    merged.setdefault('products', [])
+    merged['meta']['translation_note'] = 'AI-translated for reference only'
+    merged['meta']['extraction_method'] = 'reducto'
+
+    sh_count = len(merged.get('shareholders_pre_ipo', []))
+    fin_count = len(merged.get('financials', {}).get('income_statement', []))
+    risk_count = len(merged.get('key_risks', []))
+    sh_with_pct = sum(1 for s in merged.get('shareholders_pre_ipo', []) if s.get('pct'))
+    print(f"  Reducto result: {sh_count} shareholders ({sh_with_pct} with %), {fin_count} income periods, {risk_count} risks")
+
+    return merged
+
+
 def compare_extractions(text_data, vision_data):
     """Compare text-based and vision-based extraction results. Returns report dict."""
     report = {'dimensions': []}
@@ -2239,29 +2406,60 @@ if __name__ == '__main__':
         total_chars = sum(len(s['content']) for s in full_text_data['sections'])
         print(f"\n✓ Full text translation complete: {len(full_text_data['sections'])} sections, {total_chars:,} chars")
     elif run_eval:
-        # ── Eval mode: run both text and vision extraction, compare ──
-        print("\n─── EVAL MODE: Text vs Vision extraction ───")
+        # ── Eval mode: run all extraction methods and compare ──
+        print("\n─── EVAL MODE: Text vs Vision vs Reducto ───")
         os.makedirs(output_dir, exist_ok=True)
 
-        print("\n─── Text extraction ───")
+        print("\n─── 1/3: Text extraction (pdftotext + LLM) ───")
         text_data = extract_structured_data(pdf_path)
         validate_data(text_data)
         with open(os.path.join(output_dir, 'data_text.json'), 'w') as f:
             json.dump(text_data, f, indent=2, ensure_ascii=False)
 
-        print("\n─── Vision extraction ───")
+        print("\n─── 2/3: Vision extraction (PDF pages → Claude) ───")
         vision_data = extract_structured_data_vision(pdf_path)
         validate_data(vision_data)
         with open(os.path.join(output_dir, 'data_vision.json'), 'w') as f:
             json.dump(vision_data, f, indent=2, ensure_ascii=False)
 
-        # Compare
-        report = compare_extractions(text_data, vision_data)
-        with open(os.path.join(output_dir, 'eval_report.json'), 'w') as f:
-            json.dump(report, f, indent=2, ensure_ascii=False)
-        print_eval_report(report)
+        reducto_data = None
+        if os.environ.get('REDUCTO_API_KEY'):
+            print("\n─── 3/3: Reducto extraction (Reducto parse → LLM) ───")
+            reducto_data = extract_structured_data_reducto(pdf_path)
+            validate_data(reducto_data)
+            with open(os.path.join(output_dir, 'data_reducto.json'), 'w') as f:
+                json.dump(reducto_data, f, indent=2, ensure_ascii=False)
+        else:
+            print("\n─── 3/3: Reducto extraction — SKIPPED (no REDUCTO_API_KEY) ───")
 
-        print(f"\nSaved: {output_dir}/data_text.json, data_vision.json, eval_report.json")
+        # Compare text vs vision
+        print("\n─── Text vs Vision ───")
+        report_tv = compare_extractions(text_data, vision_data)
+        print_eval_report(report_tv)
+
+        # Compare vision vs reducto if available
+        if reducto_data:
+            print("\n─── Vision vs Reducto ───")
+            report_vr = compare_extractions(vision_data, reducto_data)
+            # Relabel for clarity
+            for d in report_vr['dimensions']:
+                if d['winner'] == 'text':
+                    d['winner'] = 'vision'
+                elif d['winner'] == 'vision':
+                    d['winner'] = 'reducto'
+            report_vr['summary']['vision_wins'] = report_vr['summary'].pop('text_wins', 0)
+            report_vr['summary']['reducto_wins'] = report_vr['summary'].pop('vision_wins', 0)
+            print_eval_report(report_vr)
+
+        # Save combined report
+        combined_report = {
+            'text_vs_vision': report_tv,
+            'vision_vs_reducto': report_vr if reducto_data else None,
+        }
+        with open(os.path.join(output_dir, 'eval_report.json'), 'w') as f:
+            json.dump(combined_report, f, indent=2, ensure_ascii=False)
+
+        print(f"\nSaved: {output_dir}/data_text.json, data_vision.json" + (", data_reducto.json" if reducto_data else "") + ", eval_report.json")
 
     else:
         # Step 1: Extract structured data

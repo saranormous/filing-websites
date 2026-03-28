@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "document": "IPO Prospectus (Draft)",
+    "issuer": "Unitree Robotics Co., Ltd.",
+    "issuer_cn": "宇树科技股份有限公司",
+    "filing_date": "2026-03-20",
+    "exchange": "Shanghai Stock Exchange",
+    "board": "STAR Market (Sci-Tech Innovation Board)",
+    "sponsor": "CITIC Securities Company Limited",
+    "source_language": "Chinese",
+    "translation_note": "AI-translated for reference only",
+    "extraction_method": "reducto"
+  },
+  "company": {
+    "name_en": "Unitree Robotics Co., Ltd.",
+    "name_cn": "宇树科技股份有限公司",
+    "founded": "2016",
+    "headquarters": "Building 1, No. 88 Dongliu Road, Xixing Street, Binjiang District, Hangzhou, Zhejiang Province",
+    "registered_capital_rmb": null,
+    "website": null,
+    "industry": "High-Performance General-Purpose Robotics / Embodied Intelligence",
+    "controller": {
+      "name": "Wang Xingxing",
+      "direct_shares_pct": null,
+      "total_control_pct": null,
+      "roles": [
+        "Actual Controller",
+        "Chairman of the Board"
+      ]
+    },
+    "employees": {
+      "total": null,
+      "rd": null
+    }
+  },
+  "offering": {
+    "shares_offered_max": 40446434,
+    "post_ipo_shares_approx": 404464340,
+    "offering_pct_approx": 10.0,
+    "par_value_rmb": 1.0
+  },
+  "products": [
+    {
+      "name": "H1 Humanoid Robot",
+      "type": "General-Purpose Humanoid Robot",
+      "specs": "First general-purpose humanoid robot released by Unitree in August 2023; series expanded to four models (excluding wheeled variants)"
+    },
+    {
+      "name": "B Series Quadruped Robot",
+      "type": "Quadruped Robot – Industry Grade",
+      "specs": "Applied in scientific research, industrial inspection, emergency rescue, and intelligent services"
+    },
+    {
+      "name": "Go Series Quadruped Robot",
+      "type": "Quadruped Robot – Consumer Grade",
+      "specs": "Applied in scientific research, industrial inspection, emergency rescue, and intelligent services"
+    },
+    {
+      "name": "Joint Module",
+      "type": "Robot Component",
+      "specs": "Core actuator component for robotic systems"
+    },
+    {
+      "name": "Dexterous Hand",
+      "type": "Robot Component",
+      "specs": "End-effector component for robotic manipulation"
+    },
+    {
+      "name": "Collaborative Robotic Arm",
+      "type": "Robot Component",
+      "specs": "Collaborative arm component for robotic systems"
+    },
+    {
+      "name": "Perception Sensor",
+      "type": "Robot Component",
+      "specs": "Sensing component for robotic perception and interaction"
+    },
+    {
+      "name": "Embodied Intelligence Model",
+      "type": "Software / AI Model",
+      "specs": "Proprietary embodied intelligence and motion control algorithms; includes reinforcement learning and high-precision control"
+    }
+  ],
+  "financials": {
+    "currency": "RMB",
+    "unit": "10K (万元)",
+    "income_statement": [
+      {
+        "period": "2025-01-09",
+        "revenue": 116749.01,
+        "net_profit": null,
+        "gross_margin_pct": null,
+        "rd_expense": null,
+        "notes": "2025年1-9月营业收入116,749.01万元，扣非后净利润43,061.23万元"
+      }
+    ],
+    "balance_sheet": [],
+    "cash_flow": []
+  },
+  "revenue_breakdown": {
+    "by_product": [],
+    "by_geography_pct": []
+  },
+  "key_risks": [
+    "High R&D investment requirements characteristic of STAR Market companies, leading to greater financial pressure",
+    "High operational risk inherent in the general-purpose robotics industry, which is still in an early stage of rapid development",
+    "Unstable financial performance due to the technology-intensive and R&D-driven nature of the business",
+    "Elevated delisting risk associated with STAR Market listing standards",
+    "Risk that core technologies may not keep pace with rapid industry iteration, causing loss of competitive advantage",
+    "Risk of intensified market competition from both domestic and international robotics companies",
+    "Risk of talent loss in key areas such as AI, motion control, and perception interaction",
+    "Risk that new products (e.g., humanoid robots) may fail to achieve expected commercialization or market acceptance",
+    "Risk of supply chain disruption or dependency on key component suppliers",
+    "Overseas market risk, including geopolitical uncertainties and export control regulations affecting international sales",
+    "Risk that proceeds from the IPO may not be deployed as planned, or that funded projects may not achieve expected returns",
+    "Risk of intellectual property disputes or failure to adequately protect proprietary technologies"
+  ],
+  "use_of_proceeds": {
+    "total_rmb_10k": null,
+    "projects": [
+      {
+        "name": "Intelligent Robot Model Research and Development Project",
+        "amount_rmb_10k": null,
+        "focus": "Research and development of embodied intelligence AI models and algorithms for general-purpose robots"
+      },
+      {
+        "name": "Robot Body Research and Development Project",
+        "amount_rmb_10k": null,
+        "focus": "R&D of robot hardware bodies, including humanoid and quadruped robot platforms and core components"
+      },
+      {
+        "name": "New Intelligent Robot Product Development Project",
+        "amount_rmb_10k": null,
+        "focus": "Development of new types of intelligent robot products to enrich the product matrix"
+      },
+      {
+        "name": "Intelligent Robot Manufacturing Base Construction Project",
+        "amount_rmb_10k": null,
+        "focus": "Construction of a scaled, intelligent manufacturing facility to enhance productionization and industrialization capabilities"
+      }
+    ]
+  },
+  "shareholders_pre_ipo": []
+}

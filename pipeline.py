@@ -2248,6 +2248,79 @@ def generate_site(data, full_text_data, output_dir):
 
 # ─── Index Page Generator ────────────────────────────────────────────────────
 
+def update_filings_stats(repo_root='.'):
+    """Update filings.json stats from each company's data.json."""
+    manifest_path = os.path.join(repo_root, 'filings.json')
+    if not os.path.exists(manifest_path):
+        return
+
+    with open(manifest_path) as f:
+        filings = json.load(f)
+
+    updated = 0
+    for filing in filings:
+        slug = filing.get('slug', '')
+        data_path = os.path.join(repo_root, slug, 'data.json')
+        if not os.path.exists(data_path):
+            continue
+
+        with open(data_path) as f:
+            data = json.load(f)
+
+        unit_mult, is_usd = _get_unit_multiplier(data)
+
+        def _fmt_usd(val):
+            if val is None:
+                return None
+            full = float(val) * unit_mult
+            usd = full if is_usd else full / 7.25
+            if abs(usd) >= 1e9:
+                return f'${usd/1e9:.1f}B'
+            elif abs(usd) >= 1e6:
+                return f'${usd/1e6:.0f}M'
+            elif abs(usd) >= 1e3:
+                return f'${usd/1e3:.0f}K'
+            return f'${usd:,.0f}'
+
+        # Build stats from data.json
+        new_stats = []
+        fin = data.get('financials', {})
+        inc = fin.get('income_statement', [])
+        if inc:
+            latest = inc[-1]
+            if latest.get('revenue'):
+                val = _fmt_usd(latest['revenue'])
+                if val:
+                    new_stats.append({'label': f'Revenue ({latest.get("period", "")})', 'value': val})
+            if latest.get('gross_margin_pct'):
+                new_stats.append({'label': 'Gross Margin', 'value': f'{latest["gross_margin_pct"]}%', 'color': 'green'})
+
+        sh = data.get('shareholders_pre_ipo', [])
+        if sh:
+            sh_with_pct = sum(1 for s in sh if s.get('pct'))
+            if sh_with_pct > 0:
+                top = max(sh, key=lambda s: s.get('pct') or 0)
+                new_stats.append({'label': 'Top Shareholder', 'value': top.get('name', '?')[:20], 'color': 'yellow'})
+
+        if not new_stats:
+            # Fallback: use existing stats
+            continue
+
+        filing['stats'] = new_stats
+        # Also update filing date from data if available
+        filing_date = data.get('meta', {}).get('filing_date')
+        if filing_date:
+            filing['filed'] = filing_date
+
+        updated += 1
+
+    with open(manifest_path, 'w') as f:
+        json.dump(filings, f, indent=2, ensure_ascii=False)
+
+    if updated:
+        print(f"✓ Updated stats for {updated} filings in filings.json")
+
+
 def generate_index(repo_root='.'):
     """Generate top-level index.html from filings.json manifest with sector filters."""
     manifest_path = os.path.join(repo_root, 'filings.json')
@@ -2479,6 +2552,7 @@ if __name__ == '__main__':
 
     # ── Rebuild index from manifest ──
     if '--rebuild-index' in sys.argv:
+        update_filings_stats('.')
         generate_index('.')
         sys.exit(0)
 

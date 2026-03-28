@@ -8,9 +8,15 @@
     "filed": "2026-03-20",
     "status": "Draft",
     "stats": [
-      {"label": "2025 Revenue", "value": "RMB 1.71B"},
-      {"label": "Fundraise", "value": "RMB 4.2B", "color": "yellow"},
-      {"label": "Gross Margin", "value": "60.3%", "color": "green"}
+      {
+        "label": "Revenue (2025-01 to 2025-09)",
+        "value": "$161M"
+      },
+      {
+        "label": "Top Shareholder",
+        "value": "Wang Xingxing",
+        "color": "yellow"
+      }
     ]
   },
   {
@@ -22,9 +28,11 @@
     "filed": "2025-12-30",
     "status": "Listed",
     "stats": [
-      {"label": "Stock Code", "value": "2513"},
-      {"label": "Raised", "value": "HKD 4.4B", "color": "yellow"},
-      {"label": "Status", "value": "Listed", "color": "green"}
+      {
+        "label": "Top Shareholder",
+        "value": "Tianjin Sankuai (Mei",
+        "color": "yellow"
+      }
     ]
   },
   {
@@ -36,9 +44,15 @@
     "filed": "2025-12-31",
     "status": "Listed",
     "stats": [
-      {"label": "Stock Code", "value": "0100"},
-      {"label": "Raised", "value": "HKD 4.8B", "color": "yellow"},
-      {"label": "Status", "value": "Listed", "color": "green"}
+      {
+        "label": "Revenue (9M2024)",
+        "value": "$19M"
+      },
+      {
+        "label": "Top Shareholder",
+        "value": "Alpha EXP",
+        "color": "yellow"
+      }
     ]
   },
   {
@@ -50,9 +64,20 @@
     "filed": "2025-12-22",
     "status": "Listed",
     "stats": [
-      {"label": "Stock Code", "value": "6082"},
-      {"label": "Raised", "value": "HKD 5.6B", "color": "yellow"},
-      {"label": "Debut", "value": "+76%", "color": "green"}
+      {
+        "label": "Revenue (H1_2025)",
+        "value": "$812K"
+      },
+      {
+        "label": "Gross Margin",
+        "value": "31.9%",
+        "color": "green"
+      },
+      {
+        "label": "Top Shareholder",
+        "value": "Zhang (Mr. Zhang) - ",
+        "color": "yellow"
+      }
     ]
   },
   {
@@ -64,9 +89,15 @@
     "filed": "2020-06-03",
     "status": "Listed",
     "stats": [
-      {"label": "Stock Code", "value": "688256"},
-      {"label": "Raised", "value": "RMB 2.6B", "color": "yellow"},
-      {"label": "Status", "value": "Listed", "color": "green"}
+      {
+        "label": "Revenue (2019)",
+        "value": "$61M"
+      },
+      {
+        "label": "Top Shareholder",
+        "value": "Ningbo Hangao (CITIC",
+        "color": "yellow"
+      }
     ]
   },
   {
@@ -78,9 +109,20 @@
     "filed": "2024-10-16",
     "status": "Listed",
     "stats": [
-      {"label": "Stock Code", "value": "9660"},
-      {"label": "Raised", "value": "HKD 5.4B", "color": "yellow"},
-      {"label": "Debut", "value": "+28%", "color": "green"}
+      {
+        "label": "Revenue (H1_2024)",
+        "value": "$129M"
+      },
+      {
+        "label": "Gross Margin",
+        "value": "79.04%",
+        "color": "green"
+      },
+      {
+        "label": "Top Shareholder",
+        "value": "Other Pre-IPO Invest",
+        "color": "yellow"
+      }
     ]
   },
   {
@@ -92,9 +134,15 @@
     "filed": "2024-07-31",
     "status": "Listed",
     "stats": [
-      {"label": "Stock Code", "value": "2533"},
-      {"label": "Sector", "value": "Auto AI SoC", "color": "yellow"},
-      {"label": "Status", "value": "Listed", "color": "green"}
+      {
+        "label": "Revenue (2024-Q1)",
+        "value": "$4M"
+      },
+      {
+        "label": "Top Shareholder",
+        "value": "Northern Light Ventu",
+        "color": "yellow"
+      }
     ]
   },
   {
@@ -106,9 +154,20 @@
     "filed": "2025-05-12",
     "status": "Listed",
     "stats": [
-      {"label": "Stock Code", "value": "3750"},
-      {"label": "Raised", "value": "HKD 41B", "color": "yellow"},
-      {"label": "Status", "value": "Listed", "color": "green"}
+      {
+        "label": "Revenue (2024)",
+        "value": "$49.9B"
+      },
+      {
+        "label": "Gross Margin",
+        "value": "24.4%",
+        "color": "green"
+      },
+      {
+        "label": "Top Shareholder",
+        "value": "Other Holders of A S",
+        "color": "yellow"
+      }
     ]
   },
   {
@@ -120,9 +179,15 @@
     "filed": "2026-01-02",
     "status": "Draft",
     "stats": [
-      {"label": "Sector", "value": "Batteries"},
-      {"label": "Market Share", "value": "#3 Global", "color": "yellow"},
-      {"label": "Status", "value": "Draft", "color": "green"}
+      {
+        "label": "Revenue (9M2025)",
+        "value": "$621M"
+      },
+      {
+        "label": "Gross Margin",
+        "value": "15.96%",
+        "color": "green"
+      }
     ]
   },
   {
@@ -134,9 +199,15 @@
     "filed": "2026-01-30",
     "status": "Draft",
     "stats": [
-      {"label": "Sector", "value": "Batteries"},
-      {"label": "Products", "value": "Consumer + Power", "color": "yellow"},
-      {"label": "Status", "value": "Draft", "color": "green"}
+      {
+        "label": "Revenue (9M2025)",
+        "value": "$600M"
+      },
+      {
+        "label": "Top Shareholder",
+        "value": "Wang Mingwang",
+        "color": "yellow"
+      }
     ]
   }
 ]

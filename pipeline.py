@@ -355,6 +355,113 @@ def _save_checkpoint(path, sections, total_pages):
         json.dump(data, f, indent=2, ensure_ascii=False)
 
 
+def translate_full_text_vision(pdf_path, output_dir=None):
+    """Translate full prospectus using vision — Claude reads actual PDF pages.
+
+    Sends batches of 30 pages as PDF document blocks. Preserves table layout.
+    Supports resuming from checkpoint.
+    """
+    total_pages = get_page_count(pdf_path)
+    print(f"Vision translation: {total_pages} pages")
+
+    pages_per_batch = 30
+    chunks = split_pdf_to_chunks(pdf_path, pages_per_chunk=pages_per_batch)
+    print(f"  Split into {len(chunks)} batches of ~{pages_per_batch} pages")
+
+    # Load checkpoint if resuming
+    checkpoint_path = os.path.join(output_dir, 'full_text.json') if output_dir else None
+    translated_sections = []
+    resume_from = 0
+    if checkpoint_path and os.path.exists(checkpoint_path):
+        try:
+            with open(checkpoint_path) as f:
+                existing = json.load(f)
+            translated_sections = existing.get('sections', [])
+            resume_from = len(translated_sections)
+            if resume_from > 0:
+                total_chars = sum(len(s.get('content', '')) for s in translated_sections)
+                print(f"  Resuming from batch {resume_from + 1}/{len(chunks)} ({total_chars:,} chars already translated)")
+        except (json.JSONDecodeError, KeyError):
+            translated_sections = []
+            resume_from = 0
+
+    system = """You are a professional translator specializing in Chinese financial and legal documents.
+Translate ALL visible text on these prospectus pages into clear, accurate English.
+
+Rules:
+- Translate EVERYTHING faithfully — do not summarize or skip content
+- Preserve headings: output them as ## Heading or ### Subheading
+- Preserve tables: output them as markdown tables with | column | separators |
+- Keep Chinese company names in both English and Chinese (e.g. "Unitree Technology (宇树科技)")
+- Keep financial figures in their original units with English equivalents where helpful
+- Mark major section boundaries with: ===SECTION: Section Title===
+- Output ONLY the translated text, no commentary"""
+
+    for batch_idx, (b64, start_page, end_page) in enumerate(chunks):
+        if batch_idx < resume_from:
+            continue
+
+        print(f"\n  Batch {batch_idx + 1}/{len(chunks)}: pages {start_page}-{end_page}...", end=' ', flush=True)
+
+        translated = call_claude_vision(
+            system,
+            b64,
+            f"Translate all visible text on these prospectus pages (pages {start_page}-{end_page}) from Chinese to English. Preserve all table formatting.",
+            max_tokens=16000
+        )
+        print(f"→ {len(translated):,} chars")
+
+        translated_sections.append({
+            'id': f'pages-{start_page}-{end_page}',
+            'title_en': f'Pages {start_page}–{end_page}',
+            'content': translated
+        })
+
+        # Checkpoint
+        if checkpoint_path:
+            os.makedirs(output_dir, exist_ok=True)
+            _save_checkpoint(checkpoint_path, translated_sections, total_pages)
+
+        time.sleep(2)  # Rate limit for vision calls
+
+    # Post-process: try to split by ===SECTION=== markers for better structure
+    final_sections = []
+    for sec in translated_sections:
+        content = sec['content']
+        parts = re.split(r'===SECTION:\s*(.*?)===', content)
+        if len(parts) > 1:
+            # Preamble before first marker
+            if parts[0].strip():
+                final_sections.append({
+                    'id': sec['id'] + '-pre',
+                    'title_en': sec['title_en'],
+                    'content': parts[0].strip()
+                })
+            # Section marker pairs
+            i = 1
+            while i < len(parts) - 1:
+                title = parts[i].strip()
+                body = parts[i + 1].strip() if i + 1 < len(parts) else ''
+                if body:
+                    final_sections.append({
+                        'id': re.sub(r'[^a-z0-9]+', '-', title.lower())[:40],
+                        'title_en': title,
+                        'content': body
+                    })
+                i += 2
+        else:
+            final_sections.append(sec)
+
+    result = {
+        'sections': final_sections,
+        'total_pages': total_pages,
+        'translation_model': 'claude-sonnet-4-6',
+        'translation_method': 'vision',
+        'translated_at': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())
+    }
+    return result
+
+
 # ─── Structured Data Extraction ─────────────────────────────────────────────
 
 def _find_sections_by_keywords(lines, keywords, window=200):
@@ -2551,7 +2658,10 @@ if __name__ == '__main__':
 
         # Step 2: Full translation (resumable)
         print("\n─── Step 2: Full text translation ───")
-        full_text_data = translate_full_text(pdf_path, output_dir)
+        if use_vision:
+            full_text_data = translate_full_text_vision(pdf_path, output_dir)
+        else:
+            full_text_data = translate_full_text(pdf_path, output_dir)
         validate_full_text(full_text_data)
         total_chars = sum(len(s['content']) for s in full_text_data['sections'])
         print(f"  Translated: {len(full_text_data['sections'])} sections, {total_chars:,} chars")

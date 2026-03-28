@@ -6,16 +6,15 @@ Tested on Unitree Technology IPO Prospectus (363 pages, SSE STAR Market, Chinese
 
 | Dimension | Text (pdftotext + LLM) | Vision (Claude PDF) | Reducto + LLM |
 |-----------|:---:|:---:|:---:|
-| Shareholders extracted | 41 | **46** | 49 |
-| Shareholders with % | 4 | **46** | 0 |
-| Income periods | 2 | **5** | 1 |
-| Periods with revenue | 1 | **5** | 1 |
-| Balance sheet periods | 0 | **5** | 0 |
-| Risk factors | 10 | **14** | 12 |
+| Shareholders extracted | 41 | **46** | 32 |
+| Shareholders with % | 4 | **46** | 32 |
+| Income periods with revenue | 1 | **5** | **5** |
+| Balance sheet periods | 0 | **5** | **5** |
+| Risk factors | 10 | **14** | **14** |
 | Products | 8 | **12** | 8 |
-| Metadata completeness | 4/5 | **5/5** | 5/5 |
+| Metadata completeness | 4/5 | **5/5** | **5/5** |
 
-**Winner: Vision**, across all financial data dimensions.
+**Winner: Vision**, particularly for shareholder data. Reducto ties on financials and risks after fixing table selection.
 
 ## How Each Method Works
 
@@ -23,26 +22,41 @@ Tested on Unitree Technology IPO Prospectus (363 pages, SSE STAR Market, Chinese
 
 **Vision** (targeted page finding via `pdftotext` keywords → send PDF pages directly to Claude as document blocks): Best quality (~$13-15/filing). Claude sees the actual rendered pages — tables, charts, footnotes, layout. Targeted page finding keeps cost manageable (sends ~300 pages across 4 passes, not all 500).
 
-**Reducto** (Reducto API parses PDF → structured markdown with tables → LLM extraction on parsed output): Reducto itself is excellent — found 365 perfectly formatted markdown tables with row/column structure preserved. But the LLM pass on top failed because it received all 365 tables and couldn't identify which ones were financial statements vs definitions vs TOC entries. The shareholder extraction pass failed entirely — the LLM refused to output JSON and wrote an explanation instead.
+**Reducto** (Reducto API parses PDF → structured markdown with table preservation → block-level filtering → LLM extraction): Good quality, competitive on financials. Reducto found 365 tables with clean markdown formatting. Block-level filtering narrows to the relevant tables before sending to the LLM.
 
-## Why Reducto Underperformed
+## Reducto: What Worked and What Didn't
 
-Reducto's parsing quality is high. The problem is pipeline design:
+Reducto's PDF parsing is excellent — 365 tables, 4,103 blocks, each with type and page metadata. The challenge was *table selection*: getting the right tables to the right LLM prompt.
 
-1. **Table selection.** 365 tables sent as a wall of markdown is too much noise. Vision avoids this by sending only the 50-100 pages where keywords appear.
-2. **No block-level filtering.** Reducto provides block metadata (type, page number, bounding box) that could be used to filter to only the relevant tables. The pipeline didn't use this — it should filter blocks by proximity to financial/shareholder keywords before sending to the LLM.
-3. **Different failure mode.** Text and vision fail gracefully (extract partial data). Reducto + naive LLM fails catastrophically (LLM refuses to output JSON when overwhelmed by irrelevant tables).
+**What worked (after fixing):**
+- **Financial tables:** Block-level filtering by keywords + proximity found 182 tables near financial sections. LLM extracted 5 income periods and 5 balance sheet periods — matching vision.
+- **Risks:** Text keyword search works well since risks are paragraph text, not tables.
 
-A fixed Reducto pipeline that pre-filters blocks by type and keyword proximity would likely match or approach vision quality at a lower per-page cost ($0.015/page for Reducto vs ~$0.005/page for vision tokens).
+**What was hard:**
+- **Shareholder cap table:** The prospectus has dozens of tables with "持股比例" (shareholding %) — most are fund composition tables listing LPs in VC funds, not the company's actual cap table. Required filtering by controller name and company references to isolate the real cap table. Still extracted 32 vs vision's 46.
+- **Table disambiguation in general:** A Chinese prospectus reuses the same terms (股东, 持股) in many contexts. Vision handles this naturally because Claude sees the full page context. Reducto's block-level extraction loses inter-block context.
+
+## Iterations
+
+| Version | Shareholders with % | Income periods | What changed |
+|---------|:---:|:---:|---|
+| Reducto v1 (naive) | 0 | 0 | Sent all 365 tables, LLM overwhelmed |
+| Reducto v2 (keyword proximity) | 0 | 5 | Block-level filtering by page proximity. Fixed financials, shareholders still failing |
+| Reducto v3 (cap table filter) | 0 | 5 | Filtered for tables with 3+ % signs. Still too many fund composition tables |
+| Reducto v4 (company-specific) | 32 | 5 | Filter by controller/company name in table content. Finds the real cap table |
 
 ## Cost Comparison
 
-| Method | Extraction Cost | Translation Cost | Total |
-|--------|:-:|:-:|:-:|
-| Text | ~$0.50 | ~$8 | ~$8-10 |
-| Vision | ~$2.50 | ~$11 | ~$13-15 |
-| Reducto | ~$5.50 + $2 LLM | ~$8 | ~$15-18 |
+| Method | Extraction Cost | Notes |
+|--------|:-:|---|
+| Text | ~$0.50 | Cheapest, lowest quality |
+| Vision | ~$2.50 | Best quality, simple pipeline |
+| Reducto | ~$5.50 + $2 LLM | Most complex, requires careful table selection |
 
 ## Recommendation
 
-Default to **vision** for extraction. It's the simplest, most accurate, and reasonably priced. Use text as a cheap fallback. Reducto is worth revisiting with block-level filtering for production scale.
+**Vision** is the default for extraction — simplest pipeline, best quality, reasonable cost. The LLM sees the actual document and disambiguates table types naturally.
+
+**Reducto** is worth using when: (1) you need the structured text output for other purposes (not just extraction), (2) you're processing at scale and want to cache parsed results, or (3) the PDF has OCR issues that Reducto's multi-pass pipeline handles better.
+
+**Text** is a cheap fallback for quick estimates or when vision API is unavailable.

@@ -1,0 +1,279 @@
+{
+  "meta": {
+    "document": "IPO Prospectus (Draft)",
+    "issuer": "Unitree Robotics Co., Ltd.",
+    "issuer_cn": "宇树科技股份有限公司",
+    "filing_date": "2026-03-20",
+    "exchange": "Shanghai Stock Exchange",
+    "board": "STAR Market (Sci-Tech Innovation Board)",
+    "sponsor": "CITIC Securities Company Limited",
+    "source_language": "Chinese",
+    "translation_note": "AI-translated for reference only",
+    "extraction_method": "reducto"
+  },
+  "company": {
+    "name_en": "Unitree Robotics Co., Ltd.",
+    "name_cn": "宇树科技股份有限公司",
+    "founded": "2016",
+    "headquarters": "Building 1, No. 88 Dongliu Road, Xixing Subdistrict, Binjiang District, Hangzhou, Zhejiang Province",
+    "registered_capital_rmb": null,
+    "website": null,
+    "industry": "High-Performance General-Purpose Robotics / Embodied Intelligence",
+    "controller": {
+      "name": "Wang Xingxing",
+      "direct_shares_pct": null,
+      "total_control_pct": null,
+      "roles": [
+        "Actual Controller",
+        "Chairman of the Board"
+      ]
+    },
+    "employees": {
+      "total": null,
+      "rd": null
+    }
+  },
+  "offering": {
+    "shares_offered_max": 40446434,
+    "post_ipo_shares_approx": 404464340,
+    "offering_pct_approx": 10.0,
+    "par_value_rmb": 1.0
+  },
+  "products": [
+    {
+      "name": "B-Series Quadruped Robot",
+      "type": "Quadruped Robot – Industrial Grade",
+      "specs": "Applied in scientific research, industrial inspection, emergency rescue, and intelligent services"
+    },
+    {
+      "name": "Go-Series Quadruped Robot",
+      "type": "Quadruped Robot – Consumer Grade",
+      "specs": "Applied in scientific research, industrial inspection, emergency rescue, and intelligent services"
+    },
+    {
+      "name": "H1 Humanoid Robot",
+      "type": "General-Purpose Humanoid Robot",
+      "specs": "First released August 2023; applied in scientific research, application development, education, cultural performance, and intelligent services"
+    },
+    {
+      "name": "Humanoid Robot Series (4 models excluding wheeled)",
+      "type": "General-Purpose Humanoid Robot",
+      "specs": "Self-developed; breakthroughs in motion performance, anthropomorphism, impact resistance, robustness, and swarm scheduling"
+    },
+    {
+      "name": "Joint Module",
+      "type": "Robot Component",
+      "specs": "Core actuator component for robots"
+    },
+    {
+      "name": "Dexterous Hand",
+      "type": "Robot Component",
+      "specs": "End-effector for humanoid robots"
+    },
+    {
+      "name": "Collaborative Robotic Arm",
+      "type": "Robot Component",
+      "specs": "Collaborative manipulation component"
+    },
+    {
+      "name": "Perception Sensor",
+      "type": "Robot Component",
+      "specs": "Sensing and interaction component for robots"
+    },
+    {
+      "name": "Embodied Intelligence Model",
+      "type": "Software / AI Model",
+      "specs": "AI model for embodied intelligence; supports robot autonomy and task execution"
+    }
+  ],
+  "financials": {
+    "currency": "RMB",
+    "unit": "10K (万元)",
+    "income_statement": [
+      {
+        "period": "2022",
+        "revenue": 12291.95,
+        "net_profit": -2210.05,
+        "gross_margin_pct": 44.18,
+        "rd_expense": 2999.07
+      },
+      {
+        "period": "2023",
+        "revenue": 15913.44,
+        "net_profit": -1114.51,
+        "gross_margin_pct": 44.22,
+        "rd_expense": 4997.87
+      },
+      {
+        "period": "2024",
+        "revenue": 39237.06,
+        "net_profit": 9450.18,
+        "gross_margin_pct": 56.41,
+        "rd_expense": 6998.41
+      },
+      {
+        "period": "2025-1-9",
+        "revenue": 116749.01,
+        "net_profit": 10533.14,
+        "gross_margin_pct": 59.45,
+        "rd_expense": 9024.61
+      },
+      {
+        "period": "2025",
+        "revenue": 170820.87,
+        "net_profit": 28756.24,
+        "gross_margin_pct": null,
+        "rd_expense": null
+      }
+    ],
+    "balance_sheet": [
+      {
+        "date": "2022-12-31",
+        "total_assets": 36618.43,
+        "total_liabilities": 5649.22,
+        "equity": 30969.21,
+        "cash": null
+      },
+      {
+        "date": "2023-12-31",
+        "total_assets": 39127.15,
+        "total_liabilities": 9222.66,
+        "equity": 29904.49,
+        "cash": null
+      },
+      {
+        "date": "2024-12-31",
+        "total_assets": 152689.65,
+        "total_liabilities": 24732.04,
+        "equity": 127957.61,
+        "cash": null
+      },
+      {
+        "date": "2025-09-30",
+        "total_assets": 286476.07,
+        "total_liabilities": 43461.74,
+        "equity": 243014.33,
+        "cash": null
+      },
+      {
+        "date": "2025-12-31",
+        "total_assets": 321491.73,
+        "total_liabilities": 60187.97,
+        "equity": 261303.76,
+        "cash": null
+      }
+    ],
+    "cash_flow": [
+      {
+        "period": "2022",
+        "operating": -3019.73,
+        "investing": null,
+        "financing": null
+      },
+      {
+        "period": "2023",
+        "operating": 494.25,
+        "investing": null,
+        "financing": null
+      },
+      {
+        "period": "2024",
+        "operating": 19239.13,
+        "investing": -71350.62,
+        "financing": 86008.22
+      },
+      {
+        "period": "2025-1-9",
+        "operating": 42753.22,
+        "investing": null,
+        "financing": null
+      },
+      {
+        "period": "2025",
+        "operating": 67208.1,
+        "investing": -47256.43,
+        "financing": 67505.36
+      }
+    ]
+  },
+  "revenue_breakdown": {
+    "by_product": [
+      {
+        "product": "Quadruped Robot",
+        "2022": 9282.38,
+        "2023": 11938.09,
+        "2024": 23054.37,
+        "2025-1-9": 48798.55
+      },
+      {
+        "product": "Humanoid Robot",
+        "2022": 0,
+        "2023": 296.71,
+        "2024": 10689.76,
+        "2025-1-9": 59518.79
+      },
+      {
+        "product": "Robot Components",
+        "2022": 2141.42,
+        "2023": 2692.34,
+        "2024": 4453.82,
+        "2025-1-9": 6653.89
+      },
+      {
+        "product": "Other",
+        "2022": 698.97,
+        "2023": 826.51,
+        "2024": 529.33,
+        "2025-1-9": 523.72
+      },
+      {
+        "product": "Total",
+        "2022": 12122.77,
+        "2023": 15753.65,
+        "2024": 38727.28,
+        "2025-1-9": 115494.95
+      }
+    ],
+    "by_geography_pct": []
+  },
+  "key_risks": [
+    "High R&D investment, high operating risk, unstable performance, and high delisting risk characteristic of STAR Market (Sci-Tech Innovation Board) companies",
+    "The general robotics industry is technology-intensive and R&D-driven; software and hardware technology development and application exploration are still in the early rapid development stage, with uncertain commercialization prospects",
+    "Risks related to the issuer's own operations, including potential inability to maintain competitive advantages in high-performance general-purpose robots",
+    "Risks related to the industry, including intense market competition from domestic and international robotics companies",
+    "Risk of technology iteration and obsolescence — rapid innovation cycles in AI and embodied intelligence may render existing products or technologies outdated",
+    "Risk of reliance on key personnel, particularly in AI, motion control, and perception interaction R&D teams; loss of core talent could adversely affect operations",
+    "Overseas market risk — a significant portion of revenue relies on international markets, exposing the company to geopolitical, trade policy, and foreign exchange risks",
+    "Risk of performance instability — future revenues and profits may fluctuate significantly due to market demand changes, product iteration cycles, and competitive dynamics",
+    "Supply chain and procurement risks — dependence on key component suppliers; supply disruptions could affect production capacity and delivery",
+    "Risk that raised funds may not be deployed as planned or that investment projects may not achieve expected returns",
+    "Dual-class share structure and special voting rights arrangement may concentrate control in the hands of the actual controller, limiting minority shareholder influence",
+    "Delisting risk associated with STAR Market listing standards"
+  ],
+  "use_of_proceeds": {
+    "total_rmb_10k": null,
+    "projects": [
+      {
+        "name": "Intelligent Robot Model Research and Development Project",
+        "amount_rmb_10k": null,
+        "focus": "R&D of embodied intelligence models, reinforcement learning, high-precision control, and frontier AI algorithms to strengthen core intelligent capabilities"
+      },
+      {
+        "name": "Robot Body Research and Development Project",
+        "amount_rmb_10k": null,
+        "focus": "R&D of humanoid robot and quadruped robot hardware bodies, improving motion performance, robustness, and anti-impact capabilities"
+      },
+      {
+        "name": "New Intelligent Robot Product Development Project",
+        "amount_rmb_10k": null,
+        "focus": "Development of new types of intelligent robot products to enrich the product matrix and expand application scenarios"
+      },
+      {
+        "name": "Intelligent Robot Manufacturing Base Construction Project",
+        "amount_rmb_10k": null,
+        "focus": "Construction of a scaled and intelligent manufacturing system to improve industrialization capacity and production efficiency"
+      }
+    ]
+  },
+  "shareholders_pre_ipo": []
+}

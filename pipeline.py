@@ -818,22 +818,49 @@ def extract_structured_data_reducto(pdf_path):
             pass
         parsed = json.loads(raw)
 
-    # Collect all text and tables
+    # Collect all blocks with page info for targeted selection
+    all_blocks = []
     full_text = ''
-    tables = []
     for chunk in parsed.get('chunks', []):
         full_text += chunk.get('content', '') + '\n\n'
         for block in chunk.get('blocks', []):
-            if block.get('type') == 'Table':
-                tables.append(block.get('content', ''))
+            page = block.get('bbox', {}).get('page', 0) if isinstance(block.get('bbox'), dict) else 0
+            all_blocks.append({
+                'type': block.get('type', ''),
+                'content': block.get('content', ''),
+                'page': page
+            })
 
-    print(f"  Total text: {len(full_text):,} chars, {len(tables)} tables detected")
+    tables = [b for b in all_blocks if b['type'] == 'Table']
+    text_blocks = [b for b in all_blocks if b['type'] in ('Text', 'Section Header', 'Title', 'List Item')]
+    print(f"  Total text: {len(full_text):,} chars, {len(tables)} tables, {len(all_blocks)} blocks")
 
-    lines = full_text.split('\n')
-    chunk1 = '\n'.join(lines[:500])
+    def _find_nearby_tables(keywords, context_pages=3):
+        """Find tables on pages near keyword matches in text blocks."""
+        hit_pages = set()
+        for b in text_blocks:
+            for kw in keywords:
+                if kw.lower() in b['content'].lower():
+                    hit_pages.add(b['page'])
+                    break
+        # Include tables on nearby pages
+        nearby = set()
+        for p in hit_pages:
+            for offset in range(-context_pages, context_pages + 1):
+                nearby.add(p + offset)
+        return [t for t in tables if t['page'] in nearby]
 
-    # ── Pass 1: Overview ──
+    def _get_text_near_keywords(keywords, window=200):
+        """Get text blocks near keyword matches."""
+        lines = full_text.split('\n')
+        return _find_sections_by_keywords(lines, keywords, window=window)
+
+    chunk1 = full_text[:15000]
+
+    # ── Pass 1: Overview (first ~50 pages of text) ──
     print("  Reducto Pass 1/4: Company overview...")
+    early_blocks = [b for b in all_blocks if b['page'] <= 50]
+    early_text = '\n'.join(b['content'] for b in early_blocks)[:15000]
     overview = _call_and_parse_json(
         """You are an expert financial analyst. This text was extracted from an IPO prospectus by a document parser that preserves table structure.
 Extract company overview. Output JSON:
@@ -844,45 +871,71 @@ Extract company overview. Output JSON:
   "products": [ { "name": "English name", "type": "...", "specs": "..." } ]
 }
 Translate to English. Output ONLY valid JSON.""",
-        f"Extract from this prospectus text (table structure preserved):\n\n{chunk1[:15000]}",
+        f"Extract from this prospectus (table structure preserved by Reducto):\n\n{early_text}",
         max_tokens=4096
     )
 
-    # ── Pass 2: Shareholders ──
+    # ── Pass 2: Shareholders (find the company cap table, not fund tables) ──
     print("  Reducto Pass 2/4: Shareholders...")
-    # Find shareholder tables from Reducto output + context text
-    sh_tables = [t for t in tables if '持股' in t or '股东' in t or '比例' in t or 'Shareholding' in t.lower() or '%' in t]
-    sh_keywords = ['持股比例', '持股数', '股东名称', '股份比例', '持股', '股東', 'Shareholding']
-    sh_chunks = _find_sections_by_keywords(lines, sh_keywords, window=200)
-    sh_input = ''
-    if sh_tables:
-        sh_input = 'SHAREHOLDER TABLES:\n\n' + '\n\n---TABLE---\n\n'.join(sh_tables[:10])[:15000]
-    sh_input += '\n\nCONTEXT TEXT:\n\n' + '\n\n'.join(sh_chunks[:5])[:10000]
+    # Use controller name from Pass 1 to find the actual company cap table
+    controller_name = (overview or {}).get('company', {}).get('controller', {}).get('name', '')
+    controller_cn = ''
+    # Also get Chinese controller name from company name_cn
+    company_cn = (overview or {}).get('company', {}).get('name_cn', '')
+
+    # Find tables that: (1) have 持股比例/% columns AND (2) contain the controller or company name
+    # This distinguishes the company cap table from fund composition tables
+    cap_tables = []
+    for t in tables:
+        content = t['content']
+        pct_count = content.count('%')
+        has_cap_headers = '持股比例' in content or ('股东' in content and '比例' in content)
+        # Must have controller name or company name to be the right table
+        has_company_ref = ('王兴兴' in content or '宇树' in content or  # Unitree-specific fallbacks
+                          (controller_name and controller_name.lower() in content.lower()) or
+                          any(cn in content for cn in ['实际控制人', '控股股东', '发行人']))
+        if pct_count >= 3 and has_cap_headers and has_company_ref:
+            cap_tables.append(t)
+
+    # Fallback: if no company-specific tables found, use all tables with 持股比例
+    if not cap_tables:
+        cap_tables = [t for t in tables if '持股比例' in t['content'] and t['content'].count('%') >= 5]
+
+    sh_context = _get_text_near_keywords(['持股比例', '股东名称', '发行人股本'], window=100)
+    print(f"    Found {len(cap_tables)} company cap tables")
     shareholders_data = {}
-    if sh_input:
+    if cap_tables:
+        sh_input = 'COMPANY SHAREHOLDER CAP TABLES:\n\n'
+        for t in cap_tables[:10]:
+            sh_input += f'[Page {t["page"]}]\n{t["content"]}\n\n---\n\n'
+        sh_input += '\nCONTEXT:\n\n' + '\n\n'.join(sh_context[:2])[:5000]
         shareholders_data = _call_and_parse_json(
-            """You are given tables and text extracted from a Chinese IPO prospectus with table structure preserved.
-Find the shareholder/cap table and extract ALL shareholders with their exact percentages.
+            """You are given the company's shareholder cap tables from an IPO prospectus.
+These tables show who owns shares in the ISSUER COMPANY (not in investment funds).
+There may be multiple historical tables — use the one with the MOST shareholders (the most complete/recent one).
+Extract ALL shareholders with their exact percentages.
 Output JSON: { "shareholders_pre_ipo": [{ "name": "English name (translate Chinese)", "shares_10k": number_or_null, "pct": number, "type": "Individual|VC|Institution" }] }
-Include EVERY shareholder row. Read percentage values exactly from the table columns. Output ONLY valid JSON.""",
-            sh_input,
+Output ONLY valid JSON.""",
+            sh_input[:20000],
             max_tokens=8192
         )
 
-    # ── Pass 3: Financials ──
+    # ── Pass 3: Financials (targeted tables near financial keywords) ──
     print("  Reducto Pass 3/4: Financial tables...")
-    # Send ALL tables to Claude and let it find the financial ones
-    all_tables_text = '\n\n---TABLE---\n\n'.join(tables)
-    # Also include surrounding text for context
-    fin_keywords = ['营业收入', '净利润', '总资产', '利润表', '资产负债', 'Revenue', 'Net profit']
-    fin_chunks = _find_sections_by_keywords(lines, fin_keywords, window=50)
-    context_text = '\n\n'.join(fin_chunks[:5])[:10000]
-    fin_input = f"TABLES EXTRACTED FROM PROSPECTUS:\n\n{all_tables_text[:25000]}\n\nCONTEXT TEXT:\n\n{context_text}"
+    fin_keywords = ['营业收入', '净利润', '总资产', '利润表', '资产负债', '现金流量',
+                    'Revenue', 'Net profit', 'Total assets', 'Income Statement']
+    fin_nearby_tables = _find_nearby_tables(fin_keywords, context_pages=3)
+    fin_context = _get_text_near_keywords(fin_keywords, window=50)
+    print(f"    Found {len(fin_nearby_tables)} tables near financial keywords")
     financials_data = {}
-    if tables:
+    if fin_nearby_tables:
+        fin_input = 'TABLES NEAR FINANCIAL SECTIONS (page numbers shown):\n\n'
+        for t in fin_nearby_tables[:20]:
+            fin_input += f'[Page {t["page"]}]\n{t["content"]}\n\n---\n\n'
+        fin_input += '\nCONTEXT:\n\n' + '\n\n'.join(fin_context[:3])[:5000]
         financials_data = _call_and_parse_json(
-            """You are given tables extracted from a Chinese IPO prospectus. The tables are in markdown format with preserved structure.
-Find the income statement, balance sheet, and cash flow tables. Extract ALL financial data.
+            """You are given tables from an IPO prospectus, filtered to pages near financial statement sections.
+Find the income statement, balance sheet, and cash flow tables. Ignore non-financial tables (definitions, TOC, etc.).
 Output JSON:
 {
   "financials": {
@@ -896,20 +949,20 @@ Output JSON:
     "by_geography_pct": [{ "region": "Domestic", "2022": number, "2023": number, "2024": number }]
   }
 }
-Extract EVERY number from the financial tables. Ignore non-financial tables. Output ONLY valid JSON.""",
-            fin_input,
+Extract EVERY number from the financial tables. Output ONLY valid JSON.""",
+            fin_input[:25000],
             max_tokens=8192
         )
 
     # ── Pass 4: Risks ──
     print("  Reducto Pass 4/4: Risks & proceeds...")
     risk_keywords = ['风险因素', '風險因素', 'RISK FACTORS', '募集资金', '所得款項']
-    risk_chunks = _find_sections_by_keywords(lines, risk_keywords, window=150)
-    risk_text = '\n\n---\n\n'.join(risk_chunks[:5])[:15000]
+    risk_context = _get_text_near_keywords(risk_keywords, window=150)
+    risk_text = '\n\n---\n\n'.join(risk_context[:5])[:15000]
     risks_data = {}
     if risk_text:
         risks_data = _call_and_parse_json(
-            """Extract risk factors and use of proceeds. Output JSON:
+            """Extract risk factors and use of proceeds from this IPO prospectus text. Output JSON:
 {
   "key_risks": ["Risk 1 in English", ...],
   "use_of_proceeds": { "total_rmb_10k": number, "projects": [{ "name": "English name", "amount_rmb_10k": number, "focus": "..." }] }

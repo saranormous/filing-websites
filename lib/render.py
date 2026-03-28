@@ -202,64 +202,12 @@ def render_html(data, full_text_data):
     # ── Full translation sections ──
     full_translation_html = ''
     if full_text_data and full_text_data.get('sections'):
-        # First pass: render all content
-        raw_content = ''
-        for sec_i, sec in enumerate(full_text_data['sections']):
-            content = sec.get('content', '')
-            is_html = bool(re.search(r'<(?:p|h[1-6]|table|div|ul|ol|em|strong)\b', content))
-            if is_html:
-                raw_content += content + '\n'
-            else:
-                paragraphs = content.split('\n\n')
-                for para in paragraphs:
-                    para = para.strip()
-                    if not para:
-                        continue
-                    if len(para) < 100 and not para.endswith('.') and not para.endswith('。'):
-                        if para.startswith('#'):
-                            level = len(para) - len(para.lstrip('#'))
-                            text = para.lstrip('#').strip()
-                            raw_content += f'<h{min(level+1,4)}>{esc(text)}</h{min(level+1,4)}>\n'
-                        else:
-                            raw_content += f'<h3>{esc(para)}</h3>\n'
-                    else:
-                        raw_content += f'<p>{esc(para)}</p>\n'
-
-        # Second pass: find all <h2> headings, give them IDs, build TOC
-        toc_entries = []
-        heading_counter = 0
-        skip_patterns = ['prospectus', '招股', '股份有限公司', 'co., ltd', 'corporation limited', '— prospectus',
-                         'table of contents', 'issuer\'s declaration', 'declaration', '目录', '目錄', '声明']
-
-        def _heading_replacer(match):
-            nonlocal heading_counter
-            tag = match.group(1)  # h2 or h3
-            attrs = match.group(2)
-            text_html = match.group(3)
-            text = re.sub(r'<[^>]+>', '', text_html).strip()
-            # Clean up nbsp
-            text = re.sub(r'&nbsp;|&amp;nbsp;|\xa0', ' ', text)
-            text = re.sub(r'\s{2,}', ' ', text).strip()
-            # Only index h2 headings that are top-level sections
-            if tag == 'h2' and text and len(text) < 150:
-                lower = text.lower()
-                if (not any(skip in lower for skip in skip_patterns)
-                    and not re.match(r'^[\d\s\-–\.]+$', text)
-                    and _is_top_level_heading(text)):
-                    anchor = f'ft-{heading_counter}'
-                    heading_counter += 1
-                    toc_entries.append((anchor, text))
-                    return f'<{tag}{attrs} id="{anchor}">{text_html}</{tag}>'
-            return match.group(0)
-
         def _sanitize_tables(content):
-            """Fix broken table HTML in translation content.
-            If tables are balanced, keep them. If not, convert to simple divs."""
+            """Fix broken table HTML in translation content."""
             opens = len(re.findall(r'<table[\s>]', content, re.IGNORECASE))
             closes = len(re.findall(r'</table>', content, re.IGNORECASE))
             if opens == closes:
-                return content  # Tables are balanced, keep as-is
-            # Unbalanced — convert all table markup to divs to prevent DOM nesting issues
+                return content
             content = re.sub(r'<table[^>]*>', '<div class="table-fallback">', content, flags=re.IGNORECASE)
             content = re.sub(r'</table>', '</div>', content, flags=re.IGNORECASE)
             content = re.sub(r'<thead[^>]*>', '', content, flags=re.IGNORECASE)
@@ -272,115 +220,53 @@ def render_html(data, full_text_data):
             content = re.sub(r'</t[hd]>', '</span> ', content, flags=re.IGNORECASE)
             return content
 
-        # Balance HTML tags in raw content before splitting into accordions
-        # This prevents unclosed <table>/<td>/<tr> from swallowing subsequent sections
-        def _balance_at_splits(html_content, split_markers):
-            """Insert closing tags before each split marker to prevent DOM nesting issues."""
-            result = html_content
-            for marker in split_markers:
-                pos = result.find(marker)
-                if pos < 0:
+        def _render_section_content(content):
+            """Render a section's content to HTML."""
+            is_html = bool(re.search(r'<(?:p|h[1-6]|table|div|ul|ol|em|strong)\b', content))
+            if is_html:
+                return content
+            html = ''
+            for para in content.split('\n\n'):
+                para = para.strip()
+                if not para:
                     continue
-                before = result[:pos]
-                # Count unclosed table-related tags in content before this marker
-                closers = ''
-                for tag in ['td', 'tr', 'table']:
-                    opens = len(re.findall(f'<{tag}[\\s>]', before, re.IGNORECASE))
-                    closes = len(re.findall(f'</{tag}>', before, re.IGNORECASE))
-                    if opens > closes:
-                        closers += f'</{tag}>' * (opens - closes)
-                if closers:
-                    result = result[:pos] + closers + result[pos:]
-            return result
+                if len(para) < 100 and not para.endswith('.') and not para.endswith('。'):
+                    if para.startswith('#'):
+                        level = len(para) - len(para.lstrip('#'))
+                        text = para.lstrip('#').strip()
+                        html += f'<h{min(level+1,4)}>{esc(text)}</h{min(level+1,4)}>\n'
+                    else:
+                        html += f'<h3>{esc(para)}</h3>\n'
+                else:
+                    html += f'<p>{esc(para)}</p>\n'
+            return html
 
-        # First: tag each TOC-level h2 with an ID and collect positions
-        toc_positions = []  # (char_position, anchor, title)
-        heading_offset = [0]  # track offset changes from replacements
+        # Build accordion from sections array — each section is one accordion item
+        sections = full_text_data['sections']
+        toc_entries = []
+        accordion_html = ''
 
-        def _heading_replacer_with_pos(match):
-            nonlocal heading_counter
-            tag = match.group(1)
-            attrs = match.group(2)
-            text_html = match.group(3)
-            text = re.sub(r'<[^>]+>', '', text_html).strip()
-            text = re.sub(r'&nbsp;|&amp;nbsp;|\xa0', ' ', text)
-            text = re.sub(r'\s{2,}', ' ', text).strip()
-            if tag == 'h2' and text and len(text) < 150:
-                lower = text.lower()
-                if (not any(skip in lower for skip in skip_patterns)
-                    and not re.match(r'^[\d\s\-–\.]+$', text)
-                    and _is_top_level_heading(text)):
-                    anchor = f'ft-{heading_counter}'
-                    heading_counter += 1
-                    toc_entries.append((anchor, text))
-                    return f'<!--TOC:{anchor}--><{tag}{attrs} id="{anchor}">{text_html}</{tag}>'
-            return match.group(0)
+        for sec_i, sec in enumerate(sections):
+            anchor = f'ft-{sec_i}'
+            title = sec.get('title_en', sec.get('id', f'Section {sec_i + 1}'))
+            content = sec.get('content', '')
 
-        # Pre-sanitize: close unclosed table tags before each <h2> to prevent DOM nesting
-        raw_content = re.sub(r'</?section[^>]*>', '', raw_content)
-        h2_positions = [m.start() for m in re.finditer(r'<h2[\s>]', raw_content, re.IGNORECASE)]
-        if h2_positions:
-            parts_raw = []
-            prev = 0
-            for pos in h2_positions:
-                chunk = raw_content[prev:pos]
-                # Close any unclosed table tags in this chunk
-                for tag in ['td', 'tr', 'table']:
-                    o = len(re.findall(f'<{tag}[\\s>]', chunk, re.IGNORECASE))
-                    c = len(re.findall(f'</{tag}>', chunk, re.IGNORECASE))
-                    if o > c:
-                        chunk += f'</{tag}>' * (o - c)
-                parts_raw.append(chunk)
-                prev = pos
-            parts_raw.append(raw_content[prev:])
-            raw_content = ''.join(parts_raw)
+            toc_entries.append((anchor, title))
 
-        tagged_body = re.sub(r'<(h[23])([^>]*)>(.*?)</\1>', _heading_replacer_with_pos, raw_content, flags=re.IGNORECASE)
+            # Render content
+            rendered = _render_section_content(content)
+            rendered = re.sub(r'</?section[^>]*>', '', rendered)
+            rendered = _sanitize_tables(rendered)
 
-        if toc_entries:
-            # Balance unclosed table tags before each split point
-            markers = [f'<!--TOC:{anchor}-->' for anchor, _ in toc_entries]
-            tagged_body = _balance_at_splits(tagged_body, markers)
+            accordion_html += f'<section class="ft-section collapsed" id="{anchor}">\n<div class="section-header" onclick="toggleSection(this)"><h2>{esc(title)}</h2><span class="chevron">&#9654;</span></div>\n<div class="section-body"><div class="translation-content">{rendered}</div></div>\n</section>\n'
 
-            # Split at TOC markers
-            marker_pattern = r'<!--TOC:(ft-\d+)-->'
-            pieces = re.split(marker_pattern, tagged_body)
-            # pieces = [preamble, 'ft-0', content0, 'ft-1', content1, ...]
+        # Build TOC
+        toc_html = '<nav class="translation-toc"><h3>Table of Contents</h3><ol>\n'
+        for anchor, title in toc_entries:
+            toc_html += f'  <li><a href="#{anchor}" onclick="expandAndScroll(\'{anchor}\'); return false;">{esc(title)}</a></li>\n'
+        toc_html += '</ol></nav>\n'
 
-            accordion_html = ''
-
-            # Preamble
-            preamble = pieces[0].strip()
-            if preamble and len(preamble) > 200:
-                preamble = re.sub(r'</?section[^>]*>', '', preamble)
-                accordion_html += f'<section class="ft-section">\n<div class="section-header" onclick="toggleSection(this)"><h2>Preamble</h2><span class="chevron">&#9654;</span></div>\n<div class="section-body"><div class="translation-content">{preamble}</div></div>\n</section>\n'
-
-            # Build anchor→title map
-            anchor_titles = dict(toc_entries)
-
-            # Each section
-            i = 1
-            while i < len(pieces) - 1:
-                anchor = pieces[i]
-                content = pieces[i + 1] if i + 1 < len(pieces) else ''
-                title = anchor_titles.get(anchor, anchor)
-                # Remove the <h2> tag from content since it's now the accordion header
-                content = re.sub(r'^\s*<h2[^>]*>.*?</h2>\s*', '', content, count=1, flags=re.DOTALL)
-                # Sanitize translation content
-                content = re.sub(r'</?section[^>]*>', '', content)
-                content = _sanitize_tables(content)
-                accordion_html += f'<section class="ft-section collapsed" id="{anchor}">\n<div class="section-header" onclick="toggleSection(this)"><h2>{esc(title)}</h2><span class="chevron">&#9654;</span></div>\n<div class="section-body"><div class="translation-content">{content}</div></div>\n</section>\n'
-                i += 2
-
-            # Build TOC
-            toc_html = '<nav class="translation-toc"><h3>Table of Contents</h3><ol>\n'
-            for anchor, title in toc_entries:
-                toc_html += f'  <li><a href="#{anchor}" onclick="expandAndScroll(\'{anchor}\'); return false;">{esc(title)}</a></li>\n'
-            toc_html += '</ol></nav>\n'
-
-            full_translation_html = toc_html + accordion_html
-        else:
-            full_translation_html = '<div class="translation-content-body">\n' + tagged_body + '\n</div>'
+        full_translation_html = toc_html + accordion_html
     else:
         full_translation_html = '<p>Full translation not available.</p>'
 

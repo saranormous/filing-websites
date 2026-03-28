@@ -1437,6 +1437,17 @@ def fmt_num(val):
         return str(val)
 
 
+def _is_top_level_heading(text):
+    """Check if a heading is a top-level section (not a sub-section)."""
+    if re.match(r'^[\(\（]?[IVXivx]+[\.\)）]', text):
+        return False
+    if re.match(r'^[\(\（]\d+[\)）]', text):
+        return False
+    if re.match(r'^\d+\.\d+', text):
+        return False
+    return True
+
+
 def _get_unit_multiplier(data):
     """Get multiplier to convert financial values to full RMB.
     Returns (multiplier, is_usd) — if already USD, multiplier converts to full USD."""
@@ -1623,18 +1634,6 @@ def render_html(data, full_text_data):
         heading_counter = 0
         skip_patterns = ['prospectus', '招股', '股份有限公司', 'co., ltd', 'corporation limited', '— prospectus',
                          'table of contents', 'issuer\'s declaration', 'declaration', '目录', '目錄', '声明']
-
-        def _is_top_level_heading(text):
-            """Check if a heading is a top-level section (not a sub-section)."""
-            # Skip sub-section numbering patterns like "III.", "VIII.", "(IV)", "3.2"
-            if re.match(r'^[\(\（]?[IVXivx]+[\.\)）]', text):  # Roman numeral sub-sections
-                return False
-            if re.match(r'^[\(\（]\d+[\)）]', text):  # (1), (2), etc.
-                return False
-            if re.match(r'^\d+\.\d+', text):  # 3.2, 5.1, etc.
-                return False
-            # Keep: "Section 1", "Section II", "第X节", or plain title headings
-            return True
 
         def _heading_replacer(match):
             nonlocal heading_counter

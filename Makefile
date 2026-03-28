@@ -33,7 +33,7 @@ endif
 ifndef SLUG
 	$(error SLUG is required. Usage: make add PDF=prospectus.pdf SLUG=mycompany)
 endif
-	$(PYTHON) pipeline.py --yes $(PDF) $(SLUG)
+	$(PYTHON) pipeline.py --yes --vision $(PDF) $(SLUG)
 	$(PYTHON) pipeline.py --rebuild-index
 	@echo ""
 	@echo "Done! Don't forget to:"

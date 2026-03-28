@@ -25,7 +25,7 @@ Every `{company}/index.html` MUST have all of these. When modifying one site, up
 5. **Collapsible sections** with chevron indicators
 6. **Quick links** bar at top for section navigation
 7. **Summary + Full Translation tabs** with cross-links via `jumpToFull()`
-8. **Full translation accordion** — content split at major `<h2>` headings into collapsible sections (all collapsed by default). TOC at top with `expandAndScroll()` links. Unclosed table tags auto-sanitized before splitting.
+8. **Full translation accordion** — built from `full_text.json` sections array (NOT from scanning `<h2>` tags in content). Each section from the translation becomes one collapsible accordion item. TOC at top with `expandAndScroll()` links. Unclosed table tags auto-sanitized.
 9. **KPI cards** with key financial highlights in USD
 10. **`data.json`** — machine-readable structured data including `executive_summary` field
 11. **Sticky header** with search, company name (links back to index), toggles
@@ -34,6 +34,7 @@ Every `{company}/index.html` MUST have all of these. When modifying one site, up
 
 ## Filing Sites
 - `unitree/` — Unitree Technology (SSE STAR Market, robotics)
+- `cxmt/` — CXMT Corporation (SSE STAR Market, DRAM semiconductors)
 - `zhipu/` — Zhipu AI (HKEX Ch.18C, foundation models/AGI)
 - `minimax/` — MiniMax (HKEX Ch.18C, foundation models/agents)
 - `biren/` — Biren Technology (HKEX Ch.18C, AI chips)

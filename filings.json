@@ -1,5 +1,25 @@
 [
   {
+    "slug": "cxmt",
+    "name_en": "CXMT Corporation",
+    "name_cn": "长鑫科技集团股份有限公司",
+    "exchange": "SSE STAR Market",
+    "sector": "Semiconductors",
+    "filed": "2025-12-29",
+    "status": "Draft",
+    "stats": [
+      {
+        "label": "Revenue (2025H1)",
+        "value": "$2.1B"
+      },
+      {
+        "label": "Gross Margin",
+        "value": "13.0%",
+        "color": "green"
+      }
+    ]
+  },
+  {
     "slug": "unitree",
     "name_en": "Unitree Technology",
     "name_cn": "宇树科技股份有限公司",
@@ -39,7 +59,7 @@
       },
       {
         "label": "Top Shareholder",
-        "value": "Huihui (Employee Own",
+        "value": "Huihui",
         "color": "yellow"
       }
     ]
@@ -89,7 +109,7 @@
       },
       {
         "label": "Top Shareholder",
-        "value": "Zhang (Mr. Zhang) - ",
+        "value": "Zhang",
         "color": "yellow"
       }
     ]
@@ -134,7 +154,7 @@
       },
       {
         "label": "Top Shareholder",
-        "value": "Other Pre-IPO Invest",
+        "value": "Other Pre-IPO Investors",
         "color": "yellow"
       }
     ]
@@ -154,7 +174,7 @@
       },
       {
         "label": "Top Shareholder",
-        "value": "Northern Light Ventu",
+        "value": "Northern Light Venture...",
         "color": "yellow"
       }
     ]
@@ -179,7 +199,7 @@
       },
       {
         "label": "Top Shareholder",
-        "value": "Other Holders of A S",
+        "value": "Other Holders of A Shares",
         "color": "yellow"
       }
     ]

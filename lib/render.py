@@ -779,7 +779,17 @@ def update_filings_stats(repo_root='.'):
             sh_with_pct = sum(1 for s in sh if s.get('pct'))
             if sh_with_pct > 0:
                 top = max(sh, key=lambda s: s.get('pct') or 0)
-                new_stats.append({'label': 'Top Shareholder', 'value': top.get('name', '?')[:20], 'color': 'yellow'})
+                name = top.get('name', '?')
+                # Clean up long names: take first meaningful part
+                if len(name) > 25:
+                    # Try splitting on common separators
+                    for sep in [' (', '（', ' - ', ', ']:
+                        if sep in name:
+                            name = name.split(sep)[0]
+                            break
+                    if len(name) > 25:
+                        name = name[:22] + '...'
+                new_stats.append({'label': 'Top Shareholder', 'value': name, 'color': 'yellow'})
 
         if not new_stats:
             # Fallback: use existing stats
